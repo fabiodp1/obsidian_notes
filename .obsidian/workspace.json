@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
+                "file": "Piano studi 24-25/Piano di studio 24-25.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 1 - AWS Cloud Practitioner Essentials"
+              "title": "Piano di studio 24-25"
             }
           }
         ]
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 377.5
   },
   "right": {
     "id": "7efb321a22ba6aba",
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md"
+                "file": "Piano studi 24-25/Piano di studio 24-25.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di Week 1 - AWS Cloud Practitioner Essentials"
+              "title": "Struttura di Piano di studio 24-25"
             }
           },
           {
@@ -161,8 +161,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "smart-connections",
-              "title": "Smart Connections"
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           },
           {
@@ -171,12 +171,12 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Smart Chat Conversation View"
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -195,10 +195,12 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "b0a6035a479c7937",
+  "active": "177269f31400fa4e",
   "lastOpenFiles": [
+    "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
     "smart-chats",
     "Piano studi 24-25/Piano di studio 24-25.md",
-    "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
     "README.md",
-    "Piano
+    "Piano studi 24-25"
+  ]
+}
