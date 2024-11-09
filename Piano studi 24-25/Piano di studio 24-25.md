@@ -2,7 +2,7 @@ Here's an integrated day-by-day learning plan with added suggestions and time al
 
 ---
 
-### **Months 1-2: Cloud Basics, [[Git]]/[[GitHub]], and Node.js/Express**
+## **Months 1-2: Cloud Basics, [[Git]]/[[GitHub]], and Node.js/Express**
 
 ### **Goal: Get comfortable with cloud deployment, version control, and basic [[Node]]/[[Express]].**
 
@@ -34,7 +34,7 @@ Here's an integrated day-by-day learning plan with added suggestions and time al
 
 ---
 
-### **Months 3-4: MongoDB, React Basics, and Cloud Deployment Practice**
+## **Months 3-4: MongoDB, React Basics, and Cloud Deployment Practice**
 
 ### **Goal: Learn MongoDB, React, and deploy a full-stack app on the cloud.**
 
@@ -61,7 +61,7 @@ Here's an integrated day-by-day learning plan with added suggestions and time al
 
 ---
 
-### **Months 5-6: Intermediate React, CI/CD, and Advanced Cloud Services**
+## **Months 5-6: Intermediate React, CI/CD, and Advanced Cloud Services**
 
 ### **Goal: Enhance React skills, automate deployment, and learn serverless functions.**
 
@@ -87,7 +87,7 @@ Here's an integrated day-by-day learning plan with added suggestions and time al
 
 ---
 
-### **Months 7-8: Vue.js Advanced, Cypress Testing, and API Documentation with Postman**
+## **Months 7-8: Vue.js Advanced, Cypress Testing, and API Documentation with Postman**
 
 ### **Goal: Improve Vue skills, write comprehensive tests, and document APIs.**
 

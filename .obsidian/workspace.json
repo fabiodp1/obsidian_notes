@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Piano studi 24-25/Piano di studio 24-25.md",
+                "file": "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Piano di studio 24-25"
+              "title": "Week 1 - AWS Cloud Practitioner Essentials"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Piano studi 24-25/Piano di studio 24-25.md",
+                "file": "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a Piano di studio 24-25"
+              "title": "Riferimenti a Week 1 - AWS Cloud Practitioner Essentials"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Piano studi 24-25/Piano di studio 24-25.md",
+                "file": "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da Piano di studio 24-25"
+              "title": "Collegamenti in uscita da Week 1 - AWS Cloud Practitioner Essentials"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Piano studi 24-25/Piano di studio 24-25.md"
+                "file": "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di Piano di studio 24-25"
+              "title": "Struttura di Week 1 - AWS Cloud Practitioner Essentials"
             }
           },
           {
@@ -154,9 +154,29 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "e2338cc2c5463455",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Smart Connections"
+            }
+          },
+          {
+            "id": "b0a6035a479c7937",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -170,14 +190,15 @@
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-connections:Open: View Smart Connections": false,
+      "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "4aea0ab8e3f65c3b",
+  "active": "b0a6035a479c7937",
   "lastOpenFiles": [
+    "smart-chats",
     "Piano studi 24-25/Piano di studio 24-25.md",
     "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
     "README.md",
-    "Piano studi 24-25"
-  ]
-}
+    "Piano
