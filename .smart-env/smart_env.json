@@ -11,5 +11,11 @@
   },
   "file_exclusions": "Untitled",
   "folder_exclusions": "smart-chats",
-  "smart_chats_folder": "smart-chats"
+  "smart_chats_folder": "smart-chats",
+  "smart_view_filter": {
+    "results_limit": "20",
+    "exclude_inlinks": false,
+    "exclude_outlinks": false
+  },
+  "show_full_path": false
 }

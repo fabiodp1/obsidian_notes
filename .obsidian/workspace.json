@@ -172,8 +172,18 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
+            }
+          },
+          {
+            "id": "440ae428ea72b5a0",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Smart Connections"
             }
           }
         ],
@@ -196,7 +206,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "cef2749af856c393",
+  "active": "4e8d2e76b83b65d7",
   "lastOpenFiles": [
     "Piano studi 24-25/Piano di studio 24-25.md",
     "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
