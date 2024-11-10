@@ -34,6 +34,7 @@ Con i servizi in cloud vengono create e distrutte nuove istanze del mio applicat
 
 **[[Loosely coupled architecture]]:** molto più efficiente e sicura della tightly, poiché un single failure non causerà failure a cascata. Se un elemento della catena fallisce, viene isolato. In genere viene utilizzato un **buffer** che raccoglie i messaggi (message queue).
 
+**[[Server-less]]**: un'infrastruttura server-less implica che non è possibile vedere o accedere all'infrastruttura sottostante il server, tutta la gestione, dalla scalabilità, disponibilità e gestione dell'applicativo, vengono autogestiti dal servizio.
 ### Famiglie di istanze
 
 Ogni tipo di istanza di EC2 viene raggruppata in una famiglia di istanze
@@ -74,3 +75,5 @@ Amazon AWS fornisce diversi tipi buffer (queue) per la gestione dei messaggi, **
 - **Usare SNS** quando:
     - Vuoi trasmettere lo stesso messaggio a più destinatari contemporaneamente.
     - Vuoi realizzare un pattern di notifica, dove uno o più servizi devono ricevere notifiche di un evento in tempo reale.
+### Servizi Server-less
+Aws fornisce diverse opzioni di computamento [[server-less]]

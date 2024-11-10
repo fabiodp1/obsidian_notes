@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 377.5,
+    "collapsed": true
   },
   "right": {
     "id": "7efb321a22ba6aba",
@@ -180,7 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 626.5
+    "width": 447.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,7 +196,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "4e8d2e76b83b65d7",
+  "active": "cef2749af856c393",
   "lastOpenFiles": [
     "Piano studi 24-25/Piano di studio 24-25.md",
     "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
