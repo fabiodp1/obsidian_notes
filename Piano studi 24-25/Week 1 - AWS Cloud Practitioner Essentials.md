@@ -35,6 +35,8 @@ Con i servizi in cloud vengono create e distrutte nuove istanze del mio applicat
 **[[Loosely coupled architecture]]:** molto più efficiente e sicura della tightly, poiché un single failure non causerà failure a cascata. Se un elemento della catena fallisce, viene isolato. In genere viene utilizzato un **buffer** che raccoglie i messaggi (message queue).
 
 **[[Server-less]]**: un'infrastruttura server-less implica che non è possibile vedere o accedere all'infrastruttura sottostante il server, tutta la gestione, dalla scalabilità, disponibilità e gestione dell'applicativo, vengono autogestiti dal servizio.
+
+**[[Kubernetes]]**: è un software open-source che permette di deployare e gestire applicazioni containerizzate in scala.
 ### Famiglie di istanze
 
 Ogni tipo di istanza di EC2 viene raggruppata in una famiglia di istanze
@@ -80,7 +82,7 @@ Aws fornisce diverse opzioni di computamento [[serverless]], una di queste è [[
 Il codice viene caricato in una funzione lambda, viene configurato un trigger e quando questo viene attivato da una richiesta, il codice viene avviato all'interno di un ambiente messo a disposizione da AWS.
 
 ### Container service
-Se abbiamo necessità di avviare il nostro applicativo in forma di container, AWS mette a disposizione Amazon Elastic Container Service ([[Amazon ECS]]) o Amazon Elastic Kubernets Service ([[Amazon EKS]]). Entrambe sono dei [[Container Orchestration Tools]].
+Se abbiamo necessità di avviare il nostro applicativo in forma di container, AWS mette a disposizione Amazon Elastic Container Service ([[Amazon ECS]]) o Amazon Elastic [[Kubernets]] Service ([[Amazon EKS]]). Entrambe sono dei [[Container Orchestration Tools]].
 Utilizzando Docker container sugli EC2 è come utilizzare normalmente i container docker avendo come host gli EC2. Per gestire l'avvio, chiusura o monitoraggio di un [[cluster]] di container, necessitiamo dei Container Orchestrator, come quelli messi a disposizione da AWS.
 
 Sia gli ECS che EKS possono girare su EC2, ma se non abbiamo necessità di accedere o configurare un determinato sistema operativo, o non vogliamo gestire gli EC2, possiamo utilizzare [[AWS Fargate]], una server-less compute platform.
