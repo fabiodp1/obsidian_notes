@@ -76,4 +76,9 @@ Amazon AWS fornisce diversi tipi buffer (queue) per la gestione dei messaggi, **
     - Vuoi trasmettere lo stesso messaggio a più destinatari contemporaneamente.
     - Vuoi realizzare un pattern di notifica, dove uno o più servizi devono ricevere notifiche di un evento in tempo reale.
 ### Servizi Server-less
-Aws fornisce diverse opzioni di computamento [[server-less]]
+Aws fornisce diverse opzioni di computamento [[server-less]], una di queste è [[AWS Lambda]]:
+Il codice viene caricato in una funzione lambda, viene configurato un trigger e quando questo viene attivato da una richiesta, il codice viene avviato all'interno di un ambiente messo a disposizione da AWS.
+
+### Container service
+Se abbiamo necessità di avviare il nostro applicativo in forma di container, AWS mette a disposizione Amazon Elastic Container Service ([[Amazon ECS]]) o Amazon Elastic Kubernets Service ([[Amazon EKS]]). Entrambe sono dei [[Container Orchestration Tools]].
+Utilizzando Docker container sugli ECS è come utilizzare normalmente i container docker avendo come host gli ECS. Per gestire l'avvio, chiusura o monitoraggio di un [[cluster]] di container, necessitiamo dei Container Orchestrator, come quelli messi a disposizione da AWS.
