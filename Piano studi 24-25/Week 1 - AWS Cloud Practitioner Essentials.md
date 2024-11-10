@@ -75,8 +75,8 @@ Amazon AWS fornisce diversi tipi buffer (queue) per la gestione dei messaggi, **
 - **Usare SNS** quando:
     - Vuoi trasmettere lo stesso messaggio a più destinatari contemporaneamente.
     - Vuoi realizzare un pattern di notifica, dove uno o più servizi devono ricevere notifiche di un evento in tempo reale.
-### Servizi Server-less
-Aws fornisce diverse opzioni di computamento [[server-less]], una di queste è [[AWS Lambda]]:
+### Servizi Serverless
+Aws fornisce diverse opzioni di computamento [[serverless]], una di queste è [[AWS Lambda]]:
 Il codice viene caricato in una funzione lambda, viene configurato un trigger e quando questo viene attivato da una richiesta, il codice viene avviato all'interno di un ambiente messo a disposizione da AWS.
 
 ### Container service
@@ -96,4 +96,4 @@ Quando utilizzare [[AWS Lambda]]:
 - Non necessitiamo di gestire l'ambiente sottostante
 Se abbiamo necessità di avviare container Docker in AWS:
 1. Scegliere il container orchestrator (ECS o EKS)
-2. Scegliere se voler gestire i server EC2 o si preferisce una soluzione server-less ([[AWS Fargate]])
+2. Scegliere se voler gestire i server EC2 o si preferisce una soluzione [[serverless]] ([[AWS Fargate]])
