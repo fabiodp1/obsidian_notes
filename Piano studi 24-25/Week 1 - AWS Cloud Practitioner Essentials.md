@@ -81,4 +81,14 @@ Il codice viene caricato in una funzione lambda, viene configurato un trigger e 
 
 ### Container service
 Se abbiamo necessità di avviare il nostro applicativo in forma di container, AWS mette a disposizione Amazon Elastic Container Service ([[Amazon ECS]]) o Amazon Elastic Kubernets Service ([[Amazon EKS]]). Entrambe sono dei [[Container Orchestration Tools]].
-Utilizzando Docker container sugli ECS è come utilizzare normalmente i container docker avendo come host gli ECS. Per gestire l'avvio, chiusura o monitoraggio di un [[cluster]] di container, necessitiamo dei Container Orchestrator, come quelli messi a disposizione da AWS.
+Utilizzando Docker container sugli EC2 è come utilizzare normalmente i container docker avendo come host gli EC2. Per gestire l'avvio, chiusura o monitoraggio di un [[cluster]] di container, necessitiamo dei Container Orchestrator, come quelli messi a disposizione da AWS.
+
+Sia gli ECS che EKS possono girare su EC2, ma se non abbiamo necessità di accedere o configurare un determinato sistema operativo, o non vogliamo gestire gli EC2, possiamo utilizzare [[AWS Fargate]], una server-less compute platform.
+
+#### Più semplicemente:
+Quando utilizzare EC2:
+- Bisogno di ospitare applicazioni tradizionali
+- Necessitiamo un accesso totale dell''OS
+Quando utilizzare AWS Lambda:
+- Quando vogliamo ospitare piccoli script e funzioni
+- Abbiamo un'applicazione service-oriented
