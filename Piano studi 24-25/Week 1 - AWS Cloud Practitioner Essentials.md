@@ -85,7 +85,7 @@ Utilizzando Docker container sugli EC2 è come utilizzare normalmente i containe
 
 Sia gli ECS che EKS possono girare su EC2, ma se non abbiamo necessità di accedere o configurare un determinato sistema operativo, o non vogliamo gestire gli EC2, possiamo utilizzare [[AWS Fargate]], una server-less compute platform.
 
-#### Più semplicemente:
+#### WHEN Più semplicemente:
 Quando utilizzare [[EC2]]:
 - Bisogno di ospitare applicazioni tradizionali
 - Necessitiamo un accesso totale dell''OS
@@ -94,3 +94,6 @@ Quando utilizzare [[AWS Lambda]]:
 - Abbiamo un'applicazione service-oriented
 - Abbiamo un'applicazione Event driven
 - Non necessitiamo di gestire l'ambiente sottostante
+Se abbiamo necessità di avviare container Docker in AWS:
+1. Scegliere il container orchestrator (ECS o EKS)
+2. Scegliere se voler gestire i server EC2 o si preferisce una soluzione server-less ([[AWS Fargate]])
