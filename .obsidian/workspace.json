@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e011ba095d58253b",
+        "id": "2228143e7509cb4a",
         "type": "tabs",
         "children": [
           {
-            "id": "9d3ab3cb6ea1b17e",
+            "id": "336ea24cf480294f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -142,7 +142,7 @@
                 "file": "Zero12 - Formazione/React/Epic React.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Epic React"
+              "title": "Struttura di Epic React"
             }
           },
           {
@@ -190,8 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5,
-    "collapsed": true
+    "width": 447.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,11 +205,12 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "ca22ef8d06d0af68",
+  "active": "336ea24cf480294f",
   "lastOpenFiles": [
+    "AWS.md",
+    "Zero12 - Formazione/React/Epic React.md",
     "Zero12 - Formazione/React",
     "Untitled.md",
-    "Zero12 - Formazione/React/Epic React.md",
     "Piano studi 24-25/Piano di studio 24-25.md",
     "Zero12 - Formazione",
     "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
