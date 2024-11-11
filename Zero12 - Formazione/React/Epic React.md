@@ -22,7 +22,9 @@ const rootElement = document.getElementById('root')
 
 ## [[JSX]]
 https://react.dev/learn/writing-markup-with-jsx
+
 [[Fragment]]: corrisponde a "<></>" e viene utilizzato per wrappare il markup che verrà restituito da un componente React nel momento in cui non si vuole utilizzare un div che lo faccia, perchè non si vuole creare un div inutilmente.
+
 ```jsx
 <>  
 <h1>Hedy Lamarr's Todos</h1>  
@@ -36,4 +38,20 @@ class="photo">
 
 </ul>  
 </>
+```
+
+[[Interpolation]]: vengono utilizzate singole {}
+
+```JSX
+export default function Avatar() {
+  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const description = 'Gregorio Y. Zara';
+  return (
+    <img
+      className="avatar"
+      src={avatar}
+      alt={description}
+    />
+  );
+}
 ```
