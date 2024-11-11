@@ -1,6 +1,6 @@
 [Epic React V1 Pro | Epic React by Kent C. Dodds](https://www.epicreact.dev/products/epic-react-pro-v1)
 
-## [[React]]
+# [[React]]
 E' un [[declarative language]]
 Supporta diverse piattaforme (native e web), ognuna di queste possiede il suo corrispettivo codice per interaggire con quella piattaforma, ed esiste anche codice condiviso fra le piattaforme.
 
@@ -18,4 +18,22 @@ const rootElement = document.getElementById('root')
 	// Queste 2 righe corrispondono a rootElement.append() 
     const root = ReactDOM.createRoot(rootElement)
     root.render(el)
+```
+
+## [[JSX]]
+https://react.dev/learn/writing-markup-with-jsx
+[[Fragment]]: corrisponde a "<></>" e viene utilizzato per wrappare il markup che verrà restituito da un componente React nel momento in cui non si vuole utilizzare un div che lo faccia, perchè non si vuole creare un div inutilmente.
+```jsx
+<>  
+<h1>Hedy Lamarr's Todos</h1>  
+<img  
+src="https://i.imgur.com/yXOvdOSs.jpg"  
+alt="Hedy Lamarr"  
+class="photo">  
+<ul>  
+
+...  
+
+</ul>  
+</>
 ```
