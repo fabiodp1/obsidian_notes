@@ -56,7 +56,21 @@ export default function Avatar() {
 }
 ```
 
+Anche questo è ammissibile:
+
+```JSX
+function message(props) {
+      return <div class="message">{props.children}</div>
+    }
+    const element = (
+      <div className="container">
+        {React.createElement(message, {children: 'Hello World'})}
+        {React.createElement(message, {children: 'Goodbye World'})}
+      </div>
+    )
+
+    ReactDOM.createRoot(document.getElementById('root')).render(element)
+```
 ## [[Components]]
 
 In React i components sono semplicemente delle funzioni JS che ritornano del contenuto renderizzabile (altri elementi React, stringhe, numeri, null ecc.).
-
