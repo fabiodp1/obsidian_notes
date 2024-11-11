@@ -55,3 +55,8 @@ export default function Avatar() {
   );
 }
 ```
+
+## [[Components]]
+
+In React i components sono semplicemente delle funzioni JS che ritornano del contenuto renderizzabile (altri elementi React, stringhe, numeri, null ecc.).
+
