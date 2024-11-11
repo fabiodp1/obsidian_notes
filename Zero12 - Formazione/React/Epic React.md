@@ -7,4 +7,15 @@ Supporta diverse piattaforme (native e web), ognuna di queste possiede il suo co
 Per scrivere applicazioni React per il web sono necessari 2 file [[JS]]:
 - React: responsabile per la creazione degli elementi React (simile a document.createElement())
 - ReactDOM: responsabile per la renderizzazione degli elementi React nel DOM (simile a rootElement.append())
-- 
+```typescript
+// Esempio Row di utilizzo
+const rootElement = document.getElementById('root')
+    const elProps = {children: 'Hello World', className: 'container'}
+    const elType = 'div'
+    // Corrisponde a document.createElemntent()
+    const el = React.createElement(elType, elProps)
+
+	// Queste 2 righe corrispondono a rootElement.append() 
+    const root = ReactDOM.createRoot(rootElement)
+    root.render(el)
+```
