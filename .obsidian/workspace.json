@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2228143e7509cb4a",
+        "id": "3caac315e90ae846",
         "type": "tabs",
         "children": [
           {
-            "id": "336ea24cf480294f",
+            "id": "c06656291beba07b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -190,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,13 +205,13 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "336ea24cf480294f",
+  "active": "c06656291beba07b",
   "lastOpenFiles": [
-    "AWS.md",
+    "Piano studi 24-25/Piano di studio 24-25.md",
     "Zero12 - Formazione/React/Epic React.md",
+    "AWS.md",
     "Zero12 - Formazione/React",
     "Untitled.md",
-    "Piano studi 24-25/Piano di studio 24-25.md",
     "Zero12 - Formazione",
     "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
     "smart-chats",
