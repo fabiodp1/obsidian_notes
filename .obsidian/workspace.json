@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Zero12 - Formazione/Epic React.md",
+                "file": "Zero12 - Formazione/React/Epic React.md",
                 "mode": "source",
                 "source": false
               },
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Zero12 - Formazione/Epic React.md"
+                "file": "Zero12 - Formazione/React/Epic React.md"
               },
               "icon": "lucide-list",
               "title": "Outline of Epic React"
@@ -206,10 +206,11 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "9d3ab3cb6ea1b17e",
+  "active": "ca22ef8d06d0af68",
   "lastOpenFiles": [
+    "Zero12 - Formazione/React",
     "Untitled.md",
-    "Zero12 - Formazione/Epic React.md",
+    "Zero12 - Formazione/React/Epic React.md",
     "Piano studi 24-25/Piano di studio 24-25.md",
     "Zero12 - Formazione",
     "Piano studi 24-25/Week 1 - AWS Cloud Practitioner Essentials.md",
