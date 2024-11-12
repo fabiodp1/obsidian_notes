@@ -117,3 +117,12 @@ function App() {
 }
 ```
 
+## [[Form]]
+
+Non ci sono molti modi in React per poter interaggire con le Form, possiamo aggiungere un handler che verrà triggerato al submit [[onSubmit]] questo verrà chiamato avendo come parametro l'evento, contenetne la proprietà target che rappresenta il nodo DOM della form.
+Tramite questo è possibile accedere ai songoli elementi della form e ai loro valori.
+
+Esistono diversi modi per accedere ai valori delle form:
+- tramite index: event.target.elements[0].value
+- tramite id o name: event.target.elements.usernameInput.value
+- 
