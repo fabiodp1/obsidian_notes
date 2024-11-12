@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 377.5,
+    "collapsed": true
   },
   "right": {
     "id": "7efb321a22ba6aba",
@@ -208,9 +209,10 @@
   },
   "active": "6f9556f657e35b56",
   "lastOpenFiles": [
-    "useState.md",
-    "Zero12 - Formazione/React/Epic React/Hooks.md",
+    "Pasted image 20241112161806.png",
     "Zero12 - Formazione/React/Epic React/React Fundamentals.md",
+    "Zero12 - Formazione/React/Epic React/Hooks.md",
+    "useState.md",
     "Zero12 - Formazione/React/Epic React",
     "Piano studi 24-25/Piano di studio 24-25.md",
     "AWS.md",
