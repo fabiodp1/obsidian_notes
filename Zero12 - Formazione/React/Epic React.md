@@ -84,3 +84,5 @@ In [[JSX]] per passare lo style inline, viene fatta la normale interpolazione pa
 ```JSX
 <div style={{marginTop: 20, backgroundColor: 'blue'}} />
 ```
+
+Tenere in considerazione che i nomi dell proprità CSS non sono in [[kebab-case]] ma [[CamelCase]]. 
