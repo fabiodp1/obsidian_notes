@@ -85,4 +85,35 @@ In [[JSX]] per passare lo style inline, viene fatta la normale interpolazione pa
 <div style={{marginTop: 20, backgroundColor: 'blue'}} />
 ```
 
-Tenere in considerazione che i nomi dell proprità CSS non sono in [[kebab-case]] ma [[CamelCase]]. 
+Tenere in considerazione che i nomi dell proprità CSS non sono in [[kebab-case]] ma [[CamelCase]].
+Un esempio di styling con interpolazione:
+
+```JSX
+function Box({size, style, ...otherProps}) {
+  const className = size ? `box--${size}` : ''
+  return (
+    <div
+      className={`${className} box`}
+      style={{fontStyle: 'italic', ...style}}
+      {...otherProps}
+    />
+  )
+}
+
+function App() {
+  return (
+    <div>
+      <Box size="small" style={{backgroundColor: 'lightblue'}}>
+        small lightblue box
+      </Box>
+      <Box size="medium" style={{backgroundColor: 'pink'}}>
+        medium pink box
+      </Box>
+      <Box size="large" style={{backgroundColor: 'orange'}}>
+        medium porange box
+      </Box>
+    </div>
+  )
+}
+```
+
