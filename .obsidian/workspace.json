@@ -11,13 +11,14 @@
             "id": "6f9556f657e35b56",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Zero12 - Formazione/React/Epic React/Hooks.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (workspace.json)"
+              "icon": "lucide-file",
+              "title": "Hooks"
             }
           }
         ]
@@ -137,9 +138,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Zero12 - Formazione/React/Epic React/Hooks.md"
+              },
               "icon": "lucide-list",
-              "title": "Struttura"
+              "title": "Struttura di Hooks"
             }
           },
           {
@@ -205,8 +208,8 @@
   "active": "6f9556f657e35b56",
   "lastOpenFiles": [
     "Zero12 - Formazione/React/Epic React/React Fundamentals.md",
-    "Zero12 - Formazione/React/Epic React/Hooks.md",
     "Pasted image 20241112161806.png",
+    "Zero12 - Formazione/React/Epic React/Hooks.md",
     "useState.md",
     "Zero12 - Formazione/React/Epic React",
     "Piano studi 24-25/Piano di studio 24-25.md",
