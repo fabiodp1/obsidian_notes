@@ -208,8 +208,6 @@ function UsernameForm({onSubmitUsername}) {
     setError(isValid ? null : 'Username must be lower case')
   }
 
-  
-
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -240,4 +238,39 @@ Ma ci sono casi in cui vogliamo avere il controllo sul suo valore. React ci perm
 Una volta fatto ciò React si assicura che il valore dell'input non può mai essere differente dal valore della variabile passata.
 
 Normalmente viene anche utilizzato un handler per l'[[onChange]] in modo da poter avere la consapevolezza dei "cambiamenti suggeriti" al campo di input.
-Normalmente si fa lo store del valore del campo input in una variabile state (con React.useState) e poi l'onChange handler
+Normalmente si fa lo store del valore del campo input che si vuole controllare in una variabile di stato (con React.useState) e poi l'onChange handler si occuperà del suo update.
+
+```jsx
+function UsernameForm({onSubmitUsername}) {
+  const usernameInput = React.useRef('fabio')
+  const [username, setUsername] = React.useState(null)
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    if (usernameInput.current.value) {
+      onSubmitUsername(usernameInput.current.value)
+    }
+  }
+
+  function handleChange(event) {
+    setUsername(usernameInput.current.value.toLowerCase())
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input
+          type="text"
+          name="usernameInput"
+          onChange={handleChange}
+          value={username}
+          ref={usernameInput}
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
