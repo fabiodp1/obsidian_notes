@@ -1,5 +1,5 @@
 [Epic React V1 Pro | Epic React by Kent C. Dodds](https://www.epicreact.dev/products/epic-react-pro-v1)
-## [[React]]
+# [[React]]
 E' un [[declarative language]]
 Supporta diverse piattaforme (native e web), ognuna di queste possiede il suo corrispettivo codice per interaggire con quella piattaforma, ed esiste anche codice condiviso fra le piattaforme.
 
@@ -19,7 +19,7 @@ const rootElement = document.getElementById('root')
     root.render(el)
 ```
 
-## [[JSX]]
+# [[JSX]]
 https://react.dev/learn/writing-markup-with-jsx
 
 [[Fragment]]: corrisponde a "<></>" e viene utilizzato per wrappare il markup che verrà restituito da un componente React nel momento in cui non si vuole utilizzare un div che lo faccia, perchè non si vuole creare un div inutilmente.
@@ -70,11 +70,11 @@ function message(props) {
 
     ReactDOM.createRoot(document.getElementById('root')).render(element)
 ```
-## [[Components]]
+# [[Components]]
 
 In React i components sono semplicemente delle funzioni JS che ritornano del contenuto renderizzabile (altri elementi React, stringhe, numeri, null ecc.).
 
-## Styling
+# Styling
 
 Esistono due modi per applicare lo styling ai componenti, tramite il normale attributo "style" o tramite l'attributo "calssName".
 
@@ -116,7 +116,7 @@ function App() {
 }
 ```
 
-## [[Form]]
+# [[Form]]
 
 Non ci sono molti modi in React per poter interaggire con le Form, possiamo aggiungere un handler che verrà triggerato al submit [[onSubmit]] questo verrà chiamato avendo come parametro l'evento, contenetne la proprietà target che rappresenta il nodo DOM della form.
 Tramite questo è possibile accedere ai songoli elementi della form e ai loro valori.
@@ -155,7 +155,7 @@ function App() {
 export default App
 ```
 
-### Ref
+## Ref
 Un altro modo per accedere agli elementi di un DOM è tramite l'attributo [[ref]].
 
 >la proprità [[ref]] è un oggetto che rimane consistente fra i render del componente React e possiede una proprietà *current* che può essere aggiornata in qualsiasi momento con qualsiasi valore.
@@ -175,7 +175,7 @@ Pricipali differenze con [[Vue]]:
 | Uso tipico                | Dati reattivi e DOM refs          | Valori persistenti e DOM refs       |
 | Modifica DOM nei template | ref="nomeRef"                     | ref={nomeRef}                       |
 
-### State
+## State
 In react per accedere allo state si utilizza un "[[hook]]" chiamato [[useState]].
 
 ```jsx
@@ -273,7 +273,7 @@ function UsernameForm({onSubmitUsername}) {
 }
 ```
 
-## Rendering Arrays
+# Rendering Arrays
 Se con Vue nel creare un v-for loop per renderizzare un [[array]] di elementi è consigliato ma non necessario utilizzare l'attributo key, in React è OBBLIGATORIO.
 Infatti è possibile ometterla ma nel momento in cui il componente deve ri-renderizzarsi perchè è stato aggiunto o rimosso un elemento, React non saprà in che posizione questo è stato inserito, potendo potenzialmente risolversi in un risultato non voluto.
 
