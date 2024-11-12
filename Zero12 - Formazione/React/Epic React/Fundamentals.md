@@ -1,6 +1,4 @@
 [Epic React V1 Pro | Epic React by Kent C. Dodds](https://www.epicreact.dev/products/epic-react-pro-v1)
-
-# Fundamentals
 ## [[React]]
 E' un [[declarative language]]
 Supporta diverse piattaforme (native e web), ognuna di queste possiede il suo corrispettivo codice per interaggire con quella piattaforma, ed esiste anche codice condiviso fra le piattaforme.
