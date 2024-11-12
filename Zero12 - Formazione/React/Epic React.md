@@ -156,3 +156,10 @@ function App() {
 export default App
 ```
 
+### Ref
+Un altro modo per accedere agli elementi di un DOM è tramite l'attributo [[ref]].
+
+>la proprità [[ref]] è un oggetto che rimane consistente fra i render del componente React e possiede una proprietà *current* che può essere aggiornata in qualsiasi momento con qualsiasi valore.
+>Se stiamo interagendo con i nodi del [[DOM]] possiamo passare un ref ad un elemento React and React imposterà come valore del current il nodo DOM che viene renderizzato.
+
+Se creiamo un oggetto [[inputRef]] tramite *React.useRef* possiamo accedere al suo valore con *inputRef.current.value*.
