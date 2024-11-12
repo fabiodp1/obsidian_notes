@@ -182,12 +182,12 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "smart-connections",
+              "title": "Smart Connections"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
