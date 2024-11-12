@@ -237,7 +237,7 @@ Ma ci sono casi in cui vogliamo avere il controllo sul suo valore. React ci perm
 <input value={myInputValue} />
 ```
 
-Una volta fatto ciò Reat si assicura che il valore dell'input non può mai essere differente dal valore della variabile passata.
+Una volta fatto ciò React si assicura che il valore dell'input non può mai essere differente dal valore della variabile passata.
 
 Normalmente viene anche utilizzato un handler per l'[[onChange]] in modo da poter avere la consapevolezza dei "cambiamenti suggeriti" al campo di input.
 Normalmente si fa lo store del valore del campo input in una variabile state (con React.useState) e poi l'onChange handler
