@@ -189,3 +189,44 @@ function Counter() {
 
 React.useState accetta un valore di default e ritorna un array. Normalmente, come si vede nell'esempio, si fa il destructuring dell'array per avere lo state e la funzione per farne l'update.
 
+```JSX
+function UsernameForm({onSubmitUsername}) {
+  const usernameInput = React.useRef('fabio')
+  const [error, setError] = React.useState(null)
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    if (usernameInput.current.value) {
+      onSubmitUsername(usernameInput.current.value)
+    }
+  }
+
+  function handleChange(event) {
+    const value = usernameInput.current.value
+    const isValid = value === value.toLowerCase()
+
+    setError(isValid ? null : 'Username must be lower case')
+  }
+
+  
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input
+          type="text"
+          name="usernameInput"
+          onChange={handleChange}
+          ref={usernameInput}
+        />
+      </div>
+      <div style={{color: 'red'}}>{error}</div>
+      <button type="submit" disabled={error !== null}>
+        Submit
+      </button>
+    </form>
+  )
+}
+```
+
