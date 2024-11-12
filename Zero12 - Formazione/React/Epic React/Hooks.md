@@ -43,3 +43,5 @@ React.useEffect(() => {
     window.localStorage.setItem('name', name)
   }, [name]) // In questa maniera al re-render lo useEffect chiamerà la callback solo se name ha cambiato valore
 ```
+
+E' possibile riutilizzare codice che potrebbe essere utile altrove e 
