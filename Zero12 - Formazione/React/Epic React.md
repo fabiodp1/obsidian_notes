@@ -230,3 +230,13 @@ function UsernameForm({onSubmitUsername}) {
 }
 ```
 
+Negli esempi precedenti semplicemente abbiamo lasciato che il browser avesse il controllo del valore del campo input, noi semplicemente lo richiediamo nel momento in cui veniamo notificati del suo cambiamento, per poter applicare la nostra logica.
+Ma ci sono casi in cui vogliamo avere il controllo sul suo valore. React ci permette di farlo tramite il set della prop *value*:
+
+```jsx
+<input value={myInputValue} />
+```
+
+Una volta fatto ciò Reat si assicura che il valore dell'input non può mai essere differente dal valore della variabile passata.
+
+Normalmente viene anche utilizzato un handler per l'[[onChange]] 
