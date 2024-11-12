@@ -274,3 +274,6 @@ function UsernameForm({onSubmitUsername}) {
 }
 ```
 
+## Rendering Arrays
+Se con Vue nel creare un v-for loop per renderizzare un [[array]] di elementi è consigliato ma non necessario utilizzare l'attributo key, in React è OBBLIGATORIO.
+
