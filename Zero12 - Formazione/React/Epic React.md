@@ -163,3 +163,6 @@ Un altro modo per accedere agli elementi di un DOM è tramite l'attributo [[ref]
 >Se stiamo interagendo con i nodi del [[DOM]] possiamo passare un ref ad un elemento React and React imposterà come valore del current il nodo DOM che viene renderizzato.
 
 Se creiamo un oggetto [[inputRef]] tramite *React.useRef* possiamo accedere al suo valore con *inputRef.current.value*.
+
+>**NOTA**: In React ref non funziona come in Vue, è un semplicemente un oggetto, ma la sua modifica non scatena il re-render del componente.
+
