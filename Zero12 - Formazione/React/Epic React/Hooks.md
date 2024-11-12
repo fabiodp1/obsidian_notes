@@ -34,3 +34,12 @@ React.useEffect(() => {
 ```
 
 ![[Pasted image 20241112161806.png]]
+
+Ovviamente non sempre vogliamo che il nostro useEffect venga chiamato ad ogni re-render, ad esempio se viene triggerato dal component parent e quindi non c'è un reale cambio nello state, l'useEffect viene chiamato, magari rifacendo inutili chiamate http o salvando nel localStore ecc.
+Per evitare questo useEffect prende un altro parametro opzionale chiamato [[dapendency array]], che farà in modo che useEffect chiami la callback solo nel caso in cui uno degli elementi nell'array cambi effettivamente di valore.
+
+```typescript
+React.useEffect(() => {
+    window.localStorage.setItem('name', name)
+  }, [name]) // In questa maniera al re-render lo useEffect chiamerà la callback solo se name ha cambiato valore
+```
