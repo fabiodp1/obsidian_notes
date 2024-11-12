@@ -166,3 +166,13 @@ Se creiamo un oggetto [[inputRef]] tramite *React.useRef* possiamo accedere al s
 
 >**NOTA**: In React ref non funziona come in Vue, è un semplicemente un oggetto, ma la sua modifica non scatena il re-render del componente.
 
+Pricipali differenze con [[Vue]]:
+
+| Caratteristica            | Vue `ref`                         | React `useRef`                      |
+| ------------------------- | --------------------------------- | ----------------------------------- |
+| Sintassi                  | `const nome = ref(initialValue)`  | `const nome = useRef(initialValue)` |
+| Reattività                | Reattivo (triggera aggiornamenti) | Non causa render automatici         |
+| Accesso al valore         | .value                            | .current                            |
+| Uso tipico                | Dati reattivi e DOM refs          | Valori persistenti e DOM refs       |
+| Modifica DOM nei template | ref="nomeRef"                     | ref={nomeRef}                       |
+
