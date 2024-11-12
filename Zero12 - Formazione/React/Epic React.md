@@ -77,4 +77,10 @@ In React i components sono semplicemente delle funzioni JS che ritornano del con
 
 ## Styling
 
+Esistono due modi per applicare lo styling ai componenti, tramite il normale attributo "style" o tramite l'attributo "calssName".
 
+In [[JSX]] per passare lo style inline, viene fatta la normale interpolazione passando un oggetto avente come proprietà le classi [[CSS]].
+
+```JSX
+<div style={{marginTop: 20, backgroundColor: 'blue'}} />
+```
