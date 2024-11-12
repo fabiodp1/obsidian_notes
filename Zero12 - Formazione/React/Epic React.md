@@ -1,6 +1,7 @@
 [Epic React V1 Pro | Epic React by Kent C. Dodds](https://www.epicreact.dev/products/epic-react-pro-v1)
 
-# [[React]]
+# Fundamentals
+## [[React]]
 E' un [[declarative language]]
 Supporta diverse piattaforme (native e web), ognuna di queste possiede il suo corrispettivo codice per interaggire con quella piattaforma, ed esiste anche codice condiviso fra le piattaforme.
 
@@ -285,3 +286,4 @@ const listUI = list.map(listItem => <li>{listItem}</li>)
 const ui = <ul>{listUI}</ul>
 ```
 
+Per cui la regola è che la prop [[key]] va SEMPRE messa, e non va utilizzata la index dell'array o si ripropone lo stesso problema di non usare la key, va utilizzato un valore univoco, come un id.
