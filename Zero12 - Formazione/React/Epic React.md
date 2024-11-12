@@ -176,3 +176,16 @@ Pricipali differenze con [[Vue]]:
 | Uso tipico                | Dati reattivi e DOM refs          | Valori persistenti e DOM refs       |
 | Modifica DOM nei template | ref="nomeRef"                     | ref={nomeRef}                       |
 
+### State
+In react per accedere allo state si utilizza un "[[hook]]" chiamato [[useState]].
+
+```jsx
+function Counter() {
+  const [count, setCount] = React.useState(0)
+  const increment = () => setCount(count + 1)
+  return <button onClick={increment}>{count}</button>
+}
+```
+
+React.useState accetta un valore di default e ritorna un array. Normalmente, come si vede nell'esempio, si fa il destructuring dell'array per avere lo state e la funzione per farne l'update.
+
