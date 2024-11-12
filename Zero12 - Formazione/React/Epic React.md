@@ -125,4 +125,33 @@ Tramite questo è possibile accedere ai songoli elementi della form e ai loro va
 Esistono diversi modi per accedere ai valori delle form:
 - tramite index: event.target.elements[0].value
 - tramite id o name: event.target.elements.usernameInput.value
-- 
+
+Un esempio di gestione della form:
+
+```JSX
+function UsernameForm({onSubmitUsername}) {
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const username = event.target.usernameInput.value
+    onSubmitUsername(username)
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input type="text" name="usernameInput" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+
+function App() {
+  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  return <UsernameForm onSubmitUsername={onSubmitUsername} />
+}
+
+export default App
+```
