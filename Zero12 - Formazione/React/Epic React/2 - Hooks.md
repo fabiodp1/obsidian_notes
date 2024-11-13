@@ -125,3 +125,37 @@ Per questo normalmente la manipolazione del [[DOM]] avviene all'interno della ca
 
 >NOTA: In React, passare un array vuoto come dipendenze a `useEffect` significa che l'effetto verrà eseguito solo una volta, al primo render del componente, e non si riattiverà mai più.
 >Se ometti l'array delle dipendenze, l'effetto verrà eseguito ad ogni render del componente, poiché React non ha indicazioni su quando dovrebbe limitare l'esecuzione dell'effetto. Questo comportamento può portare a esecuzioni inutili dell'effetto, causando potenzialmente problemi di prestazioni o comportamenti indesiderati, specialmente se l'effetto contiene operazioni pesanti o che interagiscono con l'esterno (come chiamate API).
+
+## HTTP Request
+Come abbiamo visto, in useEffect faremo operazioni che vanno svolte subito dopo il mount del componente e che devono ripetersi ad ogni re-render, ad ogni modifica delle dipendenze o una sola volta. Per questo motivo in genere le chiamate HTTP vengono fatte all'nterno di questo [[hook]].
+Il problema però è che useEffect può solo ritornare una funzione per il cleanup, e facendo un await, automaticamente verrà rotornata una Promise, a prescindere se venga ritornata qualcosa o meno:
+
+```javascript
+// this does not work, don't do this:
+React.useEffect(async () => {
+  const result = await doSomeAsyncThing()
+  // do something with the result
+})
+```
+
+Il miglior modo per farlo è questo:
+
+```javascript
+React.useEffect(() => {
+  async function effect() {
+    const result = await doSomeAsyncThing()
+    // do something with the result
+  }
+  effect()
+})
+```
+
+Oppure un altro metodo è estrarre la funzione async e poi richiamarla usando il then:
+
+```javascript
+React.useEffect(() => {
+  doSomeAsyncThing().then(result => {
+    // do something with the result
+  })
+})
+```
