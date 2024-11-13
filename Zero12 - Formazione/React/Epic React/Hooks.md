@@ -90,3 +90,7 @@ Molte volte capita che vi sia la necessità di condividere lo state fra componen
 
 ## colocating state
 Come è importante fare il [[lifting state]], è anche importante ricordarsi di fare il [[colocate state]] cioè ricordarsi che la gestione dello [[state]] dovrebbe stare dove è necessario. Ad esempio se per comabio di feature non è più necessario che tutto lo state venga gestito dal padre, lo state di competenza dovrebbe ritornare al child. In questa maniera si miglioreranno le performance.
+
+>[[managed state]]: state che va esplicitamente gestito
+>[[derived state]]: state che può essere calcolato sulla base di un altro state
+
