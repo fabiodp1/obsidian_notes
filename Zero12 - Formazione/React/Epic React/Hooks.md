@@ -93,4 +93,5 @@ Come è importante fare il [[lifting state]], è anche importante ricordarsi di 
 
 >[[managed state]]: state che va esplicitamente gestito
 >[[derived state]]: state che può essere calcolato sulla base di un altro state
+>[Don't Sync State. Derive It!](https://kentcdodds.com/blog/dont-sync-state-derive-it)
 
