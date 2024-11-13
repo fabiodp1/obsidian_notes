@@ -104,3 +104,8 @@ const squaresCopy = [...squares]
 squaresCopy[2] = "newValue"
 setSquares(squaresCopy)
 ```
+
+## with [[useRef]]
+
+
+
