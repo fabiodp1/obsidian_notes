@@ -105,7 +105,20 @@ squaresCopy[2] = "newValue"
 setSquares(squaresCopy)
 ```
 
-## with [[useRef]]
+## con [[useRef]]
+Spesso capita lavorando con react di dover accedere ai nodi del DOM per manipolarlo, per far ciò utilizziamo useRef:
 
+```javascript
+function MyDiv() {
+  const myDivRef = React.useRef()
+  React.useEffect(() => {
+    const myDiv = myDivRef.current
+    // myDiv is the div DOM node!
+    console.log(myDiv)
+  }, [])
+  return <div ref={myDivRef}>hi</div>
+}
+```
 
-
+Dopo che il componente viene renderizzato, viene considerato [[mounted]], è il momento in cui la callback di [[useEffect]]viene chiamata e a quel punto la prop current della nostra ref dovrebbe essere già valorizzata con il nodo del DOM.
+Per questo normalmente la manipolazione del [[DOM]] avviene all'interno della callback dell'useEffect
