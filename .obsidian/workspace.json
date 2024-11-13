@@ -11,10 +11,14 @@
             "id": "616382075f96be20",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Zero12 - Formazione/React/Epic React/Hooks.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Hooks"
             }
           }
         ]
@@ -134,9 +138,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Zero12 - Formazione/React/Epic React/Hooks.md"
+              },
               "icon": "lucide-list",
-              "title": "Struttura"
+              "title": "Struttura di Hooks"
             }
           },
           {

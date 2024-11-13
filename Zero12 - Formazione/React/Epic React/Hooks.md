@@ -86,4 +86,7 @@ function App() {
 ```
 
 ## lifting state
-Molte volte capita che vi sia la necessità di condividere lo state fra componenti fratelli, la risposta è semplice "lifting [[state]]" cioè spostare la gestione dello state nel parent più vicino che si occuperà di passarlo ai figli assieme al meccanismo per aggiornarlo.
+Molte volte capita che vi sia la necessità di condividere lo state fra componenti fratelli, la risposta è semplice "[[lifting state]]" cioè spostare la gestione dello state nel parent più vicino che si occuperà di passarlo ai figli assieme al meccanismo per aggiornarlo.
+
+## colocating state
+Come è importante fare il [[lifting state]], è anche importante ricordarsi di fare il [[colocate state]] cioè ricordarsi che la gestione dello [[state]] dovrebbe stare dove è necessario. Ad esempio se per comabio di feature non è più necessario che tutto lo state venga gestito dal padre, lo state di competenza dovrebbe ritornare al child. In questa maniera si miglioreranno le performance.
