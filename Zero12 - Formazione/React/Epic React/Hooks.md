@@ -95,3 +95,12 @@ Come è importante fare il [[lifting state]], è anche importante ricordarsi di 
 >[[derived state]]: state che può essere calcolato sulla base di un altro state
 >[Don't Sync State. Derive It!](https://kentcdodds.com/blog/dont-sync-state-derive-it)
 
+>[[React]] [[bad practice]]: in React non è bene cambiare direttamente lo state per ad es. fare un update, può creare diversi problemi. E' buona pratica fare una copia e usare quella per l'update:
+
+```JSX
+const [squares, setSquares] = React.useState(Array(9).fill(null))
+  
+const squaresCopy = [...squares]
+squaresCopy[2] = "newValue"
+setSquares(squaresCopy)
+```
