@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Hooks"
             }
+          },
+          {
+            "id": "04a092fa49710154",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.6"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,8 +194,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "smart-connections",
-              "title": "Smart Connections"
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           }
         ],
@@ -205,7 +218,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "6f9556f657e35b56",
+  "active": "04a092fa49710154",
   "lastOpenFiles": [
     "Zero12 - Formazione/React/Epic React/React Fundamentals.md",
     "Pasted image 20241112161806.png",
