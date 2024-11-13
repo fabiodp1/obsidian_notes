@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9f9a6e03be3db1e7",
+        "id": "5be67a7fa691feb6",
         "type": "tabs",
         "children": [
           {
-            "id": "6f9556f657e35b56",
+            "id": "5bab42f7ff800466",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Hooks"
             }
-          },
-          {
-            "id": "04a092fa49710154",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.6"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -218,11 +205,11 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "04a092fa49710154",
+  "active": "5bab42f7ff800466",
   "lastOpenFiles": [
+    "Zero12 - Formazione/React/Epic React/Hooks.md",
     "Zero12 - Formazione/React/Epic React/React Fundamentals.md",
     "Pasted image 20241112161806.png",
-    "Zero12 - Formazione/React/Epic React/Hooks.md",
     "useState.md",
     "Zero12 - Formazione/React/Epic React",
     "Piano studi 24-25/Piano di studio 24-25.md",
