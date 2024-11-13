@@ -120,5 +120,8 @@ function MyDiv() {
 }
 ```
 
-Dopo che il componente viene renderizzato, viene considerato [[mounted]], è il momento in cui la callback di [[useEffect]]viene chiamata e a quel punto la prop current della nostra ref dovrebbe essere già valorizzata con il nodo del DOM.
-Per questo normalmente la manipolazione del [[DOM]] avviene all'interno della callback dell'useEffect
+Dopo che il componente viene renderizzato, viene considerato [[mounted]], è il momento in cui la callback di [[useEffect]] viene chiamata e a quel punto la prop current della nostra ref dovrebbe essere già valorizzata con il nodo del DOM.
+Per questo normalmente la manipolazione del [[DOM]] avviene all'interno della callback dell'useEffect.
+
+>NOTA: In React, passare un array vuoto come dipendenze a `useEffect` significa che l'effetto verrà eseguito solo una volta, al primo render del componente, e non si riattiverà mai più.
+>Se ometti l'array delle dipendenze, l'effetto verrà eseguito ad ogni render del componente, poiché React non ha indicazioni su quando dovrebbe limitare l'esecuzione dell'effetto. Questo comportamento può portare a esecuzioni inutili dell'effetto, causando potenzialmente problemi di prestazioni o comportamenti indesiderati, specialmente se l'effetto contiene operazioni pesanti o che interagiscono con l'esterno (come chiamate API).
