@@ -85,3 +85,5 @@ function App() {
 }
 ```
 
+## lifting state
+Molte volte capita che vi sia la necessità di condividere lo state fra componenti fratelli, la risposta è semplice "lifting [[state]]" cioè spostare la gestione dello state nel parent più vicino che si occuperà di passarlo ai figli assieme al meccanismo per aggiornarlo.
