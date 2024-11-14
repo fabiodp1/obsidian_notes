@@ -279,3 +279,8 @@ const [state, dispatch] = React.useReducer(reducer, props.initialState, init)
 
 Verrà passato il secondo argomento alla funzione di init come parametro e la funzione ritorna l'initial state.
 Questo può risultare utile se la funzione init ad es. fa azioni come leggere dal localStorage o comunque qualcosa che non vogliamo venga lanciato ad ogni re-render.
+
+# useCallback
+
+## [[memoization]]
+
