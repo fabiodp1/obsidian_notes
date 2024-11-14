@@ -200,3 +200,5 @@ function App() {
   )
 }
 ```
+
+>Normalmente viene utilizzata la libreria [[react-error-boundary]] che già mette a disposizione tutte le proprietà e funzioni per gestire al meglio gli errori.
