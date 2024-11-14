@@ -234,4 +234,7 @@ function NameInput() {
 Dall'esempio si può notare che il riduttore (chiamto nameReducer) viene chiamato con 2 argomenti:
 1. Lo stato corrente
 2. qualsiasi valore con cui la funzione "serName" viene chiamata. In genere chiamato "action".
+[How to implement useState with useReducer](https://kentcdodds.com/blog/how-to-implement-usestate-with-usereducer)
+https://kentcdodds.com/blog/should-i-usestate-or-usereducer
+
 
