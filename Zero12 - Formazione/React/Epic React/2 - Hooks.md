@@ -161,3 +161,4 @@ React.useEffect(() => {
 ```
 
 >**NOTA** normalmente React quando vengono fatti diversi aggiornamenti di [[state]] di fila, li mette assieme in modo ri-renderizzare il componente una sola volta, ma questo non avviene se gli aggiornamenti avvengono all'interno di una callback (ad es. all'interno del 'then').
+>Per questo è importante considerare l'ordine con cui gli stati vengono aggiornati
