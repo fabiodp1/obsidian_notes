@@ -243,6 +243,7 @@ function myReducer(currentState, action) {
 }
 ```
 
+## action
 La action può essere anche un oggetto..
 
 ```typescript
@@ -259,4 +260,22 @@ function myReducer(state, action) {
 }
 ```
 
-useReduce possiede un terzo parametro che viene utilizzato normalmente per inizializzare lo [[state]] applicativo, azione chiamata [[lazy initialization]]
+## lazy initialization
+useReduce possiede un terzo parametro che viene utilizzato normalmente per inizializzare lo [[state]] applicativo, azione chiamata [[lazy initialization]].
+
+```javascript
+function init(initialStateFromProps) {
+  return {
+    pokemon: null,
+    loading: false,
+    error: null,
+  }
+}
+
+// ...
+
+const [state, dispatch] = React.useReducer(reducer, props.initialState, init)
+```
+
+Verrà passato il secondo argomento alla funzione di init come parametro e la funzione ritorna l'initial state.
+Questo può risultare utile se la funzione init ad es. fa azioni come leggere dal localStorage o comunque qualcosa che non vogliamo venga lanciato ad ogni re-render.
