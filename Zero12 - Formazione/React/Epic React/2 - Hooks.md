@@ -282,5 +282,39 @@ Questo può risultare utile se la funzione init ad es. fa azioni come leggere da
 
 # useCallback
 
-## [[memoization]]
+[[memoization]]: tecnica di optimizzazione delle performace che elimina il bisogno di ricalcolare un valore per un dato input, salvando il calcolo originale e ritornandolo nel momento in cui viene utilizzato lo stesso input. E' una forma di [[caching]]:
+
+```typescript
+const values = {}
+function addOne(num: number) {
+  if (values[num] === undefined) {
+    values[num] = num + 1 // <-- here's the computation
+  }
+  return values[num]
+}
+```
+
+Un altro aspetto della memoization è il "value referential equality":
+
+```typescript
+const dog1 = new Dog('sam')
+const dog2 = new Dog('sam')
+console.log(dog1 === dog2) // false
+```
+
+Utilizzando la memoization possiamo avere:
+
+```typescript
+const dogs = {}
+function getDog(name: string) {
+  if (dogs[name] === undefined) {
+    dogs[name] = new Dog(name)
+  }
+  return dogs[name]
+}
+
+const dog1 = getDog('sam')
+const dog2 = getDog('sam')
+console.log(dog1 === dog2) // true
+```
 
