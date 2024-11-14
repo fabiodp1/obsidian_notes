@@ -159,3 +159,44 @@ React.useEffect(() => {
   })
 })
 ```
+
+## Error component
+E' possibile gestire gli errori anche attraverso dei componenti che fanno il wrap di quelli che lanciano l'[[errore]], in modo da poter gestire gli errori in maniera più flessibile.
+Per far ciò si utilizza l'[[ErrorBoundary]] component. Ovviamente il componente che viene wrappato dovrà far il thorow dell'errore in modo che venga propagato al boundary.
+[ErrorBoudary Component – React](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary)
+
+```typescript
+function ErrorMessage({error}) {
+  return (
+    <div role="alert">
+      There was an error:{' '}
+      <pre style={{whiteSpace: 'normal'}}>{error.message}</pre>
+    </div>
+  )
+}
+
+class ErrorBoundary extends React.Component {
+  state = {error: null}
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return {error}
+  }
+
+  render() {
+    const {error} = this.state
+    if (error) {
+      // You can render any custom fallback UI
+      return <this.props.FallbackComponent error={error} />
+    }
+    return this.props.children
+  }
+}
+
+function App() {
+  return (
+        <ErrorBoundary FallbackComponent={ErrorMessage}>
+          <ThrowingComponent />
+        </ErrorBoundary>
+  )
+}
+```
