@@ -205,3 +205,4 @@ function App() {
 >[bvaughn/react-error-boundary: Simple reusable React error boundary component](https://github.com/bvaughn/react-error-boundary)
 
 # [[useReducer]]
+Grazie a `useState` abbiamo già un ottimo strumento per gestire lo stato dell'applicativo, ma ci sono casi in cui abbiamo bisogno di separare la logica dello [[state]] dai componenti che fanno i cambi di stato. Inoltre se abbiamo diversi elementi di stato che normalmente cambiano assieme, avere un unico oggetto che li contine può essere molto comodo.
