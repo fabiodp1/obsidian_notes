@@ -105,7 +105,7 @@ squaresCopy[2] = "newValue"
 setSquares(squaresCopy)
 ```
 
-## con [[useRef]]
+## utilizzo con [[useRef]]
 Spesso capita lavorando con react di dover accedere ai nodi del DOM per manipolarlo, per far ciò utilizziamo useRef:
 
 ```javascript
@@ -203,3 +203,5 @@ function App() {
 
 >Normalmente viene utilizzata la libreria [[react-error-boundary]] che già mette a disposizione tutte le proprietà e funzioni per gestire al meglio gli errori.
 >[bvaughn/react-error-boundary: Simple reusable React error boundary component](https://github.com/bvaughn/react-error-boundary)
+
+# [[useReducer]]
