@@ -258,3 +258,5 @@ function myReducer(state, action) {
   return {...state, ...(typeof action === 'function' ? action(state) : action)}
 }
 ```
+
+useReduce possiede un terzo parametro che viene utilizzato normalmente per inizializzare lo [[state]] applicativo, azione chiamata [[lazy initialization]]
