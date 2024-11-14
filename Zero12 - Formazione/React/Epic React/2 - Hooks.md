@@ -237,4 +237,24 @@ Dall'esempio si può notare che il riduttore (chiamto nameReducer) viene chiamat
 [How to implement useState with useReducer](https://kentcdodds.com/blog/how-to-implement-usestate-with-usereducer)
 https://kentcdodds.com/blog/should-i-usestate-or-usereducer
 
+```typescript
+function myReducer(currentState, action) {
+  return action
+}
+```
 
+La action può essere anche un oggetto..
+
+```typescript
+function myReducer(currentState, action) {
+  return {...currentState, ...action}
+}
+```
+
+O una funzione, o entrambe:
+
+```typescript
+function myReducer(state, action) {
+  return {...state, ...(typeof action === 'function' ? action(state) : action)}
+}
+```
