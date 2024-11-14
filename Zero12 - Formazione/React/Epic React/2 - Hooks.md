@@ -318,3 +318,19 @@ const dog2 = getDog('sam')
 console.log(dog1 === dog2) // true
 ```
 
+Un'astrazione generica del momoize può essere:
+
+```typescript
+function memoize<ArgType, ReturnValue>(cb: (arg: ArgType) => ReturnValue) {
+  const cache: Record<ArgType, ReturnValue> = {}
+  return function memoized(arg: ArgType) {
+    if (cache[arg] === undefined) {
+      cache[arg] = cb(arg)
+    }
+    return cache[arg]
+  }
+}
+
+const addOne = memoize((num: number) => num + 1)
+const getDog = memoize((name: string) => new Dog(name))
+```
