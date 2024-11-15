@@ -398,5 +398,27 @@ const updateLocalStorage = React.useCallback(
 >E' possibile usarli anche in altri casi, ma questi sono i più comuni
 
 # useContext
+Per condividere lo [[state]] fra componenti è un problema comune, possiamo innalzare lo stato nella catena padre/figlio ([[lifting state]]), ma poi ci troveremmo a dover fare un fastidioso [[prop drilling]]  per poter condividerlo con tutti i figli e figli dei figli.
 
+Per evitare questo problema, possiamo inserire dello stato in una sezione del tree di React e poi estrarlo dove serve, senza doverlo esplicitamente passare. Questa feature viene chiamata context, è come una sorta di global variable, ma senza i problemi delle global.
 
+```javascript
+const FooContext = React.createContext()
+
+function FooDisplay() {
+  const foo = React.useContext(FooContext)
+  return <div>Foo is: {foo}</div>
+}
+
+ReactDOM.render(
+  <FooContext.Provider value="I am foo">
+    <FooDisplay />
+  </FooContext.Provider>,
+  document.getElementById('root'),
+)
+// renders <div>Foo is: I am foo</div>
+```
+
+FooDisplay potrebbe trovarsi da qualsiasi parte della [[render tree]] e avrà comunque accesso al valore passato dal componente FooContext.Provider.
+
+>NOTA: è possibile passare un argomento al `createContext` che verrà usato come valore di default nel caso in cui il contesto venisse utilizzato tramite `useContext` senza la presenza di un provider. Ma questo è SCONSIGLIATO, perchè non è raccomandato usare un contesto al di fuori di un provider.
