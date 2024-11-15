@@ -359,4 +359,17 @@ React.useEffect(() => {
 }, [updateLocalStorage]) // <-- function as a dependency
 ```
 
-Il problema con questa scelta è che la funzione viene definita all'interno del body del componente e quindi ricreata ad ogni render e quindi triggerando ogni volta lo `useEffect` 
+Il problema con questa scelta è che la funzione viene definita all'interno del body del componente e quindi ricreata ad ogni render e quindi triggerando ogni volta lo `useEffect` .
+Questo è il problema che risolve `useCallback`:
+
+```javascript
+const updateLocalStorage = React.useCallback(
+  () => window.localStorage.setItem('count', count),
+  [count], // <-- yup! That's a dependency list!
+)
+React.useEffect(() => {
+  updateLocalStorage()
+}, [updateLocalStorage])
+```
+
+Quello che succede è che noi passiamo a React la nostra funzione e lui si occupa di metterla in cache e restituircela. Al prossimo render, se gli elementi passati nella dependency list di `useCallback` non sono cambiati, react ci restituirà la stessa funzione cachata in precedenza, evitando che venga triggerata di nuovo la cb dello `useEffect`.
