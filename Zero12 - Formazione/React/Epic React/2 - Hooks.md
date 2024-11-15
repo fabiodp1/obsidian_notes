@@ -280,7 +280,7 @@ const [state, dispatch] = React.useReducer(reducer, props.initialState, init)
 Verrà passato il secondo argomento alla funzione di init come parametro e la funzione ritorna l'initial state.
 Questo può risultare utile se la funzione init ad es. fa azioni come leggere dal localStorage o comunque qualcosa che non vogliamo venga lanciato ad ogni re-render.
 
-# useCallback/useMemo
+# useCallback / useMemo
 
 [[memoization]]: tecnica di optimizzazione delle performace che elimina il bisogno di ricalcolare un valore per un dato input, salvando il calcolo originale e ritornandolo nel momento in cui viene utilizzato lo stesso input. E' una forma di [[caching]]:
 
@@ -391,4 +391,12 @@ const updateLocalStorage = React.useCallback(
   [count],
 )
 ```
+
+>Normalmente `useCallback` e `useMemo` vengono utilizzati per fare il memoize di cb e dati per queste due situazioni:
+>- per le array delle dipendenze, in modo da evitare di triggerare useEffect inutilmente.
+>- per le prop su comonenti di cui è stato fatto il momoize (in questo caso `useMemo`)
+>E' possibile usarli anche in altri casi, ma questi sono i più comuni
+
+# useContext
+
 
