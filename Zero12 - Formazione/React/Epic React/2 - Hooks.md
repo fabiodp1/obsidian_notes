@@ -334,3 +334,7 @@ function memoize<ArgType, ReturnValue>(cb: (arg: ArgType) => ReturnValue) {
 const addOne = memoize((num: number) => num + 1)
 const getDog = memoize((name: string) => new Dog(name))
 ```
+
+In React non serve implementare questo tipo di astrazione, ne abbiamo già a disposizione 2 tipi [[useMemo]] e [[useCallback]].
+[Memoization and React | Epic React by Kent C. Dodds](https://www.epicreact.dev/memoization-and-react)
+
