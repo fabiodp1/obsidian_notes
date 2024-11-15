@@ -338,3 +338,25 @@ const getDog = memoize((name: string) => new Dog(name))
 In React non serve implementare questo tipo di astrazione, ne abbiamo già a disposizione 2 tipi [[useMemo]] e [[useCallback]].
 [Memoization and React | Epic React by Kent C. Dodds](https://www.epicreact.dev/memoization-and-react)
 
+Consideriamo la dependency list di useEffect, se non gliela forniamo, per evitare che il side effect della cb rimanga fuori sync con il resto dello stato dell'applicativo, questo rilancerà la cb ad ogni render.
+
+ma cosa succede se utilizzo una funzione nella mia cb:
+
+```javascript
+const updateLocalStorage = () => window.localStorage.setItem('count', count)
+React.useEffect(() => {
+  updateLocalStorage()
+}, []) // <-- what goes in that dependency list?
+```
+
+potremmo mettere count nella lista e tutto funzionerebbe. Ma se un giorno qualcuno cambiasse `updateLocalStorage` rendendo la key per lo store dinamica? Dovremmo ricordarci di mettere anche `key` nella lista delle dipendenze, e questo ad ogni modifica della funzione.
+Sarebbe molto più facile mettere fra le dipendenze la funzione stessa:
+
+```javascript
+const updateLocalStorage = () => window.localStorage.setItem('count', count)
+React.useEffect(() => {
+  updateLocalStorage()
+}, [updateLocalStorage]) // <-- function as a dependency
+```
+
+Il problema con questa scelta è che la funzione viene definita all'interno del body del componente e quindi ricreata ad ogni render e quindi triggerando ogni volta lo `useEffect` 
