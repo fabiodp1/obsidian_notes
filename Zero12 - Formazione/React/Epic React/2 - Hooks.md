@@ -423,3 +423,53 @@ FooDisplay potrebbe trovarsi da qualsiasi parte della [[render tree]] e avrà co
 
 >NOTA: è possibile passare un argomento al `createContext` che verrà usato come valore di default nel caso in cui il contesto venisse utilizzato tramite `useContext` senza la presenza di un provider. Ma questo è SCONSIGLIATO, perchè non è raccomandato usare un contesto al di fuori di un provider.
 
+## context provider component
+Per questo in genere viene creato un componente apposito che si occupa di fare il provide. Inoltre è buona norma creare un custom hook che si occupi di verificare se il componente figlio si trova all'interno di un provider e in caso contrario lanci un eccezione. In questa maniera evitiamo che ad es. un componente non mostri un valore semplicemente perchè non avendo un provider, allo `useContext` riceverà `undefined`.
+
+```javascript
+const CountContext = React.createContext()
+
+function useCount() {
+  const countContext = React.useContext(CountContext)
+  if (countContext === undefined) {
+    throw new Error(
+      'useCount may only be used from within a child of a CountProvider',
+    )
+  }
+  return countContext
+}
+
+// Importante passare anche props al component provider
+function CountProvider(props) {
+
+  const [count, setCount] = React.useState(0)
+  const value = [count, setCount]
+  
+  return <CountContext.Provider value={value} {...props} />
+}
+
+function CountDisplay() {
+  const [count] = useCount()
+  return <div>{'The current count is ${count}'}</div>
+}
+
+function Counter() {
+  const [, setCount] = useCount()
+  const increment = () => setCount(c => c + 1)
+  return <button onClick={increment}>Increment count</button>
+}
+
+function App() {
+  return (
+    <div>
+      <CountProvider>
+        <CountDisplay />
+        <Counter />
+      </CountProvider>
+    </div>
+  )
+}
+
+export default App
+```
+
