@@ -280,7 +280,7 @@ const [state, dispatch] = React.useReducer(reducer, props.initialState, init)
 Verrà passato il secondo argomento alla funzione di init come parametro e la funzione ritorna l'initial state.
 Questo può risultare utile se la funzione init ad es. fa azioni come leggere dal localStorage o comunque qualcosa che non vogliamo venga lanciato ad ogni re-render.
 
-# useCallback
+# useCallback/useMemo
 
 [[memoization]]: tecnica di optimizzazione delle performace che elimina il bisogno di ricalcolare un valore per un dato input, salvando il calcolo originale e ritornandolo nel momento in cui viene utilizzato lo stesso input. E' una forma di [[caching]]:
 
@@ -373,3 +373,22 @@ React.useEffect(() => {
 ```
 
 Quello che succede è che noi passiamo a React la nostra funzione e lui si occupa di metterla in cache e restituircela. Al prossimo render, se gli elementi passati nella dependency list di `useCallback` non sono cambiati, react ci restituirà la stessa funzione cachata in precedenza (valorizzando quindi la variabile con la stessa reference alla funzione), evitando che venga triggerata di nuovo la cb dello `useEffect`.
+
+[[useCallback]] è solo una scorciatoia per utilizzare [[useMemo]] con le funzioni:
+[When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
+
+```typescript
+// the useMemo version:
+const updateLocalStorage = React.useMemo(
+  // useCallback saves us from this annoying double-arrow function thing:
+  () => () => window.localStorage.setItem('count', count),
+  [count],
+)
+
+// the useCallback version
+const updateLocalStorage = React.useCallback(
+  () => window.localStorage.setItem('count', count),
+  [count],
+)
+```
+
