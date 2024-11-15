@@ -372,4 +372,4 @@ React.useEffect(() => {
 }, [updateLocalStorage])
 ```
 
-Quello che succede è che noi passiamo a React la nostra funzione e lui si occupa di metterla in cache e restituircela. Al prossimo render, se gli elementi passati nella dependency list di `useCallback` non sono cambiati, react ci restituirà la stessa funzione cachata in precedenza, evitando che venga triggerata di nuovo la cb dello `useEffect`.
+Quello che succede è che noi passiamo a React la nostra funzione e lui si occupa di metterla in cache e restituircela. Al prossimo render, se gli elementi passati nella dependency list di `useCallback` non sono cambiati, react ci restituirà la stessa funzione cachata in precedenza (valorizzando quindi la variabile con la stessa reference alla funzione), evitando che venga triggerata di nuovo la cb dello `useEffect`.
