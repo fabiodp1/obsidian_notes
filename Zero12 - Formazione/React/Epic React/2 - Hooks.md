@@ -422,3 +422,4 @@ ReactDOM.render(
 FooDisplay potrebbe trovarsi da qualsiasi parte della [[render tree]] e avrà comunque accesso al valore passato dal componente FooContext.Provider.
 
 >NOTA: è possibile passare un argomento al `createContext` che verrà usato come valore di default nel caso in cui il contesto venisse utilizzato tramite `useContext` senza la presenza di un provider. Ma questo è SCONSIGLIATO, perchè non è raccomandato usare un contesto al di fuori di un provider.
+
