@@ -479,4 +479,6 @@ Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
 2. [[useLayoutEffect]]
 La differenza fra questi è abbastanza subdola (hanno la stessa API).
 Nel 99% dei casi verrà usato `useEffect`, ma in certi casi `useLayoutEffect` può migliorare l'esperienza utente.
+[useEffect vs useLayoutEffect](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect)
+
 
