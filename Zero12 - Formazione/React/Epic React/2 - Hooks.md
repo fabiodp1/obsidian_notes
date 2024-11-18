@@ -484,4 +484,5 @@ Nel 99% dei casi verrà usato `useEffect`, ma in certi casi `useLayoutEffect` pu
 La semplice rule-of-thumb è:
 >Se stai facendo dei cambiamenti chiaramente osservabili nel DOM, usa `useLayoutEffect`, negli altri casi solo `useEffect`.
 
+# useImperativeHandle
 
