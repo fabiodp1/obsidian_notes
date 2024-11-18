@@ -541,3 +541,4 @@ function useCount({initialCount = 0, step = 1} = {}) {
 }
 ```
 
+Adesso quando viene utilizzato `useCount` sarà possibile vedere i valori di `initialCount` e `step` nei React DevToolds.
