@@ -528,4 +528,16 @@ In questo caso il componente figlio `CustomInput` usa `useImperativeHandle` per 
 Il componente genitore può usare il ref per chiamare questi metodi, senza sapere nulla del nodo DOM interno.
 
 # useDebugValue
-Q
+Quando si inizia a scriver custom hooks, può risultare molto utile dargli delle sorte di label speciali per identificarli e per magari differenziare i differenti usi che se ne fanno all'interno del componente.
+
+E' qui che `useDebugValue` risulta utile. Viene utilizzato in un [[custom hook]] in questa maniera:
+
+```javascript
+function useCount({initialCount = 0, step = 1} = {}) {
+  React.useDebugValue({initialCount, step})
+  const [count, setCount] = React.useState(initialCount)
+  const increment = () => setCount(c => c + step)
+  return [count, increment]
+}
+```
+
