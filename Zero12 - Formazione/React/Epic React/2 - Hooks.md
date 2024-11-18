@@ -481,4 +481,7 @@ La differenza fra questi è abbastanza subdola (hanno la stessa API).
 Nel 99% dei casi verrà usato `useEffect`, ma in certi casi `useLayoutEffect` può migliorare l'esperienza utente.
 [useEffect vs useLayoutEffect](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect)
 
+La semplice rule-of-thumb è:
+>Se stai facendo dei cambiamenti chiaramente osservabili nel DOM, usa `useLayoutEffect`, negli altri casi solo `useEffect`.
+
 
