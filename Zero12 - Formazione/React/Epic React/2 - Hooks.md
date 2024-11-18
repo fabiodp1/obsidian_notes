@@ -542,3 +542,17 @@ function useCount({initialCount = 0, step = 1} = {}) {
 ```
 
 Adesso quando viene utilizzato `useCount` sarà possibile vedere i valori di `initialCount` e `step` nei React DevToolds.
+
+Volendo prende anche un secondo parametro come formatter:
+
+```javascript
+const formatCountDebugValue = ({initialCount, step}) =>
+  `init: ${initialCount}; step: ${step}`
+
+function useCount({initialCount = 0, step = 1} = {}) {
+  React.useDebugValue({initialCount, step}, formatCountDebugValue)
+  const [count, setCount] = React.useState(0)
+  const increment = () => setCount(c => c + step)
+  return [count, increment]
+}
+```
