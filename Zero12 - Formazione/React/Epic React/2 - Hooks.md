@@ -485,4 +485,44 @@ La semplice rule-of-thumb è:
 >Se stai facendo dei cambiamenti chiaramente osservabili nel DOM, usa `useLayoutEffect`, negli altri casi solo `useEffect`.
 
 # useImperativeHandle
+Permette di decidere quello che viene esposto quando un componente genitore utilizza un `ref` su un componente figlio.
 
+## quando
+- si usa quando si vuole esporre al genitore solo alcune funzionalità del componente figlio
+- si sta lavorando con componenti personalizzati che racchiudono comportamenti complessi legati ad dom (es. modali, input personalizzati, focus ecc.)
+
+```typescript
+import React, { useImperativeHandle, useRef, forwardRef } from 'react';
+
+// Componente figlio
+const CustomInput = forwardRef((props, ref) => {
+  const inputRef = useRef();
+
+  // Esponi solo i metodi specifici al genitore
+  useImperativeHandle(ref, () => ({
+    focus: () => inputRef.current.focus(),
+    clear: () => (inputRef.current.value = ""),
+  }));
+
+  return <input ref={inputRef} {...props} />;
+});
+
+// Componente genitore
+const Parent = () => {
+  const inputRef = useRef();
+
+  return (
+    <div>
+      <CustomInput ref={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>Focus</button>
+      <button onClick={() => inputRef.current.clear()}>Clear</button>
+    </div>
+  );
+};
+
+export default Parent;
+
+```
+
+In questo caso il componente figlio `CustomInput` usa `useImperativeHandle` per esporre solo i netordi `focus` e `clear`.
+Il componente genitore può usare il ref per chiamare questi metodi, senza sapere nulla del nodo DOM interno.
