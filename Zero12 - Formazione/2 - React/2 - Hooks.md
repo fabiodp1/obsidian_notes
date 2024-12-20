@@ -13,7 +13,7 @@ E' una funzione che accetta un parametro come initial state e ritorna una coppia
 
 ## lazy state initialization
  useState può prendere come valore iniziale sia il valore direttamente, o una funzione che lo restituisca. La differenza è che passando una funzione, questa verrà chiamata solo al primo mount del componente, mentre nel primo caso il valore verrà estrapolato ogni volta che la funzione del componente verrà chiamata (ad es. al ri-render).
- Passando una funzione ci assicuriamo, nel caso in cui il nostro valore sia il risultato di un'azione, che la stessa azione venga ripetuta ad ogni render, creando rallentamenti.
+ Passando una funzione ci assicuriamo, nel caso in cui il nostro valore sia il risultato di un'azione, che la stessa azione non venga ripetuta ad ogni render, creando rallentamenti.
 
 ```typescript
 // In questa maniera verrà fatta la lettura dello store ad ogni render

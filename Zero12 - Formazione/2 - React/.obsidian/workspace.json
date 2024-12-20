@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "d914a23386ce90ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "1137dec5b254abd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f0ea3adcdf38954a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Epic React/2 - Hooks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2 - Hooks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "13db3a231f173925",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1c136ba484bc9fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e2dbc088e50799d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "85f54d2415a25d90",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "5c22f21242f36406",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "74f9dbdfba6055e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "5206086a82b7b6c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "653c4692c3aa31a9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Epic React/2 - Hooks.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a 2 - Hooks"
+            }
+          },
+          {
+            "id": "4cf5dc44fa87bcdd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Epic React/2 - Hooks.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da 2 - Hooks"
+            }
+          },
+          {
+            "id": "b13d6d361460ec0c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "0ce01e62df12d236",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Epic React/2 - Hooks.md"
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di 2 - Hooks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
+    }
+  },
+  "active": "f0ea3adcdf38954a",
+  "lastOpenFiles": []
+}

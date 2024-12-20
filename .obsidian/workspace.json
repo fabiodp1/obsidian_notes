@@ -25,12 +25,14 @@
             "id": "ed109b495f5d06c2",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.7"
+                "file": "Zero12 - Formazione/React/Epic React/1 - React Fundamentals.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "title": "1 - React Fundamentals"
             }
           }
         ],
@@ -90,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 200
   },
   "right": {
     "id": "7efb321a22ba6aba",
@@ -151,9 +153,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Zero12 - Formazione/React/Epic React/1 - React Fundamentals.md"
+              },
               "icon": "lucide-list",
-              "title": "Struttura"
+              "title": "Struttura di 1 - React Fundamentals"
             }
           },
           {
@@ -162,8 +166,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           },
           {

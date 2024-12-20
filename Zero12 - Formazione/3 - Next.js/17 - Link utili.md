@@ -1,0 +1,9 @@
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Next.js Templates](https://vercel.com/templates/next.js):
+    - [Admin Dashboard Template](https://vercel.com/templates/next.js/admin-dashboard-tailwind-postgres-react-nextjs)
+    - [Next.js Commerce](https://vercel.com/templates/next.js/nextjs-commerce)
+    - [Blog Starter Kit](https://vercel.com/templates/next.js/blog-starter-kit)
+    - [AI Chatbot](https://vercel.com/templates/next.js/nextjs-ai-chatbot)
+    - [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter)
+- [Next.js Repository](https://github.com/vercel/next.js)
+- [Vercel YouTube](https://www.youtube.com/@VercelHQ/videos)
