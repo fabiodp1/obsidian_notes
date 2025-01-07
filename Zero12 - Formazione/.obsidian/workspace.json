@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/17 - Link utili.md",
+                "file": "zzz_Pagine/Vercel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "17 - Link utili"
+              "title": "Vercel"
             }
           }
         ]
@@ -160,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 610.5
+    "width": 334.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,8 +175,15 @@
   },
   "active": "aa0c9701c0863372",
   "lastOpenFiles": [
-    "3 - Next.js/17 - Link utili.md",
+    "3 - Next.js/6 - Configurare il DB.md",
+    "zzz_Pagine/Vercel.md",
+    "3 - Next.js/7 - Fetching data.md",
+    "3 - Next.js/5 - Navigazione fra pagine.md",
+    "3 - Next.js/3 - Ottimizzare font e immagini.md",
+    "3 - Next.js/2 - CSS Styling.md",
+    "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/16 - Aggiungere metadati.md",
+    "3 - Next.js/17 - Link utili.md",
     "3 - Next.js/15 - Autenticazione.md",
     "2 - React/2 - Hooks.md",
     "3 - Next.js/14 - Migliorare l'accessibilità.md",
@@ -195,16 +202,9 @@
     "zzz_Pagine/Server Component.md",
     "zzz_Pagine/React.md",
     "zzz_Pagine/streaming.md",
-    "3 - Next.js/9 - Streaming.md",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
     "zzz_Pagine",
-    "3 - Next.js/3 - Ottimizzare font e immagini.md",
-    "useRouter.md",
-    "usePathname.md",
-    "state.md",
-    "3 - Next.js/2 - CSS Styling.md",
-    "3 - Next.js/1 - Getting started.md",
     "zzzz_allegati/Pasted image 20241216113742.png",
     "zzzz_allegati/Pasted image 20241216094250.png",
     "Senza nome.canvas",
