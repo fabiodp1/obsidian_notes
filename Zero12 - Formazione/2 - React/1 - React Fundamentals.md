@@ -22,7 +22,7 @@ const rootElement = document.getElementById('root')
 # [[JSX]]
 https://react.dev/learn/writing-markup-with-jsx
 
-[[Fragment]]: corrisponde a "<></>" e viene utilizzato per wrappare il markup che verrà restituito da un componente React nel momento in cui non si vuole utilizzare un div che lo faccia, perchè non si vuole creare un div inutilmente.
+[[Fragment]]: corrisponde a `<></>` e viene utilizzato per wrappare il markup che verrà restituito da un componente React nel momento in cui non si vuole utilizzare un div che lo faccia, perchè non si vuole creare un div inutilmente.
 
 ```jsx
 <>  
