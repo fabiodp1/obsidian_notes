@@ -1,0 +1,5 @@
+- [Why React Re-Renders • Josh W. Comeau](https://www.joshwcomeau.com/react/why-react-re-renders/)
+- [Understanding useMemo and useCallback • Josh W. Comeau](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
+- [[MUI]]: https://mui.com/material-ui/getting-started/
+- [[docs]]: [React](https://react.dev/)
+- [[React]] + [[Vite]]: [Vite-React + React-Router-Dom: The latest way!! | by Galo Hernandez | Medium](https://medium.com/@galohernandez/vite-react-react-router-dom-the-latest-way-312ee887197e)

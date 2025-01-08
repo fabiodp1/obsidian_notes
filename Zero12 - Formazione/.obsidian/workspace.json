@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/1 - Getting started.md",
+                "file": "2 - React/9 - Link utili.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - Getting started"
+              "title": "9 - Link utili"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - React/8 - Patterns.md",
+                "file": "2 - React/9 - Link utili.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 8 - Patterns"
+              "title": "Riferimenti a 9 - Link utili"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zzz_Pagine/Vercel.md",
+                "file": "2 - React/9 - Link utili.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da Vercel"
+              "title": "Collegamenti in uscita da 9 - Link utili"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/15 - Autenticazione.md"
+                "file": "2 - React/9 - Link utili.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di 15 - Autenticazione"
+              "title": "Struttura di 9 - Link utili"
             }
           },
           {
@@ -155,8 +155,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -175,22 +174,25 @@
   },
   "active": "aa0c9701c0863372",
   "lastOpenFiles": [
+    "2 - React/8 - Patterns.md",
+    "2 - React/9 - Link utili.md",
+    "1 - Development/Convenzioni.md",
+    "zzz_Pagine/docs.md",
+    "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
+    "2 - React/2 - Hooks.md",
+    "2 - React/1 - React Fundamentals.md",
+    "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/3 - Ottimizzare font e immagini.md",
     "3 - Next.js/2 - CSS Styling.md",
-    "2 - React/8 - Patterns.md",
     "2 - React/7 - Code splitting.md",
     "2 - React/6 - Compound components.md",
     "2 - React/5 - Context.md",
     "2 - React/4 - Cache management.md",
     "2 - React/3 - Routing.md",
-    "2 - React/2 - Hooks.md",
-    "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
-    "2 - React/1 - React Fundamentals.md",
     "zzz_Pagine/Vercel.md",
     "3 - Next.js/6 - Configurare il DB.md",
     "3 - Next.js/7 - Fetching data.md",
     "3 - Next.js/5 - Navigazione fra pagine.md",
-    "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/16 - Aggiungere metadati.md",
     "3 - Next.js/17 - Link utili.md",
     "3 - Next.js/15 - Autenticazione.md",
@@ -198,10 +200,7 @@
     "zzz_Pagine/Zod.md",
     "3 - Next.js/12 - Mutating Data.md",
     "zzz_Pagine/[Zod.md",
-    "3 - Next.js/13 - Gestione errori.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
-    "zzz_Pagine/HTML.md",
-    "zzz_Pagine/form.md",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
     "zzz_Pagine",
