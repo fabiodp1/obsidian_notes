@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ffffd33336ad8fe1",
+        "id": "76eb14ae4c51c4c0",
         "type": "tabs",
         "children": [
           {
-            "id": "aa0c9701c0863372",
+            "id": "ecf80e9bf2ae72b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -173,8 +173,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "84b4a88a80271df9",
+  "active": "ecf80e9bf2ae72b0",
   "lastOpenFiles": [
+    "zzz_Pagine/react-router-dom.md",
+    "2 - React/3 - Routing.md",
     "2 - React/9 - Link utili.md",
     "2 - React/8 - Patterns.md",
     "1 - Development/Convenzioni.md",
@@ -189,7 +191,6 @@
     "2 - React/6 - Compound components.md",
     "2 - React/5 - Context.md",
     "2 - React/4 - Cache management.md",
-    "2 - React/3 - Routing.md",
     "zzz_Pagine/Vercel.md",
     "3 - Next.js/6 - Configurare il DB.md",
     "3 - Next.js/7 - Fetching data.md",
@@ -200,7 +201,6 @@
     "3 - Next.js/14 - Migliorare l'accessibilità.md",
     "zzz_Pagine/Zod.md",
     "3 - Next.js/12 - Mutating Data.md",
-    "zzz_Pagine/[Zod.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
