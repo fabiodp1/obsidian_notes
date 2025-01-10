@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "76eb14ae4c51c4c0",
+        "id": "88fffe9b2e07123e",
         "type": "tabs",
         "children": [
           {
-            "id": "ecf80e9bf2ae72b0",
+            "id": "abbfc6512bef1592",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/3 - Routing.md",
+                "file": "2 - React/2 - Hooks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Routing"
+              "title": "2 - Hooks"
             }
           }
         ]
@@ -173,16 +173,17 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "ecf80e9bf2ae72b0",
+  "active": "abbfc6512bef1592",
   "lastOpenFiles": [
-    "zzz_Pagine/react-router-dom.md",
     "2 - React/3 - Routing.md",
+    "2 - React/2 - Hooks.md",
+    "zzz_Pagine/useState.md",
+    "zzz_Pagine/react-router-dom.md",
     "2 - React/9 - Link utili.md",
     "2 - React/8 - Patterns.md",
     "1 - Development/Convenzioni.md",
     "zzz_Pagine/docs.md",
     "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
-    "2 - React/2 - Hooks.md",
     "2 - React/1 - React Fundamentals.md",
     "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/3 - Ottimizzare font e immagini.md",
@@ -200,7 +201,6 @@
     "3 - Next.js/15 - Autenticazione.md",
     "3 - Next.js/14 - Migliorare l'accessibilità.md",
     "zzz_Pagine/Zod.md",
-    "3 - Next.js/12 - Mutating Data.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",

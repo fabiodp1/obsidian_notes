@@ -1,4 +1,4 @@
-\Normalmente viene utilizzato [[react-router-dom]]:
+Normalmente viene utilizzato [[react-router]]:
 [Docs | React Router](https://reactrouter.com/en/main)
 
 # BrowserRouter / Routes / Route
