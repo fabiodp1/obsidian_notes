@@ -22,6 +22,20 @@ React.useState(window.localStorage.getItem('name') ?? '')
 // Così verrà chiamato solo al primo render/mount
 React.useState(() => window.localStorage.getItem('name') ?? '')
 ```
+
+>Se dobbiamo cambiare uno stato in base ad uno precedente, non va utilizzato direttamente il valore dello stato, ma passare una callback:
+
+```jsx
+//...
+
+const [state, setState] = useState(false);
+
+function handleStateChange() {
+	setState(!state); // WRONG
+	setState(oldState => !oldState)
+}
+
+```
 # [[useEffect]]
 Permette di fare delle azioni dopo che React ha renderizzato (e ri-renderizzato) il componente nel [[DOM]] (quindi da considerare che viene chiamata ogni volta).
 Accetta una funzione di callback che React chiamerà DOPO l'update del DOM:
