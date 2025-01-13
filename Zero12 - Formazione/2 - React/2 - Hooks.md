@@ -36,6 +36,27 @@ function handleStateChange() {
 }
 
 ```
+
+>Se lo state da cambire è una reference (oggetto o array), non va modificato direttamente ma va fatta prima una copia.
+
+```jsx
+// WRONG
+function handleChange(){
+	setNewState(oldState => {
+		oldState.name = "Pippo";
+		return oldState;
+	})
+}
+
+// RIGHT
+function handleChange(){
+	setNewState(oldState => {
+		const newState = {...oldState};
+		newState.name = "Pippo";
+		return newState;
+	})
+}
+```
 # [[useEffect]]
 Permette di fare delle azioni dopo che React ha renderizzato (e ri-renderizzato) il componente nel [[DOM]] (quindi da considerare che viene chiamata ogni volta).
 Accetta una funzione di callback che React chiamerà DOPO l'update del DOM:
