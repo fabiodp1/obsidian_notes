@@ -6,3 +6,5 @@ Per questo motivo ad es. il file [[HTML]] (come altri) possono accedere ad una r
 <img src="icon.jpg" ...> // YES
 <img src="./icon.jpg" ...> // NOT needed
 ```
+
+## Assets
