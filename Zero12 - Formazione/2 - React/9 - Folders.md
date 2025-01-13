@@ -7,4 +7,5 @@ Per questo motivo ad es. il file [[HTML]] (come altri) possono accedere ad una r
 <img src="./icon.jpg" ...> // NOT needed
 ```
 
-## Assets
+>In Linea di massima vanno messi in questa cartella tutti gli elementi che non vanno presi in carico dal builder, ad es. immagini utilizzati direttamente dal file [[HTML]] o favicon.
+>Se vengono utilizzati da componenti, vanno messi al di fuori di #public  in modo da essere presi in carico dal builder.
