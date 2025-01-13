@@ -156,11 +156,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 291.5
+    "width": 403.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,7 +173,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "abbfc6512bef1592",
+  "active": "84b4a88a80271df9",
   "lastOpenFiles": [
     "2 - React/1 - React Fundamentals.md",
     "2 - React/10 - Link utili.md",

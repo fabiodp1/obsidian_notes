@@ -37,7 +37,7 @@ function handleStateChange() {
 
 ```
 
->Se lo state da cambire è una reference (oggetto o array), non va modificato direttamente ma va fatta prima una copia.
+>Se lo state da cambiare è una reference (oggetto o array), non va modificato direttamente ma va fatta prima una copia.
 
 ```jsx
 // WRONG
