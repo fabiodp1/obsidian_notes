@@ -3,7 +3,8 @@
 
 ```jsx
 function WrapMyContent({children, container}) {
-	const Container = container; // DEVE essere storato in una variabile in modo da diventare PascalCase ed essere riconisciuto come un custom component
+	const Container = container; // DEVE essere storato in una variabile in modo da diventare PascalCase ed essere riconisciuto come un custom component.
+	// L'alternativa è richiedere una prop in PascalCase, in questa maniera non serve la conversione.
 
 	return (
 	<Container> {// Adesso è PascalCase e React capirà che si tratta di un custom component
