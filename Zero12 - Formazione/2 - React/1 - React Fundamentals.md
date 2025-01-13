@@ -59,16 +59,16 @@ Anche questo è ammissibile:
 
 ```JSX
 function message(props) {
-      return <div class="message">{props.children}</div>
-    }
-    const element = (
-      <div className="container">
-        {React.createElement(message, {children: 'Hello World'})}
-        {React.createElement(message, {children: 'Goodbye World'})}
-      </div>
-    )
+  return <div class="message">{props.children}</div>
+}
+const element = (
+  <div className="container">
+	{React.createElement(message, {children: 'Hello World'})}
+	{React.createElement(message, {children: 'Goodbye World'})}
+  </div>
+)
 
-    ReactDOM.createRoot(document.getElementById('root')).render(element)
+ReactDOM.createRoot(document.getElementById('root')).render(element)
 ```
 # [[Components]]
 
