@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/2 - Hooks.md",
+                "file": "2 - React/1 - React Fundamentals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Hooks"
+              "title": "1 - React Fundamentals"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/2 - Hooks.md"
+                "file": "2 - React/1 - React Fundamentals.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di 2 - Hooks"
+              "title": "Struttura di 1 - React Fundamentals"
             }
           },
           {
@@ -156,7 +156,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -173,20 +173,20 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "84b4a88a80271df9",
+  "active": "abbfc6512bef1592",
   "lastOpenFiles": [
+    "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
+    "2 - React/2 - Hooks.md",
     "2 - React/1 - React Fundamentals.md",
     "2 - React/10 - Link utili.md",
     "2 - React/8 - Patterns.md",
     "2 - React/9 - Folders.md",
     "zzz_Pagine/JSX.md",
-    "2 - React/2 - Hooks.md",
     "2 - React/3 - Routing.md",
     "zzz_Pagine/useState.md",
     "zzz_Pagine/react-router-dom.md",
     "1 - Development/Convenzioni.md",
     "zzz_Pagine/docs.md",
-    "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
     "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/3 - Ottimizzare font e immagini.md",
     "3 - Next.js/2 - CSS Styling.md",
