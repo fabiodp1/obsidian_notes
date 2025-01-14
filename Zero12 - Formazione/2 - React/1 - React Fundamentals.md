@@ -122,6 +122,7 @@ function App() {
 ```jsx
 import classes from './Header.module.css';
 //...
+// Il nome della classe deve essere quello dichiarato nel css
 <p className={classes.paragraph}> ... </p>
 //...
 ```
