@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "zod",
+                "query": "tag:#scoped",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -173,11 +174,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "abbfc6512bef1592",
+  "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
+    "2 - React/1 - React Fundamentals.md",
     "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
     "2 - React/2 - Hooks.md",
-    "2 - React/1 - React Fundamentals.md",
     "2 - React/10 - Link utili.md",
     "2 - React/8 - Patterns.md",
     "2 - React/9 - Folders.md",

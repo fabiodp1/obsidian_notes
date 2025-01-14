@@ -116,7 +116,7 @@ function App() {
 }
 ```
 
->È possibile utilizzare file [[CSS]] semplicemente importandoli, ma c'è da tenere presente che in questo modo non saranno scoped rispetto al componente, quindi potrenno modificare tutto l'applicativo. 
+>È possibile utilizzare file [[CSS]] semplicemente importandoli, ma c'è da tenere presente che in questo modo non saranno #scoped rispetto al componente, quindi potrenno modificare tutto l'applicativo. 
 # [[form]]
 
 Non ci sono molti modi in React per poter interagire con le Form, possiamo aggiungere un handler che verrà triggerato al submit [[onSubmit]] questo verrà chiamato avendo come parametro l'evento, contenetne la proprietà target che rappresenta il nodo DOM della form.
