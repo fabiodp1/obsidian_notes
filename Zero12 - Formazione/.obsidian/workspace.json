@@ -35,8 +35,7 @@
               "title": "2 - CSS Styling"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Next.js/2 - CSS Styling.md",
+                "file": "2 - React/1 - React Fundamentals.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 2 - CSS Styling"
+              "title": "Riferimenti a 1 - React Fundamentals"
             }
           },
           {
@@ -154,10 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/2 - CSS Styling.md"
+                "file": "2 - React/1 - React Fundamentals.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di 2 - CSS Styling"
+              "title": "Struttura di 1 - React Fundamentals"
             }
           },
           {
@@ -187,10 +186,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "bb8d8ef366a86ce0",
+  "active": "abbfc6512bef1592",
   "lastOpenFiles": [
-    "2 - React/1 - React Fundamentals.md",
     "3 - Next.js/2 - CSS Styling.md",
+    "2 - React/1 - React Fundamentals.md",
     "zzz_Pagine/CSS Modules.md",
     "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
     "2 - React/2 - Hooks.md",

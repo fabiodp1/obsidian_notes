@@ -117,7 +117,14 @@ function App() {
 ```
 
 >È possibile utilizzare file [[CSS]] semplicemente importandoli, ma c'è da tenere presente che in questo modo non saranno #scoped rispetto al componente, quindi potremmo modificare tutto l'applicativo. 
->Se si vuole scrivere [[CSS]] specifico per per componente ( #scoped ), bisogna utilizzare i [[CSS Modules]]
+>Se si vuole scrivere [[CSS]] specifico per per componente ( #scoped ), bisogna utilizzare i [[CSS Modules]], rinominando il file css in es. `Header.module.css` e importando nel componente le singole classi come se fossero delle variabili:
+
+```jsx
+import classes from './Header.module.css';
+//...
+<p className={classes.paragraph}> ... </p>
+//...
+```
 # [[form]]
 
 Non ci sono molti modi in React per poter interagire con le Form, possiamo aggiungere un handler che verrà triggerato al submit [[onSubmit]] questo verrà chiamato avendo come parametro l'evento, contenetne la proprietà target che rappresenta il nodo DOM della form.

@@ -17,7 +17,7 @@ export default function RootLayout({
 ```
 
 # CSS Modules
-[[CSS Modules]] permette di creare CSS specifico per un componente creando automaticamente nomi di classi uniche, così non c'è bisogno di preoccuparsi di [[style collision]].
+[[CSS Modules]] permette di creare CSS specifico per un componente ( #scoped ) creando automaticamente nomi di classi uniche, così non c'è bisogno di preoccuparsi di [[style collision]].
 
 ```CSS
 /* home.module.css */
