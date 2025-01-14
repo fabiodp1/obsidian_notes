@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#scoped",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +73,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -157,7 +156,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -174,7 +173,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "4bad5ba6f5ce048b",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "2 - React/1 - React Fundamentals.md",
     "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
