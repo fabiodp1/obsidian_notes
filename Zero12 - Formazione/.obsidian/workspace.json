@@ -169,7 +169,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -186,7 +187,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "abbfc6512bef1592",
+  "active": "5f9799b7958c8dda",
   "lastOpenFiles": [
     "3 - Next.js/2 - CSS Styling.md",
     "2 - React/1 - React Fundamentals.md",
