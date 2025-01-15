@@ -12,4 +12,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 >[[StrictMode]] ha effetto solo in dev mode.
 
 Questo componente fa diverse cose per aiutarci a individuare dei bug, ad es:
-- Esegue (rirenderizza) i componenti 2 volte di fila (può portare all'individuazione di certi bug)
+- Esegue (ri-renderizza) i componenti 2 volte di fila (può portare all'individuazione di certi bug)
