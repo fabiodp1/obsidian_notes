@@ -57,6 +57,10 @@ function handleChange(){
 	})
 }
 ```
+
+>Come regola di base, usiamo [[useState]] se la variabile da usare e modificare ha un effetti nella UI (es. viene mostrata nella UI) e quindi c'è bisogno che la sua modifica scateni una riesecuzione del componente. In caso contrario meglio pensare di usare altri metodi, ad es. [[useRef]].
+
+>È inoltre importante capire prima di creare un nuovo stato, se può essere #derived o #computed da uno stato esistente, è importante mantenere il minimo lo state per evitare re-rendering inutili.
 # [[useEffect]]
 Permette di fare delle azioni dopo che React ha renderizzato (e ri-renderizzato) il componente nel [[DOM]] (quindi da considerare che viene chiamata ogni volta).
 Accetta una funzione di callback che React chiamerà DOPO l'update del DOM:

@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#computed",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -173,7 +174,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "bb8d8ef366a86ce0",
+  "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
     "2 - React/10 - Debugging.md",
     "2 - React/3 - Routing.md",
