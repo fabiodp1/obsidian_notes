@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/10 - Debugging.md",
+                "file": "2 - React/2 - Hooks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 - Debugging"
+              "title": "2 - Hooks"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/10 - Debugging.md"
+                "file": "2 - React/2 - Hooks.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di 10 - Debugging"
+              "title": "Struttura di 2 - Hooks"
             }
           },
           {
@@ -175,8 +175,8 @@
   },
   "active": "bb8d8ef366a86ce0",
   "lastOpenFiles": [
-    "2 - React/3 - Routing.md",
     "2 - React/10 - Debugging.md",
+    "2 - React/3 - Routing.md",
     "3 - Next.js/2 - CSS Styling.md",
     "2 - React/11 - Link utili.md",
     "2 - React/1 - React Fundamentals.md",
