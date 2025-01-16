@@ -599,3 +599,35 @@ function useCount({initialCount = 0, step = 1} = {}) {
 # useImperativeHandle
 [[useImperativeHandle]] permette ad un componente di esporre una propria API chiamabile dal componente padre. Ci sono infatti certi casi in cui è utilie, ad esempio quando il padre tramite ref interagisce con degli elementi del componente figlio, elementi che potrebbero cambiare senza che il padre ne sia consapevole. Ad es. il padre potrebbe utilizzare il metodo showModal di un elemento figlio dialog, ma questo in un futuro viene cambiato in div.
 
+```tsx
+// Child
+export default function ResultModal({ result, targetTime, timeLeft, ref }) {
+  const dialogRef = useRef();
+
+  useImperativeHandle(ref, () => ({
+    open() {
+      dialogRef.current.showModal();
+    },
+  }));
+
+  return (
+    <dialog className="result-modal" ref={dialogRef}>
+      <h2>You {result}</h2>
+    //...
+
+//Father
+
+//...
+
+function handleStopTimer() {
+    resultModal.current.open();
+  }
+
+return (
+    <>
+      <ResultModal
+        ref={resultModal}
+      />      
+```
+
+In questa maniera il padre può rimanere cieco alla reale implementazione del figlio, e sarà quest'ultimo a doverne gestire la logica.
