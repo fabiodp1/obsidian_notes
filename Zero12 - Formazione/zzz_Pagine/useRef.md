@@ -28,6 +28,6 @@ export default function ResultModal({ result, targetTime, timeLeft, ref }) {
     <dialog className="result-modal" ref={ref}>
       <h2>You {result}</h2>
 //...
-
-
 ```
+
+>Prima di React 19, bisognava usare [[forwardRef]].
