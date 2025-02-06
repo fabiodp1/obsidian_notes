@@ -526,7 +526,7 @@ La semplice rule-of-thumb è:
 # useImperativeHandle
 Permette di decidere quello che viene esposto quando un componente genitore utilizza un `ref` su un componente figlio.
 
-## quando
+## Quando
 - si usa quando si vuole esporre al genitore solo alcune funzionalità del componente figlio
 - si sta lavorando con componenti personalizzati che racchiudono comportamenti complessi legati ad dom (es. modali, input personalizzati, focus ecc.)
 
