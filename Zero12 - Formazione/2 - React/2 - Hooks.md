@@ -621,7 +621,7 @@ export default function ResultModal({ result, targetTime, timeLeft, ref }) {
 
 function handleStopTimer() {
     resultModal.current.open();
-  }
+}
 
 return (
     <>
