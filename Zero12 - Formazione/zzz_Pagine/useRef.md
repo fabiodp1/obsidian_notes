@@ -10,7 +10,7 @@ const timeLeft = endingTime.current * 1000 - endingTime.current * 1000;
 ```
 
 ## Come fare il forward verso [[custom component]]
-Per passare una ref ad un [[custom component]] figlio, da React 19 in poi, è possibile semplicemente passare la ref come se fosse una prop normale per poi utilizzarla nella ref dell'elemento html del custom component.
+Per passare una ref ad un [[custom component]] figlio, da [[React 19]] in poi, è possibile semplicemente passare la ref come se fosse una prop normale per poi utilizzarla nella ref dell'elemento html del custom component.
 
 ```tsx
 const resultModal = useRef();
@@ -30,4 +30,4 @@ export default function ResultModal({ result, targetTime, timeLeft, ref }) {
 //...
 ```
 
->Prima di React 19, bisognava usare [[forwardRef]].
+>Prima di [[React 19]], bisognava usare [[forwardRef]].
