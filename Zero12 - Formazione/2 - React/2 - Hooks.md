@@ -524,26 +524,7 @@ function App() {
 export default App
 ```
 
->Non è necessario passare un value, è anche possibile semplicemente inizializzare il context:
-
-```tsx
-export const CartContext = useContext({
-	items: []
-})
-
-...
-
-export default function MyApp() {
-	return (
-		<CartContext.Provider>
-			<App />
-		</CartContext.Provider>
-	)
-}
-
-```
-
->Con [[React 19]] è possibile fare il wrap senza bisogno di fare `.Provider`:
+>Con [[React 19]] è possibile fare il wrap senza bisogno di aggiungere `.Provider`:
 
 ```tsx
 <CartContext>

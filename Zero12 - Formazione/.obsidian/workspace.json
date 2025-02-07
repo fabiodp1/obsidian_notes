@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zzz_Pagine/use.md",
+                "file": "2 - React/2 - Hooks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "use"
+              "title": "2 - Hooks"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zzz_Pagine/use.md",
+                "file": "2 - React/2 - Hooks.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a use"
+              "title": "Riferimenti a 2 - Hooks"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zzz_Pagine/use.md",
+                "file": "2 - React/2 - Hooks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da use"
+              "title": "Collegamenti in uscita da 2 - Hooks"
             }
           },
           {
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "zzz_Pagine/use.md",
+                "file": "2 - React/2 - Hooks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di use"
+              "title": "Struttura di 2 - Hooks"
             }
           },
           {
@@ -176,8 +176,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -196,10 +195,10 @@
   },
   "active": "70c6093304a51c91",
   "lastOpenFiles": [
-    "2 - React/2 - Hooks.md",
-    "zzz_Pagine/use.md",
     "zzz_Pagine/useContext.md",
+    "2 - React/2 - Hooks.md",
     "2 - React/5 - Context.md",
+    "zzz_Pagine/use.md",
     "zzz_Pagine/React 19.md",
     "zzz_Pagine/useRef.md",
     "2 - React/12 - Link utili.md",
