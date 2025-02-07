@@ -9,9 +9,11 @@ Tutti questi possono essere utilizzati all'interno di un componente React per st
 Ognuno di questi hook possiede una propria [[API]], alcune ritornano un valore (come useRef e useContext), altre coppie di valori (useState, useReducer) e altri non ritornano niente (useEffect).
 
 # [[useState]]
+
 E' una funzione che accetta un parametro come initial state e ritorna una coppia di valori, ritornando una array con 2 valori (utilizzato con la destrutturazione per dare un nome ai due valori), lo stato e una funzione setter per cambiare lo stato (per convenzione viene nominata iniziando con 'set').
 
 ## lazy state initialization
+
  useState può prendere come valore iniziale sia il valore direttamente, o una funzione che lo restituisca. La differenza è che passando una funzione, questa verrà chiamata solo al primo mount del componente, mentre nel primo caso il valore verrà estrapolato ogni volta che la funzione del componente verrà chiamata (ad es. al ri-render).
  Passando una funzione ci assicuriamo, nel caso in cui il nostro valore sia il risultato di un'azione, che la stessa azione non venga ripetuta ad ogni render, creando rallentamenti.
 
@@ -62,6 +64,7 @@ function handleChange(){
 
 >È inoltre importante capire prima di creare un nuovo stato, se può essere #derived o #computed da uno stato esistente, è importante mantenere il minimo lo state per evitare re-rendering inutili.
 # [[useEffect]]
+
 Permette di fare delle azioni dopo che React ha renderizzato (e ri-renderizzato) il componente nel [[DOM]] (quindi da considerare che viene chiamata ogni volta).
 Accetta una funzione di callback che React chiamerà DOPO l'update del DOM:
 
@@ -85,6 +88,7 @@ React.useEffect(() => {
 ```
 
 ## [[custom hook]]
+
 E' possibile riutilizzare codice che potrebbe essere utile altrove in funzioni che vengono chiamate dai componenti che ne hanno di bisogno, proprio come normali funzioni JS e ovviamente ritornano la stessa dupletta di un normale hook.
 Queste funzioni vengono chiamate "custom hooks".
 
@@ -125,9 +129,11 @@ function App() {
 ```
 
 ## lifting state
+
 Molte volte capita che vi sia la necessità di condividere lo state fra componenti fratelli, la risposta è semplice "[[lifting state]]" cioè spostare la gestione dello state nel parent più vicino che si occuperà di passarlo ai figli assieme al meccanismo per aggiornarlo.
 
 ## colocating state
+
 Come è importante fare il [[lifting state]], è anche importante ricordarsi di fare il [[colocate state]] cioè ricordarsi che la gestione dello [[state]] dovrebbe stare dove è necessario. Ad esempio se per comabio di feature non è più necessario che tutto lo state venga gestito dal padre, lo state di competenza dovrebbe ritornare al child. In questa maniera si miglioreranno le performance.
 
 >[[managed state]]: state che va esplicitamente gestito
@@ -145,6 +151,7 @@ setSquares(squaresCopy)
 ```
 
 ## utilizzo con [[useRef]]
+
 Spesso capita lavorando con react di dover accedere ai nodi del DOM per manipolarlo, per far ciò utilizziamo useRef:
 
 ```javascript
@@ -166,6 +173,7 @@ Per questo normalmente la manipolazione del [[DOM]] avviene all'interno della ca
 >Se ometti l'array delle dipendenze, l'effetto verrà eseguito ad ogni render del componente, poiché React non ha indicazioni su quando dovrebbe limitare l'esecuzione dell'effetto. Questo comportamento può portare a esecuzioni inutili dell'effetto, causando potenzialmente problemi di prestazioni o comportamenti indesiderati, specialmente se l'effetto contiene operazioni pesanti o che interagiscono con l'esterno (come chiamate API).
 
 ## HTTP Request
+
 Come abbiamo visto, in useEffect faremo operazioni che vanno svolte subito dopo il mount del componente e che devono ripetersi ad ogni re-render, ad ogni modifica delle dipendenze o una sola volta. Per questo motivo in genere le chiamate HTTP vengono fatte all'nterno di questo [[hook]].
 Il problema però è che useEffect può solo ritornare una funzione per il cleanup, e facendo un await, automaticamente verrà rotornata una Promise, a prescindere se venga ritornata qualcosa o meno:
 
@@ -200,6 +208,7 @@ React.useEffect(() => {
 ```
 
 ## Error component
+
 E' possibile gestire gli errori anche attraverso dei componenti che fanno il wrap di quelli che lanciano l'[[errore]], in modo da poter gestire gli errori in maniera più flessibile.
 Per far ciò si utilizza l'[[ErrorBoundary]] component. Ovviamente il componente che viene wrappato dovrà far il thorow dell'errore in modo che venga propagato al boundary.
 [ErrorBoudary Component – React](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary)
@@ -438,6 +447,7 @@ const updateLocalStorage = React.useCallback(
 
 # useContext
 [[5 - Context]]
+
 Per condividere lo [[state]] fra componenti è un problema comune, possiamo innalzare lo stato nella catena padre/figlio ([[lifting state]]), ma poi ci troveremmo a dover fare un fastidioso [[prop drilling]]  per poter condividerlo con tutti i figli e figli dei figli.
 
 Per evitare questo problema, possiamo inserire dello stato in una sezione del tree di React e poi estrarlo dove serve, senza doverlo esplicitamente passare. Questa feature viene chiamata context, è come una sorta di global variable, ma senza i problemi delle global.
@@ -464,6 +474,7 @@ FooDisplay potrebbe trovarsi da qualsiasi parte della [[render tree]] e avrà co
 >NOTA: è possibile passare un argomento al `createContext` che verrà usato come valore di default nel caso in cui il contesto venisse utilizzato tramite `useContext` senza la presenza di un provider. Ma questo è SCONSIGLIATO, perchè non è raccomandato usare un contesto al di fuori di un provider.
 
 ## context provider component
+
 Per questo in genere viene creato un componente apposito che si occupa di fare il provide. Inoltre è buona norma creare un custom hook che si occupi di verificare se il componente figlio si trova all'interno di un provider e in caso contrario lanci un eccezione. In questa maniera evitiamo che ad es. un componente non mostri un valore semplicemente perchè non avendo un provider, allo `useContext` riceverà `undefined`.
 
 ```javascript
@@ -532,8 +543,15 @@ export default function MyApp() {
 
 ```
 
->Con [[React 19]] è possibile fare il wrap senza bisogno di fare `.Provider`
+>Con [[React 19]] è possibile fare il wrap senza bisogno di fare `.Provider`:
 
+```tsx
+<CartContext>
+	<App />
+</CartContext>
+```
+
+>Inoltre con [[React 19]] è possibile usare l'hook [[use]] invece di [[useContext]].
 # useLayoutEffect
 Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
 1. [[useEffect]]
