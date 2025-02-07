@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "2 - Hooks"
             }
-          },
-          {
-            "id": "448d5058efc4bfd3",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -153,12 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "2 - React/2 - Hooks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura"
+              "title": "Struttura di 2 - Hooks"
             }
           },
           {
@@ -189,7 +177,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "448d5058efc4bfd3",
+  "active": "529588b81664cd45",
   "lastOpenFiles": [
     "zzz_Pagine/useRef.md",
     "1 - Development/Git.md",

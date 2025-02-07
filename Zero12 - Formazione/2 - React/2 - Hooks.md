@@ -512,6 +512,15 @@ function App() {
 export default App
 ```
 
+>Non è necessario passare un value, è anche possibile semplicemente inizializzare il context:
+
+```tsx
+const Count
+
+```
+
+>Con [[React 19]] è possibile fare il wrap senza bisogno di fare `.Provider`
+
 # useLayoutEffect
 Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
 1. [[useEffect]]
