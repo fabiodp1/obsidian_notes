@@ -515,7 +515,19 @@ export default App
 >Non è necessario passare un value, è anche possibile semplicemente inizializzare il context:
 
 ```tsx
-const Count
+export const CartContext = useContext({
+	items: []
+})
+
+...
+
+export default function MyApp() {
+	return (
+		<CartContext.Provider>
+			<App />
+		</CartContext.Provider>
+	)
+}
 
 ```
 
