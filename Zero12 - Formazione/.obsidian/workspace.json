@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/2 - Hooks.md",
+                "file": "zzz_Pagine/useContext.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Hooks"
+              "title": "useContext"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - React/2 - Hooks.md",
+                "file": "zzz_Pagine/useContext.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 2 - Hooks"
+              "title": "Riferimenti a useContext"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - React/9 - Link utili.md",
+                "file": "zzz_Pagine/useContext.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da 9 - Link utili"
+              "title": "Collegamenti in uscita da useContext"
             }
           },
           {
@@ -128,7 +128,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Etichette"
@@ -140,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/2 - Hooks.md",
+                "file": "zzz_Pagine/useContext.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 2 - Hooks"
+              "title": "Struttura di useContext"
             }
           },
           {
@@ -181,6 +183,7 @@
   "lastOpenFiles": [
     "2 - React/5 - Context.md",
     "2 - React/2 - Hooks.md",
+    "zzz_Pagine/useContext.md",
     "zzz_Pagine/React 19.md",
     "zzz_Pagine/useRef.md",
     "2 - React/12 - Link utili.md",
@@ -204,7 +207,6 @@
     "zzz_Pagine/docs.md",
     "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/3 - Ottimizzare font e immagini.md",
-    "2 - React/6 - Compound components.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
