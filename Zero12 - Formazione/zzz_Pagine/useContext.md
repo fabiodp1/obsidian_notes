@@ -1,0 +1,1 @@
+Il componente derivante da useContext, oltre a fornire la proprietà `.Provider`, fornisce anche la proprietà [[Consumer]], in questa maniera è possibile wrappare il componente che deve consumare il context. Questo wrapper deve avere come child 

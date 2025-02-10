@@ -4,5 +4,6 @@
   "attachmentFolderPath": "zzzz_allegati",
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "zzz_Pagine"
+  "newFileFolderPath": "zzz_Pagine",
+  "promptDelete": false
 }
