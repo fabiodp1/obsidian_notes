@@ -1,1 +1,1 @@
->La reducer function avrà sempre l'ultimo valore disponibile
+>La reducer function avrà come primo argomento sempre l'ultimo valore disponibile.
