@@ -1,0 +1,1 @@
+>La reducer function avrà sempre l'ultimo valore disponibile
