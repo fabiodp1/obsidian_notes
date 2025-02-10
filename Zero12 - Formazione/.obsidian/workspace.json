@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zzz_Pagine/useContext.md",
+                "file": "zzz_Pagine/useReducer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "useContext"
+              "title": "useReducer"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zzz_Pagine/useContext.md",
+                "file": "zzz_Pagine/useReducer.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a useContext"
+              "title": "Riferimenti a useReducer"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "zzz_Pagine/useContext.md",
+                "file": "zzz_Pagine/useReducer.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di useContext"
+              "title": "Struttura di useReducer"
             }
           },
           {
@@ -161,7 +161,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -180,12 +181,14 @@
   },
   "active": "7da0e92a4bb4bc79",
   "lastOpenFiles": [
+    "2 - React/2 - Hooks.md",
+    "zzz_Pagine/useContext.md",
+    "zzz_Pagine/useEffect.md",
+    "zzz_Pagine/useReducer.md",
     "zzz_Pagine/Zod.md",
     "3 - Next.js/12 - Mutating Data.md",
     "3 - Next.js/14 - Migliorare l'accessibilità.md",
     "zzz_Pagine/[Zod.md",
-    "2 - React/2 - Hooks.md",
-    "zzz_Pagine/useContext.md",
     "2 - React/5 - Context.md",
     "zzz_Pagine/use.md",
     "zzz_Pagine/React 19.md",
@@ -204,8 +207,6 @@
     "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
     "2 - React/3 - Routing.md",
     "3 - Next.js/2 - CSS Styling.md",
-    "zzz_Pagine/CSS Modules.md",
-    "zzz_Pagine/JSX.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
