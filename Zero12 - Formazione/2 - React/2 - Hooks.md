@@ -534,6 +534,7 @@ export default App
 
 >Inoltre con [[React 19]] è possibile usare l'hook [[use]] invece di [[useContext]].
 # useLayoutEffect
+
 Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
 1. [[useEffect]]
 2. [[useLayoutEffect]]
@@ -545,9 +546,11 @@ La semplice rule-of-thumb è:
 >Se stai facendo dei cambiamenti chiaramente osservabili nel DOM, usa `useLayoutEffect`, negli altri casi solo `useEffect`.
 
 # useImperativeHandle
+
 Permette di decidere quello che viene esposto quando un componente genitore utilizza un `ref` su un componente figlio.
 
 ## Quando
+
 - si usa quando si vuole esporre al genitore solo alcune funzionalità del componente figlio
 - si sta lavorando con componenti personalizzati che racchiudono comportamenti complessi legati ad dom (es. modali, input personalizzati, focus ecc.)
 
@@ -588,6 +591,7 @@ In questo caso il componente figlio `CustomInput` usa `useImperativeHandle` per 
 Il componente genitore può usare il ref per chiamare questi metodi, senza sapere nulla del nodo DOM interno.
 
 # useDebugValue
+
 Quando si inizia a scriver custom hooks, può risultare molto utile dargli delle sorte di label speciali per identificarli e per magari differenziare i differenti usi che se ne fanno all'interno del componente.
 
 E' qui che `useDebugValue` risulta utile. Viene utilizzato in un [[custom hook]] in questa maniera:
@@ -618,6 +622,7 @@ function useCount({initialCount = 0, step = 1} = {}) {
 ```
 
 # useImperativeHandle
+
 [[useImperativeHandle]] permette ad un componente di esporre una propria API chiamabile dal componente padre. Ci sono infatti certi casi in cui è utilie, ad esempio quando il padre tramite ref interagisce con degli elementi del componente figlio, elementi che potrebbero cambiare senza che il padre ne sia consapevole. Ad es. il padre potrebbe utilizzare il metodo showModal di un elemento figlio dialog, ma questo in un futuro viene cambiato in div.
 
 ```tsx
