@@ -19,4 +19,6 @@ return (
 
 Questo approccio non è quello preferibile perché rende il codice meno leggibile e un po antiquato.
 
+# Re-rendering
 
+Nel momento in cui un componente utilizza il context e questo viene aggiornato, il componente viene ri-eseguito come se stesse aggiornando il proprio state.
