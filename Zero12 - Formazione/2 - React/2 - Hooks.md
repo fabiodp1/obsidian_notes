@@ -281,7 +281,7 @@ function NameInput() {
 
 Dall'esempio si può notare che il riduttore (chiamto nameReducer) viene chiamato con 2 argomenti:
 1. Lo stato corrente
-2. qualsiasi valore con cui la funzione "serName" viene chiamata. In genere chiamato "action".
+2. qualsiasi valore con cui la funzione "setName" viene chiamata. In genere chiamato "action".
 [How to implement useState with useReducer](https://kentcdodds.com/blog/how-to-implement-usestate-with-usereducer)
 https://kentcdodds.com/blog/should-i-usestate-or-usereducer
 
@@ -536,8 +536,8 @@ export default App
 # useLayoutEffect
 
 Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
-1. [[useEffect]]
-2. [[useLayoutEffect]]
+3. [[useEffect]]
+4. [[useLayoutEffect]]
 La differenza fra questi è abbastanza subdola (hanno la stessa API).
 Nel 99% dei casi verrà usato `useEffect`, ma in certi casi `useLayoutEffect` può migliorare l'esperienza utente.
 [useEffect vs useLayoutEffect](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect)

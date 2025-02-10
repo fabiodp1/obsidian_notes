@@ -161,8 +161,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,9 +181,9 @@
   "active": "7da0e92a4bb4bc79",
   "lastOpenFiles": [
     "2 - React/2 - Hooks.md",
+    "zzz_Pagine/useReducer.md",
     "zzz_Pagine/useContext.md",
     "zzz_Pagine/useEffect.md",
-    "zzz_Pagine/useReducer.md",
     "zzz_Pagine/Zod.md",
     "3 - Next.js/12 - Mutating Data.md",
     "3 - Next.js/14 - Migliorare l'accessibilità.md",
