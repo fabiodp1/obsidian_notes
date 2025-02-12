@@ -1,0 +1,1 @@
+>Nell'Array delle dipendenze vanno aggiunti solo elementi che sono state (non i setter) o prop.
