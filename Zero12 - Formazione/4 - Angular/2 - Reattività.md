@@ -32,7 +32,9 @@ console.log(firstNameCapitalized()); // MORGAN
 Si tratta di un oggetto `read-only`, non può essere assegnato o aggiornato. Il suo valore cambia automaticamente al cambiare dei signal da cui dipende.
 
 
-# Utilizzo
+# Utilizzo Signal e Computed
+
+## Classe
 
 Per utilizzare i [[signal]] e le [[computed]] all'interno della classe di un componente:
 
@@ -49,3 +51,43 @@ export class UserProfile {
   }
 }
 ```
+
+## Template
+
+Per utilizzarli all'interno del template, basta circondare il [[signal]] con `{{ ... }}`:
+
+```ts
+@Component({
+  selector: 'user-profile',
+  template: `<h1>Profile for {{userName()}}</h1>`,
+})
+
+export class TodoListItem {
+  userName = signal('pro_programmer_123');
+}
+```
+
+Per utilizzarli come valore degli attributi [[HTML]] invece vengono utilizzate le parentesi quadre:
+
+```ts
+@Component({
+  /*...*/
+  // Set the `disabled` property of the button based on the value of `isValidUserId`.
+  template: `<button [disabled]="isValidUserId()">Save changes</button>`,
+})
+
+export class UserProfile {
+  isValidUserId = signal(false);
+}
+```
+
+È anche possibile fare il bind delle proprietà del [[DOM]] aggiungendo il prefisso `attr.` al nome della proprietà:
+
+```ts
+<!-- Bind the `role` attribute on the `<ul>` element to value of `listRole`. -->
+<ul [attr.role]="listRole()">
+```
+
+# Interazione utente
+
+È possibile gestire gli eventi come il `click`
