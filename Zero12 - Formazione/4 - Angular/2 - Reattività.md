@@ -148,3 +148,4 @@ Come con [[Vue]] possiamo mostrare o nascondere parte del template in maniera co
 </ul>
 ```
 
+A differenza di [[Vue]] e [[React]], nel creare un loop di elementi [[Angular]] non utilizza #key per tenere traccia della lista di elementi, ma la keyword #track seguita dal valore da utilizzare.

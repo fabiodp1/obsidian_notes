@@ -284,7 +284,7 @@ function UsernameForm({onSubmitUsername}) {
 ```
 
 # Rendering Arrays
-Se con Vue nel creare un v-for loop per renderizzare un [[array]] di elementi è consigliato ma non necessario utilizzare l'attributo key, in React è OBBLIGATORIO.
+Se con Vue nel creare un v-for loop per renderizzare un [[array]] di elementi è consigliato ma non necessario utilizzare l'attributo #key, in React è OBBLIGATORIO.
 Infatti è possibile ometterla ma nel momento in cui il componente deve ri-renderizzarsi perchè è stato aggiunto o rimosso un elemento, React non saprà in che posizione questo è stato inserito, potendo potenzialmente risolversi in un risultato non voluto.
 
 ```jsx
@@ -294,4 +294,4 @@ const listUI = list.map(listItem => <li>{listItem}</li>)
 const ui = <ul>{listUI}</ul>
 ```
 
-Per cui la regola è che la prop [[key]] va SEMPRE messa, e non va utilizzata la index dell'array o si ripropone lo stesso problema di non usare la key, va utilizzato un valore univoco, come un id.
+Per cui la regola è che la prop #key va SEMPRE messa, e non va utilizzata la index dell'array o si ripropone lo stesso problema di non usare la #key, va utilizzato un valore univoco, come un id.
