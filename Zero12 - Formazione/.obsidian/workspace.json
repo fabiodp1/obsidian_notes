@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Angular/2 - Reattività.md",
+                "file": "4 - Angular/3 - Services.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Reattività"
+              "title": "3 - Services"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Angular/2 - Reattività.md",
+                "file": "4 - Angular/3 - Services.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 2 - Reattività"
+              "title": "Riferimenti a 3 - Services"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Angular/2 - Reattività.md",
+                "file": "4 - Angular/3 - Services.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 2 - Reattività"
+              "title": "Struttura di 3 - Services"
             }
           },
           {
@@ -192,11 +192,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "263ff45da9c77ac1",
+  "active": "7da0e92a4bb4bc79",
   "lastOpenFiles": [
+    "4 - Angular/2 - Reattività.md",
+    "4 - Angular/3 - Services.md",
     "zzz_Pagine/key.md",
     "2 - React/1 - React Fundamentals.md",
-    "4 - Angular/2 - Reattività.md",
     "4 - Angular/1 - Components.md",
     "zzz_Pagine/useCallback.md",
     "4 - Angular",
@@ -220,7 +221,6 @@
     "2 - React/11 - Portal.md",
     "2 - React/10 - StrictMode.md",
     "2 - React/9 - Folders.md",
-    "2 - React/8 - Patterns.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
