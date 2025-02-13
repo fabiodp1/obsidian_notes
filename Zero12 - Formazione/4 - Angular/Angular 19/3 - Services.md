@@ -19,3 +19,9 @@ export class Calculator {
 ```ts
 
 ```
+
+>Continuare qui:
+>- [Dependency Injection • Overview • Angular](https://angular.dev/guide/di)
+>- [Anatomy of components • Angular](https://angular.dev/guide/components)
+>- [Templates • Overview • Angular](https://angular.dev/guide/templates)
+>- [Signals • Overview • Angular](https://angular.dev/guide/signals)
