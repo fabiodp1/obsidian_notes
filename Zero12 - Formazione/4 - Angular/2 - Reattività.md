@@ -90,4 +90,61 @@ export class UserProfile {
 
 # Interazione utente
 
-È possibile gestire gli eventi come il `click`
+È possibile gestire gli eventi come il `click` utilizzando le parentesi tonde:
+
+```ts
+@Component({
+  /*...*/
+  // Add an 'click' event handler that calls the `cancelSubscription` method. 
+  template: `<button (click)="cancelSubscription()">Cancel subscription</button>`,
+})
+
+export class UserProfile {
+  /* ... */
+  
+  cancelSubscription() { /* Your event handling code goes here. */  }
+}
+```
+
+Per passare l'evento, basta usare la variabile `built-in` di [[Angular]]:
+
+```ts
+@Component({
+  /*...*/
+  // Add an 'click' event handler that calls the `cancelSubscription` method. 
+  template: `<button (click)="cancelSubscription($event)">Cancel subscription</button>`,
+})
+
+export class UserProfile {
+  /* ... */
+  
+  cancelSubscription(event: Event) { /* Your event handling code goes here. */  }
+}
+```
+
+# @if e @for
+
+Come con [[Vue]] possiamo mostrare o nascondere parte del template in maniera condizionale o creare un loop di elementi, utilizzando `@if` e `@for`:
+
+```ts
+<h1>User profile</h1>
+
+@if (isAdmin()) {
+  <h2>Admin settings</h2>
+  <!-- ... -->
+} @else {
+  <h2>User settings</h2>
+  <!-- ... -->  
+}
+```
+
+```ts
+<h1>User profile</h1>
+
+<ul class="user-badge-list">
+  @for (badge of badges(); track badge.id) {
+    <li class="user-badge">{{badge.name}}</li>
+  }
+</ul>
+```
+
