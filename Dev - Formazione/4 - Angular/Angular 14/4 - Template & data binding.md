@@ -133,3 +133,13 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 ```ts
 [class]="classExpression"
 ```
+
+## Style
+
+- `Bind a un singolo stile`, come per class:
+
+```ts
+// Entrambe corretti
+<nav [style.background-color]="expression"></nav>
+<nav [style.backgroundColor]="expression"></nav>
+``` 
