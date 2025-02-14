@@ -24,6 +24,5 @@ Di default questo comando andrà a creare:
 
 >È possibile definire come la CLI farà lo scaffolding del componente utilizzando specifici [comandi](https://v14.angular.io/cli/generate#component-command) È possibile creare i componenti anche manualmente, ma la CLI è consigliata.
 
-
-
+# Lifecycle hooks
 
