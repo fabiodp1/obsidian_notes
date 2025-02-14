@@ -152,3 +152,5 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 
 # Two-way binding
 
+Il `two-way binding` permette ai componenti di condividere dati. Si utilizzano per ascoltare eventi e simultaneamente aggiornare i valori fra padre e figlio.
+
