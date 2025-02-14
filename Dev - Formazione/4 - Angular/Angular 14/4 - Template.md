@@ -61,3 +61,8 @@ la differenza fra quelli sopra è che il `property binding` deve avere come valo
 [(target)]="expression"
 ```
 
+Il `target` di un binding è una proprietà o un evento, che viene circondate dalle `[ ]`, parentesi `( )` o entrambe `[( )]`
+
+- `[ ]` dalla sorgente alla view;
+- `( )` dalla view alla sorgente
+- `[( )]` two way binding
