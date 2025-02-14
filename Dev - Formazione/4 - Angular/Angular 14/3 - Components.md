@@ -26,3 +26,8 @@ Di default questo comando andrà a creare:
 
 # Lifecycle hooks
 
+Per utilizzare il `lifecycle hooks` di [[Angular]] il componente deve implementare la relativa interfaccia:
+
+```ts
+
+```
