@@ -137,6 +137,8 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 ## Style
 
 - `Bind a un singolo stile`, come per class:
+	- `[style.width]="width"` with deve avere l'unità di misura, es. `100px`
+	- `[style.width.px]="width"` non è necessaria l'unità di misura
 
 ```ts
 // Entrambe corretti
@@ -147,4 +149,3 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 - `Bind di più stili`, l'espressione può essere:
 	- Una stringa con la lista degli stili es. `"width: 100px; height: 100px; background-color: cornflowerblue;"`
 	- Un oggetto avente come key il nome dello stile es. `{width: '100px', height: '100px', backgroundColor: 'cornflowerblue'}`
-- 
