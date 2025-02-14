@@ -94,3 +94,22 @@ Permette di dare un valore alle proprietà e direttive [[HTML]]. Usato ad es. pe
 ```
 
 Le `[ ]` identificano quella proprietà come `target` e indicando ad [[Angular]] che il valore alla destra va valorizzato.
+
+Per settare una proprietà di una direttiva si fa lo stesso:
+
+```ts
+<p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p>
+```
+
+# Attribute binding
+
+Serve a settare il valore di attributi per migliorare l'accessibilità o lo style in maniera dinamica, gestendo simultaneamente diverse classi [[CSS]].
+
+La sintassi è simile a quella del `property binding`, ma invece di avere una proprietà fra le parentesi, si precede il nome dell'attributo con il prefisso `attr.`.
+
+```ts
+<p [attr.attribute-you-are-targeting]="expression"></p>
+```
+
+>Nel momento in cui l'espressione si risolve in *null* o *undefined*, [[Angular]] rimuove completamente l'attributo.
+
