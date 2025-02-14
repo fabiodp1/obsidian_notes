@@ -40,3 +40,7 @@ export class MyComponent implements OnInit {
 }
 ```
 
+Gli hook vengono eseguiti in questo ordine:
+
+1. `ngOnChanges()`: risponde quando Angular setta o resetta i *data-bound input properties*. Viene chiamato prima di *ngOnInit()* (se il componente è legato ad input) e ogni volta che un data-bound input prop cambia (prop passate dai padri).
+2. `ngOnInit()`
