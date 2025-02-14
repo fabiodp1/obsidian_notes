@@ -85,3 +85,12 @@ Il `target` di un binding è una proprietà o un evento, che viene circondate da
 <input [(ngModel)]="name">
 ```
 
+# Property binding
+
+Permette di dare un valore alle proprietà e direttive [[HTML]]. Usato ad es. per cambiare le prop di un bottone o passare proprietà ad un componente figlio.
+
+```ts
+<img alt="item" [src]="itemImageUrl">
+```
+
+Le `[ ]` identificano quella proprietà come `target` e indicando ad [[Angular]] che il valore alla destra va valorizzato.
