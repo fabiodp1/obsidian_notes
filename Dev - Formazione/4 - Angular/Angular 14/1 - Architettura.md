@@ -1,6 +1,4 @@
-# Architettura
-
-l'architettura di Angular si basa su certi concetti fondamentali. I mattoni di Angular sono i componenti che vengono organizzati in `NgModules`.
+I mattoni di Angular sono i componenti che vengono organizzati in `NgModules`.
 Questi li raccolgono il relativo codice in set funzionali.
 
 >Un applicativo in [[Angular]] viene definito da un set di `NgModules`. Un applicativo ha SEMPRE almeno un modulo di root che ne abilita l'avvio e tipicamente possiede altri `feature modules`.
@@ -23,5 +21,3 @@ Un NgModule dichiara un contesto di compilazione per un set di componenti dedica
 Ogni app Angular ha un `root module`, chiamato `AppModule`, che fornisce il meccanismo di inizializzazione che lancia l'app. Normalmente un applicativo contiene diversi moduli funzionali.
 
 Organizzare il codice in diversi moduli, aiuta a gestire lo sviluppo di applicazioni complesse, e a disegnarle per la riusabilità. Inoltre permette di poter avvantaggiarsi del [[lazy loading]].
-
-##
