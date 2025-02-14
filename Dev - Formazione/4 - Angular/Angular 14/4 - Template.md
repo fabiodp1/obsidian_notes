@@ -64,5 +64,24 @@ la differenza fra quelli sopra è che il `property binding` deve avere come valo
 Il `target` di un binding è una proprietà o un evento, che viene circondate dalle `[ ]`, parentesi `( )` o entrambe `[( )]`
 
 - `[ ]` dalla sorgente alla view;
+
+```ts
+<img [alt]="hero.name" [src]="heroImageUrl">
+<app-hero-detail [hero]="currentHero"></app-hero-detail>
+<div [ngClass]="{'special': isSpecial}"></div>
+```
+
 - `( )` dalla view alla sorgente
+
+```ts
+<button type="button" (click)="onSave()">Save</button>
+<app-hero-detail (deleteRequest)="deleteHero()"></app-hero-detail>
+<div (myClick)="clicked=$event" clickable>click me</div>
+```
+
 - `[( )]` two way binding
+
+```ts
+<input [(ngModel)]="name">
+```
+
