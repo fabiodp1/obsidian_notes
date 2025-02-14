@@ -113,3 +113,4 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 
 >Nel momento in cui l'espressione si risolve in *null* o *undefined*, [[Angular]] rimuove completamente l'attributo.
 
+>Un esempio in cui viene utilizzato è per gestire l'attributo `colspan` di un *td*. Questo non è da confondere con `colSpan` che invece è una proprietà.
