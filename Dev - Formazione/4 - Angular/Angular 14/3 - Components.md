@@ -26,10 +26,10 @@ Di default questo comando andrà a creare:
 
 # Lifecycle hooks
 
-Per utilizzare il `lifecycle hooks` di [[Angular]] il componente deve implementare la relativa interfaccia:
+Per utilizzare il `lifecycle hooks` di [[Angular]] il componente o direttiva deve implementare la relativa interfaccia:
 
 ```ts
-@Component({selector: 'my-component'})
+@Component({selector: 'my-component'}) // può essere una direttiva
 export class MyComponent implements OnInit {
   constructor()) { }
 
@@ -42,7 +42,11 @@ export class MyComponent implements OnInit {
 
 Gli hook vengono eseguiti in questo ordine:
 
-1. `ngOnChanges()`: risponde quando Angular setta o resetta i *data-bound input properties*. Viene chiamato prima di *ngOnInit()* (se il componente è legato ad input) e ogni volta che un data-bound input prop cambia (prop passate dai padri).
-2. `ngOnInit()`: chiamato una sola volta dopo il primo *ngOnChanges()*.
-3. `ngDoCheck()`: chiamato immediatamente dopo ogni *ngOnChnges()*.
-4. ng
+1. `ngOnChanges()` risponde quando Angular setta o resetta i *data-bound input properties*. Viene chiamato prima di *ngOnInit()* (se il componente è legato ad input) e ogni volta che un data-bound input prop cambia (prop passate dai padri).
+2. `ngOnInit()` chiamato una sola volta dopo il primo *ngOnChanges()*.
+3. `ngDoCheck()` chiamato immediatamente dopo ogni *ngOnChnges()*.
+4. `ngAfterContentInit()`
+5. `ngAfterContentChecked()`
+6. `ngAfterViewInit()` lanciato dopo che Angular ha inizializzato la view del componente.
+7. `ngAfterViewChecked()` lanciato dopo *ngAfterViewInit()* e ad ogni *ngAfterContentChecked()*.
+8. `ngOnDestroy()` appena prima che Angular distrugga la direttiva o componente
