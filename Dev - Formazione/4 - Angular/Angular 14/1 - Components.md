@@ -22,5 +22,6 @@ Di default questo comando andrà a creare:
 - Il file template [[HTML]] `<component-name>.component.css`
 - Un file per il test `<component-name>.component.spec.ts`
 
->È possibile definire come la CLI farà lo scaffolding del componente utilizzando specifici [comandi](https://v14.angular.io/cli/generate#component-command)
+>È possibile definire come la CLI farà lo scaffolding del componente utilizzando specifici [comandi](https://v14.angular.io/cli/generate#component-command) È possibile creare i componenti anche manualmente, ma la CLI è consigliata.
+
 
