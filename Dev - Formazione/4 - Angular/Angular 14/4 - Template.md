@@ -26,3 +26,6 @@ Per ottenere l'evento basta usare la prop built in `$event`:
 
 Nell'esempio sopra *onSave()* prende l'oggetto proprio del template `$event` come argomento, mentre *deleteHero()* prende una `template input variable`, *hero*, e *onSubmit()* prende una `template reference variable` *#heroForm*.
 
+# Binding syntax
+
+Il `data binding` automaticamente tiene aggiornata la pagina sulla base dello state applicativo.
