@@ -5,5 +5,5 @@ Questi li raccolgono il relativo codice in set funzionali.
 
 >Un applictivo in [[Angular]] viene definita da un set di [[NgModules]]. Un applicativo ha SEMPRE almeno un modulo di root che ne abilita l'avvio e tipicamente possiede altri `feature modules`.
 
-- I componenti definiscono le `view`
+- I componenti ===definiscono=== le `view`
 - I componenti utilizzano `service`, che forniscono specifiche funzionalità

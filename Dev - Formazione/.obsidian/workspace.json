@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Angular/Angular 14/1 - Basics.md",
+                "file": "4 - Angular/Angular 14/2 - Components.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - Basics"
+              "title": "2 - Components"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
-    "4 - Angular/Angular 14/2 - Components.md",
     "4 - Angular/Angular 14/1 - Basics.md",
+    "4 - Angular/Angular 14/2 - Components.md",
     "2 - React/1 - React Fundamentals.md",
     "4 - Angular/Angular 19/3 - Services.md",
     "4 - Angular/Angular 19/1 - Components.md",
