@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Angular/Angular 14/1 - Architettura.md",
+                "file": "4 - Angular/Angular 14/3 - Components.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - Architettura"
+              "title": "3 - Components"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 233.5
   },
   "right": {
     "id": "df2474bdd0d6f08b",
@@ -181,7 +181,8 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
-    "4 - Angular/Angular 14/2 - Components.md",
+    "4 - Angular/Angular 14/2 - Config Ambiente.md",
+    "4 - Angular/Angular 14/3 - Components.md",
     "4 - Angular/Angular 14/1 - Architettura.md",
     "2 - React/1 - React Fundamentals.md",
     "4 - Angular/Angular 19/3 - Services.md",
@@ -209,7 +210,6 @@
     "1 - Development/Git.md",
     "zzz_Pagine/forwardRef.md",
     "2 - React/7 - Code splitting.md",
-    "2 - React/11 - Portal.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
