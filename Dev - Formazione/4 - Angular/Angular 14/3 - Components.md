@@ -29,5 +29,14 @@ Di default questo comando andrà a creare:
 Per utilizzare il `lifecycle hooks` di [[Angular]] il componente deve implementare la relativa interfaccia:
 
 ```ts
+@Component({selector: 'my-component'})
+export class MyComponent implements OnInit {
+  constructor()) { }
 
+  // implement OnInit's `ngOnInit` method
+  ngOnInit() {
+    console.log('OnInit');
+  }
+}
 ```
+
