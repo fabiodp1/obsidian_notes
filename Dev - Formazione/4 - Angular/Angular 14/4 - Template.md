@@ -29,3 +29,4 @@ Nell'esempio sopra *onSave()* prende l'oggetto proprio del template `$event` com
 # Binding syntax
 
 Il `data binding` automaticamente tiene aggiornata la pagina sulla base dello state applicativo.
+Si fa utilizzando 
