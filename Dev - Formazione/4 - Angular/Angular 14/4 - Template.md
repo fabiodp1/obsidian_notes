@@ -40,7 +40,6 @@ la differenza fra quelli sopra è che il `property binding` deve avere come valo
 
 >Normalmente è più facile da leggere e performante usare il `property binding`
 
-
 ## Tipi di data binding
 
 - Dalla sorgente alla view: *Interpolazione*, *Property*, *Attribute*, *Class*, *Style*
