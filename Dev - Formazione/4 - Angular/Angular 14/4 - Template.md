@@ -23,3 +23,6 @@ Per ottenere l'evento basta usare la prop built in `$event`:
 <button type="button" *ngFor="let hero of heroes" (click)="deleteHero(hero)">{{hero.name}}</button>
 <form #heroForm (ngSubmit)="onSubmit(heroForm)"> ... </form>
 ```
+
+Nell'esempio sopra *onSave()* prende l'oggetto proprio del template `$event` come argomento, mentre *deleteHero()* prende una `template input variable`, *hero*, e *onSubmit()* prende una `template reference variable` *#heroForm*.
+
