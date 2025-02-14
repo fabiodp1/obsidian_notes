@@ -101,7 +101,9 @@ Per settare una proprietà di una direttiva si fa lo stesso:
 <p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p>
 ```
 
-# Attribute binding
+# Attribute, class e style binding
+
+## Attribute
 
 Serve a settare il valore di attributi per migliorare l'accessibilità o lo style in maniera dinamica, gestendo simultaneamente diverse classi [[CSS]].
 
@@ -114,3 +116,20 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 >Nel momento in cui l'espressione si risolve in *null* o *undefined*, [[Angular]] rimuove completamente l'attributo.
 
 >Un esempio in cui viene utilizzato è per gestire l'attributo `colspan` di un *td*. Questo non è da confondere con `colSpan` che invece è una proprietà.
+
+## Class
+
+- `Bind ad una singola classe`, la calsse viene aggiunta solo se *onSale* è truthy:
+
+```ts
+[class.sale]="onSale"
+```
+
+- `Bind a più classi`, l'espressione può essere:
+	- una stringa di classi
+	- un oggetto con i nomi delle classi come chiavi ed espressioni truthy o falsy come valori. In questo caso Angular aggiungera la classe solo se l'espressione è truthy
+	- un array di nomi di classi
+
+```ts
+[class]="classExpression"
+```
