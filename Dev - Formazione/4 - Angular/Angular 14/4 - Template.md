@@ -36,3 +36,4 @@ Si fa utilizzando le parentesi quadre `[ ]`.
 <input [attr.disabled]="condition ? 'disabled' : null">
 ```
 
+la differenza fra quelli sopra è che il `property binding` deve avere come valore un boolean, mentre il corrispettivo `attribute binding` si basa sul fatto che il proprio valore sia *null* o meno.
