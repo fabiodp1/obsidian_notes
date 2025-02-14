@@ -140,6 +140,8 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 
 ```ts
 // Entrambe corretti
-<nav [style.background-color]="expression"></nav>
-<nav [style.backgroundColor]="expression"></nav>
-``` 
+<nav [style.background-color]="expression/value"></nav>
+<nav [style.backgroundColor]="expression/value"></nav>
+```
+
+- 
