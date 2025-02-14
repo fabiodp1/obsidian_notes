@@ -32,8 +32,33 @@ Il `data binding` automaticamente tiene aggiornata la pagina sulla base dello st
 Si fa utilizzando le parentesi quadre `[ ]`.
 
 ```ts
-<input [disabled]="condition ? true : false">
-<input [attr.disabled]="condition ? 'disabled' : null">
+<input [disabled]="condition ? true : false"> // property binding
+<input [attr.disabled]="condition ? 'disabled' : null"> // attribute binding
 ```
 
 la differenza fra quelli sopra è che il `property binding` deve avere come valore un boolean, mentre il corrispettivo `attribute binding` si basa sul fatto che il proprio valore sia *null* o meno.
+
+>Normalmente è più facile da leggere e performante usare il `property binding`
+
+
+## Tipi di data binding
+
+- Dalla sorgente alla view: *Interpolazione*, *Property*, *Attribute*, *Class*, *Style*
+
+```ts
+{{expression}} 
+[target]="expression"
+```
+
+- Dalla view alla sorgente: *Event*
+
+```ts
+(target)="statement"
+```
+
+- In entrambe le direzioni (two way binding)
+
+```ts
+[(target)]="expression"
+```
+
