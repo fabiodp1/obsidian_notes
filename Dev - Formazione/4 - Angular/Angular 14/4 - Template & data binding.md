@@ -144,4 +144,7 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 <nav [style.backgroundColor]="expression/value"></nav>
 ```
 
+- `Bind di più stili`, l'espressione può essere:
+	- Una stringa con la lista degli stili es. `"width: 100px; height: 100px; background-color: cornflowerblue;"`
+	- Un oggetto avente come key il nome dello stile es. `{width: '100px', height: '100px', backgroundColor: 'cornflowerblue'}`
 - 
