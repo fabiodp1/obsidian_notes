@@ -156,6 +156,21 @@ trackByItems(index: number, item: Item): number { return item.id; }
 </p>
 ```
 
-
 ## `NgSwitch`
 
+È un set di 3 direttive:
+
+- `NgSwitch`
+- `NgSwitchCase`
+- `NgSwitchDefault`
+
+```ts
+<div [ngSwitch]="currentItem.feature">
+  <app-stout-item    *ngSwitchCase="'stout'"    [item]="currentItem"></app-stout-item>
+  <app-device-item   *ngSwitchCase="'slim'"     [item]="currentItem"></app-device-item>
+  <app-lost-item     *ngSwitchCase="'vintage'"  [item]="currentItem"></app-lost-item>
+  <app-best-item     *ngSwitchCase="'bright'"   [item]="currentItem"></app-best-item>
+<!-- . . . -->
+  <app-unknown-item  *ngSwitchDefault           [item]="currentItem"></app-unknown-item>
+</div>
+```
