@@ -18,14 +18,14 @@ Le direttive attributo più comuni sono:
 
 ## NgClass
 
-può essere usato sia con un'espressione:
+può essere usato con un'espressione:
 
 ```ts
 <!-- toggle the "special" class on/off with a property -->
 <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
 ```
 
- che con un metodo:
+ o con un metodo:
 
 ```ts
 // .ts
