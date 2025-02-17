@@ -235,4 +235,6 @@ export class CountdownTimerComponent implements OnDestroy {
 export class CountdownLocalVarParentComponent { }
 ```
 
-Questo approccio è abbastanza diretto, ma non permette 
+Questo approccio è abbastanza diretto, ma non permette va fatto tutto sul template del parent, il padre di per se non può utilizzare la variabile nella sua classe.
+
+Per collegare le due classi e quindi fare in modo che la classe del padre possa accedere alla classe del figlio, va fatto l'`inject` del figlio nel padre com `ViewChild`.
