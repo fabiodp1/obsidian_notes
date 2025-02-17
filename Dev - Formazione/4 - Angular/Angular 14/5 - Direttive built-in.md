@@ -16,7 +16,7 @@ Le direttive attributo più comuni sono:
 
 >Molti `NgModules` come `RouterModule` e `FormsModule` definiscono le proprie direttive attributo.
 
-## NgClass
+## `NgClass`
 
 può essere usato con un'espressione:
 
@@ -46,7 +46,7 @@ setCurrentClasses() {
 
 Nell'esempio sopra il metodo verrà chiamato all'interno di `ngOnInit()`.
 
-## NgStyle
+## `NgStyle`
 
 Come `NgClass` può essere usato tramite metodo:
 
@@ -71,7 +71,7 @@ setCurrentStyles() {
 
 Anche qui da utilizzare in `ngOnInit()` o quando vogliamo aggiornare gli stili.
 
-## NgModel
+## `NgModel`
 
 Per utilizzarlo bisogna prima di tutto importare `FormModule` fra i moduli:
 
@@ -112,15 +112,13 @@ Per applicarlo ad elementi non form o componenti di terze parti bisogna scrivern
 
 # Structural
 
-I più comuni sono:
-
-- `NgIf` (`NgIfElse`)
+## `NgIf` (`NgIfElse`)
 
 ```ts
 <app-item-detail *ngIf="isActive" [item]="item"></app-item-detail>
 ```
 
-- `NgFor`
+## `NgFor`
 
 ```ts
 <div *ngFor="let item of items">{{item.name}}</div>
@@ -130,5 +128,21 @@ I più comuni sono:
 <div *ngFor="let item of items; let i=index">{{i + 1}} - {{item.name}}</div>
 ```
 
-- `NgSwitch`
-- 
+Per evitare re-rendering inutili in un for loop, è possibile utilizzare la proprietà `trackBy` di `*ngFor`. Angular farà il re-rendering solo degli elementi che sono cambiati:
+
+1. aggiungere al componente un metodo che ritorni il valore che di cui `NgFor` dovrà tenere traccia attraverso `trackBy`, deve essere qualcosa di univoco come un id:
+
+```ts
+trackByItems(index: number, item: Item): number { return item.id; }
+```
+
+1. nell'espressione settare il `trackBy` al metodo creato:
+
+```ts
+<div *ngFor="let item of items; trackBy: trackByItems">
+  ({{item.id}}) {{item.name}}
+</div>
+```
+
+## `NgSwitch`
+
