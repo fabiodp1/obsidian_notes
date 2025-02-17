@@ -114,4 +114,11 @@ Per applicarlo ad elementi non form o componenti di terze parti bisogna scrivern
 
 I più comuni sono:
 
-- 
+- `NgIf`
+
+```ts
+<app-item-detail *ngIf="isActive" [item]="item"></app-item-detail>
+```
+
+- `NgFor`
+- `NgSwitch`
