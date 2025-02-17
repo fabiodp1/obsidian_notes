@@ -234,3 +234,5 @@ export class CountdownTimerComponent implements OnDestroy {
 })
 export class CountdownLocalVarParentComponent { }
 ```
+
+Questo approccio è abbastanza diretto, ma non permette 
