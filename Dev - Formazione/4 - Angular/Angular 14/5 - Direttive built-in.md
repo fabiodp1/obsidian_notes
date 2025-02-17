@@ -144,5 +144,18 @@ trackByItems(index: number, item: Item): number { return item.id; }
 </div>
 ```
 
+>Se si ha bisogno di utilizzare gli attributi per mostrare o manipolare degli elementi del [[DOM]] ma non vogliamo che l'elemento [[HTML]] compaia nel [[DOM]] (un po come `<template>` di Vue), possiamo usare `<ng-container>`:
+
+```ts
+<p>
+  I turned the corner
+  <ng-container *ngIf="hero">
+    and saw {{hero.name}}. I waved
+  </ng-container>
+  and continued on my way.
+</p>
+```
+
+
 ## `NgSwitch`
 
