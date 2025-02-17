@@ -240,26 +240,37 @@ Questo approccio è abbastanza diretto, ma non permette va fatto tutto sul templ
 Per collegare le due classi e quindi fare in modo che la classe del padre possa accedere alla classe del figlio, va fatto l'`inject` del figlio nel padre com `ViewChild`:
 
 ```ts
-import { AfterViewInit, ViewChild } from '@angular/core';
-import { Component } from '@angular/core';
-import { CountdownTimerComponent } from './countdown-timer.component';
-
 @Component({
   selector: 'app-countdown-parent-vc',
   template: `
     <button type="button" (click)="start()">Start</button>
     <button type="button" (click)="stop()">Stop</button>
 
+	<!-- template variable not needed -->
     <app-countdown-timer></app-countdown-timer>
   `,
+  styleUrls: ['../assets/demo.css']
 })
-export class CountdownViewChildParentComponent {
+export class CountdownViewChildParentComponent implements AfterViewInit {
 
   @ViewChild(CountdownTimerComponent)
   private timerComponent!: CountdownTimerComponent;
+
+  seconds() { return 0; }
+
+  ngAfterViewInit() {
+    // Redefine `seconds()` to get from the `CountdownTimerComponent.seconds` ...
+    // but wait a tick first to avoid one-time devMode
+    // unidirectional-data-flow-violation error
+    setTimeout(() => this.seconds = () => this.timerComponent.seconds, 0);
+  }
 
   start() { this.timerComponent.start(); }
   stop() { this.timerComponent.stop(); }
 }
 ```
+
+>Il [[lifecycle hook]] `ngAfterViewInit()` è importante qui perchè il componente figlio non è disponibile fino a quando [[Angular]] non ha mostrato la vista padre, quindi inizialmente mostra 0.
+>Poi Angular chiama `ngAfterViewInit` quando ormai è troppo tardi per aggiornare la vista del padre. Il data-flow unidirezionale di Angular previene l'aggiornarsi della view padre nello stesso ciclo, quindi l'app dovrà aspettare un turno prima di poter mostrare i secondi (nell'esempio).
+>Viene usato `setTimeout()` per aspettare un `tick` e dopo viene 
 
