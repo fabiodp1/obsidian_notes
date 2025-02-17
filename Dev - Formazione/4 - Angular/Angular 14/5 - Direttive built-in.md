@@ -121,4 +121,14 @@ I più comuni sono:
 ```
 
 - `NgFor`
+
+```ts
+<div *ngFor="let item of items">{{item.name}}</div>
+```
+
+```ts
+<div *ngFor="let item of items; let i=index">{{i + 1}} - {{item.name}}</div>
+```
+
 - `NgSwitch`
+- 
