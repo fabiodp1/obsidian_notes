@@ -48,3 +48,24 @@ Nell'esempio sopra il metodo verrà chiamato all'interno di `ngOnInit()`.
 
 ## NgStyle
 
+Come `NgClass` può essere usato tramite metodo:
+
+```ts
+// .ts
+currentStyles: Record<string, string> = {};
+/* . . . */
+setCurrentStyles() {
+  // CSS styles: set per current state of component properties
+  this.currentStyles = {
+    'font-style':  this.canSave      ? 'italic' : 'normal',
+    'font-weight': !this.isUnchanged ? 'bold'   : 'normal',
+    'font-size':   this.isSpecial    ? '24px'   : '12px'
+  };
+}
+
+// .html
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div>
+```
+
