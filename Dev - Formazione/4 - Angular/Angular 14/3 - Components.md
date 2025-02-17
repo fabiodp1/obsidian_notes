@@ -209,8 +209,6 @@ Il padre per accedere alle proprietà e metodi del figlio dovrà creare una vari
 ```ts
 // === CHILD ===
 
-import { Component, OnDestroy } from '@angular/core';
-
 @Component({
   selector: 'app-countdown-timer',
   // ...
@@ -224,20 +222,15 @@ export class CountdownTimerComponent implements OnDestroy {
 ```ts
 // === FATHER ===
 
-import { Component } from '@angular/core';
-import { CountdownTimerComponent } from './countdown-timer.component';
-
 @Component({
   selector: 'app-countdown-parent-lv',
   template: `
-    <h3>Countdown to Liftoff (via local variable)</h3>
     <button type="button" (click)="timer.start()">Start</button>
     <button type="button" (click)="timer.stop()">Stop</button>
-    <div class="seconds">{{timer.seconds}}</div>
-    <!-- template reference variable -->
+
+    <!-- template reference variable #timer -->
     <app-countdown-timer #timer></app-countdown-timer>
   `,
-  styleUrls: ['../assets/demo.css']
 })
 export class CountdownLocalVarParentComponent { }
 ```
