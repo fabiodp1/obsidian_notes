@@ -3,9 +3,7 @@ Ogni componente è formato da:
 - Una classe [[TypeScript]] che ne definisce la logica
 - Un selettore [[CSS]] che definisce come il componente viene usato in un template
 - Opzionale, degli stili [[CSS]] da applicare al template
-
 # Creazione
-
 Per creare un componente bisogna prima rispettare questi requisiti:
 - Aver installato l'[Angular CLI](https://v14.angular.io/guide/setup-local#install-the-angular-cli)
 - Aver [creato un workspace Angular](https://v14.angular.io/guide/setup-local#create-a-workspace-and-initial-application)
@@ -23,9 +21,7 @@ Di default questo comando andrà a creare:
 - Un file per il test `<component-name>.component.spec.ts`
 
 >È possibile definire come la CLI farà lo scaffolding del componente utilizzando specifici [comandi](https://v14.angular.io/cli/generate#component-command) È possibile creare i componenti anche manualmente, ma la CLI è consigliata.
-
 # Lifecycle hooks
-
 Per utilizzare il `lifecycle hooks` di [[Angular]] il componente o direttiva deve implementare la relativa interfaccia:
 
 ```ts
@@ -50,6 +46,48 @@ Gli hook vengono eseguiti in questo ordine:
 6. `ngAfterViewInit()` lanciato dopo che Angular ha inizializzato la view del componente.
 7. `ngAfterViewChecked()` lanciato dopo *ngAfterViewInit()* e ad ogni *ngAfterContentChecked()*.
 8. `ngOnDestroy()` appena prima che Angular distrugga la direttiva o componente
-
 # Passare dati: Parent > Child
+Un componente figlio per dichiarare una prop utilizza il [[decorator]] `@Input`:
+
+```ts
+import { Component, Input } from '@angular/core';
+
+import { Hero } from './hero';
+
+@Component({
+  selector: 'app-hero-child',
+  template: `
+    <h3>{{hero.name}} says:</h3>
+    <p>I, {{hero.name}}, am at your service, {{masterName}}.</p>
+  `
+})
+export class HeroChildComponent {
+  @Input() hero!: Hero;
+  @Input('master') masterName = ''; // Alias
+}
+```
+
+```ts
+import { Component } from '@angular/core';
+import { HEROES } from './hero';
+
+@Component({
+  selector: 'app-hero-parent',
+  template: `
+    <h2>{{master}} controls {{heroes.length}} heroes</h2>
+
+    <app-hero-child
+      *ngFor="let hero of heroes"
+      [hero]="hero"
+      <!-- Alias -->
+      [master]="master">
+    </app-hero-child>
+  `
+})
+export class HeroParentComponent {
+  heroes = HEROES;
+  master = 'Master';
+}
+```
+
 
