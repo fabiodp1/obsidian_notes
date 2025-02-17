@@ -44,3 +44,7 @@ setCurrentClasses() {
 <div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
 ```
 
+Nell'esempio sopra il metodo verrà chiamato all'interno di `ngOnInit()`.
+
+## NgStyle
+
