@@ -112,3 +112,6 @@ Per applicarlo ad elementi non form o componenti di terze parti bisogna scrivern
 
 # Structural
 
+I più comuni sono:
+
+- 
