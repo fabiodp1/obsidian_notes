@@ -69,3 +69,4 @@ setCurrentStyles() {
 </div>
 ```
 
+Anche qui da utilizzare in `ngOnInit()` o quando vogliamo aggiornare gli stili.
