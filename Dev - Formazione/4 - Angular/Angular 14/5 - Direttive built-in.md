@@ -26,5 +26,19 @@ può essere usato sia con un'espressione che con un metodo:
 ```
 
 ```ts
+// .ts
+currentClasses: Record<string, boolean> = {};
+/* . . . */
+setCurrentClasses() {
+  // CSS classes: added/removed per current state of component properties
+  this.currentClasses =  {
+    saveable: this.canSave,
+    modified: !this.isUnchanged,
+    special:  this.isSpecial
+  };
+}
 
+// .html
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
 ```
+
