@@ -99,3 +99,9 @@ Poi aggiungere `[(ngModel)]` su un elemento form dell'[[HTML]] (es. un campo di 
 <input [(ngModel)]="currentItem.name" id="example-ngModel">
 ```
 
+È anche possibile personalizzarne il comportamento utilizzandone la forma estesa:
+
+```ts
+<input [ngModel]="currentItem.name" (ngModelChange)="setUppercaseName($event)" id="example-uppercase">
+```
+
