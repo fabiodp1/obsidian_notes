@@ -92,3 +92,10 @@ import { FormsModule } from '@angular/forms'; // <--- JavaScript import from Ang
 export class AppModule { }
 ```
 
+Poi aggiungere `[(ngModel)]` su un elemento form dell'[[HTML]] (es. un campo di input) e settarlo come uguale alla proprietà da bindare:
+
+```ts
+<label for="example-ngModel">[(ngModel)]:</label>
+<input [(ngModel)]="currentItem.name" id="example-ngModel">
+```
+
