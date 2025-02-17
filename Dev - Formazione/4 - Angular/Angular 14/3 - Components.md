@@ -213,7 +213,7 @@ Il padre per accedere alle proprietà e metodi del figlio dovrà creare una vari
   selector: 'app-countdown-timer',
   // ...
 })
-export class CountdownTimerComponent implements OnDestroy {
+export class CountdownTimerComponent {
   start() { //... }
   stop()  { //... }
 }
@@ -237,4 +237,29 @@ export class CountdownLocalVarParentComponent { }
 
 Questo approccio è abbastanza diretto, ma non permette va fatto tutto sul template del parent, il padre di per se non può utilizzare la variabile nella sua classe.
 
-Per collegare le due classi e quindi fare in modo che la classe del padre possa accedere alla classe del figlio, va fatto l'`inject` del figlio nel padre com `ViewChild`.
+Per collegare le due classi e quindi fare in modo che la classe del padre possa accedere alla classe del figlio, va fatto l'`inject` del figlio nel padre com `ViewChild`:
+
+```ts
+import { AfterViewInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { CountdownTimerComponent } from './countdown-timer.component';
+
+@Component({
+  selector: 'app-countdown-parent-vc',
+  template: `
+    <button type="button" (click)="start()">Start</button>
+    <button type="button" (click)="stop()">Stop</button>
+
+    <app-countdown-timer></app-countdown-timer>
+  `,
+})
+export class CountdownViewChildParentComponent {
+
+  @ViewChild(CountdownTimerComponent)
+  private timerComponent!: CountdownTimerComponent;
+
+  start() { this.timerComponent.start(); }
+  stop() { this.timerComponent.stop(); }
+}
+```
+
