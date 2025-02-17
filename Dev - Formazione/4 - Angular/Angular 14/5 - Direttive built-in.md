@@ -71,3 +71,24 @@ setCurrentStyles() {
 
 Anche qui da utilizzare in `ngOnInit()` o quando vogliamo aggiornare gli stili.
 
+## NgModel
+
+Per utilizzarlo bisogna prima di tutto importare `FormModule` fra i moduli:
+
+```ts
+// app.module.ts
+
+import { FormsModule } from '@angular/forms'; // <--- JavaScript import from Angular
+/* . . . */
+@NgModule({
+  /* . . . */
+
+  imports: [
+    BrowserModule,
+    FormsModule // <--- import into the NgModule
+  ],
+  /* . . . */
+})
+export class AppModule { }
+```
+
