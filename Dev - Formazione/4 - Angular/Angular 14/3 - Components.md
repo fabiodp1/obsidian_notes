@@ -50,3 +50,6 @@ Gli hook vengono eseguiti in questo ordine:
 6. `ngAfterViewInit()` lanciato dopo che Angular ha inizializzato la view del componente.
 7. `ngAfterViewChecked()` lanciato dopo *ngAfterViewInit()* e ad ogni *ngAfterContentChecked()*.
 8. `ngOnDestroy()` appena prima che Angular distrugga la direttiva o componente
+
+# Passare dati: Parent > Child
+
