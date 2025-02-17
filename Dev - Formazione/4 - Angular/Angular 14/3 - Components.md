@@ -276,3 +276,6 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 
 # Comunicazione tramite `service`
 
+vedi [Angular - Component interaction](https://v14.angular.io/guide/component-interaction#parent-and-children-communicate-using-a-service)
+
+
