@@ -276,5 +276,3 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 
 # Comunicazione tramite `service`
 
-
-
