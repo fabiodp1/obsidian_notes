@@ -105,3 +105,10 @@ Poi aggiungere `[(ngModel)]` su un elemento form dell'[[HTML]] (es. un campo di 
 <input [ngModel]="currentItem.name" (ngModelChange)="setUppercaseName($event)" id="example-uppercase">
 ```
 
+`NgModel` funziona con elementi che supportano [ControlValueAccessor](https://v14.angular.io/api/forms/ControlValueAccessor). Angular lo fornisce per la maggior parte degli elementi form [[HTML]] base.
+Per applicarlo ad elementi non form o componenti di terze parti bisogna scriverne il `value accessor` [DefaultValueAccessor](https://v14.angular.io/api/forms/DefaultValueAccessor).
+
+>Scrivendo un componente non è necessario utilizzare `value accessor` o `NgModel` finché il valore e le prop evento vengono nominate secondo la [two-way binding syntax](https://v14.angular.io/guide/two-way-binding#how-two-way-binding-works) di Angular.
+
+# Structural
+
