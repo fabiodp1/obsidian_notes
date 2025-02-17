@@ -53,7 +53,7 @@ Gli hook vengono eseguiti in questo ordine:
 
 # Passare dati da Parent a Child
 
-Un componente figlio per dichiarare una prop utilizza il [[decorator]] `@Input`:
+Un componente figlio per dichiarare una prop utilizza il [[decorator]] `@Input()`:
 
 ```ts
 import { Component, Input } from '@angular/core';
@@ -157,4 +157,29 @@ export class VersionChildComponent implements OnChanges {
 # Ascoltare gli eventi del child
 
 Per fare ciò il child espone una proprietà `EventEmitter`  on cui emette un [[custom event]].
-La proprietà che si occuperà dell'emissione dell'evento è un `output property`, utilizzando il [[decorator]]
+La proprietà che si occuperà dell'emissione dell'evento è un `output property`, utilizzando il [[decorator]] `@Output()`
+
+```ts
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-voter',
+  template: `
+    <h4>{{name}}</h4>
+    <button type="button" (click)="vote(true)"  [disabled]="didVote">Agree</button>
+    <button type="button" (click)="vote(false)" [disabled]="didVote">Disagree</button>
+  `
+})
+export class VoterComponent {
+  @Input()  name = '';
+  @Output() voted = new EventEmitter<boolean>();
+  didVote = false;
+
+  vote(agreed: boolean) {
+    this.voted.emit(agreed);
+    this.didVote = true;
+  }
+}
+```
+
+Il padre per poterlo ascoltare dovrà 
