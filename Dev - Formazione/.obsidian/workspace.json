@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Angular/Angular 14/3 - Components.md",
+                "file": "4 - Angular/Angular 14/4 - Template & data binding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Components"
+              "title": "4 - Template & data binding"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Angular/Angular 14/3 - Components.md",
+                "file": "4 - Angular/Angular 14/4 - Template & data binding.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 3 - Components"
+              "title": "Struttura di 4 - Template & data binding"
             }
           },
           {
@@ -181,8 +181,8 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
-    "4 - Angular/Angular 14/4 - Template & data binding.md",
     "4 - Angular/Angular 14/3 - Components.md",
+    "4 - Angular/Angular 14/4 - Template & data binding.md",
     "4 - Angular/Angular 14/2 - Config ambiente.md",
     "4 - Angular/Angular 19/1 - Components.md",
     "4 - Angular/Angular 19/2 - Reattività.md",

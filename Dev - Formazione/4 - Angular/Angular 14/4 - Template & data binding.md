@@ -154,3 +154,8 @@ La sintassi è simile a quella del `property binding`, ma invece di avere una pr
 
 Il `two-way binding` permette ai componenti di condividere dati. Si utilizzano per ascoltare eventi e simultaneamente aggiornare i valori fra padre e figlio.
 
+```ts
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+```
+
+[Angular - Two-way binding](https://v14.angular.io/guide/two-way-binding#how-two-way-binding-works)
