@@ -165,21 +165,79 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-voter',
   template: `
-    <h4>{{name}}</h4>
-    <button type="button" (click)="vote(true)"  [disabled]="didVote">Agree</button>
-    <button type="button" (click)="vote(false)" [disabled]="didVote">Disagree</button>
+    <button type="button" (click)="vote(true)">Agree</button>
+    <button type="button" (click)="vote(false)">Disagree</button>
   `
 })
 export class VoterComponent {
-  @Input()  name = '';
+  // ...
   @Output() voted = new EventEmitter<boolean>();
-  didVote = false;
 
   vote(agreed: boolean) {
     this.voted.emit(agreed);
-    this.didVote = true;
   }
 }
 ```
 
-Il padre per poterlo ascoltare dovrà 
+Il padre per poterlo ascoltare dovrà:
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-vote-taker',
+  template: `
+    <app-voter
+      *ngFor="let voter of voters"
+      [name]="voter"
+      (voted)="onVoted($event)">
+    </app-voter>
+  `
+})
+export class VoteTakerComponent {
+
+  onVoted(agreed: boolean) {
+    // ...
+  }
+}
+```
+
+# Accedere a prop e metodi child
+
+Il padre per accedere alle proprietà e metodi del figlio dovrà creare una variabile di reference del template:
+
+```ts
+// === CHILD ===
+
+import { Component, OnDestroy } from '@angular/core';
+
+@Component({
+  selector: 'app-countdown-timer',
+  // ...
+})
+export class CountdownTimerComponent implements OnDestroy {
+  start() { //... }
+  stop()  { //... }
+}
+```
+
+```ts
+// === FATHER ===
+
+import { Component } from '@angular/core';
+import { CountdownTimerComponent } from './countdown-timer.component';
+
+@Component({
+  selector: 'app-countdown-parent-lv',
+  template: `
+    <h3>Countdown to Liftoff (via local variable)</h3>
+    <button type="button" (click)="timer.start()">Start</button>
+    <button type="button" (click)="timer.stop()">Stop</button>
+    <div class="seconds">{{timer.seconds}}</div>
+    <!-- template reference variable -->
+    <app-countdown-timer #timer></app-countdown-timer>
+  `,
+  styleUrls: ['../assets/demo.css']
+})
+export class CountdownLocalVarParentComponent { }
+```
