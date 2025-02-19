@@ -65,4 +65,13 @@ Questa linea di codice aggiugne `RouterModule` agli imports di `AppRoutingModule
 imports: [ RouterModule.forRoot(routes) ],
 ```
 
->Si chiama `forRoot` perchè il router viene configurato al livello root dell'applicazione. Il metodo `forRoot()` fornisce 
+>Si chiama `forRoot` perchè il router viene configurato al livello root dell'applicazione. Il metodo `forRoot()` fornisce i service provider e direttive utili per il routing, ed effettua la navigazione iniziale basata sull'URL corrente del browser.
+
+Per finire `AppRoutingModule` esporta `RouterModule` per renderlo disponibile al resto dell'applicazione:
+
+```ts
+exports: [ RouterModule ]
+```
+
+# RouterOutlet
+
