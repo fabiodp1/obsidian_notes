@@ -60,4 +60,8 @@ getHeroes(): void {
   this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
 }
+
+ngOnInit(): void {
+    getHeroes();
+}
 ```
