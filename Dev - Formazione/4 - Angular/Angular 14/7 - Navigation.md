@@ -59,3 +59,10 @@ const routes: Routes = [
 ## RouterModule.forRoot()
 
 Il metadata di `@NgModule` inizializza il router e lo fa iniziare ad ascoltare per cambiamenti di rotta.
+Questa linea di codice aggiugne `RouterModule` agli imports di `AppRoutingModule` e ne configura le routes in una volta sola chiamando `RouterModule.forRoot()`:
+
+```ts
+imports: [ RouterModule.forRoot(routes) ],
+```
+
+>Si chiama `forRoot` perchè il router viene configurato al livello root dell'applicazione. Il metodo `forRoot()` fornisce 
