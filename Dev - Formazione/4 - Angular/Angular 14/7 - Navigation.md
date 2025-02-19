@@ -2,12 +2,43 @@ In [Angular](Angular) il miglior modo per impostare la navigazione, è caricare 
 
 Per convenzione il nome della classe del modulo è `AppRoutingModule` e si trova nel file `app-routing.module.ts` nella directory `app`.
 
-Per creare il modulo per il [[routing]] va lanciato il comando:
+Per creare il modulo che useremo per il [[routing]] va lanciato il comando:
 
 ```terminal
-ng generate module app-routing --flat --module=app
+ng generate module [module-name] --flat --module=app
+```
+
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule
+  ]
+})
+export class AppRoutingModule { }
 ```
 
 - `--flat` crea il file in `src/app` piuttosto che nella sua directory.
 - `--module=app` dice a `ng generate` di registrarlo nell'array degli `import` dell'`AppModule`.
+
+Per configurare il router nel modulo creato, va utilizzato il modulo `RouterModule`:
+
+```ts
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HeroesComponent } from './heroes/heroes.component';
+
+const routes: Routes = [
+  { path: 'heroes', component: HeroesComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
 
