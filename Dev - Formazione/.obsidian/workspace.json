@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "3 - Components"
             }
+          },
+          {
+            "id": "2cef4bf14d989393",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,13 +155,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Angular/Angular 14/3 - Components.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 3 - Components"
+              "title": "Struttura"
             }
           },
           {
@@ -179,7 +191,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "5c0bc763178c5251",
+  "active": "2cef4bf14d989393",
   "lastOpenFiles": [
     "4 - Angular/Angular 14/5 - Direttive built-in.md",
     "4 - Angular/Angular 14/4 - Template & data binding.md",
