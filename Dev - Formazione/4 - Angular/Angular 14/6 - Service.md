@@ -50,3 +50,14 @@ getHeroes(): Observable<Hero[]> {
   return heroes;
 }
 ```
+
+Il metodo `of` ritorna un observable (una sorta di Promise) a cui l'utilizzatore deve fare un `subscribe` (una sorta di `.then()`):
+
+```ts
+// Componente
+
+getHeroes(): void {
+  this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
+}
+```
