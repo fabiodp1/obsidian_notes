@@ -51,6 +51,11 @@ Prima di tutto importa `RouterModule` e `Routes` in modo che l'app abbia capacit
 `Routes` dice al `Router` quale view mostrare per la relativa path.
 
 ```ts
-const routes: [Routes](https://v14.angular.io/api/router/Routes) = [ { path: 'heroes', component: HeroesComponent } ];
+const routes: Routes = [
+  { path: 'heroes', component: HeroesComponent }
+];
 ```
 
+## RouterModule.forRoot()
+
+Il metadata di `@NgModule` inizializza il router e lo fa iniziare ad ascoltare per cambiamenti di rotta.
