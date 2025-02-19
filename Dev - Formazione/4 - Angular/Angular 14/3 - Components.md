@@ -274,8 +274,3 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 >Poi Angular chiama `ngAfterViewInit` quando ormai è troppo tardi per aggiornare la vista del padre. Il data-flow unidirezionale di Angular previene l'aggiornarsi della view padre nello stesso ciclo, quindi l'app dovrà aspettare un turno prima di poter mostrare i secondi (nell'esempio).
 >Viene usato `setTimeout()` per aspettare un `tick` e dopo viene modificato il metodo `seconds()` in modo che prenda i valori futuri dal componente figlio.
 
-# Comunicazione tramite `service`
-
-Un service non è altro che una classe che si occupa di fornire della logica ai componenti, è riutilizzabile, viene iniettata nei componenti tramite [dependency injection](dependency%20injection) 
-
-
