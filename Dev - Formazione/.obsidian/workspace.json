@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "3 - Components"
             }
-          },
-          {
-            "id": "2cef4bf14d989393",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -54,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Esplora risorse"
@@ -155,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "4 - Angular/Angular 14/3 - Components.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura"
+              "title": "Struttura di 3 - Components"
             }
           },
           {
@@ -188,14 +176,17 @@
       "canvas:Crea nuova lavagna": false,
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false
+      "command-palette:Apri riquadro comandi": false,
+      "workspaces:Gestisci layout delle aree di lavoro": false,
+      "markdown-importer:Apri importazione Markdown": false
     }
   },
-  "active": "2cef4bf14d989393",
+  "active": "5c0bc763178c5251",
   "lastOpenFiles": [
+    "2 - React/4 - Cache management.md",
+    "4 - Angular/Angular 14/3 - Components.md",
     "4 - Angular/Angular 14/5 - Direttive built-in.md",
     "4 - Angular/Angular 14/4 - Template & data binding.md",
-    "4 - Angular/Angular 14/3 - Components.md",
     "4 - Angular/Angular 14/2 - Config ambiente.md",
     "4 - Angular/Angular 19/1 - Components.md",
     "4 - Angular/Angular 19/2 - Reattività.md",
@@ -221,7 +212,6 @@
     "zzz_Pagine/React 19.md",
     "zzz_Pagine/useRef.md",
     "2 - React/12 - Link utili.md",
-    "1 - Development/Git.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",

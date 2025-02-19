@@ -111,8 +111,8 @@ Usare strumenti come React Query o Zustand, accoppiati con una chiara suddivisio
 
 # React query
 [[react-query]] è un set di [[hook]] React che permette di fare query, cache, e cambiare dati sul server in maniera flessibile  per supportare molti casi di utilizzo e ottimizzazioni.
-[query/docs/src/pages/docs/api.md at v2 · TanStack/query](https://github.com/TanStack/query/blob/v2/docs/src/pages/docs/api.md#usequery)
-[query/docs/src/pages/docs/api.md at v2 · TanStack/query](https://github.com/TanStack/query/blob/v2/docs/src/pages/docs/api.md#usemutation)
+[query/docs/src/pages/docs/api.md at v2 · TanStack/query](https://github.com/TanStack/query/blob/v2/docs/src/pages/docs/api.md#usequery) query
+[query/docs/src/pages/docs/api.md at v2 · TanStack/query](https://github.com/TanStack/query/blob/v2/docs/src/pages/docs/api.md#usemutation) mutation
 
 Normalmente per dichiarare uno state cache ne dichiariamo prima la query utilizzando [[useQuery]]:
 
