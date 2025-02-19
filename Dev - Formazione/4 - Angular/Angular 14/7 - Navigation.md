@@ -77,4 +77,7 @@ exports: [ RouterModule ]
 
 `RouterOutlet` viene utilizzato come `<router-outlet>` per mostrare le pagine gestita dal router. In base a dove lo disponiamo decideremo dove mostrate le pagine gestite.
 
->`RouterOutlet` è una delle direttive che diventano disponibili all'`AppComponent` poichè `AppModule` importa `AppRoutingModule` che esporta il `RouterModule`. Quando nell'esempio precedente abbiamo lanciato `ng generate` con il flag `--module=app`, abbiamo aggiunto questo import.
+>`RouterOutlet` è una delle direttive che diventano disponibili all'`AppComponent` poiché `AppModule` importa `AppRoutingModule` che esporta il `RouterModule`. Quando nell'esempio precedente abbiamo lanciato `ng generate` con il flag `--module=app`, abbiamo aggiunto questo import.
+
+# RouterLink
+
