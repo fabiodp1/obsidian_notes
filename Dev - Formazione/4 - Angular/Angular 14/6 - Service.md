@@ -40,6 +40,13 @@ ng generate service [service-name]
 
 # Observable
 
-Uno dei casi per cui vengono usati i service, è per fare fetch di dati, per cui operazioni asincrone, non come nell'esempio precedente.
+Uno dei casi per cui vengono usati i service, è per fare fetch di dati, per cui operazioni asincrone, non come nell'esempio precedente. Il metodo deve quindi avere una signature che ne indichi l'asincronicità.
 
-Il metodo deve quindi avere una signature che ne indichi l'asincronicità
+Un [[Observable]] è una delle classi chiave della libreria `RxJS`, che sta alla base di [Angular](Angular).
+
+```ts
+getHeroes(): Observable<Hero[]> {
+  const heroes = of(HEROES);
+  return heroes;
+}
+```
