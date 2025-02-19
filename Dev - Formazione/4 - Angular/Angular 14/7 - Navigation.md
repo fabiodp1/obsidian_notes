@@ -81,3 +81,15 @@ exports: [ RouterModule ]
 
 # RouterLink
 
+La direttiva `RouterLink` è un'altra direttiva pubblica messa a disposizione dal `RouterModule` e aggiunge capacità di navigazione all'interno dell'app creando link:
+
+```ts
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+```
+
+Viene utilizzato l'attributo `routerLink` che è il selettore per la direttiva `RouterLink` che converte il click utente in una navigazione del router.
