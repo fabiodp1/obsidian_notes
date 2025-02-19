@@ -1,3 +1,5 @@
+# Modulo
+
 In [Angular](Angular) il miglior modo per impostare la navigazione, è caricare e configurare il router in un modulo separato. Questo viene poi importato dell'`AppModule`.
 
 Per convenzione il nome della classe del modulo è `AppRoutingModule` e si trova nel file `app-routing.module.ts` nella directory `app`.
@@ -40,5 +42,15 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```
+
+Prima di tutto importa `RouterModule` e `Routes` in modo che l'app abbia capacità di routing (`CommonModule` qui non è più necessario).
+
+# Rotte
+
+`Routes` dice al `Router` quale view mostrare per la relativa path.
+
+```ts
+const routes: [Routes](https://v14.angular.io/api/router/Routes) = [ { path: 'heroes', component: HeroesComponent } ];
 ```
 
