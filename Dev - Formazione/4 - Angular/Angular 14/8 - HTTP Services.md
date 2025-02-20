@@ -145,3 +145,6 @@ this.heroes$ = this.searchTerms.pipe(
 - `distinctUntilChanged()` fa in modo che non passi una stringa uguale alla precedente.
 - `switchMap()` chiama il servizio di ricerca per ogni termine di ricerca cha passa attraverso `debounce()` e `distinctUntilChanged()`, ritornando solo l'ultimo servizio observable.
 
+>Con l'operatore `switchMap`, ogni evento può triggerare un `HttpClient.get()`.
+>Anche con una pausa di 300ms fra richieste, si potrebbero avere molte richieste [HTTP](HTTP) e potrebbero non ritornare nell'ordine corretto.
+>`switchMap` mantiene l'ordine originale delle richieste, ritornando solo la più recente, i risultati di quelle precedenti vengono scartate e cancellate.
