@@ -121,3 +121,7 @@ Un `Subject` è sia una sorgente di valori osservabili che un `Observable` stess
 ```
 
 Ogni volta che l'utente digita nella casella di testo, il binding chiama search() con il valore della casella di testo come termine di ricerca. `searchTerms` diventa un `Observable` che emette un flusso continuo di termini di ricerca.
+
+# Concatenare operatori RxJS
+
+Passando un nuovo valore di ricerca a `searchHeroes()` dopo ogni digitazione dell'utente, crea troppo chiamate `HTTP`.
