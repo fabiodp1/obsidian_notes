@@ -140,3 +140,8 @@ getHero(): void {
 }
 ```
 
+- `route.snapshot` è un'immagine statica delle informazioni della route di poco dopo la sua creazione.
+- `paramMap` è un dictionary dei valori dei parametri della route estratti dall'[URL](URL).
+
+>I parametri delle rotte sono sempre `stringhe`.
+
