@@ -83,3 +83,4 @@ getHeroes(): Observable<Hero[]> {
 }
 ```
 
+L'operatore `tap()` di [[RxJS]] fornisce l'abilità di guardare i valori `observable`, permettendo di farci qualcosa e poi farli proseguire. La callback `tap()` non accede 
