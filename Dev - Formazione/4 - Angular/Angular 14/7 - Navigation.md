@@ -96,4 +96,9 @@ Viene utilizzato l'attributo `routerLink` che è il selettore per la direttiva `
 
 # Redirect
 
-Quando la pagina viene avviata, di default ha come route iniziale quella del dominio, nel momento in cui non abbiamo pagine definite per quella route, 
+Quando la pagina viene avviata, di default ha come route iniziale quella del dominio, nel caso in cui non avessimo pagine definite per quella route finirebbe per non mostrare niente. Per dare una route di default, basta fare un redirect:
+
+```ts
+{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+```
+
