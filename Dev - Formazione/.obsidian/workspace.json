@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 365.5
   },
   "right": {
     "id": "df2474bdd0d6f08b",
@@ -183,14 +183,14 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
-    "4 - Angular/Angular 14/5 - Direttive built-in.md",
+    "4 - Angular/Angular 14/3 - Components.md",
+    "4 - Angular/Angular 14/2 - Config ambiente.md",
     "4 - Angular/Angular 14/7 - Navigation.md",
+    "4 - Angular/Angular 14/5 - Direttive built-in.md",
     "4 - Angular/Angular 14/4 - Template & data binding.md",
     "4 - Angular/Angular 14/6 - Service e Observable.md",
-    "4 - Angular/Angular 14/3 - Components.md",
     "zzz_Pagine/dependency injection.md",
     "2 - React/4 - Cache management.md",
-    "4 - Angular/Angular 14/2 - Config ambiente.md",
     "4 - Angular/Angular 19/1 - Components.md",
     "4 - Angular/Angular 19/2 - Reattività.md",
     "4 - Angular/Angular 14/1 - Architettura.md",
