@@ -42,5 +42,6 @@ getHeroes(): Observable<Hero[]> {
 }
 ```
 
-Il `catchError` intercetta l'observable che fallisce, sarà poi il  metodo 
+Il `catchError` intercetta l'observable che fallisce, sarà poi il  metodo `handleError` a gestirlo e ritornare un risultato innocuo in modo che l'app possa continuare a funzionare.
+
 
