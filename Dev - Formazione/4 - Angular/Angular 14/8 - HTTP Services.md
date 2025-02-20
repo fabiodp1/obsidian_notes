@@ -46,6 +46,3 @@ Il `catchError` intercetta l'observable che fallisce, sarà poi il  metodo `hand
 
 ## handleError
 
-
-
-
