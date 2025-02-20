@@ -100,3 +100,16 @@ export class HeroSearchComponent implements OnInit {
 Come si può vedere, la lista heroes viene seguita da un `$`, questa è una convenzione che indica che `heroes$` è un `Observable`, non un'array.
 
 Poichè `*ngFor` non può fare da solo nulla con un `Observable`, va usata la pipe `|` seguita da `async`. Questa sintassi identifica `AsyncPipe` di [Angular](Angular) e sottoscrive a un `Observable` automaticamente, così non è necessario farlo nella classe componente. 
+
+# RxJS subject
+
+```ts
+private searchTerms = new Subject<string>();
+
+// Push a search term into the observable stream.
+search(term: string): void {
+  this.searchTerms.next(term);
+}
+```
+
+Un `Subject` è sia una sorgente di valori osservabili che un `Observable` stesso. È possibile sottoscriversi a un `Subject` come si fa con un normale `Observable`.
