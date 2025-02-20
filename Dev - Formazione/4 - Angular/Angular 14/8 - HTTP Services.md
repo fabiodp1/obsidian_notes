@@ -115,3 +115,9 @@ search(term: string): void {
 Un `Subject` è sia una sorgente di valori osservabili che un `Observable` stesso. È possibile sottoscriversi a un `Subject` come si fa con un normale `Observable`.
 
 È possibile pushare valori nell'`Observable` chiamando il suo metodo `next(value)`.
+
+```ts
+<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+```
+
+Ogni volta che l'utente digita nella casella di testo, il binding chiama search() con il valore della casella di testo come termine di ricerca. `searchTerms` diventa un `Observable` che emette un flusso continuo di termini di ricerca.
