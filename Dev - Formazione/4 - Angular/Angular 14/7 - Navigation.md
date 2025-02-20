@@ -93,3 +93,7 @@ La direttiva `RouterLink` è un'altra direttiva pubblica messa a disposizione da
 ```
 
 Viene utilizzato l'attributo `routerLink` che è il selettore per la direttiva `RouterLink` che converte il click utente in una navigazione del router.
+
+# Redirect
+
+Quando la pagina viene avviata, di default ha come route iniziale quella del dominio, nel momento in cui non abbiamo pagine definite per quella route, 
