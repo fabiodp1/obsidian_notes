@@ -102,4 +102,11 @@ Quando la pagina viene avviata, di default ha come route iniziale quella del dom
 { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ```
 
- 
+# Parametri
+
+per creare una rotta parametrizzata basta fare:
+
+```ts
+{ path: 'detail/:id', component: HeroDetailComponent },
+```
+
