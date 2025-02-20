@@ -92,7 +92,9 @@ L'operatore `tap()` di [[RxJS]] osserva i valori `observable`, facendo qualcosa 
 <li *ngFor="let hero of heroes$ | async" >
 
 // ...
-
+export class HeroSearchComponent implements OnInit {
+  heroes$!: Observable<Hero[]>;
+  // ...
 ```
 
 Come si può vedere, la lista heroes viene seguita da un `$`, questa è una convenzione che indica che `heroes$` è un `Observable`, non un'array.
