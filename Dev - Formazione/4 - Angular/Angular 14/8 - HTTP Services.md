@@ -125,3 +125,4 @@ Ogni volta che l'utente digita nella casella di testo, il binding chiama search(
 # Concatenare operatori RxJS
 
 Passando un nuovo valore di ricerca a `searchHeroes()` dopo ogni digitazione dell'utente, crea troppo chiamate `HTTP`.
+
