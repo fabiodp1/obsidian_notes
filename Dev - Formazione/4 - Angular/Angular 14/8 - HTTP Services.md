@@ -126,3 +126,18 @@ Ogni volta che l'utente digita nella casella di testo, il binding chiama search(
 
 Passando un nuovo valore di ricerca a `searchHeroes()` dopo ogni digitazione dell'utente, crea troppo chiamate `HTTP`.
 
+Piuttosto, il metodo `ngOnInit()` crea una pipe con l'observable `searchTerms` attraverso una sequenza di operatori `RxJS`, riducendo il numero di chiamate a `searchHeroes()`. Alla fine ritorna un observable di risultati di ricerca di eroi, dove ciascuno è un `Hero[]`.
+
+```ts
+this.heroes$ = this.searchTerms.pipe(
+  // wait 300ms after each keystroke before considering the term
+  debounceTime(300),
+
+  // ignore new term if same as previous term
+  distinctUntilChanged(),
+
+  // switch to new search observable each time the term changes
+  switchMap((term: string) => this.heroService.searchHeroes(term)),
+);
+```
+
