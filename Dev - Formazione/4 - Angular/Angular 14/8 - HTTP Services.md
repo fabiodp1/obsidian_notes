@@ -27,3 +27,20 @@ getHeroes(): Observable<Hero[]> {
 }
 ```
 
+# Error handling
+
+## catchError
+
+Per fare il `catch` degli errori, l'observable viene incanalato ("pipe") attraverso l'opertatore `catchError()`:
+
+```ts
+getHeroes(): Observable<Hero[]> {
+  return this.http.get<Hero[]>(this.heroesUrl)
+    .pipe(
+      catchError(this.handleError<Hero[]>('getHeroes', []))
+    );
+}
+```
+
+Il `catchError` intercetta l'observable che fallisce, sarà poi il  metodo 
+
