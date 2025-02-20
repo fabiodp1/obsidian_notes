@@ -141,5 +141,7 @@ this.heroes$ = this.searchTerms.pipe(
 );
 ```
 
-
+- `debounceTime(300)` aspetta fino a quando il flusso di nuove entry va in pausa per tot secondi, dopo di che fa passare la nuova stringa.
+- `distinctUntilChanged()` fa in modo che non passi una stringa uguale alla precedente.
+- `switchMap()` chiama il servizio di ricerca per ogni termine di ricerca cha passa attraverso `debounce()` e `distinctUntilChanged()`, ritornando solo l'ultimo servizio observable.
 
