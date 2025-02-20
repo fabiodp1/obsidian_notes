@@ -3,10 +3,22 @@
 Per poterlo usare nell'applicazione basta importarlo negli `AppModule`:
 
 ```ts
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [
     HttpClientModule,
   ],
 })
+```
+
+Per poterlo usare nel componente anzi tutto va dichiarato come dipendenza:
+
+```ts
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+constructor(
+  private http: HttpClient
+) { }
 ```
 
