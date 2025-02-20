@@ -110,3 +110,33 @@ per creare una rotta parametrizzata basta fare:
 { path: 'detail/:id', component: HeroDetailComponent },
 ```
 
+Il componente che dovrà mostrare il dato avrà bisogno di:
+
+- informazioni sulla rotta corrente
+- il service per il recupero del modello
+- l'oggetto che permette ad Angular di interagire con il browser
+
+Inietteremo quindi:
+
+```ts
+constructor(
+  private route: ActivatedRoute,
+  private heroService: HeroService,
+  private location: Location
+) {}
+```
+
+Il componente all'init si farà dare il modello da mostrare:
+
+```ts
+ngOnInit(): void {
+  this.getHero();
+}
+
+getHero(): void {
+  const id = Number(this.route.snapshot.paramMap.get('id'));
+  this.heroService.getHero(id)
+    .subscribe(hero => this.hero = hero);
+}
+```
+
