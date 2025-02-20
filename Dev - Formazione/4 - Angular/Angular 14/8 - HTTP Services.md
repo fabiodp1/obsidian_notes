@@ -84,3 +84,17 @@ getHeroes(): Observable<Hero[]> {
 ```
 
 L'operatore `tap()` di [[RxJS]] osserva i valori `observable`, facendo qualcosa con quei valori e li passa avanti. La callback di `tap()` non accede ai valori stessi.
+
+# AsyncPipe
+
+```ts
+// ...
+<li *ngFor="let hero of heroes$ | async" >
+
+// ...
+
+```
+
+Come si può vedere, la lista heroes viene seguita da un `$`, questa è una convenzione che indica che `heroes$` è un `Observable`, non un'array.
+
+Poichè `*ngFor` non può fare da solo nulla con un `Observable`, va usata la pipe `|` seguita da `async`. Questa sintassi identifica `AsyncPipe` di [Angular](Angular) e sottoscrive a un `Observable` automaticamente, così non è necessario farlo nella classe componente. 
