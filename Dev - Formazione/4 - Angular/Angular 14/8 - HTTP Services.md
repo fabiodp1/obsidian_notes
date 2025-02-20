@@ -46,3 +46,5 @@ Il `catchError` intercetta l'observable che fallisce, sarà poi il  metodo `hand
 
 ## handleError
 
+Invece di gestire direttamente l'errore, ritorna una funzione `error handler` per `catchError`, questa funzione viene configurato con il nome dell'operazione fallita, e con un valore di ritiorno *safe*.
+
