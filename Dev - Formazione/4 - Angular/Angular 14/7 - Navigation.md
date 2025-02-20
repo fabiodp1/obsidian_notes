@@ -145,3 +145,10 @@ getHero(): void {
 
 >I parametri delle rotte sono sempre `stringhe`.
 
+`location` è molto utile per interagire con il browser, ad esempio per fare un back:
+
+```ts
+goBack(): void {
+  this.location.back();
+}
+```
