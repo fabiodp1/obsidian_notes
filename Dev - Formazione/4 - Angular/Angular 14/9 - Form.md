@@ -1,0 +1,1 @@
+[Angular](Angular) supporta 2 tipi di approccio per gestire form interattivi, `template syntax` e direttive.
