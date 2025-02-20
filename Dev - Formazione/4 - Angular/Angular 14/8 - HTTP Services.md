@@ -113,3 +113,5 @@ search(term: string): void {
 ```
 
 Un `Subject` è sia una sorgente di valori osservabili che un `Observable` stesso. È possibile sottoscriversi a un `Subject` come si fa con un normale `Observable`.
+
+È possibile pushare valori nell'`Observable` chiamando il suo metodo `next(value)`.
