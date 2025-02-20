@@ -20,5 +20,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 constructor(
   private http: HttpClient
 ) { }
+
+/** GET heroes from the server */
+getHeroes(): Observable<Hero[]> {
+  return this.http.get<Hero[]>(this.heroesUrl)
+}
 ```
 
