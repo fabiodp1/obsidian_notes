@@ -35,7 +35,7 @@ Utilizzando il `[(ngModel)]` va definito l'attributo `name`, [[Angular]] lo user
 
 ## Control states
 
-Aggiungendo la direttiva `NgModel` ad un controllo, aggiunge a questo delle classi che ne definiscono lo stato. Queste possono essere utilizzate per cambiare lo stile di un controllo in base al suo stato.
+Aggiungendo la direttiva `NgModel` ad un controllo, aggiunge a questo delle classi [CSS](CSS) che ne definiscono lo stato. Queste possono essere utilizzate per cambiare lo stile di un controllo in base al suo stato.
 
 queste sono le classi (ogni coppia ha i due valori opposti fra loro):
 
@@ -44,3 +44,8 @@ queste sono le classi (ogni coppia ha i due valori opposti fra loro):
 - `ng-valid` / `ng-invalid` se il valore è valido
 
 >la classe `ng-submitted` invece viene applicata al submit e solo all'elemento `form`, non agli elementi contenuti.
+
+```ts
+<input … class="form-control ng-untouched ng-pristine ng-valid" …>
+```
+
