@@ -63,4 +63,10 @@ In questa maniera è possibile applicare degli stili in base alla classe aggiunt
 }
 ```
 
-# 
+## Mostrare messaggi di errore
+
+Un modo per gestire i messaggi di errore è utilizzare le `template reference variable` per poter accedere ai controlli dei campi dall'interno del template:
+
+```ts
+
+```
