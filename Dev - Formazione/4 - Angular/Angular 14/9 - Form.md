@@ -52,6 +52,8 @@ queste sono le classi (ogni coppia ha i due valori opposti fra loro):
 In questa maniera è possibile applicare degli stili in base alla classe aggiunta:
 
 ```ts
+// forms.css
+
 .ng-valid[required], .ng-valid.required  {
   border-left: 5px solid #42A948; /* green */
 }
