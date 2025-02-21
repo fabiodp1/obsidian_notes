@@ -35,4 +35,4 @@ Utilizzando il `[(ngModel)]` va definito l'attributo `name`, [[Angular]] lo user
 
 >Angular applica la classe `ng-submitted` agli elementi `form` dopo che il form è stato inviato.
 
- 
+## Control states
