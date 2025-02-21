@@ -33,6 +33,14 @@ Utilizzando il `[(ngModel)]` va definito l'attributo `name`, [[Angular]] lo user
 </div>
 ```
 
->Angular applica la classe `ng-submitted` agli elementi `form` dopo che il form è stato inviato.
-
 ## Control states
+
+Aggiungendo la direttiva `NgModel` ad un controllo, aggiunge a questo delle classi che ne definiscono lo stato. Queste possono essere utilizzate per cambiare lo stile di un controllo in base al suo stato.
+
+queste sono le classi (ogni coppia ha i due valori opposti fra loro):
+
+- `ng-touched` / `ng-untouched` se il control è stato visitato
+- `ng-dirty` / `ng-pristine` se il valore del controllo è stato cambiato
+- `ng-valid` / `ng-invalid` se il valore è valido
+
+>la classe `ng-submitted` invece viene applicata al submit e solo all'elemento `form`, non agli elementi contenuti.
