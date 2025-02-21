@@ -68,5 +68,15 @@ In questa maniera è possibile applicare degli stili in base alla classe aggiunt
 Un modo per gestire i messaggi di errore è utilizzare le `template reference variable` per poter accedere ai controlli dei campi dall'interno del template:
 
 ```ts
-
+<label for="name">Name</label>
+<input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="model.name" name="name"
+       #name="ngModel">
+<div [hidden]="name.valid || name.pristine"
+     class="alert alert-danger">
+  Name is required
+</div>
 ```
+
+>la `template reference variable` `#name` viene settata a `ngModel` perché quello è il valore della proprietà `NgModel.exportAs`. Questa proprietà dice ad Angular come collegare la reference variable a una direttiva.
