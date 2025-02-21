@@ -22,4 +22,14 @@ Fatto questo la template variable `heroForm` adesso è una reference all'istanza
 
 ## Nominare gli elementi
 
-Utilizzando il `[(ngModel)]` va definito l'attributo `name`, [[Angular]] lo userà per registrare l'elemento con la direttiva `NgForm` attaccato all'elemento `<form>`.
+Utilizzando il `[(ngModel)]` va definito l'attributo `name`, [[Angular]] lo userà per registrare l'elemento con la direttiva `NgForm` attaccato all'elemento `<form>`:
+
+```ts
+<div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name"
+         required
+         [(ngModel)]="model.name" name="name">
+</div>
+```
+
