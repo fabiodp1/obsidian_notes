@@ -80,3 +80,14 @@ Un modo per gestire i messaggi di errore è utilizzare le `template reference va
 ```
 
 >la `template reference variable` `#name` viene settata a `ngModel` perché quello è il valore della proprietà `NgModel.exportAs`. Questa proprietà dice ad Angular come collegare la reference variable a una direttiva.
+
+## Resettare il form
+
+Per resettare il form basta chiamare nel template il metodo `reset()` della `reference variable` `heroForm`:
+
+```ts
+<button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
+```
+
+## Submit del form
+
