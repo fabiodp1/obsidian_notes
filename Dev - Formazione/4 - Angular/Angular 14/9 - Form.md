@@ -20,3 +20,6 @@ Per accedere a `NgForm` e il form status, bisogna dichiarare una `template refer
 
 Fatto questo la template variable `heroForm` adesso è una reference all'istanza della direttiva `NgForm` che governa il form per intero.
 
+## Nominare gli elementi
+
+Utilizzando il `[(ngModel)]` va definito l'attributo `name`, [[Angular]] lo userà per registrare l'elemento con la direttiva `NgForm` attaccato all'elemento `<form>`.
