@@ -91,3 +91,14 @@ Per resettare il form basta chiamare nel template il metodo `reset()` della `ref
 
 ## Submit del form
 
+Per gestire l'evento di submit basta fare il bind dell'evento `ngSubmit`:
+
+```ts
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+```
+
+L'evento viene lanciato al click del bottone con `type="submit"` e possiamo usare la `reference variable` per gestire l'abilitazione del click:
+
+```ts
+<button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+```
