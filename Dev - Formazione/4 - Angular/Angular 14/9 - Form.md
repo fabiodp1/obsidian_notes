@@ -49,3 +49,15 @@ queste sono le classi (ogni coppia ha i due valori opposti fra loro):
 <input … class="form-control ng-untouched ng-pristine ng-valid" …>
 ```
 
+In questa maniera è possibile applicare degli stili in base alla classe aggiunta:
+
+```ts
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+```
+
