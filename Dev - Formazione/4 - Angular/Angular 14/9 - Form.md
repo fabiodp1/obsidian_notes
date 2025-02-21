@@ -102,5 +102,3 @@ L'evento viene lanciato al click del bottone con `type="submit"` e possiamo usar
 ```ts
 <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
 ```
-
-Una volta fatto il submit, possono essere utilizzate altre proprietà di 
