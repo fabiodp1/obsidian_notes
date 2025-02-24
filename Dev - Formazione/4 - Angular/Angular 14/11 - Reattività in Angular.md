@@ -175,5 +175,20 @@ AppComponent (selezionato)
 
 # Contrassegnare manualmente i componenti `Dirty`
 
+Tornando all'esempio precedente e supponendo di voler aggiornare il nome di `user` ma di non voler modificare la reference, possiamo contrassegnare manualmente il componente come `Dirty`.
+Per fare ciò bisogna fare l'*inject* di `changeDetectorRef` e utilizzare il suo metodo `markForCheck` per indicare ad Angular che questo componente deve essere controllato:
+
+```ts
+@Component({...})
+
+export class ChildComponent {
+	@Input() user;
+	constructor(private cd: ChangeDetectorRef) {}
+	someMethodWhichDetectsAndUpdate() {
+		this.cd.markForCheck();
+	}
+}
+```
+
 
 
