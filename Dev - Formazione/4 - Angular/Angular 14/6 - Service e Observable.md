@@ -115,3 +115,48 @@ Nell'esempio si può vedere che:
 ```ts
 <p> {{ (data$ | async).someValue }} </p>
 ```
+
+### Elaborazione dei dati e sottoscrizioni nidificate
+
+Si potrebbe pensare che la tecnica al punto precedente è valida ma non adatta a casi più complessi, ad es. quando abbiamo bisogno di elaborare prima i dati ritornati dall'`Observable`, o che comunque sia scomodo dover mettere il `| async` ovunque avessimo bisogno del valore ad es:
+
+```ts
+readonly vm$ = combineLatest([
+	this.route.params.pipe(
+		switchMap(params => this.heroService.getHero(params.id))
+	),
+	this.route.params.pipe(
+		switchMap(params => this.heroService.getPet(params.id))
+	),
+	this.heroService.getCities(),
+]).pipe(
+	map(([hero, pet, cities]) => {
+		return {
+			hero,
+			pet,
+			cities
+		}
+	})
+);
+```
+
+In realtà è facilmente utilizzabile utilizzando gli operatori di `RxJS`:
+
+```ts
+<ng-container *ngIf="vm$ | async as vm">
+ <p> {{ vm.hero.name }} </p>
+ <p> {{ vm.hero.surname }} </p>
+ <p> {{ vm.hero.city }} </p>
+ 
+ <p> {{ vm.pet.name }} </p>
+ 
+ <ul>
+ <li *ngFor="let city of vm.cities"> {{ city }} </li>
+ </ul>
+</ng-container>
+```
+
+Tutti è racchiuso nell'observable `vm$`, una volta risolto tramite `| async` la sintassi diventa molto semplice.
+
+### Inizializzazione tramite valori di input
+
