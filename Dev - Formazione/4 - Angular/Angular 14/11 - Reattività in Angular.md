@@ -62,7 +62,7 @@ function refreshComponent (hostLView, componentHostIdx) {
 
 >In sintesi `refreshComponent` assicura che solo i componenti con una strategia di rilevamento delle modifiche specifica (`CheckAlways` o `OnPush`) e contrassegnati come `Dirty` vengano aggiornati correttamente all'interno della view, garantendo così un'ottima gestione delle prestazioni e dell'aggiornamento dei componenti.
 
-# CheckAlways (Default)
+## CheckAlways (Default)
 
 La strategia di rilevamento delle modifiche `ChangeDetection` di default implica che un componente figlio verrà sempre controllato **se il componente padre viene modificato**.
 L'unica eccezione alla regola è se il `ChangeDetection` del figlio viene scollegato:
@@ -117,7 +117,7 @@ Quando clicchiamo sul pulsante del componente padre, Angular attiva un gestore e
 
 Anche se la reference all'oggetto `user` non è cambiato, poiché è stato mutato internamente, vediamo comunque il nuovo nome visualizzato sullo schermo. Questo perché Angular controlla gli oggetti non solo rispetto alla loro reference ma anche in base al loro stato interno e questo è conseguenza del fatto che Angular controlla tutti i componenti. La restrizione sull'immutabilità dell'oggetto è fondamentale perché Angular possa determinare se gli input sono stati modificati o meno.
 
-# CheckOnce (OnPush)
+## CheckOnce (OnPush)
 
 Sebbene [Angular](Angular) non imponga l'immutabilità degli oggetti, ci mette a disposizione un meccanismo per dichiarare un componente come avente input immutabili, riducendo il numero di volte in cui il componente viene controllato.
 
