@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Angular/Angular 14/Anti-Pattern.md",
+                "file": "4 - Angular/Angular 14/11 - Change detection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anti-Pattern"
+              "title": "11 - Change detection"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Angular/Angular 14/Anti-Pattern.md",
+                "file": "4 - Angular/Angular 14/11 - Change detection.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Anti-Pattern"
+              "title": "Struttura di 11 - Change detection"
             }
           },
           {
@@ -183,8 +183,9 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
+    "4 - Angular/Angular 14/10 - Anti-Pattern.md",
+    "4 - Angular/Angular 14/11 - Change detection.md",
     "4 - Angular/Angular 14/6 - Service e Observable.md",
-    "4 - Angular/Angular 14/Anti-Pattern.md",
     "4 - Angular/Angular 14/8 - HTTP Services & RxJS operators.md",
     "4 - Angular/Angular 14/7 - Navigation.md",
     "4 - Angular/Angular 14/9 - Form.md",
@@ -211,7 +212,6 @@
     "zzz_Pagine/useContext.md",
     "zzz_Pagine/Zod.md",
     "3 - Next.js/12 - Mutating Data.md",
-    "3 - Next.js/14 - Migliorare l'accessibilità.md",
     "zzzz_allegati/Pasted image 20241217142847.png",
     "zzzz_allegati/Pasted image 20241125173118.png",
     "zzzz_allegati",
