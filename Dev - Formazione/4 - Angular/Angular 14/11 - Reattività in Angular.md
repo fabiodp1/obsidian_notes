@@ -57,4 +57,31 @@ function refreshComponent (hostLView, componentHostIdx) {
 	- `componentHostIdx`: l'index del componente ospitato all'interno di `hostLView`.
 2. Inizialmente viene verificato se la vista del componente è ancora collegata al detector delle modifiche, garantendo che l'aggiornamento avvenga solo se il componente non è già stato distrutto.
 3. Se la view è ancora collegata al detector delle modifiche, la funzione procede con il controllare il tipo di strategia di rilevamento delle modifiche applicata al componente, e se il componente è contrassegnato come `Dirty`.
-4. Se il componente è marcato come `Dirty` e utilizza una strategia di rilevamento `CheckAlways` o `OnPush`, viene richiamata la funzione `RefreshView` per procedere all'aggiornamento della view
+4. Se il componente è marcato come `Dirty` e utilizza una strategia di rilevamento `CheckAlways` o `OnPush`, viene richiamata la funzione `RefreshView` per procedere all'aggiornamento della view. Questa funzione accetta come parametri il `tView` (Template View) del componente, la view stessa (`ComponentView`), il template associato e il contesto del componente.
+5. Se il componente non è contrassegnato come `Dirty` ma ci sono ancora view trasferite da aggiornare, viene chiamata la funzione `refreshContainsDirtyView` per controllare e aggiornare eventuali viste trasferite `Dirty`.
+
+>In sintesi `refreshComponent` assicura che solo i componenti con una strategia di rilevamento delle modifiche specifica (`CheckAlways` o `OnPush`) e contrassegnati come `Dirty` vengano aggiornati correttamente all'interno della view, garantendo così un'ottima gestione delle prestazioni e dell'aggiornamento dei componenti.
+
+# CheckAlways
+
+La strategia di rilevamento delle modifiche `ChangeDetection` di default implica che un componente figlio verrà sempre controllato **se il componente padre viene modificato**.
+L'unica eccezione alla regola è se il `ChangeDetection` del figlio viene scollegato:
+
+```ts
+@Component({
+	selector: 'a-op',
+	template: `I am OnPush component`
+})
+
+export class AOpComponent {
+	constructor(private cdRef: ChangeDetectorRef) {
+		cdRef.detach();
+	}
+}
+```
+
+Quando si parla di *componente principale da controllare*, si fa riferimento al padre. In Angular se il padre non è configurato per il `ChangeDetection`, non lo saranno neanche i figli, anche se utilizzano la strategia di rilevamento predefinita.
+
+>Normalmente in [Angular](Angular) se viene controllato il padre, automaticamente vengono controllati anche i figli, facendo parte della struttura del padre. Questo approccio è cruciale per garantire che tutti i componenti all'interno della gerarchia vengano aggiornati in modo coerente quando cambia lo stato dell'applicazione.
+
+ghkhfjkgfhjkghjtyjgy
