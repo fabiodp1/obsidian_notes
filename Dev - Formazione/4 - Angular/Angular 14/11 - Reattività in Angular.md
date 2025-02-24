@@ -156,7 +156,3 @@ export class ChildComponent {
 Quando l'applicazione viene eseguita, Angular non rileva più la modifica di `user.name`.
 Si può vedere che il componente figlio viene controllato una prima volta al bootstrap restituendo il nome `A`. Ma non viene controllato durante le successive esecuzioni di `ChangeDetection`, quindi il nome non cambierà da `A`  a `B` cliccando sul pulsante.
 Questo perché la reference dell'oggetto `user` passato al child come `@Input`, non è cambiata.
-
-# @Input bindings
-
-Nella maggior parte dei casi dovremo controllare 
