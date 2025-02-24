@@ -161,5 +161,76 @@ Tutti è racchiuso nell'observable `vm$`, una volta risolto tramite `| async` la
 ### Inizializzazione tramite valori di `@Input()`
 
 Spesso i componenti utilizzano le proprietà di input per ottenere lo stato dal componente padre, in modo da mostrarne il risultato, quindi dovrebbero essere reattivi anche in caso di cambiamenti.
-Spesso 
 
+>Spesso questi campi di input vengono usati semplicemente come una sorta di informazione di configurazione che utilizziamo durante l'inizializzazione del componente e basta.
+>Non gestiamo l'evenienza che questi dati possano cambiare nel tempo. In questo modo sembrerà funzionare all'inizializzazione, ma al cambiare degli input non funzionerà correttamente.
+
+```ts
+@Component({
+ template: `<p> {{ fullName }} </p>`,
+})
+
+export class NameComponent implements OnInit {
+ @Input() name: string;
+ @Input() surname: string;
+ 
+ fullName: string;
+ 
+ ngOnInit() {
+ this.fullName = `${this.name} ${this.surname}`;
+ }
+}
+```
+
+La proprietà `fullName` verrà inizializzata una volta con il primo set di `name + surname` ma successivamente al cambio di questi `fullname` rimarrà invariato.
+Dovremmo elaborare i dati di input ogni volta che cambiano, per farlo possiamo scegliere fra 3 opzioni:
+
+1. utilizzando `ngOnChanges()`
+2. utilizzando un `getter`
+3. utilizzando un `setter`
+
+#### ngOnChanges
+
+Viene eseguito ad ogni modifica degli input, quindi può essere utilizzato per aggiornare il nostro stato `derivato`. Funziona allo stesso modo di `ngOnInit()` ma verrà eseguito ad ogni cambiamento, non solo all'inizio.
+
+```ts
+@Component({
+ template: `<p> {{ fullName }} </p>`,
+})
+
+export class NameComponent implements OnChanges {
+ @Input() name: string;
+ @Input() surname: string;
+ 
+ fullName: string;
+ 
+ ngOnChanges() {
+	 this.fullName = `${this.name} ${this.surname}`;
+ }
+}
+```
+
+#### Getter
+
+Normalmente l'hook `ngOnChanges()` viene usato per logiche più complesse di quella sopra, per casi più semplici come questo è più pratico usare i `getter`.
+
+>Per utilizzare i getter è importante settare fra i metadata del componente `ChangeDetection.OnPush` per non avere problemi di prestazioni nel caso in cui il getter eseguisse logiche più complicate.
+
+```ts
+@Component({
+ template: `<p> {{ fullName }} </p>`,
+ changeDetection: ChangeDetectionStrategy.OnPush, // <==
+})
+
+export class NameComponent {
+ @Input() name: string;
+ @Input() surname: string;
+ get fullName(): string {
+ return `${this.name} ${this.surname}`
+ }
+}
+```
+
+#### Setter
+
+Questo metodo sfrutta la potenza dei setter di `TypeScript`. Nessuno nega che con i decoratori `@Input()` venga utilizzato un setter. Per questo è possibile utilizzarli con un po' di logica di configurazione leggera (niente di troppo complesso).
