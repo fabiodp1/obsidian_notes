@@ -190,5 +190,35 @@ export class ChildComponent {
 }
 ```
 
+L'hook `NgDoCheck` è un ottimo posto in cui chiamare questo tipo di metodo, venendo eseguito prima che Angular esegua il rilevamento delle modifiche.
+Qui è dove andrebbe inserita la logica di confronto dei valori e contrassegnare manualmente il componente come `Dirty` al rilevamento della modifica.
 
+La decisione di eseguire `NgDoCheck` anche se un componente è `OnPush` spesso causa confusione. Ciò è intenzionale sapendo che viene eseguito come parte del controllo del comoponente principale.
 
+>`ngDoCkeck` vine attivato solo per il componente figlio più in alto. Se questo ha figli e Angular non lo controlla, per loro `ngDoCheck` non viene attivato.
+
+```ts
+@Component({...})
+export class ParentComponent {...}
+
+@Component({
+	selector: 'app-child',
+	template: `
+	<span>User name: {{user.name}}</span>
+	`,
+	changeDetection: ChangeDetectionStrategy.OnPush
+})
+
+export class ChildComponent {
+	@Input() user;
+	previousUserName = '';
+	constructor(private cd: ChangeDetectorRef) {}
+	
+	ngDoCheck() {
+		if (this.user.name !== this.previousUserName) {
+			this.cd.markForCheck();
+			this.previousUserName = this.user.name;
+		}
+	}
+}
+```
