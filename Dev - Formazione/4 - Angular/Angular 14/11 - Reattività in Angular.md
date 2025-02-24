@@ -84,4 +84,35 @@ Quando si parla di *componente principale da controllare*, si fa riferimento al 
 
 >Normalmente in [Angular](Angular) se viene controllato il padre, automaticamente vengono controllati anche i figli, facendo parte della struttura del padre. Questo approccio è cruciale per garantire che tutti i componenti all'interno della gerarchia vengano aggiornati in modo coerente quando cambia lo stato dell'applicazione.
 
-ghkhfjkgfhjkghjtyjgy
+Angular non impone un flusso di lavoro per rilevare quando lo stato del componente cambia, quindi il comportamento predefinito è di controllare sempre i componenti per le modifiche.
+Tuttavia esistono strategie come `OnPush` che consentono agli sviluppatori di ottimizzare il rilevamento delle modifiche, ad esempio tramite l'immutabilità degli oggetti passati attraverso `@Input`.
+
+```ts
+@Component({
+ selector: 'parent-component',
+ template: `
+ <button (click)="changeName()">Change name</button>
+ <child-component [userData]="userData"></child-component>
+ `,
+})
+
+export class ParentComponent {
+ userData = { name: 'A' };
+ changeName() {
+ this.userData.name = 'B';
+ }
+}
+
+@Component({
+ selector: 'child-component',
+ template: `<span>User name: {{userData.name}}</span>`,
+})
+
+export class ChildComponent {
+ @Input() userData;
+}
+```
+
+Quando clicchiamo sul pulsante del componente padre, Angular attiva un gestore eventi che aggiorna il nome dell'utente nell'oggetto `user`. Durante il successivo ciclo di rilevamento delle modifiche, Angular controlla il comportamento del figlio, e aggiorna lo schermo per riflettere il nuovo nome dell'utente.
+
+Anche se la reference all'oggetto `user` non è cambiato, poichè è stato mutato internamente, vediamo comunque il nuovo nome visualizzato sullo schermo.
