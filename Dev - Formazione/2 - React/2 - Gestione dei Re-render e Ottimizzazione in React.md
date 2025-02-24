@@ -12,7 +12,7 @@ Esempio:
 
 Se lo stato `count` cambia, `<Counter>` e `<Decoration>` verranno ri-renderizzati. Anche se `<Decoration>` non utilizza `count`, viene comunque incluso nel processo di ri-render per precauzione. React non può sapere con certezza che non esistano dipendenze nascoste.
 
-## **Comportamenti Impuri**
+## Comportamenti Impuri
 
 React si aspetta che i componenti siano **puri**, cioè che producano sempre lo stesso risultato a parità di props. Tuttavia, è facile creare componenti **impuri**, per esempio usando variabili dipendenti da `Date` o mutando direttamente i refs.
 
@@ -79,6 +79,28 @@ Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati
 Anche il **context** segue le stesse regole di re-render. Quando lo stato condiviso cambia, tutti i componenti che consumano quel contesto vengono ri-renderizzati. In questi casi, è utile usare `React.memo` o `useContext` combinati con `useMemo` per ridurre al minimo i calcoli inutili.
 
 ---
+
+# Utilizzare key per ri-renderizzare un componente
+
+Esistono casi in cui vorremmo che un componente figlio venga ri-renderizzato al cambio di una circostanza, senza bisogno che questo debba utilizzare uno `useEffect`.
+Per fare ciò si può utilizzare l'attributo `key`, ogni volta che questo cambia, [React](React.md) ri-renderizza il componente:
+
+```tsx
+function MyComponent() {
+	const [currentIndex, setCurrentIndex] = useState(0);
+
+	function changeIndex() {
+		setCurrentIndex(1);
+	}
+
+	return (
+		<div>
+			{currentIndex}
+			<my-child key={currentIndex}></my-child> // Al cambio di currentIndex                                                       il child verrà ri-renderizzato
+		</div>
+	)
+}
+```
 
 # Conclusione
 
