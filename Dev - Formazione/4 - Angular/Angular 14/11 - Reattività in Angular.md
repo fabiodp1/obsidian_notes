@@ -124,6 +124,33 @@ Sebbene [Angular](Angular) non imponga l'immutabilità degli oggetti, ci mette a
 Questo meccanismo si presenta sotto forma di strategia di `ChangeDetection` `OnPush`.
 Internamente viene chiamata `CheckOnce`, poiché implica che il rilevamento delle modifiche venga saltato finché il componente non viene contrassegnato come `Dirty`, quindi controllato una volta e poi saltato nuovamente.
 
-Il componente può essere contrassegnato come `Dirty` automaticamente o manualmente utilizzando il metodo `markForCheck`:
+Il componente può essere contrassegnato come `Dirty` automaticamente o manualmente utilizzando il metodo `markForCheck`.
 
+```ts
+@Component({
+	selector: 'parent-component',
+	template: `
+		<button (click)="changeName()">Change name</button>
+	 	<child-component [userData]="userData"></child-component>
+	`,
+})
 
+export class ParentComponent {
+	userData = { name: 'A' };
+	changeName() {
+		this.userData.name = 'B';
+	}
+}
+
+@Component({
+	selector: 'child-component',
+	template: `<span>User name: {{userData.name}}</span>`,
+	changeDetection: ChangeDetectionStrategy.OnPush
+})
+
+export class ChildComponent {
+	@Input() userData;
+}
+```
+
+Quando l'applicazione viene eseguita, Angular non rileva più la modifica di `user.name`
