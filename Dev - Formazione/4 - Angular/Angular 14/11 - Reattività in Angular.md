@@ -62,7 +62,7 @@ function refreshComponent (hostLView, componentHostIdx) {
 
 >In sintesi `refreshComponent` assicura che solo i componenti con una strategia di rilevamento delle modifiche specifica (`CheckAlways` o `OnPush`) e contrassegnati come `Dirty` vengano aggiornati correttamente all'interno della view, garantendo così un'ottima gestione delle prestazioni e dell'aggiornamento dei componenti.
 
-# CheckAlways
+# CheckAlways (Default)
 
 La strategia di rilevamento delle modifiche `ChangeDetection` di default implica che un componente figlio verrà sempre controllato **se il componente padre viene modificato**.
 L'unica eccezione alla regola è se il `ChangeDetection` del figlio viene scollegato:
@@ -115,4 +115,15 @@ export class ChildComponent {
 
 Quando clicchiamo sul pulsante del componente padre, Angular attiva un gestore eventi che aggiorna il nome dell'utente nell'oggetto `user`. Durante il successivo ciclo di rilevamento delle modifiche, Angular controlla il comportamento del figlio, e aggiorna lo schermo per riflettere il nuovo nome dell'utente.
 
-Anche se la reference all'oggetto `user` non è cambiato, poichè è stato mutato internamente, vediamo comunque il nuovo nome visualizzato sullo schermo.
+Anche se la reference all'oggetto `user` non è cambiato, poiché è stato mutato internamente, vediamo comunque il nuovo nome visualizzato sullo schermo. Questo perché Angular controlla gli oggetti non solo rispetto alla loro reference ma anche in base al loro stato interno e questo è conseguenza del fatto che Angular controlla tutti i componenti. La restrizione sull'immutabilità dell'oggetto è fondamentale perché Angular possa determinare se gli input sono stati modificati o meno.
+
+# CheckOnce (OnPush)
+
+Sebbene [Angular](Angular) non imponga l'immutabilità degli oggetti, ci mette a disposizione un meccanismo per dichiarare un componente come avente input immutabili, riducendo il numero di volte in cui il componente viene controllato.
+
+Questo meccanismo si presenta sotto forma di strategia di `ChangeDetection` `OnPush`.
+Internamente viene chiamata `CheckOnce`, poiché implica che il rilevamento delle modifiche venga saltato finché il componente non viene contrassegnato come `Dirty`, quindi controllato una volta e poi saltato nuovamente.
+
+Il componente può essere contrassegnato come `Dirty` automaticamente o manualmente utilizzando il metodo `markForCheck`:
+
+
