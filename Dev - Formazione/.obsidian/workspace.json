@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Angular/Angular 14/11 - Change detection.md",
+                "file": "4 - Angular/Angular 14/11 - Reattività in Angular.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - Change detection"
+              "title": "11 - Reattività in Angular"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Angular/Angular 14/11 - Change detection.md",
+                "file": "4 - Angular/Angular 14/11 - Reattività in Angular.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 11 - Change detection"
+              "title": "Struttura di 11 - Reattività in Angular"
             }
           },
           {
@@ -184,7 +184,7 @@
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
     "4 - Angular/Angular 14/10 - Anti-Pattern.md",
-    "4 - Angular/Angular 14/11 - Change detection.md",
+    "4 - Angular/Angular 14/11 - Reattività in Angular.md",
     "4 - Angular/Angular 14/6 - Service e Observable.md",
     "4 - Angular/Angular 14/8 - HTTP Services & RxJS operators.md",
     "4 - Angular/Angular 14/7 - Navigation.md",
