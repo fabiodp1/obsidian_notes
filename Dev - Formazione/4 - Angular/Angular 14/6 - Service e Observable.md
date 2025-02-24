@@ -105,3 +105,13 @@ Questo rende il componente molto più leggibile rispetto a `ngOnInit()`.
 }
 ```
 
+Nell'esempio si può vedere che:
+
+1. la proprietà `data$` ha un valore sin da subito, senza bisogno di inutili inizializzazioni provvisorie, gli viene assegnato un `Observable` e la proprietà non è più facoltativa
+2. Poiché la proprietà viene valorizzata durante la creazione del componente, questa può essere `readonly`, evitando che il suo valore venga modificato.
+3. Nella classe non è prevista alcuna sottoscrizione, quindi non è necessario dover gestire l'`ngOnDestroy`.
+4. Nel componente non abbiamo prop enigmatiche di cui non sappiamo quando verranno valorizzate:
+
+```ts
+<p> {{ (data$ | async).someValue }} </p>
+```
