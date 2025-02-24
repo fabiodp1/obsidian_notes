@@ -85,7 +85,7 @@ getHeroes(): Observable<Hero[]> {
 
 L'operatore `tap()` di [[RxJS]] osserva i valori `observable`, facendo qualcosa con quei valori e li passa avanti. La callback di `tap()` non accede ai valori stessi.
 
-# AsyncPipe
+# [[AsyncPipe]]
 
 ```ts
 // ...
