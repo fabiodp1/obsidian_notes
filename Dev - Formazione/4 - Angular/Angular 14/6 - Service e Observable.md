@@ -160,5 +160,5 @@ Tutti è racchiuso nell'observable `vm$`, una volta risolto tramite `| async` la
 
 ### Inizializzazione tramite valori di `@Input()`
 
-
+Spesso i componenti utilizzano le proprietà di input per ottenere lo stato dal componente padre, in modo da mostrarne il risultato, quindi dovrebbero essere reattivi anche in caso di cambiamenti
 
