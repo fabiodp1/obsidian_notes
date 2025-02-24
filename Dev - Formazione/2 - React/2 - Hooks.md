@@ -441,9 +441,11 @@ const updateLocalStorage = React.useCallback(
 ```
 
 >Normalmente `useCallback` e `useMemo` vengono utilizzati per fare il memoize di cb e dati per queste due situazioni:
->- per le array delle dipendenze, in modo da evitare di triggerare useEffect inutilmente.
->- per le prop su comonenti di cui è stato fatto il momoize (in questo caso `useMemo`)
->E' possibile usarli anche in altri casi, ma questi sono i più comuni
+
+- per le array delle dipendenze, in modo da evitare di triggerare `useEffect` inutilmente.
+- per le prop su componenti di cui è stato fatto il momoize (in questo caso `useMemo`)
+
+E' possibile usarli anche in altri casi, ma questi sono i più comuni
 
 # useContext
 [[5 - Context]]
