@@ -233,4 +233,29 @@ export class NameComponent {
 
 #### Setter
 
-Questo metodo sfrutta la potenza dei setter di `TypeScript`. Nessuno nega che con i decoratori `@Input()` venga utilizzato un setter. Per questo è possibile utilizzarli con un po' di logica di configurazione leggera (niente di troppo complesso).
+Questo metodo sfrutta la potenza dei setter di `TypeScript`. Nessuno nega che con i decoratori `@Input()` venga utilizzato un setter. Per questo è possibile utilizzarli con un po' di logica di configurazione leggera (niente di troppo complesso):
+
+```ts
+interface MyDTO {
+ data: {
+ name: string;
+ time: string;
+ }[]
+}
+
+@Component({
+ template: `<p> {{ time }} </p>`
+})
+
+export class TimeComponent {
+ @Input() 
+ set vm(value: MyDTO) {
+  const first = value.data[0];
+ 
+  this.time = new Date(first.time);
+ }
+ time: Date;
+}
+```
+
+Con questo trucco non abbiamo più bisogno di un `lifecycle hook`, il pregio ma in altri casi anche il limite, è che ci limitiamo ai cambiamenti di una singola proprietà, mentre `ngOnChanges` viene chiamato ogni volta 
