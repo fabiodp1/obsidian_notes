@@ -30,3 +30,5 @@ Questo flag può essere `CeckAlways` o `Dirty`:
 
 ![](Pasted%20image%2020250224122217.png)
 
+Questo vuol dire che tutte le istanze `LView` create per quel componente avrà uno di questi flag impostati.
+Nel caso di strategia `OnPush`, il flag `Dirty` verrà disattivato automaticamente dopo il primo passaggio di rilevamento delle modifiche.
