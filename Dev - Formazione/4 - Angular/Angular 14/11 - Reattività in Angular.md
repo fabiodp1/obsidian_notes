@@ -57,4 +57,4 @@ function refreshComponent (hostLView, componentHostIdx) {
 	- `componentHostIdx`: l'index del componente ospitato all'interno di `hostLView`.
 2. Inizialmente viene verificato se la vista del componente è ancora collegata al detector delle modifiche, garantendo che l'aggiornamento avvenga solo se il componente non è già stato distrutto.
 3. Se la view è ancora collegata al detector delle modifiche, la funzione procede con il controllare il tipo di strategia di rilevamento delle modifiche applicata al componente, e se il componente è contrassegnato come `Dirty`.
-4. 
+4. Se il componente è marcato come `Dirty` e utilizza una strategia di rilevamento `CheckAlways` o `OnPush`
