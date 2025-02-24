@@ -96,4 +96,12 @@ In Angular non siamo limitati ad utilizzare nei modelli solo semplici valori sta
 >Raramente è necessario iscriversi agli `Observable` nella classe del componente. Dovremmo iscriverci quando abbiamo effettivamente bisogno del valore.
 
 In realtà non ne abbiamo bisogno nella classe del componente, ma nel modello, quindi bisognerebbe iscriversi li, utilizzando la [AsyncPipe](AsyncPipe) che si sottoscrive all'Observable e restituisce il valore, **Si occupa anche di annullare l'iscrizione al destroy del componente**.
+Questo rende il componente molto più leggibile rispetto a `ngOnInit()`.
+
+```ts
+@Component({...}) export class Component { 
+	readonly data$ = this.dataService.getData(); 
+	constructor(private readonly dataService: DataService) { } 
+}
+```
 
