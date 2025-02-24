@@ -156,3 +156,24 @@ export class ChildComponent {
 Quando l'applicazione viene eseguita, Angular non rileva più la modifica di `user.name`.
 Si può vedere che il componente figlio viene controllato una prima volta al bootstrap restituendo il nome `A`. Ma non viene controllato durante le successive esecuzioni di `ChangeDetection`, quindi il nome non cambierà da `A`  a `B` cliccando sul pulsante.
 Questo perché la reference dell'oggetto `user` passato al child come `@Input`, non è cambiata.
+
+# Eventi e reattività
+
+Tutti gli eventi nativi, quando lanciati da un componente, risalgono marchiando come `Dirty` tutti i componenti sopra, fino a quello `root`.
+
+>Il presupposto è che un evento possa innescare un cambiamento nell'albero dei componenti. [Angular](Angular) non sa se i componenti padre cambieranno o meno, per questo controlla sempre ogni componente antenato al lancio di un evento.
+
+Ovviamente verranno marchiati come `Dirty` solo i componenti antenati di quello che emette l'evento:
+
+```
+AppComponent (selezionato) 
+	HeaderComponent // NON è un parente
+	ContentComponent (selezionato) 
+		TodosComponent (selezionato) 
+			TodoComponent (selezionato) => emette evento
+```
+
+# Contrassegnare manualmente i componenti `Dirty`
+
+
+
