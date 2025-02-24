@@ -103,6 +103,7 @@ function MyComponent() {
 ```
 
 In questa maniera il child non dovrà utilizzare uno `useEffect` per attivare della logica.
+
 # Conclusione
 
 Ottimizzare React significa bilanciare il controllo manuale dei re-render con gli strumenti forniti dalla libreria. Mentre strumenti come `React.memo`, `useMemo` e `useCallback` possono ridurre i re-render, è importante utilizzarli solo quando necessario. Nella maggior parte dei casi, React è sufficientemente efficiente per gestire i re-render autonomamente.
