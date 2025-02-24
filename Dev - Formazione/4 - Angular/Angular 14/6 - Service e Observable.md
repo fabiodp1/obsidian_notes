@@ -158,5 +158,7 @@ In realtà è facilmente utilizzabile utilizzando gli operatori di `RxJS`:
 
 Tutti è racchiuso nell'observable `vm$`, una volta risolto tramite `| async` la sintassi diventa molto semplice.
 
-### Inizializzazione tramite valori di input
+### Inizializzazione tramite valori di `@Input()`
+
+
 
