@@ -32,3 +32,29 @@ Questo flag può essere `CeckAlways` o `Dirty`:
 
 Questo vuol dire che tutte le istanze `LView` create per quel componente avrà uno di questi flag impostati.
 Nel caso di strategia `OnPush`, il flag `Dirty` verrà disattivato automaticamente dopo il primo passaggio di rilevamento delle modifiche.
+
+I flag impostati su `LView` vengono controllati all'interno della funzione `refreshView` nel momento in cui Angular determina se un componente deve essere controllato:
+
+```ts
+function refreshComponent (hostLView, componentHostIdx) { 
+	// Solo i componenti collegati che sono CheckAlways o OnPush e dirty 
+	// devono essere aggiornati 
+	if (viewAttachedToChangeDetector (componentView)) { 
+		const tView = ComponentView[TVIEW]; 
+		if (componentView[ FLAGS ] & ( LViewFlags.CheckAlways | LViewFlags.Dirty)) 
+			RefreshView (tView, ComponentView, tView. template , ComponentView[ CON
+		} else if (componentView[ TRANSPLANTED_VIEWS_TO_REFRESH ] > 0) {
+			// Solo i componenti collegati che sono CheckAlways 
+			// o OnPush e dirty devono essere aggiornati 
+			refreshContainsDirtyView(componentView); 
+		}
+	}
+}
+```
+
+1. La funzione accetta 2 parametri:
+	- `hostLView`: rappresenta la view del componente padre
+	- `componentHostIdx`: l'index del componente ospitato all'interno di `hostLView`.
+2. Inizialmente viene verificato se la vista del componente è ancora collegata al detector delle modifiche, garantendo che l'aggiornamento avvenga solo se il componente non è già stato distrutto.
+3. Se la view è ancora collegata al detector delle modifiche, la funzione procede con il controllare il tipo di strategia di rilevamento delle modifiche applicata al componente, e se il componente è contrassegnato come `Dirty`.
+4. 
