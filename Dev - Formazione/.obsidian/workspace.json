@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zzz_Pagine/useCallback.md",
+                "file": "2 - React/2 - Gestione dei Re-render e Ottimizzazione in React.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da useCallback"
+              "title": "Collegamenti in uscita da 2 - Gestione dei Re-render e Ottimizzazione in React"
             }
           },
           {
