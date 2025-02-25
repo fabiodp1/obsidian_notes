@@ -41,13 +41,17 @@ Con `React.memo`, React non ri-renderizzerà `<Decoration>` se le props rimangon
 1. Componenti con molte props o figli.
 2. Operazioni interne costose.
 3. Situazioni in cui i re-render influenzano negativamente le performance.
+4. Va utilizzato il più in alto possibile nel tree dei componenti, per bloccare anche l'esecuzione dei figli
 
 Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi della logica aggiuntiva per verificarli.
 
 ## Quando NON usare React.memo
 
 - Quando il componente da wrappare possiede props che vengono aggiornate spesso
-- Quando il componente ha molti figli
+- Per wrappare indiscriminatamente tutti i componenti
+- Quando il ri-rendering non creerebbe problemi di performance
+
+>con `memo` React dovrà controllare tutte le prop per vedere se sono cambiate, aggiungendo logica che potrebbe pesare più del semplice ri-rendering del componente.
 
 ---
 
