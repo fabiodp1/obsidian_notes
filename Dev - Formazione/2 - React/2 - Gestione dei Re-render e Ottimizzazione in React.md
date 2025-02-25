@@ -1,4 +1,4 @@
-# Perché React Ri-renderizza
+# Perché React ri-renderizza
 In [[React]], un componente viene ri-renderizzato ogni volta che una sua variabile di **stato** cambia. Questo comportamento si propaga a tutti i suoi figli, anche se non sono direttamente legati alla variabile che ha subito il cambiamento. React adotta questa strategia per garantire che la **UI sia sempre sincronizzata** con lo stato attuale dell’applicazione.
 
 Esempio:
@@ -43,6 +43,11 @@ Con `React.memo`, React non ri-renderizzerà `<Decoration>` se le props rimangon
 3. Situazioni in cui i re-render influenzano negativamente le performance.
 
 Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi della logica aggiuntiva per verificarli.
+
+## Quando NON usare React.memo
+
+- Quando il componente da wrappare possiede props che vengono aggiornate spesso
+- Quando il componente ha molti figli
 
 ---
 
