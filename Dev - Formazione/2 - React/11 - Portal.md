@@ -20,5 +20,4 @@ export default function MyModal() {
   <div id="modal"></div>
   <div id="root"></div>
   <!-- .... -->
-
 ```
