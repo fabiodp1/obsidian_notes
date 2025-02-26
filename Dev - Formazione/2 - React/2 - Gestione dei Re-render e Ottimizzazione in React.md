@@ -62,6 +62,8 @@ Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi
 const filteredItems = useMemo(() => items.filter(item => item.active), [items]);
 ```
 
+>Anche qui è importante capire che aggiungendo della logica di controllo in più, non bisogna utilizzarlo per funzioni che non hanno un impatto sulle performance, o si rischierebbe solo di fare peggio. Va utilizzato solo per memoizzare il risultato di funzioni con logiche complesse.
+
 ## `useCallback`
 
 `useCallback` è usato per memoizzare funzioni che vengono passate come props ai componenti figli. Questo previene la creazione di nuove istanze della funzione a ogni render.
