@@ -52,7 +52,7 @@ Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi
 >con `memo` React dovrà controllare tutte le prop per vedere se sono cambiate, aggiungendo logica che potrebbe pesare più del semplice ri-rendering del componente.
 >In molti casi una buona gestione dello state e della composizione dei componenti (ad es. esternalizzando in un nuovo componente parte di codice che modifica lo stato) può essere il metodo migliore per evitare inutili ri-rendering
 
-# Memoizzare Dati e Funzioni con useMemo e useCallback
+# Memoizzare dati e funzioni con useMemo e useCallback
 
 ## `useMemo`
 
