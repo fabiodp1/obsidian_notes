@@ -56,9 +56,7 @@ Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi
 
 ## `useMemo`
 
-`useMemo` è usato per memoizzare il risultato di un'operazione complessa, evitando di ricalcolarlo inutilmente a ogni render. È utile quando si manipolano grandi quantità di dati.
-
-Esempio:
+`useMemo` è usato per memoizzare il risultato di un'operazione complessa, evitando di ricalcolarlo inutilmente a ogni render e che quindi funzioni con logiche complesse vengano rieseguite anche se il risultato ritornato sarebbe lo stesso perché le condizioni (es. parametri) non sono cambiate. È utile quando si manipolano grandi quantità di dati.
 
 ```jsx
 const filteredItems = useMemo(() => items.filter(item => item.active), [items]);
