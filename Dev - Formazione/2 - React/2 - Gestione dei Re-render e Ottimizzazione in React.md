@@ -85,7 +85,7 @@ Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati
 
 Anche il **context** segue le stesse regole di re-render. Quando lo stato condiviso cambia, tutti i componenti che consumano quel contesto vengono ri-renderizzati. In questi casi, è utile usare `React.memo` o `useContext` combinati con `useMemo` per ridurre al minimo i calcoli inutili.
 
-# Utilizzare key per ri-renderizzare un componente
+# Utilizzare key per ri-renderizzare/resettare un componente
 
 Esistono casi in cui vorremmo che un componente figlio venga ri-renderizzato al cambio di una circostanza, senza bisogno che questo debba utilizzare uno `useEffect`.
 Per fare ciò si può utilizzare l'attributo `key`, ogni volta che questo cambia, [React](React.md) ri-renderizza il componente:
