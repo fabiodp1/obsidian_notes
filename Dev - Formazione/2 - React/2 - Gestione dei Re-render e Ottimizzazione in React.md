@@ -52,11 +52,11 @@ Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi
 >con `memo` React dovrà controllare tutte le prop per vedere se sono cambiate, aggiungendo logica che potrebbe pesare più del semplice ri-rendering del componente.
 >In molti casi una buona gestione dello state e della composizione dei componenti (ad es. esternalizzando in un nuovo componente parte di codice che modifica lo stato) può essere il metodo migliore per evitare inutili ri-rendering
 
-# Memorizzare Dati e Funzioni con useMemo e useCallback
+# Memoizzare Dati e Funzioni con useMemo e useCallback
 
-## **`useMemo`**
+## `useMemo`
 
-`useMemo` è usato per memorizzare il risultato di un'operazione complessa, evitando di ricalcolarlo inutilmente a ogni render. È utile quando si manipolano grandi quantità di dati.
+`useMemo` è usato per memoizzare il risultato di un'operazione complessa, evitando di ricalcolarlo inutilmente a ogni render. È utile quando si manipolano grandi quantità di dati.
 
 Esempio:
 
@@ -64,9 +64,9 @@ Esempio:
 const filteredItems = useMemo(() => items.filter(item => item.active), [items]);
 ```
 
-## **`useCallback`**
+## `useCallback`
 
-`useCallback` è usato per memorizzare funzioni che vengono passate come props ai componenti figli. Questo previene la creazione di nuove istanze della funzione a ogni render.
+`useCallback` è usato per memoizzare funzioni che vengono passate come props ai componenti figli. Questo previene la creazione di nuove istanze della funzione a ogni render.
 
 Esempio:
 
