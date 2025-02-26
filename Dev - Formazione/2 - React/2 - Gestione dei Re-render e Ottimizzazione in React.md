@@ -108,7 +108,46 @@ function MyComponent() {
 ```
 
 In questa maniera il child non dovrà utilizzare uno `useEffect` per attivare della logica.
- 
+
+Un esempio potrebbe essere il voler resettare un counter al cambio di un altro state.
+Uno degli approcci potrebbe essere quello di usare uno `useEffect`:
+
+```tsx
+//...
+const [changingValue, setChangingValue] = useState(2);
+const [count, setCount] = useState(0);
+
+useEffect(()=>{
+	setCounter(0);
+}, [changeMe]);
+
+return (
+	//...
+	<MyCounter count={count}/>
+	//...
+)
+
+```
+
+Questo approccio funzionerebbe ed è percorribile, ma l'utilizzo di `useEffect` andrebbe limitato al massimo, per questo esiste un altro approccio per resettare un componente figlio:
+
+```tsx
+//...
+const [changingValue, setChangingValue] = useState(2);
+const [count, setCount] = useState(0);
+
+const handleSetChangingValue = () => {
+	setChangingValue(...);
+};
+
+return (
+	//...
+	<MyCounter key={changingValue} count={count}/>
+	//...
+)
+```
+
+In questa maniera ogni volta 
 # Conclusione
 
 Ottimizzare React significa bilanciare il controllo manuale dei re-render con gli strumenti forniti dalla libreria. Mentre strumenti come `React.memo`, `useMemo` e `useCallback` possono ridurre i re-render, è importante utilizzarli solo quando necessario. Nella maggior parte dei casi, React è sufficientemente efficiente per gestire i re-render autonomamente.
