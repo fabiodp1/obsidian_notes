@@ -18,8 +18,6 @@ React si aspetta che i componenti siano **puri**, cioè che producano sempre lo 
 
 React preferisce **ri-renderizzare troppo piuttosto che mostrare una UI obsoleta**. Di conseguenza, molti re-render sono previsti e accettabili.
 
----
-
 # Ottimizzare con React.memo
 
 **`React.memo`** è uno strumento che permette di memorizzare il risultato di un componente puro e riutilizzarlo fintanto che le sue props non cambiano. Questo è utile per ridurre i re-render in componenti che non subiscono cambiamenti di stato o props.
@@ -34,7 +32,7 @@ const Decoration = React.memo(() => {
 
 Con `React.memo`, React non ri-renderizzerà `<Decoration>` se le props rimangono invariate. È come se React "scattasse una foto" del componente e la riutilizzasse fintanto che non ci sono modifiche.
 
-## Quando usare React.memo?
+## Quando usare React.memo
 
 `React.memo` è più utile per:
 
@@ -52,8 +50,6 @@ Tuttavia, non è sempre necessario: i re-render leggeri sono spesso meno costosi
 - Quando il ri-rendering non creerebbe problemi di performance
 
 >con `memo` React dovrà controllare tutte le prop per vedere se sono cambiate, aggiungendo logica che potrebbe pesare più del semplice ri-rendering del componente.
-
----
 
 # Memorizzare Dati e Funzioni con useMemo e useCallback
 
@@ -81,13 +77,9 @@ const handleClick = useCallback(() => {
 
 Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati (o le funzioni) fintanto che le dipendenze non cambiano.
 
----
-
 # Context e Ottimizzazione
 
 Anche il **context** segue le stesse regole di re-render. Quando lo stato condiviso cambia, tutti i componenti che consumano quel contesto vengono ri-renderizzati. In questi casi, è utile usare `React.memo` o `useContext` combinati con `useMemo` per ridurre al minimo i calcoli inutili.
-
----
 
 # Utilizzare key per ri-renderizzare un componente
 
@@ -121,5 +113,3 @@ Per approfondimenti:
 
 - [Why React Re-Renders](https://www.joshwcomeau.com/react/why-react-re-renders/)
 - [Understanding useMemo and useCallback](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
-
----
