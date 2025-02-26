@@ -129,7 +129,7 @@ return (
 
 ```
 
-Questo approccio funzionerebbe ed è percorribile, ma l'utilizzo di `useEffect` andrebbe limitato al massimo, per questo esiste un altro approccio per resettare un componente figlio:
+>Questo approccio funzionerebbe ed è percorribile, ma l'utilizzo di `useEffect` andrebbe limitato al massimo, per questo esiste un altro approccio per resettare un componente figlio:
 
 ```tsx
 //...
@@ -147,7 +147,10 @@ return (
 )
 ```
 
-In questa maniera ogni volta 
+In questa maniera ogni volta che il valore viene cambiato, cambia anche la key del figlio, forzando il ri-render e quindi reset che componente figlio.
+
+>Per questo motivo questo pattern può essere usato ogni volta che il cambio dello state deve comportare anche il reset di componenti figli.
+
 # Conclusione
 
 Ottimizzare React significa bilanciare il controllo manuale dei re-render con gli strumenti forniti dalla libreria. Mentre strumenti come `React.memo`, `useMemo` e `useCallback` possono ridurre i re-render, è importante utilizzarli solo quando necessario. Nella maggior parte dei casi, React è sufficientemente efficiente per gestire i re-render autonomamente.
