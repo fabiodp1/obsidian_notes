@@ -200,6 +200,10 @@ const handleSetCount = () => {
 
 Non è così perché [React](React.md) facendo lo scheduling delle azioni, ri-esegue il componente solo alla fine, in modo da non creare problemi di performance.
 
+# Million.js
+
+Uno strumento molto utile per rendere React molto più veloce e performante:
+[Million](https://million.dev/)
 # Conclusione
 
 Ottimizzare React significa bilanciare il controllo manuale dei re-render con gli strumenti forniti dalla libreria. Mentre strumenti come `React.memo`, `useMemo` e `useCallback` possono ridurre i re-render, è importante utilizzarli solo quando necessario. Nella maggior parte dei casi, React è sufficientemente efficiente per gestire i re-render autonomamente.
