@@ -78,6 +78,7 @@ const handleClick = useCallback(() => {
 
 Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati (o le funzioni) fintanto che le dipendenze non cambiano. 
 
+>Non c'è bisogno di utilizzarlo con i setter ritornati da `useState`, poiché non cambiano, anche se in ogni caso non è un buon pattern passare direttamente il setter.
 # Context e Ottimizzazione
 
 Anche il **context** segue le stesse regole di re-render. Quando lo stato condiviso cambia, tutti i componenti che consumano quel contesto vengono ri-renderizzati. In questi casi, è utile usare `React.memo` o `useContext` combinati con `useMemo` per ridurre al minimo i calcoli inutili.
