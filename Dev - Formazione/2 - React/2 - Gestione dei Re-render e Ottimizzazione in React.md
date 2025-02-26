@@ -76,7 +76,7 @@ const handleClick = useCallback(() => {
 }, []);
 ```
 
-Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati (o le funzioni) fintanto che le dipendenze non cambiano.
+Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati (o le funzioni) fintanto che le dipendenze non cambiano. 
 
 # Context e Ottimizzazione
 
