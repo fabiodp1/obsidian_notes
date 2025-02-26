@@ -152,6 +152,54 @@ In questa maniera ogni volta che il valore viene cambiato, cambia anche la key d
 
 >Per questo motivo questo pattern può essere usato ogni volta che il cambio dello state deve comportare anche il reset di componenti figli.
 
+# State scheduling & Batching
+
+## State scheduling
+
+Se in un componente vogliamo modificare uno state in base al valore precedente, non bisogna fare l'errore di farlo in questo modo:
+
+```tsx
+//...
+const [count, setCount] = useState(0);
+
+const duplicate = () => {
+	setCount(count * 2); // === WRONG ===
+}
+```
+
+Questo metodo è sbagliato, perché quando facciamo il set di uno state, questo non viene cambiato subito, ma schedulato e quindi eseguito in un secondo momento. Con questo metodo potremmo avere un risultato non previsto.
+
+Il modo corretto per farlo è aggiornare il valore usando una callback, in modo da avere sempre il l'ultimo valore disponibile:
+
+```tsx
+//...
+const [count, setCount] = useState(0);
+
+const duplicate = () => {
+	setCount(previousValue => previousValue * 2); // === RIGHT ===
+}
+```
+
+## State batching
+
+Un pensiero sbagliato che si potrebbe avere da neofita di React è che ad es. in questo codice...
+
+```tsx
+//...
+const [count, setCount] = useState(0);
+
+const handleSetCount = () => {
+	setCount(2);
+	setCount(3);
+	setCount(4);
+	setOtherAction(5);
+}
+```
+
+... ogni volta che viene fatta una modifica dello stato, il componente venga rieseguito, quindi in questo caso ad ogni setCount all'interno della funzione.
+
+Non è così perché [React](React.md) facendo lo scheduling delle azioni, ri-esegue il componente solo alla fine, in modo da non creare problemi di performance.
+
 # Conclusione
 
 Ottimizzare React significa bilanciare il controllo manuale dei re-render con gli strumenti forniti dalla libreria. Mentre strumenti come `React.memo`, `useMemo` e `useCallback` possono ridurre i re-render, è importante utilizzarli solo quando necessario. Nella maggior parte dei casi, React è sufficientemente efficiente per gestire i re-render autonomamente.
