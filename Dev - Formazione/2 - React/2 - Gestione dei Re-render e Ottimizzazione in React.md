@@ -81,6 +81,7 @@ Entrambi gli strumenti utilizzano la **memoizzazione**, che conserva i risultati
 >La sostanziale differenza è che `useMemo` memoizza il risultato di una funzione, mentre `useCallback` la funzione stessa.
 
 >Non c'è bisogno di utilizzare `useCallback` con i setter ritornati da `useState`, poiché non cambiano, anche se in ogni caso non è un buon pattern passare direttamente il setter.
+
 # Context e Ottimizzazione
 
 Anche il **context** segue le stesse regole di re-render. Quando lo stato condiviso cambia, tutti i componenti che consumano quel contesto vengono ri-renderizzati. In questi casi, è utile usare `React.memo` o `useContext` combinati con `useMemo` per ridurre al minimo i calcoli inutili.
