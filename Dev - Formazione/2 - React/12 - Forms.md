@@ -19,3 +19,15 @@ Metodo classico, utilizzerà:
 - handler
 - two-way binding su input field
 
+```tsx
+// ...
+const [state, setState] = useState("Pippo");
+
+const handleStateChaange = (event) => {
+	setState(event.target.value);
+}
+
+//...
+<input ... value={state} onChange={handleStateChange}/>
+
+```
