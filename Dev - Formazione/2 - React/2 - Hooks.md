@@ -87,47 +87,6 @@ React.useEffect(() => {
   }, [name]) // In questa maniera al re-render lo useEffect chiamerà la callback solo se name ha cambiato valore
 ```
 
-## [[custom hook]]
-
-E' possibile riutilizzare codice che potrebbe essere utile altrove in funzioni che vengono chiamate dai componenti che ne hanno di bisogno, proprio come normali funzioni JS e ovviamente ritornano la stessa dupletta di un normale hook.
-Queste funzioni vengono chiamate "custom hooks".
-
-```jsx
-function useLocalStorageState(key, initialState = '') {
-  const [state, setState] = React.useState(
-    () => window.localStorage.getItem(key) ?? initialState,
-  )
-
-  React.useEffect(() => {
-    window.localStorage.setItem(key, state)
-  }, [key, state])
-
-  return [state, setState]
-}
-
-function Greeting({initialName = ''}) {
-  const [name, setName] = useLocalStorageState('name', initialName)
-  
-  function handleChange(event) {
-    setName(event.target.value)
-  }
-
-  return (
-    <div>
-      <form>
-        <label htmlFor="name">Name: </label>
-        <input value={name} onChange={handleChange} id="name" />
-      </form>
-      {name ? <strong>Hello {name}</strong> : 'Please type your name'}
-    </div>
-  )
-}
-
-function App() {
-  return <Greeting initialName="Fabio" />
-}
-```
-
 ## lifting state
 
 Molte volte capita che vi sia la necessità di condividere lo state fra componenti fratelli, la risposta è semplice "[[lifting state]]" cioè spostare la gestione dello state nel parent più vicino che si occuperà di passarlo ai figli assieme al meccanismo per aggiornarlo.
@@ -659,3 +618,46 @@ return (
 ```
 
 In questa maniera il padre può rimanere cieco alla reale implementazione del figlio, e sarà quest'ultimo a doverne gestire la logica.
+
+## Custom hooks
+
+E' possibile riutilizzare codice che potrebbe essere utile altrove in funzioni che vengono chiamate dai componenti che ne hanno di bisogno, proprio come normali funzioni JS e ovviamente ritornano la stessa dupletta di un normale hook.
+Queste funzioni vengono chiamate "custom hooks".
+
+```jsx
+function useLocalStorageState(key, initialState = '') {
+  const [state, setState] = React.useState(
+    () => window.localStorage.getItem(key) ?? initialState,
+  )
+
+  React.useEffect(() => {
+    window.localStorage.setItem(key, state)
+  }, [key, state])
+
+  return [state, setState]
+}
+
+function Greeting({initialName = ''}) {
+  const [name, setName] = useLocalStorageState('name', initialName)
+  
+  function handleChange(event) {
+    setName(event.target.value)
+  }
+
+  return (
+    <div>
+      <form>
+        <label htmlFor="name">Name: </label>
+        <input value={name} onChange={handleChange} id="name" />
+      </form>
+      {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+    </div>
+  )
+}
+
+function App() {
+  return <Greeting initialName="Fabio" />
+}
+```
+
+>Anche i `custom hook` devono avere un nome che inizia con `use..` in modo che venga riconosciuto da React come hook.
