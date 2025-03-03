@@ -624,6 +624,9 @@ In questa maniera il padre può rimanere cieco alla reale implementazione del fi
 E' possibile riutilizzare codice che potrebbe essere utile altrove in funzioni che vengono chiamate dai componenti che ne hanno di bisogno, proprio come normali funzioni JS e ovviamente ritornano la stessa dupletta di un normale hook.
 Queste funzioni vengono chiamate "custom hooks".
 
+>Non è necessario ritornare una dupletta, posso anche ritornare un oggetto contenente più stati es. `isLoading`, `data`, `error` ecc.
+>In questa maniera saranno disponibili per i componenti che potranno farne il `distructuring`.
+
 ```jsx
 function useLocalStorageState(key, initialState = '') {
   const [state, setState] = React.useState(
@@ -661,3 +664,4 @@ function App() {
 ```
 
 >Anche i `custom hook` devono avere un nome che inizia con `use..` in modo che venga riconosciuto da React come hook.
+
