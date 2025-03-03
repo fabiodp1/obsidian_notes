@@ -29,5 +29,7 @@ const handleStateChaange = (event) => {
 
 //...
 <input ... value={state} onChange={handleStateChange}/>
-
 ```
+
+>Ovviamente non dobbiamo per forza avere uno state per ogni campo di input, possiamo anche gestire il form con un unico oggetto.
+
