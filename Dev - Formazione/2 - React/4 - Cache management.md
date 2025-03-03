@@ -292,3 +292,6 @@ function useUpdateListItem(user, ...options) {
 }
 ```
 
+>Questa tecnica può essere usata anche a prescindere da [react-query](react-query). Ad es. se abbiamo un metodo che prima fa il set di uno stato e poi lo invia al server, avremo che se la chiamata server fallisce, comunque lo stato sarà stato cambiato.
+>Possiamo quindi fare nel `catch` della chiamata un `setState(oldState)` senza usare la `lambda` in modo da avere lo state pre-rirendering, e quindi resettare.
+
