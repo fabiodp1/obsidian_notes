@@ -4,5 +4,10 @@ Fare il submit di un form e l'estrazione dei relativi campi è abbastanza sempli
 2. Attraverso le `refs` e quindi `useRef`
 3. Attraverso `FormData` e le feature messe a disposizione dal browser
 
-Quello che è un po più complicato è la validazione dei dati
+Quello che è un po più complicato è la validazione dei dati offrendo anche una buona `user experience`:
+
+1. Possiamo validare ad ogni `keystroke` ma gli errori potrebbero essere mostrati troppo presto.
+2. Possiamo validare alla perdita del `focus` ma gli errori potrebbero essere mostrati troppo a lungo.
+3. Possiamo validare al `submit` del form ma gli errori potrebbero essere mostrati troppo tardi.
+
 
