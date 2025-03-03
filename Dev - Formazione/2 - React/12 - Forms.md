@@ -13,3 +13,9 @@ Quello che è un po più complicato è la validazione dei dati offrendo anche un
 
 # 1. State e two-way binding
 
+Metodo classico, utilizzerà:
+
+- useState
+- handler
+- two-way binding su input field
+
