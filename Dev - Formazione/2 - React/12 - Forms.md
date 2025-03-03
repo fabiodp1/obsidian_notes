@@ -1,6 +1,6 @@
 Fare il submit di un form e l'estrazione dei relativi campi è abbastanza semplice, ad es. è possibile:
 
-1. Attraverso lo `state` e il `two-way binding`
+1. Attraverso lo `state` e il `two-way binding[[]]`
 2. Attraverso le `refs` e quindi `useRef`
 3. Attraverso `FormData` e le feature messe a disposizione dal browser
 4. Con [React 19](React%2019.md) abbiamo possiamo usare le `Form Actions`.
@@ -11,4 +11,5 @@ Quello che è un po più complicato è la validazione dei dati offrendo anche un
 2. Possiamo validare alla perdita del `focus` ma gli errori potrebbero essere mostrati troppo a lungo.
 3. Possiamo validare al `submit` del form ma gli errori potrebbero essere mostrati troppo tardi.
 
+# 1. State e two-way binding
 
