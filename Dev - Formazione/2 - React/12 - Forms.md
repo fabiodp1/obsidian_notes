@@ -3,6 +3,7 @@ Fare il submit di un form e l'estrazione dei relativi campi è abbastanza sempli
 1. Attraverso lo `state` e il `two-way binding`
 2. Attraverso le `refs` e quindi `useRef`
 3. Attraverso `FormData` e le feature messe a disposizione dal browser
+4. Con [React 19](React%2019.md) abbiamo possiamo usare le `Form Actions`.
 
 Quello che è un po più complicato è la validazione dei dati offrendo anche una buona `user experience`:
 
