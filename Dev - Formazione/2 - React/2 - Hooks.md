@@ -619,7 +619,7 @@ return (
 
 In questa maniera il padre può rimanere cieco alla reale implementazione del figlio, e sarà quest'ultimo a doverne gestire la logica.
 
-## Custom hooks
+# Custom hooks
 
 E' possibile riutilizzare codice che potrebbe essere utile altrove in funzioni che vengono chiamate dai componenti che ne hanno di bisogno, proprio come normali funzioni JS e ovviamente ritornano la stessa dupletta di un normale hook.
 Queste funzioni vengono chiamate "custom hooks".
