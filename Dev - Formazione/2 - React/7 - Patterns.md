@@ -1,3 +1,6 @@
+[Your React App Isn’t Great — Here’s Why. | by Pierre G. | Dec, 2024 | Level Up Coding](https://levelup.gitconnected.com/your-react-app-isnt-great-here-s-why-5eb61b3f110b)
+
+# Code splitting
 [Code-Splitting – React](https://legacy.reactjs.org/docs/code-splitting.html)
 
 Per ottimizzare le performance è importante che fra componenti le callback vengano passate utilizzando l'hook [[useCallback]], in modo da evitare re-render inutili.
