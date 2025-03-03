@@ -33,3 +33,25 @@ const handleStateChaange = (event) => {
 
 >Ovviamente non dobbiamo per forza avere uno state per ogni campo di input, possiamo anche gestire il form con un unico oggetto e quindi un unico setter.
 
+Un modo elegante per l'handler potrebbe essere quello di farsi dare il nome del campo in modo da avere un handler unico:
+
+```tsx
+const [state, setState] = useState(
+	{email: '', name: ''}
+);
+
+const handleStateChaange = (field: string, value) => {
+	setState(prev => ({
+		...prev,
+		[field]: value
+	}));
+}
+
+//...
+<input ... value={state.name} type="name" name={name} 
+	onChange={(event) => handleStateChange('name', event.target.value)}/>
+<input ... value={state.email} type="email" name={email} 
+	onChange={(event) => handleStateChange('email', event.target.value)}/>
+```
+
+# 
