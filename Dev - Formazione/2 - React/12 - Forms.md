@@ -72,3 +72,24 @@ const handleSubmit = () => {
 
 # FormData & native browser features
 
+Il browser mette a disposizione un oggetto che ci può aiutare nell'estrazione dei dati, `FormData`.
+basta nel metodo che gestisce il submit, creare l'oggetto `FormData` passando al suo costruttore l'evento passata dall'`onSubmit`, che conterrà le info di tutto il form:
+
+```tsx
+//...
+const handleSubmit = (event) => {
+	event.preventDefault();
+
+	const formData = new FormData(event.target);
+	const name = formData.get('name');
+	const password = formData.get('password');
+}
+//...
+<form onSubmit="handleSubmit">
+	<input name="name"...
+	<input name="password"...
+</form>
+```
+
+>È importante che tutti i campi del form abbiano l'attributo `name`.
+
