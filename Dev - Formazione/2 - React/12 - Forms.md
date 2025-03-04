@@ -70,3 +70,5 @@ const handleSubmit = () => {
 <input ... type="name" name="name" ref={nameRef}/>
 ```
 
+# FormData & native browser features
+
