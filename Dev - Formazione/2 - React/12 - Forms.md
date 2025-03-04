@@ -169,3 +169,39 @@ const handleSubmit = (event) => {
 
 ## Al keystroke
 
+Per poter avere questo tipo di validazione, non è fattibile usare i metodi visti prima come `useRef`, ma servirà una gestione `statefull`.
+
+Uno dei modi è utilizzare delle computed che ad ogni re-render vengono aggiornati:
+
+```tsx
+//...
+
+const isEmailInvalid = !email.includes('@'); // solo un esempio di validazione
+
+//...
+{isEmailInvalid && <div>Please enter a valid email</div>}
+//...
+```
+
+Nell'esempio il messaggio comparirà da subito e in molti casi vorremmo dare all'utente la possibilità di inserire un valore corretto, prima di mostrare il messaggio di errore. Ad esempio controllando nella computed se il campo non è una stringa vuota e quindi l'utente ha già iniziato a scrivere. Questo però non risolve il fatto che alla prima lettera inserita comparirà il messaggio di errore.
+
+## Alla perdita del focus
+
+A differenza della validazione al `keystroke`, questo metodo permette di evitare che il messaggio di errore compaia troppo presto.
+Per fare ciò facciamo utilizzo del built-in event `onBlur`, scatenato ogni volta che il campo input perde focus:
+
+```tsx
+//...
+const [didEdit, setDidEdit] = useState(
+	email: false,
+	password: false
+); // Uno dei modi per gestirlo, potrebbe anche essere un campo `isValid` all'interno dello state principale
+
+const handleInputBlur = (identifier: string) => {
+	setDidEdit(prev => ({...prev, [identifier]: true}));
+};
+
+//...
+<input ... onBlur={() => handleInputBlur('email')} .../>
+```
+
