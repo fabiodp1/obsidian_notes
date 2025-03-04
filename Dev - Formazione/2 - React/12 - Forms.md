@@ -315,5 +315,7 @@ const [formState, formAction, pending] = useActionState(submitAction, {errors: n
 - `formAction`: è un metodo creato da React che fa il wrap del metodo che abbiamo passato come parametro e che si mette in ascolto dell'esecuzione di questo, fornendocene una versione "potenziata". Sarà questo nuovo metodo ad essere usato nel template come valore dell'attributo `action`.
 - `pending`: indica se è stato fatto il submit o meno, utile per sapere lo stato delle operazioni `async`
 
+## Manage form reset
 
+Come detto prima di default una volta fatto il submit tramite action, React farà il reset dello state del form, ma non sempre vorremmo sia questo il comportamento.
 
