@@ -198,11 +198,32 @@ const [didEdit, setDidEdit] = useState(
 ); // Uno dei modi per gestirlo, potrebbe anche essere un campo `isValid` all'interno dello state principale
 
 const handleInputBlur = (identifier: string) => {
-	setDidEdit(prev => ({...prev, [identifier]: true}));
+	setDidEdit(prev => ({
+		...prev, 
+		[identifier]: true
+	}));
 };
 
 //...
 <input ... onBlur={() => handleInputBlur('email')} .../>
 ```
 
-La contropartita è che i messaggi di errore potrebbero rimanere troppo a lungo visibili. Infatti una volta comparso, se l'utente modifica il valore l'errore scomparirà solo quando il valore sarà corretto.
+La contropartita è che i messaggi di errore potrebbero rimanere troppo a lungo visibili. Infatti una volta comparso, se l'utente modifica il valore l'errore scomparirà solo quando il valore sarà corretto. Per questo va gestito anche al change del valore:
+
+```tsx
+//...
+const handleInputChange = (identifier: string, value: string) => {
+	setEnteredValues(prev => ({
+		...prev,
+		[identifier]: value
+	}));
+
+	setDidEdit(prev => ({
+		...prev,
+		[identifier]: false // <==
+	}));
+};
+```
+
+## Al submit
+
