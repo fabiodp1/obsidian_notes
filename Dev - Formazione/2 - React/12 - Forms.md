@@ -93,3 +93,16 @@ const handleSubmit = (event) => {
 
 >È importante che tutti i campi del form abbiano l'attributo `name`.
 
+Gestire al submit ogni singolo campo come nell'esempio precedente può essere tedioso, per questo normalmente viene usato un pattern molto pratico:
+
+```tsx
+const handleSubmit = (event) => {
+	event.preventDefault();
+
+	const formData = new FormData(event.target);
+
+	
+}
+```
+
+
