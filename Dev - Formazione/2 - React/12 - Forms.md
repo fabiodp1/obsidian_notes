@@ -261,3 +261,7 @@ Un altro tipo di validazione al `submit` è quella di usare le built-in props co
 
 Al submit o al focus sui campi di input, i messaggi di errore verranno gestiti.
 Se non abbiamo il controllo sui messaggi di errore, però questo metodo facilita molto il check sulla validità dei campi.
+
+### Mix fra custom e built-in
+
+Il fatto di usare built-in props non esclude l'utilizza anche di custom validations. Ad es. se volessimo controllare che la password inserita e la "confirm password" sono uguali, possiamo aggiungere questo check all'interno del metodo `handleSubmit` come usato negli esempi precedenti e aggiungendo l'elemento html che mostrerà il messaggio in base al valore dello state (vedi esempi sopra).
