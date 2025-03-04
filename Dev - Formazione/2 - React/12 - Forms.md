@@ -124,3 +124,6 @@ const handleSubmit = (event) => {
 <input name="myCheckboxes" type="checkbox"...
 <input name="myCheckboxes" type="checkbox"...
 ```
+
+# Reset form
+
