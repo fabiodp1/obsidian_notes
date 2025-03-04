@@ -428,7 +428,7 @@ const [secondFormState, secondFormAction, secondPending] = useActionState(handle
 //...
 <form>
 	//...
-	<button formAction={firstFormAction} disabled={firstPending} ...>
-	<button formAction={secondFormAction} disabled={secondPending} ...>
-
+	<button formAction={firstFormAction} disabled={firstPending || secondPending} ...>
+	<button formAction={secondFormAction} disabled={firstPending || secondPending} ...>
 ```
+
