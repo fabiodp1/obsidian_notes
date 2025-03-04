@@ -408,4 +408,27 @@ const handleSecondAction = (formData) => {
 	<button formAction={handleSecondAction} ...>
 ```
 
-Anche qui possiamo gestire diversamente lo state del form, infatti possiamo usare `useFormStatus`, ma sarebbe necessario creare dei sottocomponenti da innestare
+Anche qui possiamo gestire diversamente lo state del form ad es. per avere lo stato `pending`, infatti possiamo usare `useFormStatus`, ma sarebbe necessario creare dei sottocomponenti da innestare.
+Oppure possiamo usare `useActionState`:
+
+```tsx
+//...
+const handleFirstAction = (prevData, formData) => {
+	// ...
+};
+
+const handleSecondAction = (prevData, formData) => {
+	// ...
+};
+
+const [firstFormState, firstFormAction, firstPending] = useActionState(handleFirstAction);
+
+const [secondFormState, secondFormAction, secondPending] = useActionState(handleSecondAction);
+
+//...
+<form>
+	//...
+	<button formAction={firstFormAction} disabled={firstPending} ...>
+	<button formAction={secondFormAction} disabled={secondPending} ...>
+
+```
