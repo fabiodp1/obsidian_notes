@@ -344,5 +344,7 @@ const [formState, formAction, pending] = useActionState(submitAction, {
 });
 
 //...
-<input name="password" defaultValue={}
+<input name="password" defaultValue={formState.enteredValues?.passowrd}>...
 ```
+
+In questa maniera al submit React reimposterà i valori correnti, senza resettarli
