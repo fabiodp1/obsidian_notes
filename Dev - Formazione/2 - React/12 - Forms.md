@@ -253,5 +253,11 @@ Qui il tradeoff è che l'utente avrà un feedback sulla correttezza dei dati sol
 
 >In ogni caso validare i dati al submit è sempre una buona idea, anche se li stiamo già validando ad es. al `keystroke`.
 
-## Built-in validation Props
+### Built-in validation Props
 
+Un altro tipo di validazione al `submit` è quella di usare le built-in props come `type="email"` (che permette di specificare il tipo di dato), ad esempio la prop `required`, o `minLength` ecc.:
+
+- [Client-side form validation - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#using_built-in_form_validation)
+
+Al submit o al focus sui campi di input, i messaggi di errore verranno gestiti.
+Se non abbiamo il controllo sui messaggi di errore, però questo metodo facilita molto il check sulla validità dei campi.
