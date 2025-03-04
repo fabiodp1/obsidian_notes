@@ -367,7 +367,7 @@ Come abbiamo visto possiamo usare il booleano `pending` fornito da `useActionSta
 
 Ma esiste un altro [hook](hook) messo a disposizione da [React](React.md) che può essere molto utile e che ===va utilizzato assieme alle form action===, `useFormStatus`.
 
->**NON** può essere utilizzato dal componente che utilizza il `form`, ma deve essere utilizzato da un componente `nested` all'interno del form che gestisce il submit.
+>**NON** può essere utilizzato dal componente che utilizza il `form`, ma deve essere utilizzato da un componente `nested` all'interno del form, che gestirà il submit.
 
 ```tsx
 import { useFormStatus } from 'react-dom';
