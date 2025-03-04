@@ -268,7 +268,7 @@ Se non abbiamo il controllo sui messaggi di errore, però questo metodo facilita
 Il fatto di usare built-in props non esclude l'utilizza anche di custom validations. Ad es. se volessimo controllare che la password inserita e la "confirm password" sono uguali, possiamo aggiungere questo check all'interno del metodo `handleSubmit` come usato negli esempi precedenti e aggiungendo l'elemento html che mostrerà il messaggio in base al valore dello state (vedi esempi sopra).
 
 ---
-# Actions (React 19+)
+# Actions ([[React 19+]])
 
 È una feature presente da [React 19+](React%2019+.md) in poi e sfrutta l'attributo `action` degli elementi html `form` (esiste indipendentemente da React) che normalmente serve a definire il path per la chiamata del submit (l'endpoint).
 
@@ -431,4 +431,13 @@ const [secondFormState, secondFormAction, secondPending] = useActionState(handle
 	<button formAction={firstFormAction} disabled={firstPending || secondPending} ...>
 	<button formAction={secondFormAction} disabled={firstPending || secondPending} ...>
 ```
+
+## useOptimistic
+
+I metodi utilizzati fin adesso per gestire i form sono corretti ma in certi casi (ad es. in seguito a chiamate server lente), possono rendere la [[UX]] non ottimale e poco reattiva.
+Per questo esiste un altro [[hook]] che permette di gestire agevolmente l'[optimistic UI](optimistic%20UI), `useOptimistic`.
+Accetta 2 parametri:
+
+- Il campo da gestire
+- Il metodo che si occuperà della logica di aggiornamento
 
