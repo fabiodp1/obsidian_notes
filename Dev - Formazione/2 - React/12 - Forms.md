@@ -101,7 +101,7 @@ const handleSubmit = (event) => {
 
 	const formData = new FormData(event.target);
 
-	
+	Object.fromEntries(fd.entries());
 }
 ```
 
