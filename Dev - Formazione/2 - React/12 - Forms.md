@@ -393,11 +393,11 @@ In questi casi possiamo evitare di usare l'attributo `action` a livello di `<for
 
 ```tsx
 //...
-const handleFirstAction = (formData) => {
+const firstAction = (formData) => {
 	// ...
 };
 
-const handleSecondAction = (formData) => {
+const secondAction = (formData) => {
 	// ...
 };
 
@@ -413,11 +413,11 @@ Oppure possiamo usare `useActionState`:
 
 ```tsx
 //...
-const handleFirstAction = (prevData, formData) => {
+const firstAction = (prevData, formData) => {
 	// ...
 };
 
-const handleSecondAction = (prevData, formData) => {
+const secondAction = (prevData, formData) => {
 	// ...
 };
 
@@ -443,15 +443,30 @@ Accetta 2 parametri:
 
 Restituisce 3 parametri:
 
-- Il valore 'optimistico': quello passato inizialmente e poi quello gestito dalla funzione. Rappresenta il valore che verrà impostato sulla UI nel mentre che il metodo (async?) fa il suo lavoro, una volta finita la logica di update la UI sarà aggiornata e quindi questo valore non servirà più.
-- Il metodo che abbiamo passato, in modo da poterlo invocare, va invocato nei `form action` e può essere invocato in quanti `formAction` vogliamo.
+- Il valore 'ottimistico': quello passato inizialmente e poi quello gestito dalla funzione. Rappresenta il valore che verrà impostato sulla UI nel mentre che il metodo (async?) fa il suo lavoro, una volta finita la logica di update la UI sarà aggiornata e quindi questo valore non servirà più.
+- Il metodo che abbiamo passato, in modo da poterlo invocare. Va invocato nei metodi `form action` e può essere invocato in quanti metodi vogliamo.
+
+>Il metodo passato **NON** è quello async di reale update ad es. su db, è solo un modificatore ottimistico del valore corrente.
 
 ```tsx
 //...
 const [optimisticValue, setOptimisticValue] = useOptimistic(
 	value,
-	(prevValue, ...myOtherParams) => (
-		myParam === 'up' ? prevValue + 1 : prevValue - 1
+	(prevValue, myParam, ...myOtherParams) => (
+		myParam === 'first' ? prevValue + 1 : prevValue - 1
 	);
 );
+
+async function firstAction() {
+	setOptimisticValue('first');
+	//...
+	await firstAsyncMethod();
+}
+
+//...
+<form>
+	//...
+	<button formAction={firstFormAction} disabled={firstPending || secondPending} ...>
+	<button formAction={secondFormAction} disabled={firstPending || secondPending} ...>
 ```
+
