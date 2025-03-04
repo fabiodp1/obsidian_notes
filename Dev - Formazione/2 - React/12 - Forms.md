@@ -360,3 +360,28 @@ In questa maniera al submit React reimposterà i valori correnti, senza resettar
 
 >Poiché non utilizzerà nessuno stato del componente, non è necessario definire il metodo che gestisce il submit dentro il componente, può essere esternalizzato e importato.
 
+## useFormStatus
+
+Come abbiamo visto possiamo usare il booleano `pending` fornito da `useActionState` per sapere se l'action submit ha concluso la sua logica (probabilmente asincrona).
+
+Ma esiste un altro [hook](hook) messo a disposizione da [React](React.md) che può essere molto utile e che ===va utilizzato assieme alle form action===, `useFormStatus`.
+
+>**NON** può essere utilizzato dal componente che utilizza il `form`, ma deve essere utilizzato da un componente `nested` all'interno del form che gestisce il submit.
+
+```tsx
+import { useFormStatus } from 'react-dom';
+
+export default function Submit() {
+	const { pending, data, method, action } = useFormStatus();
+
+	return (
+		<p>
+			<button type="submit" disabled={pending}>
+				{ pending ? "Submitting..." : "Submit"}
+			</button>
+		</p>
+	)
+}
+```
+
+
