@@ -48,7 +48,7 @@ const handleStateChaange = (field: string, value) => {
 }
 
 //...
-<input ... value={state.name} type="name" name={name} 
+<input ... value={state.name} type="text" name={name} 
 	onChange={(event) => handleStateChange('name', event.target.value)}/>
 <input ... value={state.email} type="email" name={email} 
 	onChange={(event) => handleStateChange('email', event.target.value)}/>
@@ -56,4 +56,13 @@ const handleStateChaange = (field: string, value) => {
 
 # Refs e useRef
 
-Come abbiamo v
+Come abbiamo visto in precedenza:
+
+```tsx
+//...
+const name - useRef();
+
+//...
+<input ... type="name" name={name} ref={name}/>
+```
+
