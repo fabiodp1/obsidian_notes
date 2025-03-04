@@ -165,6 +165,7 @@ const handleSubmit = (event) => {
 
 >Il metodo `reset` è lo stesso che viene chiamata quando usiamo il built-in `type="reset"`.
 
+---
 # Validation
 
 ## Al keystroke
@@ -266,6 +267,7 @@ Se non abbiamo il controllo sui messaggi di errore, però questo metodo facilita
 
 Il fatto di usare built-in props non esclude l'utilizza anche di custom validations. Ad es. se volessimo controllare che la password inserita e la "confirm password" sono uguali, possiamo aggiungere questo check all'interno del metodo `handleSubmit` come usato negli esempi precedenti e aggiungendo l'elemento html che mostrerà il messaggio in base al valore dello state (vedi esempi sopra).
 
+---
 # Actions (React 19+)
 
 È una feature presente da [React 19](React%2019.md) in poi e sfrutta l'attributo `action` degli elementi html `form` (esiste indipendentemente da React) che normalmente serve a definire il path per la chiamata del submit (l'endpoint).
@@ -287,3 +289,6 @@ const submitAction = (fromData: FormData) => {
 ## Validation
 
 Per la validazione possiamo gestire il form come visto prima, creandoci dei metodi di validazione, utilizzando librerie esterne, usando built-in props ecc.
+
+## useActionState
+
