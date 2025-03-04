@@ -321,6 +321,7 @@ Come detto prima di default una volta fatto il submit tramite action, React far�
 Per gestire il reset possiamo sfruttare il nostro metodo che si occupa del submit, e l'attributo html `defaultValue` (o nel caso degli elementi di tipo checkbox `defaultChecked`):
 
 ```tsx
+//...
 const submitAction = (prevState: FormData, formData: FormData) => {
 	//...
 	const password = formData.get('password');
@@ -384,3 +385,25 @@ export default function Submit() {
 }
 ```
 
+## Multiple form actions
+
+Ci sono casi in cui abbiamo bisogno di gestire più form action, ad esempio avendo bottoni che fanno cose diverse e chiamate diverse, quindi ognuno di loro sarebbe un submit e avremmo quindi più di un handler.
+
+In questi casi possiamo evitare di usare l'attributo `action` a livello di `<form>` e invece utilizzare l'attributo `formAction` a livello di singolo elemento [HTML](HTML.md):
+
+```tsx
+//...
+const handleFirstAction = (formData) => {
+	// ...
+};
+
+const handleSecondAction = (formData) => {
+	// ...
+};
+
+//...
+<form>
+	//...
+	<button formAction={handleFirstAction} ...>
+	<button formAction={handleSecondAction} ...>
+```
