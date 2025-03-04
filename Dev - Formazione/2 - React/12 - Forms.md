@@ -165,9 +165,18 @@ const handleSubmit = (event) => {
 
 >Il metodo `reset` è lo stesso che viene chiamata quando usiamo il built-in `type="reset"`.
 
-# Actions (React > 18)
+# Actions (React 19+)
 
+È una feature presente da [React 19](React%2019.md) in poi e sfrutta l'attributo `action` degli elementi html `form` (esiste indipendentemente da React) che normalmente serve a definire il path per la chiamata del submit (l'endpoint).
 
+Utilizzandolo con React, verrà fatto dietro le quinte un override dell'attributo, venendo gestito da React:
+
+```tsx
+//...
+const handleSubmit = (event) => {
+	
+}; 
+```
 
 # Validation
 
