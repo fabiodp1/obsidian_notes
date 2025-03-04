@@ -127,3 +127,39 @@ const handleSubmit = (event) => {
 
 # Reset form
 
+Esistono diversi modi per resettare un form:
+
+- usando la built-in feature del campo `input`:
+
+```tsx
+//...
+<button type="reset" ...>Reset</button>
+//...
+```
+
+- Programmaticamente, semplicemente rimettendo lo state ad un valore di default.
+	- Se abbiamo usato `useRef` bisognerà anche li resettarli manualmente in maniera imperativa, ma non è un pattern consigliato perché dovrebbe essere [React](React.md) ad occuparsi della manipolazione del [DOM](DOM). È meglio usare i ref solo in lettura.
+- Utilizzando il metodo `reset()` fornito dall'evento `onSubmit`, è questa è una forma imperativa ma sempre meglio di resettare ogni singolo campo usando i ref:
+
+```tsx
+//...
+//...
+const handleSubmit = (event) => {
+	event.preventDefault();
+
+	const formData = new FormData(event.target);
+	const myCheckboxes = formData.getAll('myCheckboxes');
+	const data = Object.fromEntries(formData.entries());
+
+	data.checkboxes = myCheckboxes;
+
+	event.target.reset(); // <==
+}
+//...
+<form onSubmit="handleSubmit">
+	//...
+</form>
+```
+
+>Il metodo `reset` è lo stesso che viene chiamata quando usiamo il built-in `type="reset"`.
+
