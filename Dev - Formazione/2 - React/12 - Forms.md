@@ -317,5 +317,32 @@ const [formState, formAction, pending] = useActionState(submitAction, {errors: n
 
 ## Manage form reset
 
-Come detto prima di default una volta fatto il submit tramite action, React farà il reset dello state del form, ma non sempre vorremmo sia questo il comportamento.
+Come detto prima di default una volta fatto il submit tramite action, React farà il reset dello state del form, ma non sempre vorremmo fosse questo il comportamento.
+Per gestire il reset possiamo sfruttare il nostro metodo che si occupa del submit, e l'attributo html `defaultValue`:
 
+```tsx
+const submitAction = (prevState: FormData, formData: FormData) => {
+	//...
+	const password = formData.get('password');
+	const errors = [];
+
+	//...
+	return {
+		errors,
+		enteredValues: {
+			password,
+			//...
+		}
+	}
+};
+
+const [formState, formAction, pending] = useActionState(submitAction, {
+	errors: null,
+	enteredValues: {
+		password: ''
+	}
+});
+
+//...
+<input name="password" defaultValue={}
+```
