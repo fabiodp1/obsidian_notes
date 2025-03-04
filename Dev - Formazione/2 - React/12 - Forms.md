@@ -48,9 +48,9 @@ const handleStateChaange = (field: string, value) => {
 }
 
 //...
-<input ... value={state.name} type="text" name={name} 
+<input ... value={state.name} type="text" name="name" 
 	onChange={(event) => handleStateChange('name', event.target.value)}/>
-<input ... value={state.email} type="email" name={email} 
+<input ... value={state.email} type="email" name="email" 
 	onChange={(event) => handleStateChange('email', event.target.value)}/>
 ```
 
@@ -60,9 +60,13 @@ Come abbiamo visto in precedenza:
 
 ```tsx
 //...
-const name - useRef();
+const nameRef = useRef();
+
+const handleSubmit = () => {
+	const name = nameRef.current.value;
+}
 
 //...
-<input ... type="name" name={name} ref={name}/>
+<input ... type="name" name="name" ref={nameRef}/>
 ```
 
