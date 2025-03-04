@@ -439,13 +439,19 @@ Per questo esiste un altro [[hook]] che permette di gestire agevolmente l'[optim
 Accetta 2 parametri:
 
 - Il campo da gestire
-- Il metodo che si occuperà della logica di aggiornamento
+- Il metodo che si occuperà della logica di aggiornamento: avrà **sempre** come primo parametro lo stato precedente, e come parametri successivi quelli che vogliamo.
 
 Restituisce 3 parametri:
 
-- 
+- Il valore 'optimistico': quello passato inizialmente e poi quello gestito dalla funzione. Rappresenta il valore che verrà impostato sulla UI nel mentre che il metodo (async?) fa il suo lavoro, una volta finita la logica di update la UI sarà aggiornata e quindi questo valore non servirà più.
+- Il metodo che abbiamo passato, in modo da poterlo invocare, va invocato nei `form action` e può essere invocato in quanti `formAction` vogliamo.
 
 ```tsx
 //...
-const 
+const [optimisticValue, setOptimisticValue] = useOptimistic(
+	value,
+	(prevValue, ...myOtherParams) => (
+		myParam === 'up' ? prevValue + 1 : prevValue - 1
+	);
+);
 ```
