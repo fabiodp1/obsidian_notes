@@ -359,3 +359,4 @@ In questa maniera al submit React reimposterà i valori correnti, senza resettar
 >Questo influenzerà anche il funzionamento standard dei button `type="reset"`.
 
 >Poiché non utilizzerà nessuno stato del componente, non è necessario definire il metodo che gestisce il submit dentro il componente, può essere esternalizzato e importato.
+
