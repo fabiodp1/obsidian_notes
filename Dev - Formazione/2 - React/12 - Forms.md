@@ -326,13 +326,19 @@ const submitAction = (prevState: FormData, formData: FormData) => {
 	const password = formData.get('password');
 	const errors = [];
 
-	//...
-	return {
-		errors,
-		enteredValues: {
-			password,
-			//...
+	// Se sono presenti errori voglio che il reset conservi i valori
+	if(errors.length){
+		return {
+			errors,
+			enteredValues: {
+				password,
+				//...
 		}
+	}
+
+	// Non essendoci errori va bene che il reset azzeri i campi
+	return {
+		errors: null
 	}
 };
 
@@ -344,7 +350,11 @@ const [formState, formAction, pending] = useActionState(submitAction, {
 });
 
 //...
+// Se il campo è presente al reset verrà impostato il suo valore
 <input name="password" defaultValue={formState.enteredValues?.passowrd}>...
 ```
 
-In questa maniera al submit React reimposterà i valori correnti, senza resettarli
+In questa maniera al submit React reimposterà i valori correnti, senza resettarli.
+
+>Questo influenzerà anche il funzionamento standard dei button `type="reset"`.
+
