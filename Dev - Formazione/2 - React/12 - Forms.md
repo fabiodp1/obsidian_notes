@@ -208,7 +208,7 @@ const handleInputBlur = (identifier: string) => {
 <input ... onBlur={() => handleInputBlur('email')} .../>
 ```
 
-La contropartita è che i messaggi di errore potrebbero rimanere troppo a lungo visibili. Infatti una volta comparso, se l'utente modifica il valore l'errore scomparirà solo quando il valore sarà corretto. Per questo va gestito anche al change del valore:
+Il tradeoff è che i messaggi di errore potrebbero rimanere troppo a lungo visibili. Infatti una volta comparso, se l'utente modifica il valore l'errore scomparirà solo quando il valore sarà corretto. Per questo va gestito anche al change del valore:
 
 ```tsx
 //...
@@ -227,3 +227,26 @@ const handleInputChange = (identifier: string, value: string) => {
 
 ## Al submit
 
+Per validare il nostro form al submit e mostrare possibili errori nella UI, possiamo fare così:
+
+
+```tsx
+const [emailIsInvalid, setEmailIsInvalid] = useState(false);
+const email = useRef();
+
+const handleSubmit = (event) => {
+	event.preventDefault();
+	
+	const enteredEmail = email.current.value;
+	const emailIsValid = enteredEmail.includes('@');
+
+	if(!emailIsValid) {
+		setEmailIsInvalid(true);
+		return;
+	}
+
+	setEmailIsInvalid(false); // This way the DOM will update removing possible error message
+}
+```
+
+Qui il tradeoff è che l'utente avrà un feedback sulla correttezza dei dati solo al submit.
