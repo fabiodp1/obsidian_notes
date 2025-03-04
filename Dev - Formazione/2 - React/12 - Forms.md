@@ -165,6 +165,10 @@ const handleSubmit = (event) => {
 
 >Il metodo `reset` è lo stesso che viene chiamata quando usiamo il built-in `type="reset"`.
 
+# Form Actions (React >= 19)
+
+
+
 # Validation
 
 ## Al keystroke
