@@ -250,3 +250,8 @@ const handleSubmit = (event) => {
 ```
 
 Qui il tradeoff è che l'utente avrà un feedback sulla correttezza dei dati solo al submit.
+
+>In ogni caso validare i dati al submit è sempre una buona idea, anche se li stiamo già validando ad es. al `keystroke`.
+
+## Built-in validation Props
+
