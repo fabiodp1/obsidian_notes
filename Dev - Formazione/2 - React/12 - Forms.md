@@ -101,8 +101,26 @@ const handleSubmit = (event) => {
 
 	const formData = new FormData(event.target);
 
-	Object.fromEntries(fd.entries());
+	const data = Object.fromEntries(formData.entries());
 }
 ```
 
+`entries()` restituirà un'array di tuple key/value (es. [ [ key, value ] ]) mentre `fromEntries` creerà un oggetto dall'array creata da `entries` con i corrispettivi `key/value`.
 
+>Questo metodo però non restituirà i valori di campi di tipo `checkbox`, per poterli ottenere sarà necessario prima di tutto che ogni input `checkbox` appartenente allo stesso gruppo abbia lo stesso `name`. Poi per ottenerne i valori:
+
+```tsx
+const handleSubmit = (event) => {
+	event.preventDefault();
+
+	const formData = new FormData(event.target);
+	const myCheckboxes = formData.getAll('myCheckboxes');
+	const data = Object.fromEntries(formData.entries());
+
+	data.checkboxes = myCheckboxes;
+}
+
+//...
+<input name="myCheckboxes" type="checkbox"...
+<input name="myCheckboxes" type="checkbox"...
+```
