@@ -407,3 +407,5 @@ const handleSecondAction = (formData) => {
 	<button formAction={handleFirstAction} ...>
 	<button formAction={handleSecondAction} ...>
 ```
+
+Anche qui possiamo gestire diversamente lo state del form, infatti possiamo usare `useFormStatus`, ma sarebbe necessario creare dei sottocomponenti da innestare
