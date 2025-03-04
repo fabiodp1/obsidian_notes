@@ -286,7 +286,4 @@ const submitAction = (fromData: FormData) => {
 
 ## Validation
 
-
-
-
-
+Per la validazione possiamo gestire il form come visto prima, creandoci dei metodi di validazione, utilizzando librerie esterne, usando built-in props ecc.
