@@ -205,3 +205,4 @@ const handleInputBlur = (identifier: string) => {
 <input ... onBlur={() => handleInputBlur('email')} .../>
 ```
 
+La contropartita è che i messaggi di errore potrebbero rimanere troppo a lungo visibili. Infatti una volta comparso, se l'utente modifica il valore l'errore scomparirà solo quando il valore sarà corretto.
