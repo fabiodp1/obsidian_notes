@@ -292,4 +292,25 @@ Per la validazione possiamo gestire il form come visto prima, creandoci dei meto
 
 ## useActionState
 
-È un hook messo a disposizione da [React 19+](React%2019+.md) che permette di
+È un hook messo a disposizione da [React 19+](React%2019+.md) che permette di gestire lo stato del form più agilmente.
+Richiede 2 parametri, la funzione che gestirà il `submit` e l'`initial state` del form
+
+```tsx
+//...
+const submitAction = (fromData: FormData) => {
+	//...
+}; 
+
+const [formState, formAction, pending] = useActionState(submitAction, {errors: null});
+
+//...
+<form action={formAction}
+```
+
+`useActionState` ritornerà:
+
+- `formState`: rappresenta lo stato aggiornato del form
+- `formAction`: è un metodo creato da React che fa il wrap del metodo che abbiamo passato come parametro e che si mette in ascolto dell'esecuzione di questo, fornendocene una versione "potenziata". Sarà questo nuovo metodo ad essere usato nel template come valore dell'attributo `action`.
+- `pending`: indica se è stato fatto il submit o meno, utile per sapere lo stato delle operazioni `async`
+- 
+
