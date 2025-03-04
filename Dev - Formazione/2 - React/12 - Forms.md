@@ -5,7 +5,7 @@ Fare il submit di un form e l'estrazione dei relativi campi è abbastanza sempli
 1. Attraverso lo `state` e il `two-way binding[[]]`
 2. Attraverso le `refs` e quindi `useRef`
 3. Attraverso `FormData` e le feature messe a disposizione dal browser
-4. Con [React 19](React%2019.md) abbiamo possiamo usare le `Form Actions`.
+4. Con [React 19+](React%2019+.md) abbiamo possiamo usare le `Form Actions`.
 
 Quello che è un po più complicato è la validazione dei dati offrendo anche una buona `user experience`:
 
@@ -270,7 +270,7 @@ Il fatto di usare built-in props non esclude l'utilizza anche di custom validati
 ---
 # Actions (React 19+)
 
-È una feature presente da [React 19](React%2019.md) in poi e sfrutta l'attributo `action` degli elementi html `form` (esiste indipendentemente da React) che normalmente serve a definire il path per la chiamata del submit (l'endpoint).
+È una feature presente da [React 19+](React%2019+.md) in poi e sfrutta l'attributo `action` degli elementi html `form` (esiste indipendentemente da React) che normalmente serve a definire il path per la chiamata del submit (l'endpoint).
 
 Utilizzandolo con React, verrà fatto dietro le quinte un override dell'attributo, venendo gestito da React. Il metodo non riceverà un evento come per il `onSubmit`, ma un oggetto `FormData`:
 
@@ -292,3 +292,4 @@ Per la validazione possiamo gestire il form come visto prima, creandoci dei meto
 
 ## useActionState
 
+È un hook messo a disposizione da [React 19+](React%2019+.md) che permette di

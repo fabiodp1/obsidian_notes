@@ -485,7 +485,7 @@ function App() {
 export default App
 ```
 
->Con [[React 19]] è possibile fare il wrap senza bisogno di aggiungere `.Provider`:
+>Con [[React 19+]] è possibile fare il wrap senza bisogno di aggiungere `.Provider`:
 
 ```tsx
 <CartContext>
@@ -493,7 +493,7 @@ export default App
 </CartContext>
 ```
 
->Inoltre con [[React 19]] è possibile usare l'hook [[use]] invece di [[useContext]].
+>Inoltre con [[React 19+]] è possibile usare l'hook [[use]] invece di [[useContext]].
 # useLayoutEffect
 
 Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
