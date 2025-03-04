@@ -1,3 +1,5 @@
+# Data management
+
 Fare il submit di un form e l'estrazione dei relativi campi è abbastanza semplice, ad es. è possibile:
 
 1. Attraverso lo `state` e il `two-way binding[[]]`
@@ -11,7 +13,7 @@ Quello che è un po più complicato è la validazione dei dati offrendo anche un
 2. Possiamo validare alla perdita del `focus` ma gli errori potrebbero essere mostrati troppo a lungo.
 3. Possiamo validare al `submit` del form ma gli errori potrebbero essere mostrati troppo tardi.
 
-# 1. State e two-way binding
+## State e two-way binding
 
 Metodo classico, utilizzerà:
 
@@ -54,7 +56,7 @@ const handleStateChaange = (field: string, value) => {
 	onChange={(event) => handleStateChange('email', event.target.value)}/>
 ```
 
-# Refs e useRef
+## Refs e useRef
 
 Come abbiamo visto in precedenza:
 
@@ -70,7 +72,7 @@ const handleSubmit = () => {
 <input ... type="name" name="name" ref={nameRef}/>
 ```
 
-# FormData & native browser features
+## FormData & native browser features
 
 Il browser mette a disposizione un oggetto che ci può aiutare nell'estrazione dei dati, `FormData`.
 basta nel metodo che gestisce il submit, creare l'oggetto `FormData` passando al suo costruttore l'evento passata dall'`onSubmit`, che conterrà le info di tutto il form:
@@ -125,7 +127,7 @@ const handleSubmit = (event) => {
 <input name="myCheckboxes" type="checkbox"...
 ```
 
-# Reset form
+## Reset form
 
 Esistono diversi modi per resettare un form:
 
@@ -162,4 +164,8 @@ const handleSubmit = (event) => {
 ```
 
 >Il metodo `reset` è lo stesso che viene chiamata quando usiamo il built-in `type="reset"`.
+
+# Validation
+
+## Al keystroke
 
