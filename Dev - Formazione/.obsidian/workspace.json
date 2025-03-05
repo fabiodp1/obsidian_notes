@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dialog",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c0bc763178c5251",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "zzz_Pagine/dialog.md",
     "2 - React/2 - Hooks.md",
