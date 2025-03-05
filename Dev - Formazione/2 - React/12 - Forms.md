@@ -439,7 +439,7 @@ const [secondFormState, secondFormAction, secondPending] = useActionState(handle
 # useOptimistic
 
 I metodi utilizzati fin adesso per gestire i form sono corretti ma in certi casi (ad es. in seguito a chiamate server lente), possono rendere la [[UX]] non ottimale e poco reattiva.
-Per questo esiste un altro [[hook]] che permette di gestire agevolmente l'[optimistic UI](optimistic%20UI), `useOptimistic`.
+Per questo esiste un altro [[hook]] che permette di gestire agevolmente l'[optimistic UI](optimistic%20UI), `useOptimistic` (*presente da React 18*).
 Accetta 2 parametri:
 
 - Il campo da gestire
