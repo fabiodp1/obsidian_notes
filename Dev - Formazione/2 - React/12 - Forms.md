@@ -434,7 +434,9 @@ const [secondFormState, secondFormAction, secondPending] = useActionState(handle
 	<button formAction={secondFormAction} disabled={firstPending || secondPending} ...>
 ```
 
-## useOptimistic
+---
+
+# useOptimistic
 
 I metodi utilizzati fin adesso per gestire i form sono corretti ma in certi casi (ad es. in seguito a chiamate server lente), possono rendere la [[UX]] non ottimale e poco reattiva.
 Per questo esiste un altro [[hook]] che permette di gestire agevolmente l'[optimistic UI](optimistic%20UI), `useOptimistic`.
