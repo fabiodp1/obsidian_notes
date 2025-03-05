@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "custom",
+                "query": "dialog",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,10 +184,11 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
+    "zzz_Pagine/dialog.md",
+    "2 - React/2 - Hooks.md",
     "2 - React/12 - Forms.md",
     "zzz_Pagine/React 19+.md",
     "2 - React/13 - Link utili.md",
-    "2 - React/2 - Hooks.md",
     "2 - React/7 - Patterns.md",
     "2 - React/7 - Code splitting.md",
     "2 - React/4 - Cache management.md",
@@ -209,7 +211,6 @@
     "4 - Angular/Angular 19/1 - Components.md",
     "4 - Angular/Angular 19/2 - Reattività.md",
     "4 - Angular/Angular 14/1 - Architettura.md",
-    "2 - React/1 - React Fundamentals.md",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",
     "4 - Angular",

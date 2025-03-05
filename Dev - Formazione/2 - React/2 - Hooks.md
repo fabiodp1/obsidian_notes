@@ -587,7 +587,7 @@ function useCount({initialCount = 0, step = 1} = {}) {
 
 # useImperativeHandle
 
-[[useImperativeHandle]] permette ad un componente di esporre una propria API chiamabile dal componente padre. Ci sono infatti certi casi in cui è utilie, ad esempio quando il padre tramite ref interagisce con degli elementi del componente figlio, elementi che potrebbero cambiare senza che il padre ne sia consapevole. Ad es. il padre potrebbe utilizzare il metodo showModal di un elemento figlio dialog, ma questo in un futuro viene cambiato in div.
+[[useImperativeHandle]] permette ad un componente di esporre una propria API chiamabile dal componente padre. Ci sono infatti certi casi in cui è utilie, ad esempio quando il padre tramite ref interagisce con degli elementi del componente figlio, elementi che potrebbero cambiare senza che il padre ne sia consapevole. Ad es. il padre potrebbe utilizzare il metodo showModal di un elemento figlio [[dialog]], ma questo in un futuro viene cambiato in div.
 
 ```tsx
 // Child
