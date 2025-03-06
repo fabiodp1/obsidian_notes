@@ -95,10 +95,31 @@ store.subscribe(counterSubscriber);
 
 ## Action
 
-Un po come si fa con `useReducer`, la `Action` è un oggetto che tramite una prop `type`, definisce il tipo di azione che andrà fatta.
+Un po come si fa con `useReducer`, la `Action` è un oggetto che tramite una prop `type`, definisce il tipo di azione che andrà fatta dal `Reducer`
 
 ```tsx
 // dispatch è un metodo built-in che fa il dispatch di una Action
 store.dispatch({ type: 'increment'}); // qui lo stiamo invocando
+// OR
+store.dispatch({ type: 'decrement'});
 ```
 
+In questa maniera il reducer potrà ad es. gestire la logica così:
+
+```tsx
+const counterReducer = (state = {counter: 0}, action) => {
+	if(action.type === 'increment') {
+		return {
+			counter: state.counter + 1
+		}
+	}
+
+	if(action.type === 'decrement') {
+		return {
+			counter: state.counter - 1
+		}
+	}
+
+	return state;
+}
+```
