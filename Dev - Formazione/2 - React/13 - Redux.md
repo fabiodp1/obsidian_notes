@@ -157,6 +157,19 @@ export default store;
 
 A differenza di quello che abbiamo visto prima, non sarà in questo file che faremo il subscribe:
 
-```tsx
+Nel file di root dell'applicativo `index.ts` registreremo lo store importando il componente `Provider` (un vero a proprio `Context`) e con questo faremo il wrap dell'applicativo:
 
+```ts
+import { Provider } from 'react-redux';
+import store from './store/index';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+	<Provider>
+		<App />
+	</Provider>
+)
 ```
+
+>Come tutti i `Context`, non è obbligatorio fare il wrap a livello di root, possiamo farlo anche innestato in punti diversi del tree di componenti.
+
