@@ -47,3 +47,8 @@ I componenti che hanno bisogno di utilizzare lo store, fanno una `Subscription` 
 I `Reducer` sono delle funzioni che si occupano di modificare lo state dello store e vengono attivati da delle funzione di `Dispatch` usati dai componenti, le `Action`.
 Le `Action` sono degli oggetti che descrivono le azioni che i `Reducer` devono compiere. 
 Quindi il componente chiama l'`Action`, [[React]] la passa al `Reducer` che genererà il nuovo `state` e tutti i componenti che hanno fatto la `Subscription` a quello state verranno informati.
+
+---
+
+# Concepts
+
