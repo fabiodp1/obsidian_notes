@@ -348,3 +348,24 @@ const counterSlice = createSlice({
 	}
 });
 ```
+
+### Unire più Slice
+
+Per fare ciò viene utilizzato un altro [[hook]] del toolkit, `configureStore` che permette di configurare e creare uno store, ma rendendo facile l'unione fra più store:
+
+```ts
+const store = configureStore({
+	// All fine Redux vuole in ogni caso un unico reducer globale
+	
+	// reducer: counterSlice.reducer // può essere usato così
+	
+	// Per unirne diversi
+	reducer: {
+		// Verrà fatto il merge fra tutti i reducer passati
+		counter: counterSlice.reducer,
+		...
+	}
+});
+```
+
+## 
