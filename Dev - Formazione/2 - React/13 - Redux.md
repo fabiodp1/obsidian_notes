@@ -127,3 +127,28 @@ const counterReducer = (state = {counter: 0}, action) => {
 # React & react-redux
 
 Con `React` installeremo `react-redux` che semplifica un po le cose.
+
+## Creare lo store
+
+Creiamo un file `.ts` (o .js) nella cartella che conterrà lo store:
+
+```ts
+import {createStore} from 'redux';
+
+const counterReducer = (state = {counter: 0}, action) => {
+	if(action.type === "increase") {
+		return {
+			counter: state.counter + 1
+		}
+	}
+	if(action.type === "decrease") {
+		return {
+			counter: state.counter - 1
+		}
+	}
+
+	return state;
+};
+
+const store = createStore(counterReducer);
+```
