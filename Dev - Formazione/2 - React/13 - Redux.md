@@ -66,7 +66,8 @@ Ritornerà **SEMPRE** un nuovo oggetto `state` e deve essere una funzione "pura"
 
 const redux = require('redux');
 
-const counterReducer = (state, action) => {
+// Lo state deve avere un default perchè se no alla creazione sarà undefined
+const counterReducer = (state = { counter: 0 }, action) => {
 	return {
 		counter: state.counter + 1
 	}
@@ -74,11 +75,30 @@ const counterReducer = (state, action) => {
 
 // Lo store deve sapere quali sono i Reducer che lo modificheranno
 const store = redux.createStore(counterReducer);
+```
 
+>Nel momento in cui lo store viene creato, i reducer verranno chiamati per la prima volta, quindi è importante dare un default alla proprietà `state` del `Reducer` o essendo al primo avvio `undefined`, cercare di accedere alle prop dello state darebbe errore.
+
+## Subscriber
+
+Il subscriber è una funzione che restituirà tutto o parte dello state, e andrà registrato nello store tramite il metodo `subscribe`.
+
+```tsx
 const counterSubscriber = () => {
 	// getState è un metodo built-in che ci darà l'ultimo state disponibile
 	const latestState = store.getState();
 };
 
+// Adesso il subscriber viene sottoscritto allo store
 store.subscribe(counterSubscriber);
 ```
+
+## Action
+
+Un po come si fa con `useReducer`, la `Action` è un oggetto che tramite una prop `type`, definisce il tipo di azione che andrà fatta.
+
+```tsx
+// dispatch è un metodo built-in che fa il dispatch di una Action
+store.dispatch({ type: 'increment'}); // qui lo stiamo invocando
+```
+
