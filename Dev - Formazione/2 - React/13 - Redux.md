@@ -62,7 +62,7 @@ Sono delle funzioni [JS](JS) che prendono come argomenti 2 parametri:
 Ritornerà **SEMPRE** un nuovo oggetto `state` e deve essere una funzione "pura", dato un input deve ritornare sempre lo stesso output.
 
 ```tsx
-// Semplice esempio
+// Semplice esempio che non usa React perchè Redux è agnostic
 
 const redux = require('redux');
 
@@ -119,7 +119,7 @@ const counterReducer = (state = {counter: 0}, action) => {
 			counter: state.counter - 1
 		}
 	}
-
+	
 	return state;
 }
 ```
