@@ -276,4 +276,32 @@ const counterReducer = (state = initialState, action) => {
 const showCounter = useSelector(stete => state.showCounter);
 ```
 
->È necessario ritornare lo state per intero, perché [Redux](Redux) non farà il merge con lo stato corrente, ma lo sostituirà in toto.
+>È necessario ritornare lo state per intero, perché [Redux](Redux) non farà il merge con lo stato corrente, ma lo sostituirà in toto. Se non passiamo una proprietà, questa verra valorizzata con `undefined`, creando side effects non voluti.
+
+Quello che ci si potrebbe chiedere è perché ogni volta dobbiamo ritornare un oggetto invece di mutare lo state in maniera più semplice, ad es.
+
+```ts
+const counterReducer = (state = initialState, action) => {
+	// si potrebbe usare anche uno switch
+	if(action.type === "increment") {
+		state.counter++
+		return state;
+	}
+	//....
+
+// OR
+
+const counterReducer = (state = initialState, action) => {
+	// si potrebbe usare anche uno switch
+	if(action.type === "increment") {
+		state.counter++
+		
+		return {
+			counter: state.counter,
+			showCounter: state.showCounter
+		};
+	}
+```
+
+==**WRONG**== :Se facciamo in quel modo, l'applicativo apparentemente sembra funzionare, ma non è per niente corretto, lo state è `immutable`, come ogni state di React.
+Facendo così incorriamo in side effects non voluti e bug.
