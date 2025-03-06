@@ -327,7 +327,7 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = { counter: 0, showCounter: true };
 
-createSlice({
+const counterSlice = createSlice({
 	name: 'counter', // Nome della slice
 	initialState,
 	// tutti i reducer di cui avrà bisogno questa slice
@@ -339,7 +339,11 @@ createSlice({
 			state.counter++;			
 		},
 		decrement() {...},
-		increase() {...},
+		increase(state, action) {
+			// comunque i reducer ricevono l'action, 
+			// quindi è possibile usare il PAYLOAD
+			state.counter += action.amount;
+		},
 		toggleCounter() {...}
 	}
 });
