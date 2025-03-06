@@ -30,4 +30,20 @@ Parliamo di potenziali 'contro', perché potrebbe essere che nella nostra app no
 	- Soprattutto in grandi applicazioni, potremmo avere multipli `Context` per la gestione di diversi tipi di state. Ovviamente potremmo anche crearne uno unico, ma diventerebbe un `Provider` molto grande e difficile da gestire, da manutenere e avrebbe anche state che non hanno relazione diretta fra loro.
 - Problemi di **performance** per cambiamenti frequenti allo stato
 	- È consigliato soprattutto per state che vengono aggiornati poco frequentemente, ad es. cambio theme e autenticazione, ma no se i dati cambiano frequentemente. **Non può in tutti gli scenari essere utilizzato** come `store`.
-- 
+
+Librerie come `Redux` nascono per risolvere queste criticità.
+
+---
+
+# HOW
+
+[[Redux]] nasce per poter creare uno `Central Data Store`, avere tutti dati (state) centralizzati in **un unico** store.
+Questo potrebbe sembrare difficile da mantenere, come per il Context, ma in realtà non abbiamo bisogno ogni volta di gestire direttamente l'intero store,
+
+I componenti che hanno bisogno di utilizzare lo store, fanno una `Subscription` ad esso e ogni volta che lo state all'interno dello store cambia, il componente verrà notificato per reagire di conseguenza.
+
+>I componenti non manipolano **===MAI===** lo stato dello store in maniera diretta, per fare ciò utilizzano (attraverso le `Action`) i **Reducer**.
+
+I `Reducer` sono delle funzioni che si occupano di modificare lo state dello store e vengono attivati da delle funzione di `Dispatch` usati dai componenti, le `Action`.
+Le `Action` sono degli oggetti che descrivono le azioni che i `Reducer` devono compiere. 
+Quindi il componente chiama l'`Action`, [[React]] la passa al `Reducer` che genererà il nuovo `state` e tutti i componenti che hanno fatto la `Subscription` a quello state verranno informati.
