@@ -310,3 +310,34 @@ const counterReducer = (state = initialState, action) => {
 # Redux Toolkit
 
 Il fatto di dover stare molto attenti a copiare lo state correttamente prima che il reducer lo possa ritornare per rispettare l'immutabilità dello state di [Redux](Redux) può essere tedioso e pericolosi man mano che l'applicativo e lo state crescono.
+
+>Installando `@reduxjs/toolkit` è possibile disinstallare `redux`, poiché è già incluso nel pacchetto
+
+[[Redux Toolkit]] semplifica molte cose nell'utilizzo di [Redux](Redux), partendo dal file di root dello store dove dichiariamo il `Reducer`.
+
+## createSlice
+
+Aiuta nella creazione del `Reducer`. Esiste anche `createReducer`, ma è meno potente.
+Accetta un oggetto che rappresenta una fetta, "slice", dello state.
+
+>Possiamo creare quante slice vogliamo in quanti file vogliamo, rendendo lo store più facile da mantenere.
+
+```ts
+import {createSlice} from "@reduxjs/toolkit"
+
+const initialState = { counter: 0, showCounter: true };
+
+createSlice({
+	name: 'counter', // Nome dello slice
+	initialState,
+	// tutti i reducer di cui avrà bisogno questa slice
+	reducers: {
+		// Non c'è più bisogno di fare i check sul type della action in un singolo 
+		// reducer, al dispatch verrà chiamato il metodo corrispondente
+		increment(state) {},
+		decrement() {},
+		increase() {},
+		toggleCounter() {}
+	}
+});
+```
