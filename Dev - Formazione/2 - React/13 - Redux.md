@@ -305,3 +305,8 @@ const counterReducer = (state = initialState, action) => {
 
 ==**WRONG**== :Se facciamo in questo modo, l'applicativo apparentemente sembra funzionare, ma non è per niente corretto, lo state è `immutable`, come ogni state di React. Facendo così incorriamo in side effects non voluti e bug.
 
+---
+
+# Redux Toolkit
+
+Il fatto di dover stare molto attenti a copiare lo state correttamente prima che il reducer lo possa ritornare per rispettare l'immutabilità dello state di [Redux](Redux) può essere tedioso e pericolosi man mano che l'applicativo e lo state crescono.
