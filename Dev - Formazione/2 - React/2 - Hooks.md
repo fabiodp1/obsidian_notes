@@ -270,6 +270,7 @@ function myReducer(state, action) {
 >Anche in questo caso lo `state` non deve essere modificato direttamente, ad es. facendo un push, ma va ricreato un nuovo oggetto utilizzando lo state precedente.
 
 >Normalmente `useReducer` viene usato per gestire state più complessi, ad esempio liste che hanno bisogno di `add` o `remove`, per questo in genere l'`action` possiede diverse proprietà, ad es. `type` che definiscono l'azione da compiere sullo state, (es. `{ type: 'add', item: {...} }`). In questa maniere all'interno del reducer si possono scatenare diverse logiche a seconda dell'action `type`.
+>
 ## lazy initialization
 useReduce possiede un terzo parametro che viene utilizzato normalmente per inizializzare lo [[state]] applicativo, azione chiamata [[lazy initialization]].
 
