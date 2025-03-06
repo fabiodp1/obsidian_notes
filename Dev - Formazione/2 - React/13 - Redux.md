@@ -124,6 +124,8 @@ const counterReducer = (state = {counter: 0}, action) => {
 }
 ```
 
+---
+
 # React & react-redux
 
 Con `React` installeremo `react-redux` che semplifica un po le cose.
@@ -210,3 +212,6 @@ const Counter = () => {
 	//...
 }
 ```
+
+### Passare un payload
+
