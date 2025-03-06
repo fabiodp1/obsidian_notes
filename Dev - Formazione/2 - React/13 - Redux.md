@@ -368,4 +368,12 @@ const store = configureStore({
 });
 ```
 
-## 
+## Actions
+
+Per accedere alle action possiamo fare tramite la prop `actions`:
+
+```ts
+counterSlice.actions.increment();
+```
+
+Dietro le quinte `tookit` creerà la action per noi.
