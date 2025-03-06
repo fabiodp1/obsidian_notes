@@ -173,9 +173,9 @@ root.render(
 
 >Come tutti i `Context`, non è obbligatorio fare il wrap a livello di root, possiamo farlo anche innestato in punti diversi del tree di componenti.
 
-## Utilizzo in component
+## useSelector
 
-Anche in questo caso faremo uso di un custom hook appartenente alla libreria `react-redux`, `useSelector`. A questo [[hook]] va passata una funzione che verrà eseguita da `Redux` per estrarre la parte di state che ci serve:
+Per leggere lo store in componente faremo uso di un custom hook appartenente alla libreria `react-redux`, `useSelector`. A questo [[hook]] va passata una funzione che verrà eseguita da `Redux` per estrarre la parte di state che ci serve:
 
 ```tsx
 import { useSelector } from 'react-redux';
@@ -194,5 +194,19 @@ const Counter = () => {
 >`useSelector` si occuperà di fare la `subscription` allo store per questo componente, quindi il componente verrà aggiornato ogni volta che lo stato per cui è stata fatta la subscription cambia.
 >Si occuperà anche di cancellare la sottoscrizione al destroy del componente.
 
-## Cambiare lo stato
+## useDispatch
 
+Per fare il `dispatch` di un'`action` all'interno di un componente possiamo usare l'`hook` di react-redux `useDispatch.
+
+```tsx
+import {useDispatch} from 'react-redux';
+
+const Counter = () => {
+	const dispatch = useDispatch();
+
+	const incrementHandler = () => {
+		dispatch({type: 'increment'});
+	}
+	//...
+}
+```
