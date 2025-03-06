@@ -59,10 +59,26 @@ Sono delle funzioni [JS](JS) che prendono come argomenti 2 parametri:
 - il vecchio `state`
 - la `action` di cui è stato fatto il `dispatch`
 
-Ritornerà SEMPRE un nuovo oggetto `state` e deve essere una funzione "pura", dato un input deve ritornare sempre lo stesso output.
+Ritornerà **SEMPRE** un nuovo oggetto `state` e deve essere una funzione "pura", dato un input deve ritornare sempre lo stesso output.
 
 ```tsx
-const counterReducer = (state, action) => {
+// Semplice esempio
 
+const redux = require('redux');
+
+const counterReducer = (state, action) => {
+	return {
+		counter: state.counter + 1
+	}
 };
+
+// Lo store deve sapere quali sono i Reducer che lo modificheranno
+const store = redux.createStore(counterReducer);
+
+const counterSubscriber = () => {
+	// getState è un metodo built-in che ci darà l'ultimo state disponibile
+	const latestState = store.getState();
+};
+
+store.subscribe(counterSubscriber);
 ```
