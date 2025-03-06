@@ -52,3 +52,17 @@ Quindi il componente chiama l'`Action`, [[React]] la passa al `Reducer` che gene
 
 # Concepts
 
+## Reducer
+
+Sono delle funzioni [JS](JS) che prendono come argomenti 2 parametri:
+
+- il vecchio `state`
+- la `action` di cui è stato fatto il `dispatch`
+
+Ritornerà SEMPRE un nuovo oggetto `state` e deve essere una funzione "pura", dato un input deve ritornare sempre lo stesso output.
+
+```tsx
+const counterReducer = (state, action) => {
+
+};
+```
