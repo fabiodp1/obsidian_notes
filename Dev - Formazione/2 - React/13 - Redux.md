@@ -328,16 +328,19 @@ import {createSlice} from "@reduxjs/toolkit"
 const initialState = { counter: 0, showCounter: true };
 
 createSlice({
-	name: 'counter', // Nome dello slice
+	name: 'counter', // Nome della slice
 	initialState,
 	// tutti i reducer di cui avrà bisogno questa slice
 	reducers: {
 		// Non c'è più bisogno di fare i check sul type della action in un singolo 
 		// reducer, al dispatch verrà chiamato il metodo corrispondente
-		increment(state) {},
-		decrement() {},
-		increase() {},
-		toggleCounter() {}
+		increment(state) {
+			// Qui È possibile cambiare direttamente lo state
+			state.counter++;			
+		},
+		decrement() {...},
+		increase() {...},
+		toggleCounter() {...}
 	}
 });
 ```
