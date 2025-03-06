@@ -29,3 +29,5 @@ Parliamo di potenziali 'contro', perché potrebbe essere che nella nostra app no
 - In certi casi potremmo avere **elevata complessità di setup e gestione**
 	- Soprattutto in grandi applicazioni, potremmo avere multipli `Context` per la gestione di diversi tipi di state. Ovviamente potremmo anche crearne uno unico, ma diventerebbe un `Provider` molto grande e difficile da gestire, da manutenere e avrebbe anche state che non hanno relazione diretta fra loro.
 - Problemi di **performance** per cambiamenti frequenti allo stato
+	- È consigliato soprattutto per state che vengono aggiornati poco frequentemente, ad es. cambio theme e autenticazione, ma no se i dati cambiano frequentemente. **Non può in tutti gli scenari essere utilizzato** come `store`.
+- 
