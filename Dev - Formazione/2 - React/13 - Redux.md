@@ -165,11 +165,13 @@ import store from './store/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<Provider store={store}>
+	<Provider store={store}> // Adesso tutti i componenti possono accedere allo store
 		<App />
 	</Provider>
 )
 ```
 
 >Come tutti i `Context`, non è obbligatorio fare il wrap a livello di root, possiamo farlo anche innestato in punti diversi del tree di componenti.
+
+
 
