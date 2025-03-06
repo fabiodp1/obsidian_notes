@@ -61,9 +61,9 @@ Sono delle funzioni [JS](JS) che prendono come argomenti 2 parametri:
 
 Ritornerà **SEMPRE** un nuovo oggetto `state` e deve essere una funzione "pura", dato un input deve ritornare sempre lo stesso output.
 
-```tsx
-// Semplice esempio che non usa React perchè Redux è agnostic
+>Semplice esempio che non usa React perché [[Redux]] può essere usato in **qualsiasi progetto JS**, per usarlo con React basta installare `react-redux`.
 
+```tsx
 const redux = require('redux');
 
 // Lo state deve avere un default perchè se no alla creazione sarà undefined
