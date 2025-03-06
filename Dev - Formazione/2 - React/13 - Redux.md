@@ -374,6 +374,19 @@ Per accedere alle action possiamo fare tramite la prop `actions`:
 
 ```ts
 counterSlice.actions.increment();
+
+// Quindi dallo store possiamo anche farne l'export e importarli nei componenti
+export const counterActions = counterSlice.actions;
 ```
 
-Dietro le quinte `tookit` creerà la action per noi.
+Dietro le quinte `toolkit` creerà la action per noi.
+All'interno dei componenti potremo usarli così:
+
+```ts
+import { counterActions } from './store/index';
+
+//...
+const incrementHandler = () => {
+	dispatch(counterActions.increment());
+}
+```
