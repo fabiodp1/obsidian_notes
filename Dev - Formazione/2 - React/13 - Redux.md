@@ -215,3 +215,24 @@ const Counter = () => {
 
 ### Passare un payload
 
+Come per le funzioni reducer utilizzati da `useReduce`, anche qui assieme al tipo di azione, l'`action` può contenere un payload:
+
+```ts
+const counterReducer = (state ..., action) => {
+	//...
+	if(action.type === 'increase') {
+		return {
+			counter: state.counter + action.amount // o 'value', come vogliamo
+		}
+	}
+	//...
+}
+
+//...
+// COMPONENT
+
+const increaseHandler = (amount: number) => {
+	dispatch({type: 'increase', amount});
+};
+
+```
