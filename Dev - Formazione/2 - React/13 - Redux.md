@@ -136,12 +136,12 @@ Creiamo un file `.ts` (o .js) nella cartella che conterrà lo store:
 import {createStore} from 'redux';
 
 const counterReducer = (state = {counter: 0}, action) => {
-	if(action.type === "increase") {
+	if(action.type === "increment") {
 		return {
 			counter: state.counter + 1
 		}
 	}
-	if(action.type === "decrease") {
+	if(action.type === "decrement") {
 		return {
 			counter: state.counter - 1
 		}
@@ -151,4 +151,12 @@ const counterReducer = (state = {counter: 0}, action) => {
 };
 
 const store = createStore(counterReducer);
+
+export default store;
+```
+
+A differenza di quello che abbiamo visto prima, non sarà in questo file che faremo il subscribe:
+
+```tsx
+
 ```
