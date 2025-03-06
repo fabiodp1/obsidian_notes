@@ -303,6 +303,5 @@ const counterReducer = (state = initialState, action) => {
 	}
 ```
 
->==**WRONG**== :Se facciamo in questo modo, l'applicativo apparentemente sembra funzionare, ma non è per niente corretto, lo state è `immutable`, come ogni state di React.
->Facendo così incorriamo in side effects non voluti e bug.
+==**WRONG**== :Se facciamo in questo modo, l'applicativo apparentemente sembra funzionare, ma non è per niente corretto, lo state è `immutable`, come ogni state di React. Facendo così incorriamo in side effects non voluti e bug.
 
