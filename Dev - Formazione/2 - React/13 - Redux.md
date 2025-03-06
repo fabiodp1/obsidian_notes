@@ -186,10 +186,13 @@ const Counter = () => {
 	const counter = useSelector(state => state.counter);
 	
 	return (
-		//...
+		<div>{ counter }</div>
 	)
 };
 ```
 
 >`useSelector` si occuperà di fare la `subscription` allo store per questo componente, quindi il componente verrà aggiornato ogni volta che lo stato per cui è stata fatta la subscription cambia.
 >Si occuperà anche di cancellare la sottoscrizione al destroy del componente.
+
+## Cambiare lo stato
+
