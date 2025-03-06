@@ -123,3 +123,7 @@ const counterReducer = (state = {counter: 0}, action) => {
 	return state;
 }
 ```
+
+# React & react-redux
+
+Con `React` installeremo `react-redux` che semplifica un po le cose.
