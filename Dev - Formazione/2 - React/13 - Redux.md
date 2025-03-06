@@ -173,5 +173,22 @@ root.render(
 
 >Come tutti i `Context`, non è obbligatorio fare il wrap a livello di root, possiamo farlo anche innestato in punti diversi del tree di componenti.
 
+## Utilizzo in component
 
+Anche in questo caso faremo uso di un custom hook appartenente alla libreria `react-redux`, `useSelector`. A questo [[hook]] va passata una funzione che verrà eseguita da `Redux` per estrarre la parte di state che ci serve:
 
+```tsx
+import { useSelector } from 'react-redux';
+
+const Counter = () => {
+
+	// In questo caso lo state da estrarre è semplice
+	const counter = useSelector(state => state.counter);
+	
+	return (
+		//...
+	)
+};
+```
+
+>`useSelector` si occuperà di fare la `subscription` allo store per questo componente, quindi il componente verrà aggiornato ogni volta che lo stato per cui è stata fatta la subscription cambia.
