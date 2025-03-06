@@ -270,8 +270,9 @@ function myReducer(state, action) {
 >Anche in questo caso lo `state` non deve essere modificato direttamente, ad es. facendo un push, ma va ricreato un nuovo oggetto utilizzando lo state precedente.
 
 >Normalmente `useReducer` viene usato per gestire state più complessi, ad esempio liste che hanno bisogno di `add` o `remove`, per questo in genere l'`action` possiede diverse proprietà, ad es. `type` che definiscono l'azione da compiere sullo state, (es. `{ type: 'add', item: {...} }`). In questa maniere all'interno del reducer si possono scatenare diverse logiche a seconda dell'action `type`.
->
+
 ## lazy initialization
+
 useReduce possiede un terzo parametro che viene utilizzato normalmente per inizializzare lo [[state]] applicativo, azione chiamata [[lazy initialization]].
 
 ```javascript
@@ -290,6 +291,8 @@ const [state, dispatch] = React.useReducer(reducer, props.initialState, init)
 
 Verrà passato il secondo argomento alla funzione di init come parametro e la funzione ritorna l'initial state.
 Questo può risultare utile se la funzione init ad es. fa azioni come leggere dal localStorage o comunque qualcosa che non vogliamo venga lanciato ad ogni re-render.
+
+---
 
 # useCallback / useMemo
 
@@ -410,6 +413,8 @@ const updateLocalStorage = React.useCallback(
 
 E' possibile usarli anche in altri casi, ma questi sono i più comuni
 
+---
+
 # useContext
 [[5 - Context]]
 
@@ -498,6 +503,9 @@ export default App
 ```
 
 >Inoltre con [[React 19+]] è possibile usare l'hook [[use]] invece di [[useContext]].
+
+---
+
 # useLayoutEffect
 
 Ci sono 2 modi per dire a React di lanciare side-effects dopo il render:
@@ -509,6 +517,8 @@ Nel 99% dei casi verrà usato `useEffect`, ma in certi casi `useLayoutEffect` pu
 
 La semplice rule-of-thumb è:
 >Se stai facendo dei cambiamenti chiaramente osservabili nel DOM, usa `useLayoutEffect`, negli altri casi solo `useEffect`.
+
+---
 
 # useImperativeHandle
 
@@ -555,6 +565,8 @@ export default Parent;
 In questo caso il componente figlio `CustomInput` usa `useImperativeHandle` per esporre solo i netordi `focus` e `clear`.
 Il componente genitore può usare il ref per chiamare questi metodi, senza sapere nulla del nodo DOM interno.
 
+---
+
 # useDebugValue
 
 Quando si inizia a scriver custom hooks, può risultare molto utile dargli delle sorte di label speciali per identificarli e per magari differenziare i differenti usi che se ne fanno all'interno del componente.
@@ -585,6 +597,8 @@ function useCount({initialCount = 0, step = 1} = {}) {
   return [count, increment]
 }
 ```
+
+---
 
 # useImperativeHandle
 
