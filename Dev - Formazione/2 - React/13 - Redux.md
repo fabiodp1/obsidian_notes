@@ -246,18 +246,34 @@ const initialState = {
 }
 
 const counterReducer = (state = initialState, action) => {
+	// si potrebbe usare anche uno switch
 	if(action.type === "increment") {
 		return {
 			counter: state.counter + 1,
-			showCounter: true // va inserita nello state ritornato
+			showCounter: state.showCounter // va inserita nello state ritornato, si può anche usare lo spred
 		}
 	}
 	if(action.type === "decrement") {
 		return {
-			counter: state.counter - 1
+			...state,
+			counter: state.counter - 1,
+		}
+	}
+
+	if(action.type === 'toggle'){
+		return {
+			...state,
+			showCounter: !state.showCounter
 		}
 	}
 
 	return state;
 };
+
+// COMPONENT
+//...
+// useSelector può essere usato più volte
+const showCounter = useSelector(stete => state.showCounter);
 ```
+
+>È necessario ritornare lo state per intero, perché [Redux](Redux) non farà il merge con lo stato corrente, ma lo sostituirà in toto.
