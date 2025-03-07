@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/13 - Redux.md",
+                "file": "2 - React/3 - Routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13 - Redux"
+              "title": "3 - Routing"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 365.5,
-    "collapsed": true
+    "width": 365.5
   },
   "right": {
     "id": "df2474bdd0d6f08b",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/13 - Redux.md",
+                "file": "2 - React/3 - Routing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 13 - Redux"
+              "title": "Struttura di 3 - Routing"
             }
           },
           {
@@ -184,8 +183,8 @@
   },
   "active": "5c0bc763178c5251",
   "lastOpenFiles": [
-    "2 - React/5 - Context.md",
     "2 - React/13 - Redux.md",
+    "2 - React/5 - Context.md",
     "2 - React/100 - Link utili.md",
     "2 - React/2 - Hooks.md",
     "zzz_Pagine/dialog.md",
