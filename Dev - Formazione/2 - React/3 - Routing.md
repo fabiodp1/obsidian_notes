@@ -51,7 +51,22 @@ Spesso nell'applicativo abbiamo per una pagina un determinato layout, es. navbar
 Per fare ciò viene usato il componente `Outlet` che indica dove i componenti child devono essere renderizzati:
 
 ```tsx
+<Route element={<AuthLayout />}>
+	<Route path="login" element={<Login />} />
+	<Route path="register" element={<Register />} />
+</Route>
 
+//..
+export const AuthLayout = ()=> {
+	reuturn (
+		//...
+		<div>
+			<h1> Layout Title </h1>
+			// This is where the child components will be rendered
+			<Outlet/>
+		</div>
+	)
+}
 ```
 # useParams
 Nel momento in cui un componente ha bisogno di usare un parametro della route (es. BookScreen dell'es. precedente), possiamo usare l'hook [[useParams]]:
