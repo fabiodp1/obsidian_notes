@@ -43,6 +43,12 @@ function AppRoutes({user}) {
 }
 ```
 
+---
+
+# Layout
+
+Spesso nell'applicativo abbiamo per una pagina un determinato layout, es. navbar e menu laterale, che contiene le pagine corrispondenti allo route corrente.
+Per fare ciò viene usato il componente ``
 # useParams
 Nel momento in cui un componente ha bisogno di usare un parametro della route (es. BookScreen dell'es. precedente), possiamo usare l'hook [[useParams]]:
 
