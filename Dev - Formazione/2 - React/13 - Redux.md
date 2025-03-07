@@ -388,5 +388,12 @@ import { counterActions } from './store/index';
 //...
 const incrementHandler = () => {
 	dispatch(counterActions.increment());
-}
+};
+
+// PAYLOAD
+const increaseHandler = () => {
+	dispatch(counterActions.increase(5));
+};
 ```
+
+Se l'action viene lanciata con un payload, nel reducer questo andrà estratto usando la key `payload` (verrà creato di default una action con forma `{ type: 'increase', payload: 5 }`)
