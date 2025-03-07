@@ -36,7 +36,10 @@ function AppRoutes({user}) {
   return (
     <Routes>
       <Route path="/discover" element={<DiscoverBooksScreen user={user} />} />
-      <Route path="/book/:bookId" element={<BookScreen user={user} />} />
+      <Route path="/book/:bookId" element={<BookScreen user={user} />}>
+	    // Nested route
+		<Route path="/cover" element={<BookCover />} />
+	  </Route>
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>
   )
