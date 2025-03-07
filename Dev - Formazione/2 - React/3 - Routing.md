@@ -1,7 +1,9 @@
- Normalmente viene utilizzato [[react-router]]:
+Normalmente viene utilizzato [[react-router]]:
 [Docs | React Router](https://reactrouter.com/en/main)
 
+>Di seguito viene mostrato come configurare rotte usando i componenti di `react-router-dom`, ma è anche possibile farlo usando l'hook `createBrowserRouter` e `RouterProvider`.
 # BrowserRouter / Routes / Route
+
 La libreria possiede i suoi componenti e i suoi [[hook]] per manipolare e gestire il [[routing]].
 Normalmente per introdurre il routing in una web app si procede così:
 1. Si importano il componente `BrouwserRouter` che wrapperà la parte di applicazione che utilizzarà il routing
