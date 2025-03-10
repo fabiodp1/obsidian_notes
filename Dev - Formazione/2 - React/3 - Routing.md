@@ -244,16 +244,17 @@ Per questo si può fare in modo che `react-router` faccia il lavoro facendo il f
 Infatti alla definizione della `route` possiamo utilizzare la prop `loader` per configurare il fetch dei dati. Il valore ritornato da questa funzione sarà quello che il componente si ritroverà al mount:
 
 ```tsx
-        <Route element={<ProductPage />} path="/prodict/:id" 
-        loader={async () => {
-	        const response = await fetch('...', {body: {id: }});
-	        
-	        if(!response.ok) {
-	        
-	        } else {
-		        const resData = await response.json();
-		        return resData;
-	        }
-        }}
-        />
+//...
+<Route element={<ProductPage />} path="/prodict/:id" 
+loader={async () => {
+	const response = await fetch('...', {body: {id: }});
+	
+	if(!response.ok) {
+	
+	} else {
+		const resData = await response.json();
+		return resData;
+	}
+}}
+/>
 ```
