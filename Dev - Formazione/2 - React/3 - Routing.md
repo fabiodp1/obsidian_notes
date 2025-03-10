@@ -272,3 +272,15 @@ const data = useLoaderData();
 >Le route che stanno sopra quella su cui è configurato il `loader` non potranno utilizzare il dato, mentre potranno usarlo tutti i suoi figli e nipoti.
 
 Normalmente la funzione `loader` viene definita nello stesso file della pagina ed esportato per essere utilizzato dal file che definisce le route.
+
+---
+
+# Navigation state & UI
+
+Spesso è necessario riflettere lo stato della navigazione sull'UI, ad es. se la pagina sta caricando ecc. Anche in questo caso è utile l'[[hook]] `useNavigation` e la sua proprietà `navigation.state: 'idle' | 'loading' | 'submitting'`.
+
+```tsx
+//..
+{navigation.state === 'loading' && <div>Loading...</div>}
+```
+
