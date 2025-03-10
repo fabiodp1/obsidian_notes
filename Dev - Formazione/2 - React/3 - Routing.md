@@ -128,3 +128,7 @@ import { Link } from 'react-router-dom'
 
 <Link to="/discover">Discover</Link>
 ```
+
+# Error Page
+
+Possiamo anche definire una pagina di default nel caso in cui l'utente voglia andare in una pagina non esistente
