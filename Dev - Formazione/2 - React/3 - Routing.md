@@ -134,5 +134,8 @@ import { Link } from 'react-router-dom'
 Possiamo anche definire una pagina di default nel caso in cui l'utente voglia andare in una pagina non esistente. Potrebbero però esserci diversi tipi di errore che vorremmo gestire con pagine diverse, per questo esiste la prop apposita `errorElement`:
 
 ```tsx
-
+return (
+    <Routes>
+      <Route path="/" element={<DiscoverBooksScreen user={user} />} />
+    //...
 ```
