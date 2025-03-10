@@ -425,6 +425,13 @@ export async function loader( { request, params } ) {
 }
 ```
 
+## Accedere al loader data da altre rotte
+
+Se abbiamo più pagine che hanno bisogno dello stesso dato fornito dal `loader`, possiamo metterli sotto la stessa route padre:
+
+```tsx
+```
+
 ---
 
 # Navigation state & UI
