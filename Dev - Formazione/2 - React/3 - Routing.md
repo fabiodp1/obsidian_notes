@@ -273,6 +273,39 @@ const data = useLoaderData();
 
 Normalmente la funzione `loader` viene definita nello stesso file della pagina ed esportato per essere utilizzato dal file che definisce le route.
 
+## Ritornare una Response
+
+Il nostro `loader` può anche ritornare una `Response`, un oggetto messo a disposizione dal `browser`. Questo prende come primo argomento un qualsiasi valore vogliamo e come secondo argomento un oggetto che descrive la risposta (possiamo ad es. indicare lo status code):
+
+```tsx
+loader={async () => {
+	const response = await fetch('...', {body: {id: }});
+	
+	if(!response.ok) {
+		
+	} else {
+		const resData = await response.json();
+		const res = new Response('any data', {status: 201}); // <==
+		return res;
+	}
+}}
+```
+
+Il valore ritornato da `useLoaderData` sarà comunque il valore della risposta (es. 'any data').
+Considerando che `fetch` ritornerà un oggetto `Response`, questo vuol dire che sarà possibile ritornare direttamente l'oggetto ritornato dalla request, e sarà `react-router` a gestirlo per noi fornendoci il valore ritornato direttamente tramite `useLoaderData`:
+
+```tsx
+loader={async () => {
+	const response = await fetch('...', {body: {id: }});
+	
+	if(!response.ok) {
+		
+	} else {
+		return response;
+	}
+}}
+```
+
 ---
 
 # Navigation state & UI
@@ -283,4 +316,3 @@ Spesso è necessario riflettere lo stato della navigazione sull'UI, ad es. se la
 //..
 {navigation.state === 'loading' && <div>Loading...</div>}
 ```
-
