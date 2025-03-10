@@ -250,7 +250,7 @@ loader={async () => {
 	const response = await fetch('...', {body: {id: }});
 	
 	if(!response.ok) {
-	
+		
 	} else {
 		const resData = await response.json();
 		return resData;
