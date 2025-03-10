@@ -207,7 +207,7 @@ export default function ProductDetails () {
 # Relative and Absolute paths
 
 >Se la route inizia con `/` avremo una **absolute path**, quindi ad esempio cliccando su un link verremo rimandati a quel path che verrà subito dopo il dominio.
->Se invece non viene anteposto il `/`, ad es. `products/:id`, ad es. al click di un link avente quel path, verremo indirizzati al path indicato *che però verrà aggiunto al path corrente*.
+>Se invece non viene anteposto il `/`, ad es. `products/:id`, ad es. al click di un link avente quel path, verremo indirizzati al path indicato *che però verrà aggiunto al path padre*.
 
 Esiste anche la prop `relative: 'path' | 'route'` che permette di scegliere a quale parte della route andrà aggiunta la *relative path* alla prop `to`.
 Di default è `route`, quindi ad es. se il parent di `products/:id` è `/root`, facendo back andremo su `/root`, se invece è `path`, React router rimuoverà un segmento dalla path andando indietro relativamente alla path. Quindi da `products/:id` andremo in `products`:
