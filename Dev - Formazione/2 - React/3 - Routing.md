@@ -71,7 +71,11 @@ export const AuthLayout = ()=> {
 	)
 }
 ```
+
+---
+
 # useParams
+
 Nel momento in cui un componente ha bisogno di usare un parametro della route (es. BookScreen dell'es. precedente), possiamo usare l'hook [[useParams]]:
 
 ```ts
@@ -83,6 +87,8 @@ function BookScreen({user}) {
 	...
 }
 ```
+
+---
 
 # useMatch
 Se vogliamo sapere se la route corrente fa match con una determinata path, utilizziamo l'hook [[useMatch]]:
@@ -120,7 +126,10 @@ function NavLink(props) {
 }
 ```
 
+---
+
 # Link
+
 Se vogliamo creare dei link alle pagine, ad es. in una barra di navigazione, utilizziamo il componente `<Link />`:
 
 ```ts
@@ -129,17 +138,27 @@ import { Link } from 'react-router-dom'
 <Link to="/discover">Discover</Link>
 ```
 
-Un'alternativa al componente `Link` è il componente **`<NavLink />`**, che funziona alla stessa maniera ma funziona un po diversamente, infatti le classi possono essere passate fornendo una funzione che avrà come parametro un oggetto con diverse proprietà fra cui `isActive`, per assegnare classi in base allo stato del link:
+Un'alternativa al componente `Link` è il componente **`<NavLink />`**, che funziona alla stessa maniera ma funziona un po diversamente, infatti le classi e gli stili possono essere passati fornendo una funzione che avrà come parametro un oggetto con diverse proprietà fra cui `isActive`, per assegnare classi in base allo stato del link:
 
 ```tsx
 //...
-<NavLink to="/" className={({ isActive }) => (isActive ? '...' : '...')}>
+<NavLink to="/" className={({ isActive }) => (isActive ? '...' : '...')}
+	style={({ isActive }) => ({ textAlign: isActive ? 'center' : 'left' })} >
 	Home
 </NavLink>
 //...
 ```
 
+>Bisogna però fare attenzione al fatto che ad es. nell'esempio la route è `/`, questo vuol dire che la classe verrà assegnata alla route `/` ma anche a tutte le sotto route (es. `/products`). Per questo esiste la proprietà `end`, che indicherà che la route deve terminare con la path indicata:
 
+```tsx
+//...
+<NavLink to="/" end className={({ isActive }) => (isActive ? '...' : '...')} >
+	Home
+</NavLink>
+```
+
+---
 
 # Error Page
 
@@ -154,3 +173,8 @@ return (
 ```
 
 In questa maniera nel momento in cui avviene un errore nella path `/` (quindi l'intero applicativo), si verrà rediretti a `<ErrorPage />`. Essendo il `404` un errore, verrà servita la pagina di errore.
+
+---
+
+# Navigare programmaticamente
+
