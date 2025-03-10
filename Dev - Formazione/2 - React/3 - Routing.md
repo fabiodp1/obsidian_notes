@@ -353,6 +353,41 @@ loader={async () => {
 //...
 ```
 
+## Estrarre error data e Responses
+
+In molti casi vorremmo sapere il tipo di errore che è stato lanciato, in modo da poter gestire la pagina di errore da mostrare. Come detto in precedenza, il metodo `loader` può anche ritornare un oggetto `Response`:
+
+```tsx
+//...
+loader={async () => {
+	const response = await fetch('...', {body: {id: }});
+	
+	if(!response.ok) {
+		throw new Response(
+			JSON.stringify({message: 'Could not fetch events'} // <==
+		), { status: 500 });
+	} else {
+		return response;
+	}
+}}
+//...
+```
+
+Per poter usare quell'errore nel componente, `react-router` mette a disposizione l'[hook](hook) `useRouteError` che ci metterà a disposizione l'oggetto rappresentante l'errore, sia che esso sia un `Response` o altro:
+
+```tsx
+import { useRouteError } from 'react-router-dom';
+
+function ErrorPage() {
+	const error = useRouteError();
+	// in questo caso avendo un oggetto Response abbiamo la prop 'status'
+	let title = 'An error occurred!';
+	let message = 'Something went wrong';
+}
+```
+
+>È comodo lanciare un oggetto `Response` perché così possiamo gestire i codici errore.
+
 ---
 
 # Navigation state & UI
