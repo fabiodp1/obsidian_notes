@@ -456,6 +456,30 @@ const data = useRouteLoaderData('event-detail');
 
 ---
 
+# Data submit
+
+Come è possibile fare il pre-load dei dati grazie alla prop `loader`, è anche possibile gestire l'invio di dati tramite:
+
+- Proprietà `action`
+- Programmaticamente
+
+## action
+
+Come per la prop `loader`, la prop `action` riceve una funzione (anche questa può essere dichiarata nel file del componente) che verrà eseguita nel browser.
+
+```tsx
+//...
+<Route element={<ProductPage />} path="/prodict/:id" 
+ action={async () => {
+	const response = await fetch('...');
+	
+}}
+/>
+```
+
+
+---
+
 # Navigation state & UI
 
 Spesso è necessario riflettere lo stato della navigazione sull'UI, ad es. se la pagina sta caricando ecc. Anche in questo caso è utile l'[[hook]] `useNavigation` e la sua proprietà `navigation.state: 'idle' | 'loading' | 'submitting'`.
