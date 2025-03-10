@@ -380,9 +380,24 @@ import { useRouteError } from 'react-router-dom';
 
 function ErrorPage() {
 	const error = useRouteError();
-	// in questo caso avendo un oggetto Response abbiamo la prop 'status'
 	let title = 'An error occurred!';
 	let message = 'Something went wrong';
+
+	// in questo caso avendo un oggetto Response abbiamo la prop 'status'
+	if( error.status === 500 ) {
+		message = JSON.parse(error.data) .message;
+	}
+
+	if( error.status === 404 ) {
+		title = 'Not found!';
+		message = 'Could not find resource or page.';
+	}
+
+	return (
+		<PageContent title={title}>
+			<p>{ message }</p>
+		</PageContent>
+	)
 }
 ```
 
