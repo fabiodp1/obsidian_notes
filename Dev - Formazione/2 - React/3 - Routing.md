@@ -131,4 +131,8 @@ import { Link } from 'react-router-dom'
 
 # Error Page
 
-Possiamo anche definire una pagina di default nel caso in cui l'utente voglia andare in una pagina non esistente
+Possiamo anche definire una pagina di default nel caso in cui l'utente voglia andare in una pagina non esistente. Potrebbero però esserci diversi tipi di errore che vorremmo gestire con pagine diverse, per questo esiste la prop apposita `errorElement`:
+
+```tsx
+
+```
