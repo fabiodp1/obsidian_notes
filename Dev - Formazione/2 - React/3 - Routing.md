@@ -299,7 +299,7 @@ loader={async () => {
 	const response = await fetch('...', {body: {id: }});
 	
 	if(!response.ok) {
-		
+		//...
 	} else {
 		return response;
 	}
@@ -308,7 +308,50 @@ loader={async () => {
 
 ## Che codice può andarci dentro?
 
+Il loader viene eseguito nel browser, non nel server, quindi al suo interno possiamo eseguire qualsiasi codice vogliamo, anche utilizzare l'API del browser.
+Quello che non possiamo fare è utilizzare i React [hook](hook).
 
+## Error handling
+
+All'interno del metodo `loader` non gestiamo gli errori come se fossimo in uno `useEffect`, quello che possiamo fare è restituire un `Response` o qualsiasi altro oggetto per descrivere che è avvenuto un errore:
+
+```tsx
+loader={async () => {
+	const response = await fetch('...', {body: {id: }});
+	
+	if(!response.ok) {
+		return { isError: true, message: "Could not fetch products!" } // <==
+	} else {
+		return response;
+	}
+}}
+```
+
+In questa maniera possiamo gestire la cosa all'interno del componente:
+
+```tsx
+//...
+if(data.isError) {
+	return <p>{ data.message }</p>
+}
+//...
+```
+
+Ma esiste un'altra alternativa, possiamo lanciare un errore e lasciare che sia `react-router` a gestire la cosa, infatti cercherà il più vicino `errorElement` configurato nelle route (l, ritornando il componente configurato. Infatti `errorElement` non serve solo a gestire il caso in cui l'utente dovesse richiedere una rotta non esistente.
+
+```tsx
+//...
+loader={async () => {
+	const response = await fetch('...', {body: {id: }});
+	
+	if(!response.ok) {
+		throw { message: "Could not fetch products!" } // <==
+	} else {
+		return response;
+	}
+}}
+//...
+```
 
 ---
 
