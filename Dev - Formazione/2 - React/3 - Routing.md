@@ -411,7 +411,7 @@ Per questo in automatico al loader viene passato un oggetto che contiene i dati 
 ```tsx
 // COMPONENT (loader in relative component file)
 //...
-export async function loader( { request, params } ) {
+export async function eventLoader( { request, params } ) {
 
 	const response = await fetch(`http://mysite.com/events/${ params.id }`);
 	
@@ -430,7 +430,13 @@ export async function loader( { request, params } ) {
 Se abbiamo più pagine che hanno bisogno dello stesso dato fornito dal `loader`, possiamo metterli sotto la stessa route padre:
 
 ```tsx
+<Route path=":eventId" loader={ eventLoader }>
+	<Route index element={<EventDetails />} />
+	<Route path="edit" element={<EventEdit />} />
+</Route>
 ```
+
+In questa maniera le sub-route potranno usare lo stesso dato ottenuto tramite il loader utilizzando l'[hook](hook) `useLoaderData`.
 
 ---
 
