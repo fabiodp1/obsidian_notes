@@ -136,6 +136,9 @@ Possiamo anche definire una pagina di default nel caso in cui l'utente voglia an
 ```tsx
 return (
     <Routes>
-      <Route path="/" element={<DiscoverBooksScreen user={user} />} />
+      <Route path="/" element={<DiscoverBooksScreen user={user} />} 
+      errorElement={<ErrorPage/>}/>
     //...
 ```
+
+In questa maniera nel momento in cui avviene un errore nella path `/` (quindi l'intero applicativo), si verrà rediretti a `<ErrorPage />`. Essendo il `404` un errore, verrà servita la pagina di errore.
