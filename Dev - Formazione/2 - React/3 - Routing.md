@@ -121,13 +121,25 @@ function NavLink(props) {
 ```
 
 # Link
-Se vogliamo creare dei link alle pagine, ad es. in una barra di navigazione, utilizziamo il componente [[Link]]:
+Se vogliamo creare dei link alle pagine, ad es. in una barra di navigazione, utilizziamo il componente `<Link />`:
 
 ```ts
 import { Link } from 'react-router-dom'
 
 <Link to="/discover">Discover</Link>
 ```
+
+Un'alternativa al componente `Link` è il componente **`<NavLink />`**, che funziona alla stessa maniera ma funziona un po diversamente, infatti le classi possono essere passate fornendo una funzione che avrà come parametro un oggetto con diverse proprietà fra cui `isActive`, per assegnare classi in base allo stato del link:
+
+```tsx
+//...
+<NavLink to="/" className={({ isActive }) => (isActive ? '...' : '...')}>
+	Home
+</NavLink>
+//...
+```
+
+
 
 # Error Page
 
