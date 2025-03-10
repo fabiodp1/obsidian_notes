@@ -269,4 +269,6 @@ import {useLoaderData} from 'react-router-dom';
 const data = useLoaderData();
 ```
 
->Ovviamente le route che stanno sopra quella su cui è configurato il `loader` non potranno utilizzare il dato, mentre potranno usarlo tutti i suoi figli e nipoti.
+>Le route che stanno sopra quella su cui è configurato il `loader` non potranno utilizzare il dato, mentre potranno usarlo tutti i suoi figli e nipoti.
+
+Normal
