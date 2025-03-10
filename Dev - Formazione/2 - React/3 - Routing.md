@@ -271,4 +271,4 @@ const data = useLoaderData();
 
 >Le route che stanno sopra quella su cui è configurato il `loader` non potranno utilizzare il dato, mentre potranno usarlo tutti i suoi figli e nipoti.
 
-Normal
+Normalmente la funzione `loader` viene definita nello stesso file della pagina ed esportato per essere utilizzato dal file che definisce le route.
