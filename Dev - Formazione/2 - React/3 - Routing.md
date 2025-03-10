@@ -260,3 +260,13 @@ loader={async () => {
 ```
 
 `react-router` gestirà autonomamente le `Promise`, per cui saremo sempre certi che al componente arriverà il dato, non la `Promise`.
+Poi nel componente potremo far uso del dato utilizzando `useLoaderData()` [hook](hook):
+
+```tsx
+import {useLoaderData} from 'react-router-dom';
+
+//...
+const data = useLoaderData();
+```
+
+>Ovviamente le route che stanno sopra quella su cui è configurato il `loader` non potranno utilizzare il dato.
