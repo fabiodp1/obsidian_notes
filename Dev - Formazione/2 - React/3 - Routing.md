@@ -74,22 +74,6 @@ export const AuthLayout = ()=> {
 
 ---
 
-# useParams
-
-Nel momento in cui un componente ha bisogno di usare un parametro della route (es. BookScreen dell'es. precedente), possiamo usare l'hook [[useParams]]:
-
-```ts
-import {useParams} from 'react-router-dom'
-
-function BookScreen({user}) {
-	...
-	const {bookId} = useParams()
-	...
-}
-```
-
----
-
 # useMatch
 Se vogliamo sapere se la route corrente fa match con una determinata path, utilizziamo l'hook [[useMatch]]:
 
@@ -196,3 +180,23 @@ function navigateHandler() {
 
 # Dynamic Routes
 
+```tsx
+return (
+    <Routes>
+	  // i due punti indicano che quel valore è dinamico
+      <Route path="/products/:id" element={<ProductDetails user={user}/>
+    //...
+```
+
+Per estrarre il parametro useremo l'[hook](hook) `useParams`:
+
+```tsx
+import { useParams }
+
+export default function ProductDetails () {
+	const params = useParams();
+	const productId = params.id;
+
+	//...
+}
+```
