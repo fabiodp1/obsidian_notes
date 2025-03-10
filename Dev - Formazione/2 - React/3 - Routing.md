@@ -403,6 +403,10 @@ function ErrorPage() {
 
 >È comodo lanciare un oggetto `Response` perché così possiamo gestire i codici errore.
 
+## json() utility
+
+Costruire l'oggetto `Response` come abbiamo visto sopra, può essere tedioso, per quest `react-router` ci mette a disposizione l'utility `json()`
+
 ---
 
 # Navigation state & UI
