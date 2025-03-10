@@ -247,7 +247,7 @@ Infatti alla definizione della `route` possiamo utilizzare la prop `loader` per 
 //...
 <Route element={<ProductPage />} path="/prodict/:id" 
 loader={async () => {
-	const response = await fetch('...', {body: {id: }});
+	const response = await fetch('...');
 	
 	if(!response.ok) {
 		
@@ -279,7 +279,7 @@ Il nostro `loader` può anche ritornare una `Response`, un oggetto messo a dispo
 
 ```tsx
 loader={async () => {
-	const response = await fetch('...', {body: {id: }});
+	const response = await fetch('...');
 	
 	if(!response.ok) {
 		
@@ -296,7 +296,7 @@ Considerando che `fetch` ritornerà un oggetto `Response`, questo vuol dire che 
 
 ```tsx
 loader={async () => {
-	const response = await fetch('...', {body: {id: }});
+	const response = await fetch('...');
 	
 	if(!response.ok) {
 		//...
@@ -317,7 +317,7 @@ All'interno del metodo `loader` non gestiamo gli errori come se fossimo in uno `
 
 ```tsx
 loader={async () => {
-	const response = await fetch('...', {body: {id: }});
+	const response = await fetch('...');
 	
 	if(!response.ok) {
 		return { isError: true, message: "Could not fetch products!" } // <==
@@ -342,7 +342,7 @@ Ma esiste un'altra alternativa, possiamo lanciare un errore e lasciare che sia `
 ```tsx
 //...
 loader={async () => {
-	const response = await fetch('...', {body: {id: }});
+	const response = await fetch('...');
 	
 	if(!response.ok) {
 		throw { message: "Could not fetch products!" } // <==
@@ -360,7 +360,7 @@ In molti casi vorremmo sapere il tipo di errore che è stato lanciato, in modo d
 ```tsx
 //...
 loader={async () => {
-	const response = await fetch('...', {body: {id: }});
+	const response = await fetch('...');
 	
 	if(!response.ok) {
 		throw new Response(
@@ -405,7 +405,25 @@ function ErrorPage() {
 
 ## loader & dynamic routes
 
-Se la route per cui va fatto il pre-load è dinamica, 
+Se la route per cui va fatto il pre-load è dinamica, bisogna fare in modo che il loader possa utilizzare il parametro della route.
+Per questo in automatico al loader viene passato un oggetto che contiene i dati passati alla route:
+
+```tsx
+// COMPONENT (loader in relative component file)
+//...
+export async function loader( { request, params } ) {
+
+	const response = await fetch(`http://mysite.com/events/${ params.id }`);
+	
+	if(!response.ok) {
+		throw new Response(
+			JSON.stringify({message: 'Could not fetch event details'}
+		), { status: 500 });
+	} else {
+		return response;
+	}
+}
+```
 
 ---
 
