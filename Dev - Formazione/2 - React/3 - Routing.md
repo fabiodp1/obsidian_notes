@@ -436,7 +436,23 @@ Se abbiamo più pagine che hanno bisogno dello stesso dato fornito dal `loader`,
 </Route>
 ```
 
-In questa maniera le sub-route potranno usare lo stesso dato ottenuto tramite il loader utilizzando l'[hook](hook) `useLoaderData`.
+In questa maniera le sub-route potranno usare lo stesso dato ottenuto tramite il loader.
+
+>Per poter utilizzare i dati nel componente però non andrà usato l'[[hook]] `useLoaderData`, perché questo cercherà il loader più vicino per la rotta che ha renderizzato il relativo componente, che non è la route padre (quella che detiene il loader). Non trovandolo sulla route restituirà errore.
+
+Andrà aggiunto un `id` alla `route` padre e utilizzato un altro [hook](hook), `useRouteDataLoader` passandogli l'`id` assegnato al padre:
+
+```tsx
+<Route id='event-detail' path=":eventId" loader={ eventLoader }>
+	<Route index element={<EventDetails />} />
+	<Route path="edit" element={<EventEdit />} />
+</Route>
+
+// COMPONENTE
+//...
+const data = useRouteLoaderData('event-detail');
+//...
+```
 
 ---
 
