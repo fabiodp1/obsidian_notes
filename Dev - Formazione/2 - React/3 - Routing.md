@@ -200,3 +200,9 @@ export default function ProductDetails () {
 	//...
 }
 ```
+
+# Relative and Absolute paths
+
+>Se la route inizia con `/` avremo una **absolute path**, quindi ad esempio cliccando su un link verremo rimandati a quel path che verrà subito dopo il dominio.
+>Se invece non viene anteposto il `/`, ad es. `products/:id`, ad es. al click di un link avente quel path, verremo indirizzati al path indicato *che però verrà aggiunto al path corrente*.
+
