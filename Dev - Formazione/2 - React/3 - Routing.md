@@ -55,8 +55,8 @@ Per fare ciò viene usato il componente `Outlet` che indica dove i componenti ch
 
 ```tsx
 <Route element={<AuthLayout />}>
-	<Route path="login" element={<Login />} />
-	<Route path="register" element={<Register />} />
+	<Route path="/login" element={<Login />} />
+	<Route path="/register" element={<Register />} />
 </Route>
 
 //..
@@ -221,3 +221,14 @@ Di default è `route`, quindi ad es. se il parent di `products/:id` è `/root`, 
 
 # Index route
 
+Negli esempi precedenti abbiamo impostato la route principale `/` che espone il `Layout` dell'applicativo, e una prima route figlia con path `""` in modo da indicare che dovrebbe essere la pagina principale.
+Esiste però un metodo più leggibile per gestire questo caso, ed è quello di usare la prop `index`, che serve ad indicare qual è la route `index`:
+
+```tsx
+return (
+	<Route element={<AuthLayout />}>
+		<Route index element={<Main />} />
+		<Route path="/products" element={<Products />} />
+	</Route>
+    //...
+```
