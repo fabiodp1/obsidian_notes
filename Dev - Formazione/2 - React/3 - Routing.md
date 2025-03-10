@@ -275,7 +275,7 @@ Normalmente la funzione `loader` viene definita nello stesso file della pagina e
 
 ## Ritornare una Response
 
-Il nostro `loader` può anche ritornare una `Response`, un oggetto messo a disposizione dal `browser`. Questo prende come primo argomento un qualsiasi valore vogliamo e come secondo argomento un oggetto che descrive la risposta (possiamo ad es. indicare lo status code):
+Il nostro `loader` può anche ritornare una `Response`, un oggetto messo a disposizione dal `browser`. Questo prende come primo argomento il valore che vogliamo ritornare (se custom object meglio ritornarlo come stringa) e come secondo argomento un oggetto che descrive la risposta (possiamo ad es. indicare lo status code):
 
 ```tsx
 loader={async () => {
@@ -403,9 +403,9 @@ function ErrorPage() {
 
 >È comodo lanciare un oggetto `Response` perché così possiamo gestire i codici errore.
 
-## json() utility
+## loader & dynamic routes
 
-Costruire l'oggetto `Response` come abbiamo visto sopra, può essere tedioso, per quest `react-router` ci mette a disposizione l'utility `json()`
+Se la route per cui va fatto il pre-load è dinamica, 
 
 ---
 
