@@ -118,8 +118,11 @@ Se vogliamo creare dei link alle pagine, ad es. in una barra di navigazione, uti
 
 ```ts
 import { Link } from 'react-router-dom'
-
+//...
 <Link to="/discover">Discover</Link>
+// Sintassi speciale per indicare di andare indietro
+<Link to="..">Back</Link>
+//...
 ```
 
 Un'alternativa al componente `Link` è il componente **`<NavLink />`**, che funziona alla stessa maniera ma funziona un po diversamente, infatti le classi e gli stili possono essere passati fornendo una funzione che avrà come parametro un oggetto con diverse proprietà fra cui `isActive`, per assegnare classi in base allo stato del link:
@@ -205,4 +208,10 @@ export default function ProductDetails () {
 
 >Se la route inizia con `/` avremo una **absolute path**, quindi ad esempio cliccando su un link verremo rimandati a quel path che verrà subito dopo il dominio.
 >Se invece non viene anteposto il `/`, ad es. `products/:id`, ad es. al click di un link avente quel path, verremo indirizzati al path indicato *che però verrà aggiunto al path corrente*.
+
+Esiste anche la prop `relative: 'path' | 'route'` che permette di scegliere a quale parte della route andrà aggiunta la relative path alla prop `to`:
+
+```tsx
+
+```
 
