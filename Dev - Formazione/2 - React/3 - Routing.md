@@ -232,3 +232,12 @@ return (
 	</Route>
     //...
 ```
+
+
+---
+
+# Data fetching
+
+In molti casi, abbiamo bisogno che dei dati vengano inizializzati per la pagina e quindi il componente corrente, normalmente potremmo farlo usando uno `useEffect` all'interno del componente, ma potrebbe essere poco efficiente perché il componente deve prima essere creato e se possiede diversi sotto componenti che hanno bisogno di quel dato devono essere creati anche loro e avranno bisogno di aspettare che il dato arrivi.
+
+Per questo si può fare in modo che `react-router` faccia il lavoro facendo il fetch del dato **PRIMA** di servire la pagina:
