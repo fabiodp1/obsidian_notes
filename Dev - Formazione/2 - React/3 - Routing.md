@@ -178,3 +178,21 @@ In questa maniera nel momento in cui avviene un errore nella path `/` (quindi l'
 
 # Navigare programmaticamente
 
+Se volessimo cambiare route in maniera programmatica e imperativa, `react-router` mette a disposizione l'[[hook]] `useNavigate`:
+
+```tsx
+import { useNavigate } from 'react-router-dom';
+
+//...
+const navigate = useNavigate();
+
+function navigateHandler() {
+	nabigate('/products');
+}
+//...
+```
+
+---
+
+# Dynamic Routes
+
