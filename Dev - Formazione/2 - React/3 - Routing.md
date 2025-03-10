@@ -337,7 +337,7 @@ if(data.isError) {
 //...
 ```
 
-Ma esiste un'altra alternativa, possiamo lanciare un errore e lasciare che sia `react-router` a gestire la cosa, infatti cercherà il più vicino `errorElement` configurato nelle route (l, ritornando il componente configurato. Infatti `errorElement` non serve solo a gestire il caso in cui l'utente dovesse richiedere una rotta non esistente.
+Ma esiste un'altra alternativa, possiamo lanciare un errore e lasciare che sia `react-router` a gestire la cosa, infatti cercherà il più vicino `errorElement` configurato nelle route (l'error farà un bubble-up dal componente a risalire), ritornando il componente configurato. Infatti `errorElement` non serve solo a gestire il caso in cui l'utente dovesse richiedere una rotta non esistente.
 
 ```tsx
 //...
