@@ -470,9 +470,10 @@ Come per la prop `loader`, la prop `action` riceve una funzione (anche questa pu
 ```tsx
 //...
 <Route element={<ProductPage />} path="/prodict/:id" 
- action={async () => {
-	const response = await fetch('...');
-	
+ action={async (request, params) => {
+	// Request conterrà i dati della sumbit
+	const data = request.formData();
+	const response = await fetch('...', {method: 'POST', body: data});
 }}
 />
 ```
