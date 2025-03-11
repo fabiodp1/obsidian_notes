@@ -473,7 +473,13 @@ Come per la prop `loader`, la prop `action` riceve una funzione (anche questa pu
  action={async (request, params) => {
 	// Request conterrà i dati della sumbit
 	const data = request.formData();
-	const response = await fetch('...', {method: 'POST', body: data});
+	const response = await fetch('...', {method: 'POST', body: JSON.stringify(data)});
+
+	if(!response.ok) {
+		throw json({message: 'Could not save event.', { status: 500 }})
+	}
+
+	return redirect('/home');
 }}
 />
 ```
