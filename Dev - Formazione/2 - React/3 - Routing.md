@@ -484,6 +484,24 @@ Come per la prop `loader`, la prop `action` riceve una funzione (anche questa pu
 />
 ```
 
+## Programmaticamente
+
+`react-router-dom` mette a disposizione l'[hook](hook) `useSubmit` con cui è possibile emettere programmaticamente l'evento submit e settare la request:
+
+```tsx
+//...
+const submit = useSubmit();
+
+function startDeleteHandler() {
+	const proceed = window.confirm('Are you sure?'):
+
+	if(proceed) {
+		submit(null, {method: 'delete'});
+	}
+}
+```
+
+l'oggetto che verrà passato a `submit` sarà quello che il metodo della `action` si troverà come parametro `request`.
 
 ---
 
