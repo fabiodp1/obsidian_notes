@@ -7,7 +7,7 @@ Per creare link fra pagine normalmente utilizzeremmo il tag `<a>`, questo però 
 # Il componente `<Link>`
 
 In [[Next.js]] è possibile utilizzare il componente `<Link />` di [[next/link]] per linkare pagine, permette di fare [[client-side navigation]] con JavaScript.
-Nonostante parti dell'applicativo vengono renderizzate server-side, non avviene il refresh, facendola sembrare una web app.
+Nonostante parti dell'applicativo vengono renderizzate server-side, non avviene il refresh, facendola sembrare una single page app.
 
 ## [[code-splitting]] e [[prefetching]] automatico
 
