@@ -5,3 +5,11 @@ Al suo interno troviamo 2 file con 2 nomi riservati:
 	- Dice a [Next.js](Next.js) che tramite il suo contenuto dovrà renderizzare una pagina.
 	- Al suo interno si trova un **componente React**, che in questo caso viene definito un `Server Component`, un componente che richiede un "environment" speciale fornito da Next. **Viene eseguito e renderizzato sul server**, mai lato client.
 - `layout.ts`
+
+## Routing
+
+[Next.js](Next.js) utilizzerà la struttura di cartelle definita all'interno della cartella `app` per definire l'albero delle `route` dell'applicativo.
+
+Ad esempio se vogliamo aggiungere una nuova pagina e quindi una nuova route, dobbiamo:
+
+1. 
