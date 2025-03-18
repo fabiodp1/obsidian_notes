@@ -16,6 +16,3 @@ npx create-next-app@latest <my-app-name> --use-pnpm
 - **File di config**: nella route del progetto sono presenti file come `next.config.js`.
   Molti di questi file vengono creati e pre-configurati allo scaffolding di un nuovo progetto utilizzando [[create-next-app]].
 
-## Placeholder data
-
-quando si sta lavorando ad un'interfaccia e la parte di db o api non è ancora pronta, può essere utile creare dei dati placeholder sotto forma di costanti JSON che verranno ritornati da librerie di mock come ad es. [[mockAPI]] (https://mockapi.io/).

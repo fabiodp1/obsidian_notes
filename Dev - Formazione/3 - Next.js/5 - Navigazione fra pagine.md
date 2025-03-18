@@ -1,4 +1,5 @@
 # Perchè ottimizzare la navigazione
+
 Per creare link fra pagine normalmente utilizzeremmo il tag `<a>`, questo perà nel caso ad esempio di un passaggio fra pagine tramite link sulla barra laterale, provoca il refresh di tutta la pagina.
 
 # Il componente [[<Link>]]
