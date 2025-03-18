@@ -2,8 +2,10 @@
 
 La gestione della [[cache]] è sicuramente uno dei problemi più grossi nello sviluppo applicativo.
 Lo state può essere raggruppato in due contenitori:
+
 1. [[UI state]]: isModalOpen, isItemHighlighted, etc.
 2. [[Server cache]]: User data, tweets, contacts, etc.
+
 La principale causa di complessità e problemi viene quando si cerca di mischiare questi due contenitori. Quando ciò avviene, lo UI state che non dovrebbe essere global viene reso tale poichè il Server cache state è tipicamente global, così naturalmente ci porta a rendere tutto global.
 
 ## UI State e Server Cache State
