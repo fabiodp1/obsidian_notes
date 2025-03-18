@@ -21,5 +21,14 @@ Ad esempio se vogliamo aggiungere una nuova pagina e quindi una nuova route, dob
  |__layout.ts
  |__/about
 	   |__page.ts
+```
+
+```tsx
+//page.ts
+
+// Il nome non è importante
+export default function AboutPage() {
+	return <h1>About Us</h1>
+}
 
 ```
