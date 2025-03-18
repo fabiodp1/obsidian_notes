@@ -204,6 +204,7 @@ export default function ProductDetails () {
 }
 ```
 
+>Se invece vogliamo estrarre i [[query parameter]] useremo l'[hook](hook) messo a disposizione da `react-reouter-dom` `useSearchParams`, che restituirà l'oggetto contenente i parametri e il setter per modificarli.
 # Relative and Absolute paths
 
 >Se la route inizia con `/` avremo una **absolute path**, quindi ad esempio cliccando su un link verremo rimandati a quel path che verrà subito dopo il dominio.
@@ -237,6 +238,8 @@ return (
 ---
 
 # Data fetching
+
+## loader
 
 In molti casi, abbiamo bisogno che dei dati vengano inizializzati per la pagina e quindi il componente corrente, normalmente potremmo farlo usando uno `useEffect` all'interno del componente, ma potrebbe essere poco efficiente perché il componente deve prima essere creato e se possiede diversi sotto componenti che hanno bisogno di quel dato devono essere creati anche loro e avranno bisogno di aspettare che il dato arrivi.
 
@@ -273,6 +276,19 @@ const data = useLoaderData();
 
 Normalmente la funzione `loader` viene definita nello stesso file della pagina ed esportato per essere utilizzato dal file che definisce le route.
 
+>**IMPORTANTE**: la funzione `loader` deve SEMPRE ritornare un dato o null.
+
+```tsx
+export function checkAuthLoader() {
+  const token = getAuthToken();
+
+  if (!token) {
+   return redirect('/auth');
+  }
+
+ return null; // ALWAYS
+}
+```
 ## Ritornare una Response
 
 Il nostro `loader` può anche ritornare una `Response`, un oggetto messo a disposizione dal `browser`. Questo prende come primo argomento il valore che vogliamo ritornare (se custom object meglio ritornarlo come stringa) e come secondo argomento un oggetto che descrive la risposta (possiamo ad es. indicare lo status code):
@@ -405,7 +421,7 @@ function ErrorPage() {
 
 ## loader & dynamic routes
 
-Se la route per cui va fatto il pre-load è dinamica, bisogna fare in modo che il loader possa utilizzare il parametro della route.
+Se la `route` per cui va fatto il pre-load è dinamica, bisogna fare in modo che il loader possa utilizzare il parametro della route.
 Per questo in automatico al loader viene passato un oggetto che contiene i dati passati alla route:
 
 ```tsx
@@ -463,9 +479,11 @@ Come è possibile fare il pre-load dei dati grazie alla prop `loader`, è anche 
 - Proprietà `action`
 - Programmaticamente
 
+>È consigliabile usare il componente `Form` di `react-router-dom` che gestisce automaticamente la action collegata alla `route`.
+
 ## action
 
-Come per la prop `loader`, la prop `action` riceve una funzione (anche questa può essere dichiarata nel file del componente) che verrà eseguita nel browser.
+Come per la prop `loader`, nella `route` possiamo settare una funzione nella prop `action`, che verrà chiamata nel momento in cui il componente servito dalla route emetterà un evento di `submit`, sia che questo venga fatto tramite form element che tramite `useSubmit` (che vedremo dopo).
 
 ```tsx
 //...
@@ -484,9 +502,66 @@ Come per la prop `loader`, la prop `action` riceve una funzione (anche questa pu
 />
 ```
 
+Come per le form action implementate in [React 19+](React%2019+.md), il parametro `request` conterrà il `formData`.
+
+>Come per le `loader` function, anche le `action` possono ritornare una response (anche se non capita spesso che vengano utilizzate), solo che per usarla nel componente invece di `useLoaderData` avremo `useActionData`, anche qui andrà a cercare l'`action` più vicina nel tree delle route:
+
+```tsx
+function EventForm({method, event}) {
+	const data = useActionData();
+	//...
+
+	return (
+		//...
+		{data && data.errors && <ul>...</ul>}
+	)
+}
+```
+
+### Possibili utilizzi dell'action e loader
+
+- Capito il funzionamento delle action, è facile intuire che possono essere utilizzate anche per compiere altre azioni, come ad es. fare il `logout`. Infatti facendo il submit di una form ad una `route` che non serve un componente, comunque ne scatena la action:
+
+```tsx
+<Route path="logout" action={logoutAction}/>
+
+const logoutAction = () => {
+	localStorage.removeItem('token');
+	redirect('/');
+}
+
+// Component
+<Form action='/logout' method='post'>
+	<button>Logout</button>
+</Form>
+```
+
+- Un altro caso in cui le `Route` possono facilitarci la vita, è ad esempio quando volgiamo mettere a disposizione di tutte le `sub-route` dei dati che vengono precaricati, ad es. un token che al load della pagina va preso dallo store:
+
+```tsx
+<Route path='/' element={<RootLayout>} errorElement={<ErrorPage/>}
+	loader={tokenLoader} id='root'> // è importante assegnare un id
+	<Route .../>
+	<Route .../>
+	//...
+</Route>
+
+export function tokenLoader() {
+	return getAuthToken();
+}
+
+// Componente
+function MyComponent() {
+	const token = useRouteLoaderData('root');
+	//...
+}
+
+```
+
+>`react-router` autonomamente farà il re-evaluate nel momento in cui ad es. dovessimo fare il logout e ricaricare la `route` `/`.
 ## Programmaticamente
 
-`react-router-dom` mette a disposizione l'[hook](hook) `useSubmit` con cui è possibile emettere programmaticamente l'evento submit e settare la request:
+`react-router-dom` mette a disposizione l'[hook](hook) `useSubmit` con cui è possibile emettere programmaticamente l'evento submit e settare la request che verrà passata alla action:
 
 ```tsx
 //...
@@ -501,7 +576,52 @@ function startDeleteHandler() {
 }
 ```
 
-l'oggetto che verrà passato a `submit` sarà quello che il metodo della `action` si troverà come parametro `request`.
+Infatti l'oggetto che verrà passato a `submit` sarà quello che il metodo della `action` si troverà come parametro `request`, quindi la function `action` potrà utilizzare i parametri passati per applicare determinate logiche (es. il method da utilizzare ecc.).
+
+## useFetcher
+
+Ci possono essere casi in cui è presente un componente con un form che oltre ad essere servito da una specifica `route`, è anche condiviso fra pagine differenti, ad es. un form con un campo input presente nella navbar superiore e che possiede una propria action che andrebbe chiamata al submit. 
+Nella route che serve solo quel componente, è semplice e viene gestito come abbiamo visto prima (con il normale componente `Form`).
+
+Nelle altre pagine però con cui viene condiviso, perché ad es. parte della barra di navigazione, dovremmo aggiungere a tutte le rispettive route la stessa `action`, creando duplicazione del codice, lavoro extra e potrebbe entrare in collisione con le action già presenti.
+Ad es. il submit sulla pagina "Eventi" della form per la newsletter presente sulla barra di navigazione, attiverebbe la `route transition` della route avente quella action (newsletter) e ci ritroveremmo su quella pagina.
+
+Per questo esiste un [[hook]] speciale, `useFetcher`, messo a disposizione da `react-router-dom` che restituisce un oggetto contenente diverse prop e metodi che possiamo usare.
+Fra questi mette a disposizione un altro `Form` component, diverso da quello usato prima, che al trigger della action non scatenerà la `route transition` alla `route` a cui appartiene quella action.
+
+>Possiamo usare `useFetcher` quando vogliamo chiamare una `action` o un `loader` specifico, senza che avvenga la `route transition` al componente a cui appartiene la action.
+
+```tsx
+function NewsletterSignup() {
+	const fetcher = useFetcher();
+
+	return (
+		<fetcher.Form
+			method="post"
+			action="/newsletter" // la route avente la action che vogliamo chiamare
+		>
+			//...
+			<button>Sign up</button>
+		</fetcher.Form>
+	)
+}
+```
+
+Alla stessa maniera possiamo avere un feedback della action che abbiamo attivato sempre grazie a `useFetcher()`:
+
+```tsx
+function NewsletterSignup() {
+	const fetcher = useFetcher();
+
+	const {data, state} = fetcher; // come visto prima state da lo stato della chiamata
+
+	useEffect(() => {
+		if(state === 'idle' && data && data.message) {
+			window.alert(data.message);
+		}
+	});
+	//...
+```
 
 ---
 
@@ -512,4 +632,120 @@ Spesso è necessario riflettere lo stato della navigazione sull'UI, ad es. se la
 ```tsx
 //..
 {navigation.state === 'loading' && <div>Loading...</div>}
+```
+
+---
+
+# Route Protection
+
+Come sappiamo certe `route` possono avere bisogno autorizzazione per l'accesso, ad es. essere disponibili solo ad admin o a utenti autenticati, per questo possiamo usare i `loader` che semplicemente prima di servire la pagina controllano se l'utente è autorizzato e nel caso contrario lo reindirizzano altrove.
+
+```tsx
+export function checkAuthLoader() {
+	const token = getAuthToken();
+
+	if(!token) {
+		return redirect('/login');
+	}
+}
+
+//Routes
+<Route loader={checkAuthLoader} .../> // Possiamo utilizzarlo in tutte le route protette
+```
+
+---
+
+# Automatic Logout
+
+Come spesso accade una volta autenticati riceviamo un token, questo però ha una scadenza e per questo una volta scaduto andrebbe fatto il logout dell'utente e fatta pulizia del token scaduto.
+
+Uno dei modi che si potrebbe utilizzare è quello di usare `useEffect` per inizializzare un timer al mount dell'applicativo, avente come dipendenza il `token` e attraverso `useSubmit` chiamare la action della route `/logout`:
+
+```tsx
+functoin RootLayout() {
+	const token = useLoaderData();
+	const submit = useSubmit();
+
+	useEffect(() => {
+		if(!token) {
+			return;
+		}
+		setTimeout(()=>{
+			submit(null, {action: '/logout', method: 'post'});
+		}, 1 * 60 * 60 * 1000);
+	}, [token, submit]);
+
+	return (
+		...
+	)
+}
+```
+
+>Ma questa soluzione ha dei problemi, ad es. il timeout non tiene conto del tempo rimanente ogni volta che viene ricaricata la pagina e letto il token, di default imposta 1 ora.
+
+Per questo una soluzione migliore è quella di impostare un tempo di scadenza (ETA) nel momento in cui viene creato il token e storare anche quello, ad es. nel `localStorage`:
+
+```ts
+//...
+localStorage.setItem('token', token);
+
+const expiration = new Date();
+expiration.setHours(expiration.getHours() + 1);
+localStorage.setItem('expiration', expiration.toISOString());
+
+return redirect('/');
+```
+
+Per poi tramite una utility ottenere la durata rimanente da controllare alla richiesta del token:
+
+```ts
+export function getTokenDuration() {
+	const storedExpirationDate = localStorage.getItem('expiration');
+	const expirationDate = new Date(storedExpirationDate);
+	const now = new Date();
+	const duration = expirationDate.getTime() - now.getTime();
+
+	return duration;
+}
+
+export function getAuthToken() {
+	const token = localStorage.getItem('token');
+
+	if(!token) {
+		return null; // A loader should always return a value or null
+	}
+
+	const tokenDuration = getTokenDuration();
+	if(tokenDuration < 0) {
+		return 'EXPIRED';
+	}
+	return token;
+}
+
+// Component
+functoin RootLayout() {
+	const token = useLoaderData();
+	const submit = useSubmit();
+
+	useEffect(() => {
+		if(!token) {
+			return;
+		}
+
+		if(token === 'EXPIRED') {                                <===
+			submit(null, {action: '/logout', method: 'post'});
+			return;
+		}
+
+		const tokenDuration = getTokenDuration();
+		
+		setTimeout(()=>{
+			submit(null, {action: '/logout', method: 'post'});
+		}, tokenDuration);                                       <===
+	}, [token, submit]);
+
+	return (
+		...
+	)
+}
 ```

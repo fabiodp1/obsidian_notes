@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4273f5e02cc2c9ec",
+        "id": "9cd6189e960514b2",
         "type": "tabs",
         "children": [
           {
-            "id": "5c0bc763178c5251",
+            "id": "d364a12fb04a5c7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/3 - Routing.md",
+                "file": "2 - React/4 - Cache management - React Query.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Routing"
+              "title": "4 - Cache management - React Query"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "lazy loading",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/3 - Routing.md",
+                "file": "2 - React/4 - Cache management - React Query.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 3 - Routing"
+              "title": "Struttura di 4 - Cache management - React Query"
             }
           },
           {
@@ -157,17 +157,16 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 344.5,
-    "collapsed": true
+    "width": 344.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,22 +181,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c0bc763178c5251",
+  "active": "84b4a88a80271df9",
   "lastOpenFiles": [
-    "2 - React/2 - Hooks.md",
-    "2 - React/11 - Portal.md",
+    "2 - React/14 - Lazy loading.md",
     "2 - React/3 - Routing.md",
+    "2 - React/4 - Cache management - React Query.md",
+    "zzz_Pagine/Tanstack Query.md",
+    "zzz_Pagine/useQuery.md",
+    "2 - React/100 - Risorse utili.md",
+    "zzz_Pagine/optimistic UI.md",
+    "2 - React/10 - StrictMode.md",
+    "2 - React/2 - Hooks.md",
     "2 - React/12 - Forms.md",
+    "2 - React/11 - Portal.md",
     "zzz_Pagine/Link.md",
     "2 - React/13 - Redux.md",
     "2 - React/5 - Context.md",
-    "2 - React/100 - Link utili.md",
     "zzz_Pagine/dialog.md",
     "zzz_Pagine/React 19+.md",
     "2 - React/7 - Patterns.md",
     "2 - React/7 - Code splitting.md",
-    "2 - React/4 - Cache management.md",
-    "2 - React/10 - StrictMode.md",
     "2 - React/9 - Folders.md",
     "2 - React/2 - Gestione dei re-render e Ottimizzazione in React.md",
     "4 - Angular/Angular 14/11 - Reattività in Angular.md",
@@ -207,10 +210,6 @@
     "4 - Angular/Angular 14/8 - HTTP Services & RxJS operators.md",
     "4 - Angular/Angular 14/7 - Navigation.md",
     "4 - Angular/Angular 14/9 - Form.md",
-    "4 - Angular/Angular 14/3 - Components.md",
-    "4 - Angular/Angular 14/2 - Config ambiente.md",
-    "4 - Angular/Angular 14/5 - Direttive built-in.md",
-    "4 - Angular/Angular 14/4 - Template & data binding.md",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",
     "4 - Angular",
