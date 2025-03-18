@@ -30,5 +30,4 @@ Ad esempio se vogliamo aggiungere una nuova pagina e quindi una nuova route, dob
 export default function AboutPage() {
 	return <h1>About Us</h1>
 }
-
 ```

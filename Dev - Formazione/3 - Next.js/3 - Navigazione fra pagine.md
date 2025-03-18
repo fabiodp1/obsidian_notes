@@ -1,15 +1,21 @@
-# Perchè ottimizzare la navigazione
+# Perché ottimizzare la navigazione
 
-Per creare link fra pagine normalmente utilizzeremmo il tag `<a>`, questo perà nel caso ad esempio di un passaggio fra pagine tramite link sulla barra laterale, provoca il refresh di tutta la pagina.
+Per creare link fra pagine normalmente utilizzeremmo il tag `<a>`, questo però nel caso ad esempio di un passaggio fra pagine tramite link sulla barra laterale, provoca il refresh di tutta la pagina.
 
-# Il componente [[<Link>]]
+---
+
+# Il componente `<Link>`
+
 In [[Next.js]] è possibile utilizzare il componente `<Link />` di [[next/link]] per linkare pagine, permette di fare [[client-side navigation]] con JavaScript.
 Nonostante parti dell'applicativo vengono renderizzate server-side, non avviene il refresh, facendola sembrare una web app.
+
 ## [[code-splitting]] e [[prefetching]] automatico
+
 Per migliorare l'esperienza della navigazione, [[Next.js]] automaticamente fa la separazione del codice dell'applicativo in base ai segmenti della route. Questo è diverso dalla tradizionale [[React]] SPA, in cui il browser carica tutto il codice applicativo al caricamento iniziale.
 Inoltre in produzione, ogni qualvolta compare nella viewport un [[<Link>]] component, Next.js automaticamente fa in background il [[prefetch]] del codice per la rotta linkata. Nel momento in cui l'utente clicca sul link, il codice per la destinazione sarà già stata caricata in background, e questo è ciò che rende la transizione istantanea.
 
 # Pattern: mostrare il link attivo
+
 Un comune pattern UI è quello di mostrare all'utente dove si trova mostrando il link alla pagina attivo, per fare ciò è necessario avere il path corrente dall'[[URL]].
 [[Next.js]] fornisce un [[hook]] chiamato [[usePathname]] che da questa informazione.
 

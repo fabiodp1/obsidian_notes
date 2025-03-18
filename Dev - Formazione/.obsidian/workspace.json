@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/2 - Routing & Server Components.md",
+                "file": "3 - Next.js/3 - Navigazione fra pagine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Routing & Server Components"
+              "title": "3 - Navigazione fra pagine"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/2 - Routing & Server Components.md",
+                "file": "3 - Next.js/3 - Navigazione fra pagine.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 2 - Routing & Server Components"
+              "title": "Struttura di 3 - Navigazione fra pagine"
             }
           },
           {
@@ -183,12 +183,12 @@
   },
   "active": "d364a12fb04a5c7f",
   "lastOpenFiles": [
-    "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/2 - Routing & Server Components.md",
+    "3 - Next.js/1 - Getting started.md",
     "3 - Next.js/3 - Ottimizzare font e immagini.md",
     "3 - Next.js/3 - CSS Styling.md",
     "3 - Next.js/4 - Creare layout e pagine.md",
-    "3 - Next.js/5 - Navigazione fra pagine.md",
+    "3 - Next.js/3 - Navigazione fra pagine.md",
     "2 - React/4 - Cache management - React Query.md",
     "2 - React/14 - Lazy loading.md",
     "2 - React/3 - Routing.md",
