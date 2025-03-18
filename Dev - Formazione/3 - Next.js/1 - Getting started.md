@@ -2,7 +2,7 @@
 Viene utilizzato il comando [[create-next-app]] :
 
 ```terminal
-npx create-next-app@latest nextjs-dashboard --use-pnpm
+npx create-next-app@latest <my-app-name> --use-pnpm
 ```
 
 > [[pnpm]] è un'alternativa preferibile a [[npm]], più veloce e gestisce meglio memoria e moduli.
