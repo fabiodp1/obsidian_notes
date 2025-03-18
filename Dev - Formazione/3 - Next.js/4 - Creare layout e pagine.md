@@ -1,4 +1,5 @@
 # Routing innestato
+
 [[Next.js]] utilizza il [[file-system routing]] in cui le cartelle vengono usate per creare rotte innestate. Ogni folder rappresenta un segmento della [[route]] che mappa ad un segmento dell'[[URL]].
 
 ![[Pasted image 20241209161745.png]]
@@ -20,6 +21,7 @@ Avendo un nome riservato per i file `page`, [[Next.js]] permette di collocare ([
 >Solo il contenuto del `page` file sarà pubblicamente accessibile. Per esempio le cartelle `/ui` e `/lib` sono *collocate* all'interno della cartella `/app` insieme alle altre rotte.
 
 # Creare un layout
+
 Come per [[page.tsx]], [[Next.js]] possiede un altro tipo di file speciale che serve a creare UI condiviso tra pagine, [[layout.tsx]].
 
 ```tsx

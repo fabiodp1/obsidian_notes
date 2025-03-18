@@ -1,4 +1,4 @@
-# Creare un nuovo progetto
+.# Creare un nuovo progetto
 Viene utilizzato il comando [[create-next-app]] :
 
 ```terminal
