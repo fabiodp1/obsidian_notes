@@ -12,4 +12,14 @@ Al suo interno troviamo 2 file con 2 nomi riservati:
 
 Ad esempio se vogliamo aggiungere una nuova pagina e quindi una nuova route, dobbiamo:
 
-1. 
+1. creare una cartella con il nome dell'endpoint
+2. creare al suo interno il file `page.ts` che conterrà il `Server Component`.
+
+```
+/app
+ |__page.ts
+ |__layout.ts
+ |__/about
+	   |__page.ts
+
+```
