@@ -9,11 +9,10 @@ Mentre [[Cognito]] è una `user directory service` che gestisce la registrazione
 
 # Collegare frontend a Cognito
 
-Per configurare il nostro `frontend` per utilizzare il sistema di gestione utenze di `Cognito` ci sono diversi modi messi a disposizione dalla libreria `aws-amplify`:
-
-- Tramite l'oggetto `Amplify`:
+Per configurare il nostro `frontend` per utilizzare il sistema di gestione utenze di `Cognito`, creeremo la nostra configurazione nel file di root dell'applicativo `main.ts`, utilizzando la classe `Amplify` messa a disposizione da `aws-amplify`:
 
 ```ts
+// main.ts
 import { Amplify } from "aws-amplify"
 
 Amplify.configure({
@@ -44,4 +43,3 @@ Amplify.configure({
 })
 ```
 
-Tramite 
