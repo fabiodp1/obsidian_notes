@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -184,9 +184,9 @@
   "active": "d364a12fb04a5c7f",
   "lastOpenFiles": [
     "3 - Next.js/2 - Navigazione fra pagine.md",
+    "3 - Next.js/1 - Base Concepts.md",
     "3 - Next.js/3 - Creare layout e pagine.md",
     "3 - Next.js/5 - Ottimizzare font e immagini.md",
-    "3 - Next.js/1 - Base Concepts.md",
     "3 - Next.js/2 - Routing & Server Components.md",
     "3 - Next.js/4 - CSS Styling.md",
     "3 - Next.js/6 - Configurare il DB.md",

@@ -24,10 +24,10 @@ npx create-next-app@latest <my-app-name> --use-pnpm
 La cartella `app` è quella più importante, qui verranno definite le pagine del nostro sito web e le sue `route`.
 Al suo interno troviamo 2 file con 2 nomi riservati: 
 
-- `page.ts`
+- `page.tsx`
 	- Dice a [Next.js](Next.js) che tramite il suo contenuto dovrà renderizzare una pagina.
 	- Al suo interno si trova un **componente React**, che in questo caso viene definito un `Server Component`, un componente che richiede un "environment" speciale fornito da Next. **Viene eseguito e renderizzato sul server**, mai lato client.
-- `layout.ts`
+- `layout.tsx`
 
 ## Routing
 
@@ -40,14 +40,14 @@ Ad esempio se vogliamo aggiungere una nuova pagina e quindi una nuova route, dob
 
 ```
 /app
- |__page.ts
- |__layout.ts
+ |__page.tsx
+ |__layout.tsx
  |__/about
-	   |__page.ts
+	   |__page.tsx
 ```
 
 ```tsx
-//page.ts
+//page.tsx
 
 // Il nome non è importante
 export default function AboutPage() {

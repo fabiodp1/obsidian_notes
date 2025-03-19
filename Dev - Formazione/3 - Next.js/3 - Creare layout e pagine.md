@@ -16,7 +16,7 @@ Per creare una [[nested route]], si possono innestare le cartelle una nell'altra
 
 ![[Pasted image 20241209162837.png]]
 
-Avendo un nome riservato per i file `page`, [[Next.js]] permette di collocare ([[colocate]]) i componenti UI, test e altro codice con la rotta di riferimento.
+Avendo un nome riservato per i file `page.tsx`, [[Next.js]] permette di collocare ([[colocate]]) i componenti UI, test e altro codice con la rotta di riferimento.
 
 >Solo il contenuto del `page` file sarà pubblicamente accessibile. Per esempio le cartelle `/ui` e `/lib` sono *collocate* all'interno della cartella `/app` insieme alle altre rotte.
 
