@@ -48,5 +48,6 @@ Nell'esempio le pagine dentro `/dashboard` saranno automaticamente innestate in 
 >Un beneficio di utilizzare i layouts in [[Next.js]] è quello che durante la navigazione, solo i componenti delle pagine si re-renderizzano, mentre il [[layout]] no. Questo viene chiamato [[partial prerendering]].
 
 # Root layout
+
 Nel capitolo 3 è stato aggiunto un font nel layout `/app/layout.tsx`.
-Questo viene chiamato [[root layout]] ed è **obbligatorio**. Ogni UI aggiunta a questo layout sarà condivisa fra tutte le pagine dell'applicativo. Può essere utilizzato per moficare i tag `<html>` e `<body>` e aggiungere metadati.
+Questo viene chiamato [[root layout]] ed è **obbligatorio**. Ogni UI aggiunta a questo layout sarà condivisa fra tutte le pagine dell'applicativo. Può essere utilizzato per modificare i tag `<html>` e `<body>` e aggiungere metadati.
