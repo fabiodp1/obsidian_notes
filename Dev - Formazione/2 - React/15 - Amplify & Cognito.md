@@ -43,3 +43,18 @@ Amplify.configure({
 })
 ```
 
+# Utilizzo
+
+Per tutte le azioni utili al flusso di autenticazione e gestione utenze, si può utilizzare la libreria `auth` messa a disposizione da `aws-amplify`, semplicemente importandoli da `aws-amplify/auth`:
+
+```ts
+import { signIn } from 'aws-amplify/auth'
+
+await signIn({
+  username: "hello@mycompany.com",
+  password: "hunter2",
+})
+```
+
+Fare comunque riferimento alla [documentazione ufficiale](https://docs.amplify.aws/react/build-a-backend/auth/connect-your-frontend/).
+
