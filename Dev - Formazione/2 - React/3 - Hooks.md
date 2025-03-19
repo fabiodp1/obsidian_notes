@@ -416,7 +416,7 @@ E' possibile usarli anche in altri casi, ma questi sono i più comuni
 ---
 
 # useContext
-[[5 - Context]]
+[[6 - Context]]
 
 Per condividere lo [[state]] fra componenti è un problema comune, possiamo innalzare lo stato nella catena padre/figlio ([[lifting state]]), ma poi ci troveremmo a dover fare un fastidioso [[prop drilling]]  per poter condividerlo con tutti i figli e figli dei figli.
 

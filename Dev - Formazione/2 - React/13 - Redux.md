@@ -20,7 +20,7 @@ Possiamo suddividere gli `state` in 3 tipologie:
 
 # WHY
 
-Se [Redux](Redux) è semplicemente un'alternativa ai [5 - Context](5%20-%20Context.md), perché dovremmo usarlo?
+Se [Redux](Redux) è semplicemente un'alternativa ai [6 - Context](6%20-%20Context.md), perché dovremmo usarlo?
 
 ## Contro del Context
 

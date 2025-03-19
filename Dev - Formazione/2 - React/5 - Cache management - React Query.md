@@ -660,7 +660,7 @@ const { mutate } = useMutation({
 
 # React Query & React Router
 
-Nella sezione [3 - Routing](3%20-%20Routing.md) abbiamo visto che di per se `React Router` permette di configurare azioni per fare il fetch e update dei dati. Quindi a questo punto non rimane che mettere assieme i due mondi per farli collaborare in maniera efficiente.
+Nella sezione [4 - Routing](4%20-%20Routing.md) abbiamo visto che di per se `React Router` permette di configurare azioni per fare il fetch e update dei dati. Quindi a questo punto non rimane che mettere assieme i due mondi per farli collaborare in maniera efficiente.
 
 ## Loader
 
@@ -704,7 +704,7 @@ Volendo se utilizziamo la gestione degli errori messa a disposizione da `React R
 ## Action
 
 Come abbiamo fatto per il `leader`, possiamo usare `React Query` e le sue `mutation` anche per definire la `action` della route.
-Anche in questo caso la funzione riceverà (come abbiamo visto in [3 - Routing](3%20-%20Routing.md)) un oggetto con informazioni riguardo la richiesta di `submit` che ha scatenato la `action` della route.
+Anche in questo caso la funzione riceverà (come abbiamo visto in [4 - Routing](4%20-%20Routing.md)) un oggetto con informazioni riguardo la richiesta di `submit` che ha scatenato la `action` della route.
 
 ```tsx
 //...
