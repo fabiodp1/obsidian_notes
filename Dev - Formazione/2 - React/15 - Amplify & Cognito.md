@@ -9,4 +9,39 @@ Mentre [[Cognito]] è una `user directory service` che gestisce la registrazione
 
 # Collegare frontend a Cognito
 
-Per configurare 
+Per configurare il nostro `frontend` per utilizzare il sistema di gestione utenze di `Cognito` ci sono diversi modi messi a disposizione dalla libreria `aws-amplify`:
+
+- Tramite l'oggetto `Amplify`:
+
+```ts
+import { Amplify } from "aws-amplify"
+
+Amplify.configure({
+  Auth: {
+    Cognito: {
+      userPoolId: "<your-cognito-user-pool-id>",
+      userPoolClientId: "<your-cognito-user-pool-client-id>",
+      identityPoolId: "<your-cognito-identity-pool-id>",
+      loginWith: {
+        email: true,
+      },
+      signUpVerificationMethod: "code",
+      userAttributes: {
+        email: {
+          required: true,
+        },
+      },
+      allowGuestAccess: true,
+      passwordFormat: {
+        minLength: 8,
+        requireLowercase: true,
+        requireUppercase: true,
+        requireNumbers: true,
+        requireSpecialCharacters: true,
+      },
+    },
+  },
+})
+```
+
+Tramite 
