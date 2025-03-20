@@ -1,4 +1,5 @@
-# WHY Fonts
+# Fonts
+## WHY
 
 L'utilizzo di custom fonts può creare problemi di performance nel caso in cui necessitassero il fetch e caricamento.
 Il [[Cumulative Layout Shift]] è una metrica utilizzata da Google per valutare le performance e la UX di un sito web. Con i font il [[layout shift]] avviene quando il browser inizialmente renderizza il testo in un font di fallback o di sistema e poi passa a quello custom.
@@ -6,7 +7,7 @@ Questo può causare il cambiamento delle dimensioni, spaziature ecc. del testo, 
 
 Next.js automaticamente ottimizza i font quando viene utilizzato il modulo [[next/font]]. Scarica i file dei font a *build-time* e li mantiene insieme agli altri file statici. Questo vuol dire che quando un utente visita l'applicazione, non ci sono richieste per font che peggiorerebbero le performance.
 
-# Aggiungere un font primario
+## Aggiungere un font primario
 
 In genere viene creato un file `fonts.ts` nella cartella `ui`, che avrà il compito di contenere tutti i font utilizzati nell'applicazione.
 
@@ -37,7 +38,10 @@ export default function RootLayout({
 
 Aggiungedo `Inter` al body facciamo in modo che venga applicato a tutta l'applicazione. In questo caso è stata applicata anche la classe [[Tailwind]] [[antialiased]] che migliora la visualizzazione del font.
 
-# WHY Images
+---
+
+# Images
+## WHY
 
 [[Next.js]] può servire i file statici, come immagini, presenti nella cartella `/public`. E' inoltre possibile referenziare i file presenti in questa cartella da per tutto nell'applicazione.
 
@@ -58,7 +62,7 @@ Questo però comporta che ci toccherà manualmente:
 
 Invece di fare questo manualmente, è possibile utilizzare il componente [[next/image]] per ottimizzare automaticamente le immagini.
 
-# Il componente [[<Image>]]
+## Il componente [[<Image>]]
 
 E' una estensione del tag html `<img>,` e ottimizza automaticamente le immagini come:
 - Prevenire il [[layout shift]] al load delle immagini
