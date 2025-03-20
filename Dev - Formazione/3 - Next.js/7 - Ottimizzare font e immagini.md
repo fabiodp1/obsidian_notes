@@ -97,3 +97,15 @@ export default function Page() {
   );
 }
 ```
+
+>Se l'immagine che stiamo mostrando è presente fra i nostri asset, il componente sarà capace di capirne le dimensioni automaticamente. Ciò però non avviene se l'immagine si trova altrove e dobbiamo farne il fetch, non essendo presente a `build-time`.
+
+Per risolvere la cosa, abbiamo diverse possibilità ma quella migliore è utilizzare `fill`.
+Questa prop può essere usata al posto di `width` e `height` ogni qualvolta abbiamo un'immagine di cui non conosciamo le dimensioni.
+
+```tsx
+//...
+<Image src={image} alt={title} fill />
+//...
+```
+
