@@ -12,7 +12,41 @@ In questo caso abbiamo bisogno di rotte dinamiche, definite una volta sola, ma c
 ```
 /app
   |__/blog
-        |__[slug]
+        |__page.tsx
+        |__[id]
               |__page.tsx
 ```
 
+```tsx
+// /app/blog/page.tsx
+
+import Link from 'next/link';
+
+export default function BlogPage() {
+  return (
+    <main>
+      <h1>The Blog</h1>
+      <p><Link href="/blog/post-1">Post 1</Link></p>
+      <p><Link href="/blog/post-2">Post 2</Link></p>
+    </main>
+  )
+}
+```
+
+```tsx
+// /app/blog/[id]/page.tsx
+
+import Link from 'next/link';
+
+export default function BlogPostPage( { params } ) {
+  
+  
+  return (
+    <main>
+      <h1>Blog Post {params.id}</h1>
+    </main>
+  )
+}
+```
+
+>Per poter accedere ai parametri della `route`, [Next.js](Next.js) passerà automaticamente delle prop al nostro componente che potremo utilizzare per accedervi, non ci sarà bisogno di farlo manualmente.
