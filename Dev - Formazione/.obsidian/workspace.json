@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "defaultValue",
+                "query": "font",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,8 +184,10 @@
   },
   "active": "d16e6c9237207ce5",
   "lastOpenFiles": [
-    "zzz_Pagine/colocate.md",
+    "3 - Next.js/5 - Ottimizzare font e immagini.md",
     "3 - Next.js/3 - Creare layout e pagine.md",
+    "3 - Next.js/4 - CSS Styling.md",
+    "zzz_Pagine/colocate.md",
     "2 - React/14 - Lazy loading.md",
     "2 - React/15 - Amplify & Cognito.md",
     "2 - React/100 - Risorse utili.md",
@@ -199,9 +202,7 @@
     "3 - Next.js/11 - Ricerca e paginazione.md",
     "3 - Next.js/2 - Navigazione fra pagine.md",
     "3 - Next.js/1 - Base Concepts.md",
-    "3 - Next.js/5 - Ottimizzare font e immagini.md",
     "3 - Next.js/2 - Routing & Server Components.md",
-    "3 - Next.js/4 - CSS Styling.md",
     "3 - Next.js/6 - Configurare il DB.md",
     "zzz_Pagine/Tanstack Query.md",
     "zzz_Pagine/useQuery.md",

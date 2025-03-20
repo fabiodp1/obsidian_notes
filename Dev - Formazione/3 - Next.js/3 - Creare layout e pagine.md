@@ -49,5 +49,5 @@ Nell'esempio le pagine dentro `/dashboard` saranno automaticamente innestate in 
 
 # Root layout
 
-Nel capitolo 3 è stato aggiunto un font nel layout `/app/layout.tsx`.
+Nel capitolo [5 - Ottimizzare font e immagini](5%20-%20Ottimizzare%20font%20e%20immagini.md)  è stato aggiunto un font nel layout `/app/layout.tsx`.
 Questo viene chiamato [[root layout]] ed è **obbligatorio**. Ogni UI aggiunta a questo layout sarà condivisa fra tutte le pagine dell'applicativo. Può essere utilizzato per modificare i tag `<html>` e `<body>` e aggiungere metadati.
