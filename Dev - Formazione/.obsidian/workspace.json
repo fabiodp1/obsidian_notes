@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "font",
+                "query": "tag:#scoped",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -181,11 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5b09076c50e2a04f",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "3 - Next.js/7 - Fetching data.md",
-    "3 - Next.js/7 - Configurare il DB.md",
     "3 - Next.js/6 - CSS Styling.md",
+    "3 - Next.js/7 - Configurare il DB.md",
     "3 - Next.js/4 - Layout.md",
     "3 - Next.js/5 - Navigazione fra pagine.md",
     "3 - Next.js/2 - File riservati & Custom Components.md",

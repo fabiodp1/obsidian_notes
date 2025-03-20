@@ -16,8 +16,11 @@ export default function RootLayout({
 }
 ```
 
+---
+
 # CSS Modules
-[[CSS Modules]] permette di creare CSS specifico per un componente ( #scoped ) creando automaticamente nomi di classi uniche, così non c'è bisogno di preoccuparsi di [[style collision]].
+
+[[CSS Modules]] permette di creare CSS specifico per un componente ( `scoped` ) creando automaticamente nomi di classi uniche, così non c'è bisogno di preoccuparsi di [[style collision]].
 
 ```CSS
 /* home.module.css */
@@ -46,7 +49,9 @@ export default function Page() {
 }
 ```
 
-# Usare [[clsx]] per attivare e disattivare classi
+---
+
+# Usare `clsx` per attivare e disattivare classi
 
 Ci sono casi in cui ci potrebbe essere bisogno di stilizzare un elemento dinamicamente al cambio di state o altre condizioni.
 
