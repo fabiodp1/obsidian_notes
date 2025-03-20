@@ -11,4 +11,11 @@ Se abbiamo necessità di eseguire del codice JS sul client, avremo bisogno di un
 - se dobbiamo usare dei React [hook](hook), non possiamo in componenti renderizzati server-side;
 - se dobbiamo reagire ad azioni dell'utente, ad es. usare gli eventi del [[DOM]], come click ecc.
 
-Per poter rendere un componente client, basta usare la direttiva `"use client"` in cima al file.
+Per poter rendere un componente client, basta usare la direttiva `"use client"` in cima al file:
+
+```tsx
+'use client'
+
+import { ... } from '...';
+//...
+```
