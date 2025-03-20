@@ -1,6 +1,7 @@
 I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli addizionali sulla pagina web ma non sono visibili agli utenti. Lavorano dietro le quinte embeddate nell'[[HTML]], normalmente all'interno del tag `<head>`. Questa informazione è cruciale per i motori di ricerca e altri sistemi che necessitano di capire meglio il contenuto della pagina web.
 
 # Tipi di [[metadata]]
+
 - **Title metadata**: responsabile del titolo della pagina web che viene mostrato sul tab del browser, molto importante per i motori di ricerca.
 - **Description metadata**: fornisce una breve descrizione del contenuto della pagina, spesso mostrata nei risultati dei motori di ricerca:
 
@@ -29,6 +30,7 @@ I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli 
 ```
 
 # Aggiungere metadati
+
 [[Next.js]] possiede un'[[API]] per i [[metadata]] ed esistono 2 modi per utilizzarla:
 - **Config-based**: esportando un oggetto statico [[metadata]] o una funzione dinamica [[generateMetadata]] in un file [[layout.tsx]] o [[page.tsx]].
 - **File-based**: [[Next.js]] possiede una serie di file speciali specifici per i [[metadata]]:
@@ -41,11 +43,13 @@ Si ha la flessibilità di utilizzare questi file per [[metadata]] statici, o pos
 Con queste due possibilità [[Next.js]] automaticamente genererà gli elementi per l'`<head>`.
 
 # Favicon e Open graph
+
 Nel momento in cui spostiamo la #favicon e l'immagine [[open graph]] nella root della cartella `app`, [[Next.js]] le identificherà e utilizzerà.
 
 >È anche possibile creare immagini [[open graph]] in maniera dinamica utilizzando il costruttore [[ImageResponse]].
 
 # Titolo e descrizione
+
 È possibile anche includere l'oggetto [[metadata]] da qualsiasi file [[layout.tsx]] o [[page.tsx]] per aggiungere ulteriori informazioni alla pagina, come titolo e descrizione.
 
 >Qualsiasi [[metadata]] in [[layout.tsx]] verrà ereditato da tutte le pagine che lo usano.
