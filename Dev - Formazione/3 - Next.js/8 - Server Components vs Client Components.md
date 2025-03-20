@@ -6,4 +6,8 @@ Questo fa in modo che ci sia meno codice JS lato client, rendendo l'app più vel
 
 >Al contrario i `client components` sono componenti che vengono pre-renderizzati sul server, ma poi anche potenzialmente sul client.
 
-Se abbiamo necessità di eseguire del codice JS sul client, avremo bisogno di un `client component`, ad es. se dobbiamo usare dei React [hook](hook), non possiamo in componenti renderizzati server-side.
+Se abbiamo necessità di eseguire del codice JS sul client, avremo bisogno di un `client component`, ad es.:
+
+- se dobbiamo usare dei React [hook](hook), non possiamo in componenti renderizzati server-side;
+- se dobbiamo reagire ad azioni dell'utente, ad es. usare gli eventi del [[DOM]], come click ecc.
+- 
