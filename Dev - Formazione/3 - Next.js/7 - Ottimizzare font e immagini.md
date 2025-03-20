@@ -55,8 +55,9 @@ Con normale HTML per aggiungere una immagine faremmo:
 ```
 
 Questo però comporta che ci toccherà manualmente:
-- assicurarci che l'immagine sia responsive su diferse dimenzioni di schermo
-- specificare le dimenzioni delle immagini per dispositivi differenti
+
+- assicurarci che l'immagine sia responsive su diverse dimensioni di schermo
+- specificare le dimensioni delle immagini per dispositivi differenti
 - prevenire il [[layout shift]] al caricamento delle immagini
 - fare il lazy loading delle immagini che sono al di fuori della viewport dell'utente
 
@@ -76,6 +77,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
+import heroImg from '@/assets/hero.png'
  
 export default function Page() {
   return (
@@ -83,8 +85,8 @@ export default function Page() {
     <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
       {/* Add Hero Images Here */}
       <Image
-        src="/hero-desktop.png"
-        width={1000} // Importante to set both for avoiding layout shift
+        src={ heroImg }
+        width={1000} // Important to set both for avoiding layout shift
         height={760}
         className="hidden md:block"
         alt="Screenshots of the dashboard project showing desktop version"
