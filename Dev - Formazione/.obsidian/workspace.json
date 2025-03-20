@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "use client",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,10 +183,12 @@
   },
   "active": "5b09076c50e2a04f",
   "lastOpenFiles": [
+    "3 - Next.js/1 - Base Concepts.md",
+    "3 - Next.js/15 - Autenticazione.md",
+    "3 - Next.js/8 - Server Components vs Client Components.md",
     "3 - Next.js/9 - Rendering statico e dinamico.md",
     "3 - Next.js/9 - Fetching data.md",
     "3 - Next.js/9 - Configurare il DB.md",
-    "3 - Next.js/8 - Server Components vs Client Components.md",
     "3 - Next.js/2 - File riservati & Custom Components.md",
     "3 - Next.js/7 - Ottimizzare font e immagini.md",
     "3 - Next.js/6 - CSS Styling.md",
@@ -207,8 +209,6 @@
     "2 - React/4 - Routing.md",
     "2 - React/5 - Cache management - React Query.md",
     "2 - React/3 - Hooks.md",
-    "2 - React/12 - Forms.md",
-    "3 - Next.js/11 - Ricerca e paginazione.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",
