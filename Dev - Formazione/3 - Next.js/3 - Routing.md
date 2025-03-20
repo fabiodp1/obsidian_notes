@@ -1,5 +1,26 @@
-Come abbiamo visto prima [Next.js](Next.js) utilizza la composizione delle cartelle nella directory `app` e i relativi file `page.tsx`, per definire le `route` dell'applicativo.
-Rimane da capire come sia possibile definire `route` più complesse come quelle dinamiche.
+# Routing innestato
+
+[[Next.js]] utilizza il [[file-system routing]] in cui le cartelle vengono usate per creare rotte innestate. Ogni folder rappresenta un segmento della [[route]] che mappa ad un segmento dell'[[URL]].
+
+![[Pasted image 20241209161745.png]]
+
+> [[page.tsx]] è un file speciale [[Next.js]] che esporta un componente [[React]] ed è richiesto dalla [[route]] per essere accessibile ed essere riconosciuta da Next come tale.
+
+```tsx
+export default function Page() {
+  return <p>Dashboard Page</p>;
+}
+```
+
+Per creare una [[nested route]], si possono innestare le cartelle una nell'altra avendo ognuna una [[page.tsx]]:
+
+![[Pasted image 20241209162837.png]]
+
+Avendo un nome riservato per i file `page.tsx`, [[Next.js]] permette di collocare (`colocate`) i componenti UI, test e altro codice con la rotta di riferimento.
+
+>Solo il contenuto del `page.tsx` file sarà pubblicamente accessibile. Per esempio le cartelle `/ui` e `/lib` sono *collocate* all'interno della cartella `/app` insieme alle altre rotte.
+
+---
 
 # Dynamic Routes
 

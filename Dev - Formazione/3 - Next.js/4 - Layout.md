@@ -1,30 +1,6 @@
-# Routing innestato
-
-[[Next.js]] utilizza il [[file-system routing]] in cui le cartelle vengono usate per creare rotte innestate. Ogni folder rappresenta un segmento della [[route]] che mappa ad un segmento dell'[[URL]].
-
-![[Pasted image 20241209161745.png]]
-
-> [[page.tsx]] è un file speciale [[Next.js]] che esporta un componente [[React]] ed è richiesto dalla [[route]] per essere accessibile.
-
-```tsx
-export default function Page() {
-  return <p>Dashboard Page</p>;
-}
-```
-
-Per creare una [[nested route]], si possono innestare le cartelle una nell'altra avendo ognuna una [[page.tsx]]:
-
-![[Pasted image 20241209162837.png]]
-
-Avendo un nome riservato per i file `page.tsx`, [[Next.js]] permette di collocare (`colocate`) i componenti UI, test e altro codice con la rotta di riferimento.
-
->Solo il contenuto del `page.tsx` file sarà pubblicamente accessibile. Per esempio le cartelle `/ui` e `/lib` sono *collocate* all'interno della cartella `/app` insieme alle altre rotte.
-
----
-
 # Creare un layout
 
-Come per [[page.tsx]], [[Next.js]] possiede un altro tipo di file speciale che serve a creare UI condiviso tra pagine, [[layout.tsx]].
+Come per `page.tsx`, [[Next.js]] possiede un altro tipo di file speciale che serve a creare UI condiviso tra pagine, `layout.tsx`.
 
 ```tsx
 import SideNav from '@/app/ui/dashboard/sidenav';
@@ -48,8 +24,6 @@ Il componente `<Layout />` riceve una prop `children`. Questo può essere sia un
 Nell'esempio le pagine dentro `/dashboard` saranno automaticamente innestate in `<Layout />`.
 
 >Un beneficio di utilizzare i layouts in [[Next.js]] è quello che durante la navigazione, solo i componenti delle pagine si re-renderizzano, mentre il [[layout]] no. Questo viene chiamato [[partial prerendering]].
-
->È quindi anche possibile innestare anche più `layout` nell'albero di pagine e sotto-pagine.
 
 ---
 
@@ -78,3 +52,14 @@ export default function RootLayout({ children }) { //<== Il contenuto iniettato
   );
 }
 ```
+
+---
+
+# Nested layouts
+
+È possibile innestare anche più `layout` nell'albero di pagine e sotto-pagine, non siamo limitati al `Root Layout`.
+Per fare ciò basta aggiungere alla sotto-route il file `layout.tsx` come facciamo per `page.tsx`.
+
+>Così facendo il layout creato sara accessibile solo dalla route in cui è stato definito, e sarà innestato all'interno della `Route Layout`.
+
+Anche per queste andrà utilizzata la prop `children` per mostrare la page per cui Next.js si occuperà di fare il wrap.
