@@ -19,3 +19,6 @@ Per poter rendere un componente client, basta usare la direttiva `"use client"` 
 import { ... } from '...';
 //...
 ```
+
+# Usare i Client Components efficientemente
+
