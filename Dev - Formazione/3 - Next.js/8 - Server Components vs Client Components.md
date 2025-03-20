@@ -22,3 +22,4 @@ import { ... } from '...';
 
 # Usare i Client Components efficientemente
 
+Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se è necessario che tutto il componente debba essere eseguito lato client, se possibile è molto meglio individuare e separare dei sottocomponenti che hanno veramente necessità di essere eseguiti lato client, in modo da lasciare il resto server-side.
