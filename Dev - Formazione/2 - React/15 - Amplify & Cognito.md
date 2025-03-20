@@ -62,4 +62,4 @@ Fare comunque riferimento alla [documentazione ufficiale](https://docs.amplify.a
 
 La libreria `auth` di [Amplify](Amplify) emette degli eventi durante il flow di autenticazione, che ci permettono di reagire in tempo reale per lanciare della logica custom (es. per ottenere i dati e aggiornare lo state dell'app ecc.).
 
-Per fare ciò è possibile utilizzare la classe `Hub` di [Amplify](Amplify) con i suoi eventi built-in a cui sottoscrivere un `listener` con un pattern `publish-subscribe`, catturando gli eventi da qualsiasi parte dell'applicativo.
+Per fare ciò è possibile utilizzare la classe [Hub](https://docs.amplify.aws/gen1/react/build-a-backend/utilities/hub/) di [Amplify](Amplify) con i suoi eventi built-in a cui sottoscrivere un `listener` con un pattern `publish-subscribe`, catturando gli eventi da qualsiasi parte dell'applicativo.
