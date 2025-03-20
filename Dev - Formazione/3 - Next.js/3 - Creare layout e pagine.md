@@ -4,7 +4,7 @@
 
 ![[Pasted image 20241209161745.png]]
 
-> [[page.tsx]] è un file special [[Next.js]] che esporta un componente [[React]] ed è richiesto dalla [[route]] per essere accessibile.
+> [[page.tsx]] è un file speciale [[Next.js]] che esporta un componente [[React]] ed è richiesto dalla [[route]] per essere accessibile.
 
 ```tsx
 export default function Page() {
@@ -16,9 +16,9 @@ Per creare una [[nested route]], si possono innestare le cartelle una nell'altra
 
 ![[Pasted image 20241209162837.png]]
 
-Avendo un nome riservato per i file `page.tsx`, [[Next.js]] permette di collocare ([[colocate]]) i componenti UI, test e altro codice con la rotta di riferimento.
+Avendo un nome riservato per i file `page.tsx`, [[Next.js]] permette di collocare (`colocate`) i componenti UI, test e altro codice con la rotta di riferimento.
 
->Solo il contenuto del `page` file sarà pubblicamente accessibile. Per esempio le cartelle `/ui` e `/lib` sono *collocate* all'interno della cartella `/app` insieme alle altre rotte.
+>Solo il contenuto del `page.tsx` file sarà pubblicamente accessibile. Per esempio le cartelle `/ui` e `/lib` sono *collocate* all'interno della cartella `/app` insieme alle altre rotte.
 
 # Creare un layout
 

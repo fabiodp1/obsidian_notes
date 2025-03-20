@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/15 - Amplify & Cognito.md",
+                "file": "3 - Next.js/3 - Creare layout e pagine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "15 - Amplify & Cognito"
+              "title": "3 - Creare layout e pagine"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/15 - Amplify & Cognito.md",
+                "file": "3 - Next.js/3 - Creare layout e pagine.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 15 - Amplify & Cognito"
+              "title": "Struttura di 3 - Creare layout e pagine"
             }
           },
           {
@@ -183,6 +183,9 @@
   },
   "active": "d16e6c9237207ce5",
   "lastOpenFiles": [
+    "zzz_Pagine/colocate.md",
+    "3 - Next.js/3 - Creare layout e pagine.md",
+    "2 - React/14 - Lazy loading.md",
     "2 - React/15 - Amplify & Cognito.md",
     "2 - React/100 - Risorse utili.md",
     "2 - React/9 - Folders.md",
@@ -194,21 +197,18 @@
     "2 - React/3 - Hooks.md",
     "2 - React/12 - Forms.md",
     "3 - Next.js/11 - Ricerca e paginazione.md",
-    "3 - Next.js/3 - Creare layout e pagine.md",
     "3 - Next.js/2 - Navigazione fra pagine.md",
     "3 - Next.js/1 - Base Concepts.md",
     "3 - Next.js/5 - Ottimizzare font e immagini.md",
     "3 - Next.js/2 - Routing & Server Components.md",
     "3 - Next.js/4 - CSS Styling.md",
     "3 - Next.js/6 - Configurare il DB.md",
-    "2 - React/14 - Lazy loading.md",
     "zzz_Pagine/Tanstack Query.md",
     "zzz_Pagine/useQuery.md",
     "zzz_Pagine/optimistic UI.md",
     "2 - React/10 - StrictMode.md",
     "2 - React/11 - Portal.md",
     "zzz_Pagine/Link.md",
-    "2 - React/13 - Redux.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",
