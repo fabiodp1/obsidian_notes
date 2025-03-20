@@ -22,8 +22,7 @@ Il componente `<Layout />` riceve una prop `children`. Questo può essere sia un
 ![[Pasted image 20241209170949.png]]
 
 Nell'esempio le pagine dentro `/dashboard` saranno automaticamente innestate in `<Layout />`.
-
-Ov
+Ovviamente è possibile utilizzare custom components all'interno del componente layout.
 
 >Un beneficio di utilizzare i layouts in [[Next.js]] è quello che durante la navigazione, solo i componenti delle pagine si re-renderizzano, mentre il [[layout]] no. Questo viene chiamato [[partial prerendering]].
 
