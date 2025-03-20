@@ -62,4 +62,51 @@ Fare comunque riferimento alla [documentazione ufficiale](https://docs.amplify.a
 
 La libreria `auth` di [Amplify](Amplify) emette degli eventi durante il flow di autenticazione, che ci permettono di reagire in tempo reale per lanciare della logica custom (es. per ottenere i dati e aggiornare lo state dell'app ecc.).
 
-Per fare ciò è possibile utilizzare la classe [Hub](https://docs.amplify.aws/gen1/react/build-a-backend/utilities/hub/) di [Amplify](Amplify) con i suoi eventi built-in a cui sottoscrivere un `listener` con un pattern `publish-subscribe`, catturando gli eventi da qualsiasi parte dell'applicativo.
+Per fare ciò è possibile utilizzare la classe [Hub](https://docs.amplify.aws/gen1/react/build-a-backend/utilities/hub/) di [Amplify](Amplify) con i suoi eventi built-in a cui sottoscrivere un `listener` con un pattern `publish-subscribe`, catturando gli eventi da qualsiasi parte dell'applicativo. Questo pattern permette una relazione uno-a-molti in cui un evento può essere condiviso fra più listeners diversi.
+
+>Una volta che l'applicativo è settato per sottoscriversi e ascoltare specifici eventi dal canale `auth`, i `listener` verranno notificati in maniera asincrona quando un evento occorre.
+>Inoltre è possibile sottoscrivere degli eventi per estrarre dati dal `payload` dell'evento ed eseguire una callback definita da noi.
+
+```ts
+import { Hub } from 'aws-amplify/utils';
+
+Hub.listen('auth', ({ payload }) => {
+  switch (payload.event) {
+    case 'signedIn':
+      console.log('user have been signedIn successfully.');
+      break;
+    case 'signedOut':
+      console.log('user have been signedOut successfully.');
+      break;
+    case 'tokenRefresh':
+      console.log('auth tokens have been refreshed.');
+      break;
+    case 'tokenRefresh_failure':
+      console.log('failure while refreshing auth tokens.');
+      break;
+    case 'signInWithRedirect':
+      console.log('signInWithRedirect API has successfully been resolved.');
+      break;
+    case 'signInWithRedirect_failure':
+      console.log('failure while trying to resolve signInWithRedirect API.');
+      break;
+    case 'customOAuthState':
+      logger.info('custom state returned from CognitoHosted UI');
+      break;
+  }
+});
+```
+
+# Interrompere l'ascolto degli eventi
+
+È possibile smettere di ascoltare per un evento semplicemente chiamando il metodo ritornato dalla funzione `Hub.listen()`. Questo può essere utile quando non abbiamo più bisogno di ricevere messaggi nel flow dell'applicativo, evitando overhead inutile e memory leaks.
+
+```ts
+/* start listening for messages */
+const hubListenerCancelToken = Hub.listen('auth', (data) => {
+  console.log('Listening for all auth events: ', data.payload.data);
+});
+
+/* later */
+hubListenerCancelToken(); // stop listening for messages
+```
