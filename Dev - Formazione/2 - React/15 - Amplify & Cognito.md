@@ -58,3 +58,4 @@ await signIn({
 
 Fare comunque riferimento alla [documentazione ufficiale](https://docs.amplify.aws/react/build-a-backend/auth/connect-your-frontend/).
 
+# Ascoltare gli eventi di Auth
