@@ -66,6 +66,7 @@ Invece di fare questo manualmente, è possibile utilizzare il componente [[next/
 ## Il componente [[<Image>]]
 
 E' una estensione del tag html `<img>,` e ottimizza automaticamente le immagini come:
+
 - Prevenire il [[layout shift]] al load delle immagini
 - Ridimenzionare le immagini per evitare di pubblicare immagini troppo grandi per il device con una viewport più piccola
 - [[lazy loading]] delle immagini di default (solo quando entrano nella viewport)
