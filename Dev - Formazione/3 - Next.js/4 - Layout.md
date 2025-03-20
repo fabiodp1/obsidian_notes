@@ -23,6 +23,8 @@ Il componente `<Layout />` riceve una prop `children`. Questo può essere sia un
 
 Nell'esempio le pagine dentro `/dashboard` saranno automaticamente innestate in `<Layout />`.
 
+Ov
+
 >Un beneficio di utilizzare i layouts in [[Next.js]] è quello che durante la navigazione, solo i componenti delle pagine si re-renderizzano, mentre il [[layout]] no. Questo viene chiamato [[partial prerendering]].
 
 ---

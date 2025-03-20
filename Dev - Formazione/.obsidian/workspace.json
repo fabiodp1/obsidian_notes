@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 452.5
+    "width": 350.5
   },
   "right": {
     "id": "df2474bdd0d6f08b",
@@ -157,8 +157,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           }
         ],
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 342.5
   },
   "left-ribbon": {
     "hiddenItems": {
