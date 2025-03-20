@@ -59,3 +59,5 @@ await signIn({
 Fare comunque riferimento alla [documentazione ufficiale](https://docs.amplify.aws/react/build-a-backend/auth/connect-your-frontend/).
 
 # Ascoltare gli eventi di Auth
+
+La libreria `auth` di [Amplify](Amplify) emette degli eventi durante il flow di autenticazione, che ci permettono di reagire in tempo reale per lanciare della logica custom (es. per ottenere i dati e aggiornare lo state dell'app ecc.).
