@@ -13,4 +13,20 @@ Ovviamente oltre al file `page.tsx`, per creare le nostre pagine, possiamo anche
 
 Non essendo file speciali, i custom components non verranno trattati in nessun modo da [Next.js](Next.js), per essere usati andranno importati come normalmente avviene in un'app [React](React.md).
 
+```tsx
+// In Next.js il simbolo '@' indica la root del progetto
+import Header from '@/components/header';
+
+export default function Home() {
+  return (
+    <main>
+      <Header />
+      //...
+    </main>
+  )
+}
+```
+
 >Anche mettendoli in una sotto-cartella `components`, non cambierà niente. Non essendo `components` un nome riservato e non contenendo il file `page.tsx`, non sarà considerato una `route`.
+
+Dove posizionare i componenti è una scelta personale, un altro pattern potrebbe essere quello di lasciarli fuori dalla cartella `/app`, in modo da lasciarvi dentro solo file che hanno a che fare con la gestione delle `route`.
