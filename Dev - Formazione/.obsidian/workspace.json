@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/4 - File riservati, Custom Components & Project Organization.md",
+                "file": "3 - Next.js/5 - Routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 - File riservati, Custom Components & Project Organization"
+              "title": "5 - Routing"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/4 - File riservati, Custom Components & Project Organization.md",
+                "file": "3 - Next.js/5 - Routing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 4 - File riservati, Custom Components & Project Organization"
+              "title": "Struttura di 5 - Routing"
             }
           },
           {
@@ -183,10 +183,11 @@
   },
   "active": "5b09076c50e2a04f",
   "lastOpenFiles": [
-    "3 - Next.js/5 - CSS Styling.md",
-    "3 - Next.js/5 - Ottimizzare font e immagini.md",
+    "3 - Next.js/4 - File riservati & Custom Components.md",
+    "3 - Next.js/5 - Routing.md",
+    "3 - Next.js/7 - Ottimizzare font e immagini.md",
+    "3 - Next.js/6 - CSS Styling.md",
     "3 - Next.js/16 - Metadati.md",
-    "3 - Next.js/4 - File riservati, Custom Components & Project Organization.md",
     "3 - Next.js/3 - Creare layout e pagine.md",
     "zzz_Pagine/Senza nome.md",
     "3 - Next.js/2 - Navigazione fra pagine.md",
@@ -208,7 +209,6 @@
     "3 - Next.js/2 - Routing & Server Components.md",
     "3 - Next.js/6 - Configurare il DB.md",
     "zzz_Pagine/Tanstack Query.md",
-    "zzz_Pagine/useQuery.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",

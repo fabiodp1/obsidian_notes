@@ -55,7 +55,7 @@ Nell'esempio le pagine dentro `/dashboard` saranno automaticamente innestate in 
 
 # Root layout
 
-Nel capitolo [5 - Ottimizzare font e immagini](5%20-%20Ottimizzare%20font%20e%20immagini.md)  è stato aggiunto un font nel layout `/app/layout.tsx`, proprio alla root della cartella `app`.
+Nel capitolo [7 - Ottimizzare font e immagini](7%20-%20Ottimizzare%20font%20e%20immagini.md)  è stato aggiunto un font nel layout `/app/layout.tsx`, proprio alla root della cartella `app`.
 Questo viene chiamato `root layout` ed è **obbligatorio**. Ogni UI aggiunta a questo layout sarà condivisa fra tutte le pagine dell'applicativo.
 Può essere utilizzato per modificare i tag `<html>` e `<body>` e aggiungere metadati.
 

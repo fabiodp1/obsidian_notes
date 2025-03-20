@@ -1,9 +1,17 @@
 # File riservati
 
-All'interno della directory `/app` ci sono anche altri file oltre a `page.tsx` e `layout.tsx`:
+All'interno della directory `/app` ci sono anche altri file oltre a `page.tsx` e `layout.tsx` che hanno un nome riservato (almeno all'interno di `/app`):
 
-- `globals.css`: viene importato nel `layout.tsx` e contiene tutte le classi [CSS](CSS) disponibili per tutto l'applicativo.
-- `icon.png`: verrà usato in automatico da [Next.js](Next.js) come una `favicon` (non ci sarà bisogno di importarla o inserirla nell'html del `Root Layout`).
+- `globals.css`: viene importato nel `layout.tsx` e contiene tutte le classi [CSS](CSS) disponibili per tutto l'applicativo;
+- `icon.png`: verrà usato in automatico da [Next.js](Next.js) come una `favicon` (non ci sarà bisogno di importarla o inserirla nell'html del `Root Layout`);
+- `not-found.tsx`: pagina di fallback per errori `404` (lanciati da fratelli o pagine innestate o layout);
+- `error.tsx`: pagina di fallback per gli altri tipi di errore;
+- `loading.tsx`: pagina di fallback da mostrare mentre fratelli o pagine innestate (o layout) stanno facendo il fetch di dati;
+- `route.ts`: permette di creare una `API route` (ad es. una pagina che non ritorna `tsx` ma invece dati in formato JSON);
+
+Per maggiori info vedere la [documentazione ufficiale](https://nextjs.org/docs/app/api-reference/file-conventions).
+
+---
 
 # Custom Components
 
