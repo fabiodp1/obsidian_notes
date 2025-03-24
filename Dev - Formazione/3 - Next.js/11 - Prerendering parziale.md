@@ -11,6 +11,7 @@ Però la maggior parte delle [[route]] non sono completamente statiche o dinamic
 ![[Pasted image 20241216113742.png]]
 
 Quando un utente visita una rotta:
+
 - Viene servito un guscio della rotta che include la navbar e le info sui prodotti, permettendo un caricamento iniziale più veloce.
 - Il guscio lascia buchi in cui il contenuto del carrello e i prodotti suggeriti verranno caricati asincronicamente.
 - I buchi asincroni vengono streammati in parallelo, riducendo il caricamento generale della pagina.

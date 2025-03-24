@@ -74,3 +74,10 @@ Utilizzando questo pattern è possibile:
 - Utilizzare un pattern nativo JavaScript che può essere applicato a qualsiasi libreria o framework
 
 >Esiste però uno svantaggio in questo pattern..cosa succede se una richiesta è più lenta di tutte le altre?
+
+---
+
+# Loading state
+
+Nel momento in cui chiediamo una pagina che viene renderizzata lato server e che deve fare il fetch dei dati, essendo una operazione asincrona dovremo aspettare un tot tempo prima che sia pronta per essere servita, quindi ci serve un modo per gestire il feedback lato client.
+
