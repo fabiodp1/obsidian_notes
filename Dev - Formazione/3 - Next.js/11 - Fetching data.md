@@ -145,7 +145,7 @@ export default function MealsPage() {
 
 >Dietro le quinte è quello che viene fatto tramite il file `loading.tsx`, ma in questo caso lo stiamo limitando alla singola porzione di pagina dinamica, non tutta.
 
-Nelle versioni di **React < 19** potrebbe essere necessario attivare il [PPR](PPR):
+Per configurare la [PPR](PPR):
 
 ```ts
 // next.config.ts

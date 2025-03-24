@@ -34,7 +34,7 @@ Nel capitolo [7 - Ottimizzare font e immagini](7%20-%20Ottimizzare%20font%20e%20
 Questo viene chiamato `root layout` ed è **obbligatorio**. Ogni UI aggiunta a questo layout sarà condivisa fra tutte le pagine dell'applicativo.
 Può essere utilizzato per modificare i tag `<html>` e `<body>` e aggiungere metadati.
 
->Per aggiungere i `metadata` in [Next.js](Next.js) non useremo il tag `<head>`, ma basterà esportare una variabile `metadata` (nome riservato) e Next.js si occuperà in automatico di gestirlo. Per maggiori info guarda [16 - Metadati](16%20-%20Metadati.md).
+>Per aggiungere i `metadata` in [Next.js](Next.js) non useremo il tag `<head>`, ma basterà esportare una variabile `metadata` (nome riservato) e Next.js si occuperà in automatico di gestirlo. Per maggiori info guarda [19 - Metadati](19%20-%20Metadati.md).
 
 ```tsx
 import '@/app/ui/global.css';
