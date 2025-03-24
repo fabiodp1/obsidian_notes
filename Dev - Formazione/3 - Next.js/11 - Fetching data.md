@@ -81,3 +81,11 @@ Utilizzando questo pattern è possibile:
 
 Nel momento in cui chiediamo una pagina che viene renderizzata lato server e che deve fare il fetch dei dati, essendo una operazione asincrona dovremo aspettare un tot tempo prima che sia pronta per essere servita, quindi ci serve un modo per gestire il feedback lato client.
 
+Per questo come si fa di solito risulta utile avere un elemento di `loading`.
+In [Next.js](Next.js) la cosa viene gestita automaticamente, basta aggiungere alla cartella `/app` il file speciale `loading.tsx`.
+
+>Il componente ritornato da questo file verrà mostrato ogni volta che una pagina "fratello" o figlio caricherà dei dati.
+
+````tsx
+export default function
+```
