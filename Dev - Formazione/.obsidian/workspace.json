@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/10 - Prerendering parziale.md",
+                "file": "3 - Next.js/11 - Fetching data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 - Prerendering parziale"
+              "title": "11 - Fetching data"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/10 - Prerendering parziale.md",
+                "file": "3 - Next.js/11 - Fetching data.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 10 - Prerendering parziale"
+              "title": "Struttura di 11 - Fetching data"
             }
           },
           {
@@ -183,8 +183,8 @@
   },
   "active": "5b09076c50e2a04f",
   "lastOpenFiles": [
+    "3 - Next.js/11 - Prerendering parziale.md",
     "3 - Next.js/10 - Configurare il DB.md",
-    "3 - Next.js/10 - Prerendering parziale.md",
     "3 - Next.js/9 - Navigazione fra pagine.md",
     "3 - Next.js/7 - Ottimizzare font e immagini.md",
     "3 - Next.js/8 - Server Components vs Client Components.md",
