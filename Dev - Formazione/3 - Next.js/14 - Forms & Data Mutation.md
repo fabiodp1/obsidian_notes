@@ -76,7 +76,7 @@ Un vantaggio di invocare la `server action` è che essendo eseguito tutto sul se
 
 # Estrarre i dati del form
 
-Esistono diversi modi per farlo, uno di questi è l'utilizzo del metodo `.get(name)`.
+Esistono diversi modi per farlo, uno di questi è l'utilizzo del metodo `.get(<inputName>)`.
 
 ```ts
 'use server';
@@ -92,8 +92,11 @@ export async function createInvoice(formData: FormData) {
 }
 ```
 
->Nel caso in cui stiamo usando form con molti dati, conviene usare il metodo [[entries]]() con `Object.fromEntries()`:
->`const rawFormData = Object.fromEntries(formData.entries())`
+>Nel caso in cui stiamo usando form con molti dati, conviene usare il metodo `entries()` con `Object.fromEntries()`:
+
+```tsx
+const rawFormData = Object.fromEntries(formData.entries())
+```
 
 ---
 
