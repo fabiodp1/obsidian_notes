@@ -1,7 +1,9 @@
 # Server Actions
 
-Le [[server action]] di [[React]] permettono di lanciare codice asincrono direttamente sul server. Eliminano la necessità di creare endpoint [[API]] per cambiare i dati. 
+Le `server action` di [[React]] permettono di lanciare codice asincrono direttamente sul server. Eliminano la necessità di creare endpoint [[API]] per cambiare i dati.
 Basta scrivere delle funzioni asincrone che verranno eseguite sul server e possono essere invocate dal client o dai [[Server Component]].
+
+>Per fare ciò basta inserire il tag `"use server"` all'interno del nostro handler, all'interno del `Server Component`, per trasformarlo in una `server action`.
 
 Inoltre offrono una soluzione efficace per la sicurezza, proteggendo contro diversi tipi di attacco, mettendo al sicuro i dati e assicurando un accesso autorizzato. Le [[server action]] permettono questo attraverso tecniche come `POST` request, encrypted closure, strict input check, hashing dei messaggi di errore, restrizioni all'host, che tutti assieme collaborano per potenziare la sicurezza dell'applicativo.
 
@@ -9,7 +11,7 @@ Inoltre offrono una soluzione efficace per la sicurezza, proteggendo contro dive
 
 # Utilizzare i `form` con le [[server action]]
 
-In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto [[FromData]] nativo, contenente i dati catturati.
+In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md):
 
 ```tsx
 // Server Component
@@ -25,6 +27,7 @@ export default function Page() {
   return <form action={create}>...</form>;
 }
 ```
+
 
 Un vantaggio di invocare la [[server action]] all'interno del [[Server Component]] è il potenziamento progressivo, i form funzionano anche se JS è disabilitato sul client.
 
