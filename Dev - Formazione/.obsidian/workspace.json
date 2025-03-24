@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4812c866ae5e8fd5",
+        "id": "9b46b9294e827dd2",
         "type": "tabs",
         "children": [
           {
-            "id": "5b09076c50e2a04f",
+            "id": "0a96076e09fecebb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -181,8 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5b09076c50e2a04f",
+  "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "3 - Next.js/5 - CSS Styling.md",
+    "zzz_Pagine/root layout.md",
+    "3 - Next.js/11 - Ricerca e paginazione.md",
     "3 - Next.js/11 - Prerendering parziale.md",
     "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/10 - Configurare il DB.md",
@@ -192,14 +195,12 @@
     "3 - Next.js/8 - Server Components vs Client Components.md",
     "3 - Next.js/13 - Streaming.md",
     "3 - Next.js/12 - Rendering statico e dinamico.md",
-    "3 - Next.js/5 - CSS Styling.md",
     "3 - Next.js/1 - Base Concepts.md",
     "3 - Next.js/15 - Autenticazione.md",
     "3 - Next.js/4 - Layout.md",
     "3 - Next.js/3 - Routing.md",
     "3 - Next.js/16 - Metadati.md",
     "zzz_Pagine/Senza nome.md",
-    "zzz_Pagine/root layout.md",
     "zzz_Pagine/colocate.md",
     "2 - React/14 - Lazy loading.md",
     "2 - React/15 - Amplify & Cognito.md",
@@ -208,7 +209,6 @@
     "2 - React/8 - Patterns.md",
     "2 - React/7 - Compound components.md",
     "2 - React/6 - Context.md",
-    "2 - React/4 - Routing.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",

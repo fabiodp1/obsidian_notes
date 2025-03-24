@@ -3,8 +3,7 @@
 Normalmente nella cartella `/app` è presente il file `globals.css`. E' possibile usare questo file per aggiungere regole CSS a tutte le [[route]] dell'applicativo.
 E' possibile importare questo file in qualsiasi componente, ma è buona pratica aggiungerlo al **top level component** che in [[Next.js]] è il [[root layout]].
 
-```tsx 
-// layout.tsx
+```tsx title:layout.tsx
 import '@/app/globals.css';
 
 export default function RootLayout({ 
@@ -22,8 +21,7 @@ export default function RootLayout({
 
 [[CSS Modules]] permette di creare CSS specifico per un componente ( `scoped` ) creando automaticamente nomi di classi uniche, così non c'è bisogno di preoccuparsi di [[style collision]].
 
-```CSS
-/* home.module.css */
+```css title:home.module.css
 .shape {
   height: 0;
   width: 0;
@@ -33,8 +31,7 @@ export default function RootLayout({
 }
 ```
 
-```tsx
-// page.tsx
+```tsx title:page.tsx
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
