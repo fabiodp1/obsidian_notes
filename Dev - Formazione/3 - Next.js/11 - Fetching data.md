@@ -160,11 +160,21 @@ export default nextConfig;
 
 
 // layout.tsx
-import SideNav from '@/app/ui/dashboard/sidenav'; 
+// Può essere fatto anche a livello di singolo componente
+import SideNav from '@/app/ui/dashboard/sidenav';
 
 export const experimental_ppr = true; 
-// ...
 
+export default function Page() {
+  return {
+     <>
+      <StaticComponent />
+      <Suspense fallback={<Fallback />}>
+        <DynamicComponent />
+      </Suspense>
+     </>
+  };
+}
 ```
 
 >Non c'è bisogno di cambiare il codice, basta configurare e aver usato i `Suspense`.
