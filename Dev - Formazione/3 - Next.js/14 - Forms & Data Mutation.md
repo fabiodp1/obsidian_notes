@@ -100,7 +100,7 @@ const rawFormData = Object.fromEntries(formData.entries())
 
 ## Validazione e preparazione dati
 
-Prima di inviare i dati al database è necessario #validare i dati per assicurarsi che siano nel formato corretto e con i type corretti.
+Prima di inviare i dati al database è necessario validare i dati per assicurarsi che siano nel formato corretto, con i type corretti e che non siano potenzialmente una minaccia alla sicurezza (es. [[XSS]] o [[DOS]]).
 
 Per la validazione dati esistono diverse opzioni, fra cui l'utilizzo di librerie come  [Zod](https://zod.dev/):
 
@@ -137,11 +137,13 @@ export async function createInvoice(formData: FormData) {
 }
 ```
 
+>**NOTA** per la validazione di stringhe di html da renderizare client-side, esiste la libreria `xss` che si assicura che l'html da parsare non sia malevolo.
+
 ---
 
 # Persistere i dati
 
-Per persistere i dati a [[DB]] basta creare una [[query]] [[SQL]] per fare l'inserimento:
+Per persistere i dati a [[DB]] basta creare una `query SQL` per fare l'inserimento:
 
 ```ts
 import { sql } from '@vercel/postgres';
