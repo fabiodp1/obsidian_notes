@@ -1,4 +1,5 @@
 # Fonts
+
 ## WHY
 
 L'utilizzo di custom fonts può creare problemi di performance nel caso in cui necessitassero il fetch e caricamento.
@@ -41,6 +42,7 @@ Aggiungedo `Inter` al body facciamo in modo che venga applicato a tutta l'applic
 ---
 
 # Images
+
 ## WHY
 
 [[Next.js]] può servire i file statici, come immagini, presenti nella cartella `/public`. E' inoltre possibile referenziare i file presenti in questa cartella da per tutto nell'applicazione.
