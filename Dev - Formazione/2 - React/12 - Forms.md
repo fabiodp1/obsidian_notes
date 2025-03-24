@@ -297,7 +297,7 @@ Per la validazione possiamo gestire il form come visto prima, creandoci dei meto
 È un hook messo a disposizione da [React 19+](React%2019+.md) che permette di gestire lo stato del form più agilmente.
 Richiede 2 parametri, la funzione che gestirà il `submit` e l'`initial state` del form.
 
->	Utilizzando l'handler con `useActionState`,  Il metodo riceverà un parametro in più che contiene lo stato precedente del form.
+>Utilizzando l'handler con `useActionState`,  Il metodo riceverà un parametro in più che contiene lo stato precedente del form.
 
 ```tsx
 //...
@@ -308,7 +308,7 @@ const submitAction = (prevState: FormData, formData: FormData) => {
 const [formState, formAction, pending] = useActionState(submitAction, {errors: null});
 
 //...
-<form action={formAction}
+<form action={formAction} ...>
 ```
 
 `useActionState` ritornerà:

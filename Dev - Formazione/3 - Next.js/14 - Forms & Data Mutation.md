@@ -209,6 +209,8 @@ export default function ShareMealPage() {
 }
 ```
 
+>Il suo funzionamento e configurazione è molto simile al `useActionState` di [React 19+](React%2019+.md).
+
 ---
 
 # Persistere i dati
