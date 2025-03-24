@@ -1,4 +1,4 @@
-Oltre al metodo tradizionale per gestire gli errori tramite [[try/catch]], [[Next.js]] mette a disposizione il file speciale [[error.tsx]] che serve da [[catch-all]] per gli errori che potrebbero capitare inaspettatamente e poterli gestire in una maniera standard:
+Oltre al metodo tradizionale per gestire gli errori tramite [[try/catch]], [[Next.js]] mette a disposizione il file speciale `error.tsx` che serve da `catch-all` per gli errori che potrebbero capitare inaspettatamente e poterli gestire in una maniera standard:
 
 ```tsx
 'use client';
@@ -36,16 +36,17 @@ export default function Error({
 
 Dall'esempio si possono capire diverse cose:
 
-- `'use client'`: [[error.tsx]] deve essere un [[Client Component]].
+- `'use client'`: `error.tsx` deve essere un [[Client Component]].
 - accetta 2 prop:
 	- `error`: istanza dell'oggetto JS nativo `Error`.
 	- `reset`: una funzione per fare il reset del limitatore degli errori. Quando eseguita, la funzione cercherà di re-renderizzare il [[route segment]].
 
 ---
 
-# Gestire gli errori 404 con [[notFound]]
-Un altro modo per gestire gli errori è utilizzare la funzione [[notFound]].
-Se [[error.tsx]] è utile per fare il catch degli errori, [[notFound]] può essere usato quando si cerca di fare il fetch di una risorsa che non esiste:
+# Gestire gli errori 404 con `notFound`
+
+Un altro modo per gestire gli errori è utilizzare la funzione `notFound`.
+Se `error.tsx` è utile per fare il catch degli errori, `notFound` può essere usato quando si cerca di fare il fetch di una risorsa che non esiste:
 
 ```tsx
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
@@ -68,7 +69,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
 }
 ```
 
-Per mostrare una UI di errore all'utente, possiamo usare il file speciale [[not-found.tsx]].
+Per mostrare una UI di errore all'utente, possiamo usare il file speciale `not-found.tsx`.
 
 ```tsx
 // not-found.tsx
@@ -93,7 +94,7 @@ export default function NotFound() {
 }
 ```
 
->[[notFound]] avrà precedenza su [[error.tsx]].
+>`notFound` avrà precedenza su `error.tsx`.
 
 ---
 
