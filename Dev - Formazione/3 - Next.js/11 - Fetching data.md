@@ -70,6 +70,7 @@ export async function fetchCardData() {
 ```
 
 Utilizzando questo pattern è possibile:
+
 - Iniziare i data fetch allo stesso tempo
 - Utilizzare un pattern nativo JavaScript che può essere applicato a qualsiasi libreria o framework
 
@@ -94,9 +95,11 @@ export default function MealsLoadingPage() {
 
 ## Partial Prerendering, Suspense & Streamed Responses
 
-Per la maggior parte delle web apps moderne, la scelta è fra [[static rendering]] e [[dynamic rendering]] per l'intera applicazione o per specifiche rotte. In [[Next.js]] se viene chiamata una [[dynamic function]] in una [[route]], l'intera [[route]] diventa dinamica.
+Il problema con l'utilizzo della pagina `loading.tsx` è che ogni qual volta viene caricato qualcosa, verrà mostrato il `loading` ma tutto il resto della pagina che sta facendo il fetch non verrà mostrato fino a quando il dato non sarà pronto, creando una [UX](UX) non ottimale.
+la maggior parte delle [[route]] non sono completamente statiche o dinamiche. 
+Ad es. il titolo della pagina ecc. potrebbero essere caricate subito e in seguito gli elementi dinamici, in modo da non dover mostrare tutto solo alla fine, quando i dati dinamici sono pronti.
 
-Però la maggior parte delle [[route]] non sono completamente statiche o dinamiche. Ad es. il layout, il titolo della pagina ecc. potrebbero essere caricate subito e in seguito gli elementi dinamici, in modo da non dover mostrare tutto solo alla fine, quando i dati dinamici sono pronti.
+>NB. Per la maggior parte delle web apps moderne, la scelta è fra [[static rendering]] e [[dynamic rendering]] per l'intera applicazione o per specifiche rotte. In [[Next.js]] se viene chiamata una [[dynamic function]] in una [[route]], l'intera [[route]] diventa dinamica. 
 
 ### Partial Prerendering
 
