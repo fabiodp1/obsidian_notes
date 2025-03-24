@@ -101,8 +101,6 @@ Ad es. il titolo della pagina ecc. potrebbero essere caricate subito e in seguit
 
 >NB. Per la maggior parte delle web apps moderne, la scelta è fra [[static rendering]] e [[dynamic rendering]] per l'intera applicazione o per specifiche rotte. In [[Next.js]] se viene chiamata una [[dynamic function]] in una [[route]], l'intera [[route]] diventa dinamica.
 
-### Partial Prerendering
-
 [[PPR]] ([[partial prerendering]]) è un modello di rendering che permette di combinare i benefici del rendering statico e dinamico nella stessa [[route]]:
 
 ![[Pasted image 20241216113742.png]]
@@ -120,11 +118,32 @@ Gli step da seguire per poter utilizzare questo pattern sono:
 1. Estrapolare il contenuto dinamico, ad es. creando un apposito componente.
 2. Fare il wrap di questo componente con `<Suspense>`.
 
-### Suspense
+Il [[partial prerendering]] utilizza `Suspense` e il contenuto dato alla prop `fallback` viene incluso nell'[[HTML]] iniziale con il contenuto statico, il contenuto statico così viene prerenderizzato creando il guscio statico. Il rendering del contenuto dinamico viene rimandato a quando l'utente richiederà la rotta.
 
-Il [[partial prerendering]] utilizza [[Suspense]], il contenuto dato alla prop `fallback` viene incluso nell'[[HTML]] iniziale con il contenuto statico, il contenuto statico così viene prerenderizzato creando il guscio statico. Il rendering del contenuto dinamico viene rimandato a quando l'utente richiederà la rotta.
+>Wrappare un componente in `Suspense` non lo rende di per se dinamico, piuttosto `Suspense` viene utilizzato come confine fra il contenuto statico e quello dinamico.
 
->Wrappare un componente in [[Suspense]] non lo rende di per se dinamico, piuttosto [[Suspense]] viene utilizzato come confine fra il contenuto statico e quello dinamico.
+```tsx title:page.tsx
+// Parte dinamica
+async function Meals() {
+  const meals = await getMeals();
+  return <MealsGrid meals={meals} />;
+}
+
+export default function MealsPage() {
+  return (
+    //...
+    <main>
+      // Confine fra contenuto statico e dinamico
+      <Suspense fallback={<p>Fetching meals...</p>}>
+        <Meals />
+      </Suspense>
+    </main>
+    //...
+  )
+}
+```
+
+>Dietro le quinte è quello che viene fatto tramite il file `loading.tsx`, ma in questo caso lo stiamo limitando alla singola porzione di pagina dinamica, non tutta.
 
 Per attivare il [[PPR]]:
 
@@ -148,4 +167,4 @@ export const experimental_ppr = true;
 
 ```
 
->Non c'è bisogno di cambiare il codice, basta configurare e aver usato i [[Suspense]].
+>Non c'è bisogno di cambiare il codice, basta configurare e aver usato i `Suspense`.
