@@ -137,7 +137,7 @@ export async function createInvoice(formData: FormData) {
 }
 ```
 
->**NOTA** per la validazione di stringhe di html da renderizare client-side, esiste la libreria `xss` che si assicura che l'html da parsare non sia malevolo.
+>**NOTA** per la validazione di stringhe di html da renderizare client-side, esiste la libreria `xss` che si assicura che l'[HTML](HTML.md) da parsare non sia malevolo.
 
 ---
 
@@ -155,6 +155,8 @@ export async function createInvoice(formData: FormData) {
 ```
 
 Ovviamente nell'esempio manca la gestione degli errori.
+
+>Le immagini caricate non vanno salvate a [DB](DB) ma sulla cartella `public` grazie all'API `fs`.
 
 ---
 
