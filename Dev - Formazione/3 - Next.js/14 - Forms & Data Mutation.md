@@ -196,3 +196,74 @@ export async function createInvoice(formData: FormData) {
 }
 ```
 
+---
+
+# Rotte dinamiche
+
+[[Next.js]] permette la creazione di [[dynamic route]] segment, ad es. quando ci serve una rotta che contenga un id o un endpoint creato dinamicamente in base ai dati posseduti.
+Per fare ciò basta creare un un folder wrappandone il nome con parentesi quadre:
+
+![[Pasted image 20241217142847.png]]
+
+## Leggere i parametri della route
+
+Oltre a [[searchParams]], i componenti della pagina accettano anche un prop chiamata [[params]] che può essere utilizzata per leggere i parametri della [[route]]:
+
+```tsx
+import Form from '@/app/ui/invoices/edit-form';
+import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
+import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
+ 
+export default async function Page(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+  const id = params.id;
+  const [invoice, customers] = await Promise.all([
+    fetchInvoiceById(id),
+    fetchCustomers(),
+  ]);
+  // ...
+}
+```
+
+>Nel momento in cui dobbiamo aggiornare il valore del modello ricevuto, invece di semplicemente chiamare il nostro metodo passando il valore, possiamo assicurarci che il parametro passato al [[server action]] sia #codificato utilizzando [[bind]]:
+
+```tsx
+// ...
+import { updateInvoice } from '@/app/lib/actions';
+ 
+export default function EditInvoiceForm({
+  invoice,
+  customers,
+}: {
+  invoice: InvoiceForm;
+  customers: CustomerField[];
+}) {
+  const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+ 
+  return <form action={updateInvoiceWithId}></form>;
+}
+```
+
+>Nel caso di un delete basta ad es. wrappare il pulsante per il #delete in un `<form>` tag:
+
+```tsx
+import { deleteInvoice } from '@/app/lib/actions';
+ 
+// ...
+ 
+export function DeleteInvoice({ id }: { id: string }) {
+  const deleteInvoiceWithId = deleteInvoice.bind(null, id);
+ 
+  return (
+    <form action={deleteInvoiceWithId}>
+      <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
+        <span className="sr-only">Delete</span>
+        <TrashIcon className="w-4" />
+      </button>
+    </form>
+  );
+}
+```
+
+> #security 
+>[How to Think About Security in Next.js | Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions)
