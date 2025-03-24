@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "use client",
+                "query": "suspen",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -181,13 +182,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
+    "3 - Next.js/11 - Prerendering parziale.md",
+    "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/5 - CSS Styling.md",
     "zzz_Pagine/root layout.md",
     "3 - Next.js/11 - Ricerca e paginazione.md",
-    "3 - Next.js/11 - Prerendering parziale.md",
-    "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/10 - Configurare il DB.md",
     "3 - Next.js/2 - File riservati & Custom Components.md",
     "3 - Next.js/9 - Navigazione fra pagine.md",
