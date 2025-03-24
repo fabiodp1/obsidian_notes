@@ -11,7 +11,7 @@ Inoltre offrono una soluzione efficace per la sicurezza, proteggendo contro dive
 
 # Utilizzare i `form` con le [[server action]]
 
-In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md):
+In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [12 - Forms](12%20-%20Forms.md) ):
 
 ```tsx title:my-form.tsx
 // Server Component
