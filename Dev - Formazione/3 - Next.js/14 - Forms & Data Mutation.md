@@ -139,6 +139,19 @@ export async function createInvoice(formData: FormData) {
 
 >**NOTA** per la validazione di stringhe di html da renderizare client-side, esiste la libreria `xss` che si assicura che l'[HTML](HTML.md) da parsare non sia malevolo.
 
+## Submission Status
+
+Nel momento in cui inviamo la nostra richiesta di `submit` dovremo aspettare la risposta del sever, e questo potrebbe prendere del tempo. È quindi importante anche in questo caso gestire lo status della richiesta per poter dare un feedback all'utente.
+
+Per fare questo possiamo usare un [[hook]] che utilizziamo già in vanilla [React 19+](React%2019+.md), `useFormStatus`.
+Per poterlo usare, dovrà trovarsi in un `client component`, essendo un hook, e dovrà trovarsi nel componente che utilizza il `<form>`, quindi dovremmo trasformare tutto il nostro componente in un `client component`.
+
+```tsx
+"use client"
+//...
+
+```
+
 ---
 
 # Persistere i dati
