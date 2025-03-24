@@ -92,5 +92,50 @@ export default function MealsLoadingPage() {
 }
 ```
 
-## Suspense & Streamed Responses
+## Partial Prerendering, Suspense & Streamed Responses
 
+Per la maggior parte delle web apps moderne, la scelta è fra [[static rendering]] e [[dynamic rendering]] per l'intera applicazione o per specifiche rotte. In [[Next.js]] se viene chiamata una [[dynamic function]] in una [[route]], l'intera [[route]] diventa dinamica.
+
+Però la maggior parte delle [[route]] non sono completamente statiche o dinamiche. Ad es. il layout, il titolo della pagina ecc. potrebbero essere caricate subito e in seguito gli elementi dinamici, in modo da non dover mostrare tutto solo alla fine, quando i dati dinamici sono pronti.
+
+### Partial Prerendering
+
+[[PPR]] ([[partial prerendering]]) è un modello di rendering che permette di combinare i benefici del rendering statico e dinamico nella stessa [[route]]:
+
+![[Pasted image 20241216113742.png]]
+
+Quando un utente visita una rotta:
+
+- Viene servito un guscio della rotta che include la navbar e le info sui prodotti, permettendo un caricamento iniziale più veloce.
+- Il guscio lascia buchi in cui il contenuto del carrello e i prodotti suggeriti verranno caricati asincronicamente.
+- I buchi asincroni vengono streammati in parallelo, riducendo il caricamento generale della pagina.
+
+### Suspense
+
+Il [[partial prerendering]] utilizza [[Suspense]], il fallback viene incluso nell'[[HTML]] iniziale con il contenuto statico, il contenuto statico così viene prerenderizzato creando il guscio statico. Il rendering del contenuto dinamico viene rimandato a quando l'utente richiederà la rotta.
+
+>Wrappare un componente in [[Suspense]] non lo rende di per se dinamico, piuttosto [[Suspense]] viene utilizzato come confine fra il contenuto statico e quello dinamico.
+
+Per attivare il [[PPR]]:
+
+```ts
+// next.config.ts
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  experimental: {
+    ppr: 'incremental'
+  }
+};
+export default nextConfig;
+
+
+// layout.tsx
+import SideNav from '@/app/ui/dashboard/sidenav'; 
+
+export const experimental_ppr = true; 
+// ...
+
+```
+
+>Non c'è bisogno di cambiare il codice, basta configurare e aver usato i [[Suspense]].
