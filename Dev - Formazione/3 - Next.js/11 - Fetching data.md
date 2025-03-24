@@ -86,10 +86,9 @@ In [Next.js](Next.js) la cosa viene gestita automaticamente, basta aggiungere al
 
 >Il componente ritornato da questo file verrà mostrato ogni volta che una pagina "fratello" o figlio caricherà dei dati.
 
-````tsx
-// loading.tsx
-
+```tsx title="loading.tsx" linenums="1"
 export default function MealsLoadingPage() {
   return <p>Fetching meals...</p>
 }
 ```
+
