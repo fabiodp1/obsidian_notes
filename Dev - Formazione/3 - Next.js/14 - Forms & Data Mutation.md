@@ -152,7 +152,7 @@ export default function MealsForm() {
   //...
   return (
     <form>
-      //...
+      ...
       <MealsFormSubmit />
     </form>
   )
@@ -180,23 +180,32 @@ Nelle `server action` non siamo limitati al lancio di errori o redirect, possiam
 'use server'
 
 export async function createInvoice(formData: FormData) {
-  //...
+  ...
   if(invalid) {
     return {
       message: 'Invalid input.'
     }
   }
-  //...    
+  ...
 }
 ```
 
-Per poter utilizzare questa risposta all'interno del componente, possiamo usare l'[[hook]] `useFormState`, anche questo come `useFormStatus` fornito dalla libreria `react-dom`:
+Per poter utilizzare questa risposta all'interno del componente, possiamo usare l'[[hook]] `useFormState`, anche questo come `useFormStatus` fornito dalla libreria `react-dom`.
+A questo andranno passati la `action` e l'`initialValue` che dovrà ritornare prima che sia arrivata la risposta server:
 
 ```tsx title:page.tsx
 import { useFormState } from 'react-dom';
+import { shareMeal } from '@/lib/actions'
 
 export default function ShareMealPage() {
-  const {} = useFormState();
+  const [state, formAction] = useFormState(shareMeal, {message: null});
+
+  return (
+    ...
+    <form action={formAction} ...>
+    ...
+    </form>
+  )
 }
 ```
 
