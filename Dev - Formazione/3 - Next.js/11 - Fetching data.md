@@ -20,6 +20,8 @@ import {sql} from '@vercel/postgres';
 // ...
 ```
 
+>In alternativa basta utilizzare il metodo messo a disposizione dalla libreria legata al tipo di [DB](DB) che stiamo utilizzando.
+
 ---
 
 # Request waterfalls
