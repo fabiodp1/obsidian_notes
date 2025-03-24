@@ -42,12 +42,13 @@ Dall'esempio si possono capire diverse cose:
 
 ---
 
-# Gestire gli errori 404 con `notFound`
+# Gestire gli errori 404
 
-Un altro modo per gestire gli errori è utilizzare la funzione `notFound`.
-Se `error.tsx` è utile per fare il catch degli errori, `notFound` può essere usato quando si cerca di fare il fetch di una risorsa che non esiste:
+## `notFound`
 
-```tsx
+Un altro modo per gestire gli errori è utilizzare la funzione `notFound` fornita da `next/navigation`. `notFound` può essere usato quando si vuole lanciare lo specifico errore `404`:
+
+```tsx title:page.tsx
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 import { updateInvoice } from '@/app/lib/actions';
 import { notFound } from 'next/navigation';
@@ -68,23 +69,21 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
 }
 ```
 
-Per mostrare una UI di errore all'utente, possiamo usare il file speciale `not-found.tsx`.
+## `not-found.tsx`
 
-```tsx
-// not-found.tsx
+Se `error.tsx` è utile per fare il catch-all degli errori, e mostrare una UI di errore all'utente, possiamo usare il file speciale `not-found.tsx` per fare la stessa cosa ma per l'errore `404`.
 
+```tsx title:not-found.tsx
 import Link from 'next/link';
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
  
 export default function NotFound() {
   return (
-    <main className="flex h-full flex-col items-center justify-center gap-2">
-      <FaceFrownIcon className="w-10 text-gray-400" />
-      <h2 className="text-xl font-semibold">404 Not Found</h2>
+    <main>
+      <h2>404 Not Found</h2>
       <p>Could not find the requested invoice.</p>
       <Link
         href="/dashboard/invoices"
-        className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
       >
         Go Back
       </Link>
