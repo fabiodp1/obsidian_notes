@@ -52,6 +52,8 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 
 ## Utilizzare i `form` con le [[server action]]
 
+>Gran parte del funzionamento descritto sotto, riguardante from e action, è già stato affrontato con il capitolo [12 - Forms](12%20-%20Forms.md) alla sezione `Actions`.
+
 In [React 19+](React%2019+.md) è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [12 - Forms](12%20-%20Forms.md) ):
 
 ```tsx title:my-form.tsx
@@ -172,7 +174,7 @@ export default function MealsFormSubmit() {
 }
 ```
 
-## Server Action Responses & useFormState
+## Server Action Responses & useActionState
 
 Nelle `server action` non siamo limitati al lancio di errori o redirect, possiamo anche ritornare valori, oggetti di risposta, la cui forma dipende da noi:
 
@@ -190,15 +192,20 @@ export async function createInvoice(formData: FormData) {
 }
 ```
 
-Per poter utilizzare questa risposta all'interno del componente, possiamo usare l'[[hook]] `useFormState`, anche questo come `useFormStatus` fornito dalla libreria `react-dom`.
+Per poter utilizzare questa risposta all'interno del componente, possiamo usare l'[[hook]] `useActionState` fornito da [React 19+](React%2019+.md).
+
+>Ovviamente essendo un [hook](hook), il componente che lo usa dovrà essere un `Client Component`.
+
 A questo andranno passati la `action` e l'`initialValue` che dovrà ritornare prima che sia arrivata la risposta server:
 
 ```tsx title:page.tsx
-import { useFormState } from 'react-dom';
+"use client";
+
+import { useActionState } from 'react-dom';
 import { shareMeal } from '@/lib/actions'
 
 export default function ShareMealPage() {
-  const [state, formAction] = useFormState(shareMeal, {message: null});
+  const [state, formAction] = useActionState(shareMeal, {message: null});
 
   return (
     ...
@@ -209,7 +216,14 @@ export default function ShareMealPage() {
 }
 ```
 
->Il suo funzionamento e configurazione è molto simile al `useActionState` di [React 19+](React%2019+.md).
+Come descritto nella pagina [12 - Forms](12%20-%20Forms.md), se utilizziamo la nostra action in questo modo, non riceverà più come parametro solo il `formData`, ma anche un altro parametro contenente lo state corrente:
+
+```ts title:actions.ts
+...
+export async function shareMeal(prevState, formData) {
+  ...
+}
+```
 
 ---
 
