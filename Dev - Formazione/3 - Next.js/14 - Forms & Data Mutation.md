@@ -154,7 +154,7 @@ export async function createInvoice(formData: FormData) {
 	// ...
 ```
 
-Ovviamente nell'esempio manca la gestione degli errori.
+>Ovviamente nell'esempio manca la gestione degli errori e **IMPORTANTE** i valori vanno parametrizzati, è pericoloso costruire le query con string interpolation o string concatenation.
 
 >Le immagini caricate non vanno salvate a [DB](DB) ma sulla cartella `public` grazie all'API `fs`.
 
