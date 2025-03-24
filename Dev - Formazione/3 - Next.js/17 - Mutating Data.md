@@ -1,9 +1,13 @@
 # Server Actions
+
 Le [[server action]] di [[React]] permettono di lanciare codice asincrono direttamente sul server. Eliminano la necessità di creare endpoint [[API]] per cambiare i dati, invece basta scrivere delle funzioni asincrone che verranno eseguite sul server e possono essere invocate dal client o dai [[Server Component]].
 
 Inoltre offrono una soluzione efficace per la sicurezza, proteggendo contro diversi tipi di attacco, mettendo al sicuro i dati e assicurando un accesso autorizzato. Le [[server action]] permettono questo attraverso tecniche come POST request, encrypted closure, strict input check, hashing dei messaggi di errore, restrizioni all'host, che tutti assieme collaborano per potenziare la sicurezza dell'applicativo.
 
-# Utilizzare i [[form]] con le [[server action]]
+---
+
+# Utilizzare i `form` con le [[server action]]
+
 In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto [[FromData]] nativo, contenente i dati catturati.
 
 ```tsx
@@ -23,11 +27,15 @@ export default function Page() {
 
 Un vantaggio di invocare la [[server action]] all'interno del [[Server Component]] è il potenziamento progressivo, i form funzionano anche se JS è disabilitato sul client.
 
+---
+
 # [[Next.js]] con le [[server action]]
+
 Le [[server action]] sono profondamente integrate con il sistema di [[caching]] di [[Next.js]].
 Quando un form viene confermato attraverso le [[server action]], non solo è possibile cambiare i dati, ma è anche possibile rivalidare la [[cache]] associata utilizzando [[API]] come [[revalidatePath]] e [[revalidateTag]].
 
 ## How
+
 per creare delle action:
 
 ```tsx
@@ -52,7 +60,10 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 > Normalmente in [[HTML]] all'attributo action verrebbe passato l'URL dell'endpoint dell'API di destinazione a cui inviare il form. In [[React]] invece l'attributo action è una prop speciale su cui React costruisce per dare la possibilità di invocarlo.
 > Dietro le quinte il [[server action]] crea un endpoint [[API]] di POST. Questo è il motivo per cui non c'è bisogno di creare endpoint manualmente quando utilizziamo le [[server action]].
 
+---
+
 # Estrarre i dati del form
+
 Esistono diversi modi per farlo, uno di questi è l'utilizzo del metodo `.get(name)`.
 
 ```ts
@@ -72,7 +83,10 @@ export async function createInvoice(formData: FormData) {
 >Nel caso in cui stiamo usando form con molti dati, conviene usare il metodo [[entries]]() con `Object.fromEntries()`:
 >`const rawFormData = Object.fromEntries(formData.entries())`
 
+---
+
 # Validazione e preparazione dati
+
 Prima di inviare i dati al database è necessario #validare i dati per assicurarsi che sono nel formato corretto e con i type corretti.
 
 Per la validazione dati esistono diverse opzioni, fra cui l'utilizzo di librerie come  [Zod](https://zod.dev/):
@@ -110,7 +124,10 @@ export async function createInvoice(formData: FormData) {
 }
 ```
 
+---
+
 # Persistere i dati
+
 Per persistere i dati a [[DB]] basta creare una [[query]] [[SQL]] per fare l'inserimento:
 
 ```ts
@@ -124,7 +141,10 @@ export async function createInvoice(formData: FormData) {
 
 Ovviamente nell'esempio manca la gestione degli errori.
 
+---
+
 # Revalidate and redirect
+
 [[Next.js]] ha un [[client-side]] [[router cache]] che mantiene nel browser dell'utente i segmenti della [[route]] per un certo periodo di tempo.
 Assieme al [[prefetching]], questa [[cache]] si assicura che gli utenti possano muoversi fra rotte in maniera veloce, limitando al minimo le richieste fatte al server.
 
@@ -175,74 +195,4 @@ export async function createInvoice(formData: FormData) {
   redirect('/dashboard/invoices');
 }
 ```
-
-# Rotte dinamiche
-[[Next.js]] permette la creazione di [[dynamic route]] segment, ad es. quando ci serve una rotta che contenga un id o un endpoint creato dinamicamente in base ai dati posseduti.
-Per fare ciò basta creare un un folder wrappandone il nome con parentesi quadre:
-
-![[Pasted image 20241217142847.png]]
-
-## Leggere i parametri della route
-Oltre a [[searchParams]], i componenti della pagina accettano anche un prop chiamata [[params]] che può essere utilizzata per leggere i parametri della [[route]]:
-
-```tsx
-import Form from '@/app/ui/invoices/edit-form';
-import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
-import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
- 
-export default async function Page(props: { params: Promise<{ id: string }> }) {
-  const params = await props.params;
-  const id = params.id;
-  const [invoice, customers] = await Promise.all([
-    fetchInvoiceById(id),
-    fetchCustomers(),
-  ]);
-  // ...
-}
-```
-
->Nel momento in cui dobbiamo aggiornare il valore del modello ricevuto, invece di semplicemente chiamare il nostro metodo passando il valore, possiamo assicurarci che il parametro passato al [[server action]] sia #codificato utilizzando [[bind]]:
-
-```tsx
-// ...
-import { updateInvoice } from '@/app/lib/actions';
- 
-export default function EditInvoiceForm({
-  invoice,
-  customers,
-}: {
-  invoice: InvoiceForm;
-  customers: CustomerField[];
-}) {
-  const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
- 
-  return <form action={updateInvoiceWithId}></form>;
-}
-```
-
->Nel caso di un delete basta ad es. wrappare il pulsante per il #delete in un `<form>` tag:
-
-```tsx
-import { deleteInvoice } from '@/app/lib/actions';
- 
-// ...
- 
-export function DeleteInvoice({ id }: { id: string }) {
-  const deleteInvoiceWithId = deleteInvoice.bind(null, id);
- 
-  return (
-    <form action={deleteInvoiceWithId}>
-      <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
-        <span className="sr-only">Delete</span>
-        <TrashIcon className="w-4" />
-      </button>
-    </form>
-  );
-}
-```
-
-> #security 
->[How to Think About Security in Next.js | Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions)
-
-
 

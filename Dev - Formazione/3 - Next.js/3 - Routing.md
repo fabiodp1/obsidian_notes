@@ -66,3 +66,47 @@ export default function BlogPostPage( { params } ) {
 ```
 
 >Per poter accedere ai parametri della `route`, [Next.js](Next.js) passerà automaticamente delle prop al nostro componente che potremo utilizzare per accedervi, non ci sarà bisogno di farlo manualmente.
+
+>Nel momento in cui dobbiamo aggiornare il valore del modello ricevuto, invece di semplicemente chiamare il nostro metodo passando il valore, possiamo assicurarci che il parametro passato al [[server action]] sia #codificato utilizzando [[bind]]:
+
+```tsx
+// ...
+import { updateInvoice } from '@/app/lib/actions';
+ 
+export default function EditInvoiceForm({
+  invoice,
+  customers,
+}: {
+  invoice: InvoiceForm;
+  customers: CustomerField[];
+}) {
+  const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+ 
+  return <form action={updateInvoiceWithId}></form>;
+}
+```
+
+>Nel caso di un delete basta ad es. wrappare il pulsante per il #delete in un `<form>` tag:
+
+```tsx
+import { deleteInvoice } from '@/app/lib/actions';
+ 
+// ...
+ 
+export function DeleteInvoice({ id }: { id: string }) {
+  const deleteInvoiceWithId = deleteInvoice.bind(null, id);
+ 
+  return (
+    <form action={deleteInvoiceWithId}>
+      <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
+        <span className="sr-only">Delete</span>
+        <TrashIcon className="w-4" />
+      </button>
+    </form>
+  );
+}
+```
+
+> #security 
+>[How to Think About Security in Next.js | Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions)
+
