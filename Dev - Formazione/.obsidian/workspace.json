@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/100 - Link utili.md",
+                "file": "3 - Next.js/13 - Gestione Errori.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "100 - Link utili"
+              "title": "13 - Gestione Errori"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/100 - Link utili.md",
+                "file": "3 - Next.js/13 - Gestione Errori.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 100 - Link utili"
+              "title": "Struttura di 13 - Gestione Errori"
             }
           },
           {
@@ -183,6 +183,7 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "3 - Next.js/100 - Link utili.md",
     "3 - Next.js/19 - Metadati.md",
     "3 - Next.js/18 - Autenticazione.md",
     "3 - Next.js/17 - Mutating Data.md",
@@ -208,7 +209,6 @@
     "zzz_Pagine/Senza nome.md",
     "zzz_Pagine/colocate.md",
     "2 - React/14 - Lazy loading.md",
-    "2 - React/15 - Amplify & Cognito.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",

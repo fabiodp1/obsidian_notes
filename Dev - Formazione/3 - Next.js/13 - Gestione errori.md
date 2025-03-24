@@ -35,10 +35,14 @@ export default function Error({
 ```
 
 Dall'esempio si possono capire diverse cose:
+
 - `'use client'`: [[error.tsx]] deve essere un [[Client Component]].
 - accetta 2 prop:
 	- `error`: istanza dell'oggetto JS nativo `Error`.
 	- `reset`: una funzione per fare il reset del limitatore degli errori. Quando eseguita, la funzione cercherà di re-renderizzare il [[route segment]].
+
+---
+
 # Gestire gli errori 404 con [[notFound]]
 Un altro modo per gestire gli errori è utilizzare la funzione [[notFound]].
 Se [[error.tsx]] è utile per fare il catch degli errori, [[notFound]] può essere usato quando si cerca di fare il fetch di una risorsa che non esiste:
@@ -90,6 +94,8 @@ export default function NotFound() {
 ```
 
 >[[notFound]] avrà precedenza su [[error.tsx]].
+
+---
 
 # Altre risorse per approfondire
 
