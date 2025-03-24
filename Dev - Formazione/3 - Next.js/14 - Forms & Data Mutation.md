@@ -219,7 +219,12 @@ export default function ShareMealPage() {
 Come descritto nella pagina [12 - Forms](12%20-%20Forms.md), se utilizziamo la nostra action in questo modo, non riceverà più come parametro solo il `formData`, ma anche un altro parametro contenente lo state corrente:
 
 ```ts title:actions.ts
-...
+// Before
+export async function shareMeal(formData) {
+  ...
+}
+
+// After
 export async function shareMeal(prevState, formData) {
   ...
 }
@@ -251,7 +256,8 @@ export async function createInvoice(formData: FormData) {
 [[Next.js]] ha un [[client-side]] [[router cache]] che mantiene nel browser dell'utente i segmenti della [[route]] per un certo periodo di tempo.
 Assieme al [[prefetching]], questa [[cache]] si assicura che gli utenti possano muoversi fra rotte in maniera veloce, limitando al minimo le richieste fatte al server.
 
-Se volessimo pulire questa cache, ad es. perché vogliamo che i dati mostrati vengano aggiornati, possiamo utilizzare la funzione di Next.js [[revalidatePath]]:
+Se volessimo pulire questa cache, ad es. perché vogliamo che i dati mostrati vengano aggiornati, possiamo utilizzare la funzione di Next.js [[revalidatePath]].
+
 
 ```tsx
 'use server';
