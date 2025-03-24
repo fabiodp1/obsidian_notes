@@ -253,11 +253,12 @@ export async function createInvoice(formData: FormData) {
 
 # Revalidate and Redirect
 
-[[Next.js]] ha un [[client-side]] [[router cache]] che mantiene nel browser dell'utente i segmenti della [[route]] per un certo periodo di tempo.
-Assieme al [[prefetching]], questa [[cache]] si assicura che gli utenti possano muoversi fra rotte in maniera veloce, limitando al minimo le richieste fatte al server.
+[[Next.js]] ha un sistema di caching `client-side`, mantiene nel browser dell'utente i segmenti della [[route]] per un certo periodo di tempo.
+Assieme al `prefetching`, questa `cache` si assicura che gli utenti possano muoversi fra rotte in maniera veloce, limitando al minimo le richieste fatte al server.
 
-Se volessimo pulire questa cache, ad es. perché vogliamo che i dati mostrati vengano aggiornati, possiamo utilizzare la funzione di Next.js [[revalidatePath]].
+Se volessimo pulire questa cache, ad es. perché vogliamo che i dati mostrati vengano aggiornati, possiamo utilizzare la funzione di Next.js `revalidatePath`.
 
+>Per approfondire vedi [15 - Production Build & Caching](15%20-%20Production%20Build%20&%20Caching.md).
 
 ```tsx
 'use server';
