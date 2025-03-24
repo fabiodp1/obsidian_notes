@@ -144,12 +144,31 @@ export async function createInvoice(formData: FormData) {
 Nel momento in cui inviamo la nostra richiesta di `submit` dovremo aspettare la risposta del sever, e questo potrebbe prendere del tempo. È quindi importante anche in questo caso gestire lo status della richiesta per poter dare un feedback all'utente.
 
 Per fare questo possiamo usare un [[hook]] che utilizziamo già in vanilla [React 19+](React%2019+.md), `useFormStatus`.
-Per poterlo usare, dovrà trovarsi in un `client component`, essendo un hook, e dovrà trovarsi nel componente che utilizza il `<form>`, quindi dovremmo trasformare tutto il nostro componente in un `client component`.
+Per poterlo usare, dovrà trovarsi in un `client component`, essendo un hook, *INOLTRE* dovrà trovarsi nel componente che utilizza il `<form>` o un suo sottocomponente. 
+Quindi per evitare di dovere trasformare tutto il componente (contenente il form) in un `client component`, possiamo estrapolare la parte che ci interessa e che dovrà utilizzare lo stato, e farne un componente:
 
 ```tsx
-"use client"
-//...
+// MealsForm.tsx (Server Component)
+export default function MealsForm() {
+  //...
+  return (
+    <form>
+      //...
+      <MealsFormSubmit />
+    </form>
+  )
+}
 
+// MealsFormSubmit.tsx (Client Component)
+export default function MealsFormSubmit() {
+  const { pending } = useFormStatus();
+
+  return (
+	<button disabled={pending}>
+	  {pending ? 'Submitting...' : 'Share Meal'}
+	</button>
+  )
+}
 ```
 
 ---
