@@ -30,3 +30,8 @@ revalidatePath('/meals', 'layout');    // di default è 'page'
 
 redirect('/meals');
 ```
+
+---
+
+# Production & Images
+
