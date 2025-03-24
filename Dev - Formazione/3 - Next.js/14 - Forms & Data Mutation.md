@@ -58,9 +58,8 @@ In [React 19+](React%2019+.md) è possibile utilizzare l'attributo [[action]] ne
 // Server Component
 export default function MyForm() {
   // Action
-  async function create(formData: FormData) {
+  async function handelSubmit(formData: FormData) {
     'use server';
- 
     // Logic to mutate data...
   }
  
@@ -160,6 +159,8 @@ export default function MealsForm() {
 }
 
 // MealsFormSubmit.tsx (Client Component)
+import { useFormStatus } from 'react-dom';
+
 export default function MealsFormSubmit() {
   const { pending } = useFormStatus();
 
@@ -168,6 +169,34 @@ export default function MealsFormSubmit() {
 	  {pending ? 'Submitting...' : 'Share Meal'}
 	</button>
   )
+}
+```
+
+## Server Action Responses & useFormState
+
+Nelle `server action` non siamo limitati al lancio di errori o redirect, possiamo anche ritornare valori, oggetti di risposta, la cui forma dipende da noi:
+
+```ts title:actions.ts
+'use server'
+
+export async function createInvoice(formData: FormData) {
+  //...
+  if(invalid) {
+    return {
+      message: 'Invalid input.'
+    }
+  }
+  //...    
+}
+```
+
+Per poter utilizzare questa risposta all'interno del componente, possiamo usare l'[[hook]] `useFormState`, anche questo come `useFormStatus` fornito dalla libreria `react-dom`:
+
+```tsx title:page.tsx
+import { useFormState } from 'react-dom';
+
+export default function ShareMealPage() {
+  const {} = useFormState();
 }
 ```
 
