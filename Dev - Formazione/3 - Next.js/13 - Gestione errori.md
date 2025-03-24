@@ -18,10 +18,9 @@ export default function Error({
   }, [error]);
  
   return (
-    <main className="flex h-full flex-col items-center justify-center">
-      <h2 className="text-center">Something went wrong!</h2>
+    <main>
+      <h2>Something went wrong!</h2>
       <button
-        className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
         onClick={
           // Attempt to recover by trying to re-render the invoices route
           () => reset()
@@ -36,7 +35,7 @@ export default function Error({
 
 Dall'esempio si possono capire diverse cose:
 
-- `'use client'`: `error.tsx` deve essere un [[Client Component]].
+- `'use client'`: `error.tsx` deve essere un [[Client Component]]. Infatti non permette solo di fare il catch degli errori lato server, ma anche client.
 - accetta 2 prop:
 	- `error`: istanza dell'oggetto JS nativo `Error`.
 	- `reset`: una funzione per fare il reset del limitatore degli errori. Quando eseguita, la funzione cercherà di re-renderizzare il [[route segment]].
