@@ -202,7 +202,7 @@ export default function ShareMealPage() {
 
   return (
     ...
-    <form action={formAction} ...>
+    <form action={ formAction } ...>
     ...
     </form>
   )
