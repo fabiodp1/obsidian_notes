@@ -38,9 +38,7 @@ In questo caso abbiamo bisogno di rotte dinamiche, definite una volta sola, ma c
               |__page.tsx
 ```
 
-```tsx
-// /app/blog/page.tsx
-
+```tsx title:/app/blog/page.tsx
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -54,9 +52,7 @@ export default function BlogPage() {
 }
 ```
 
-```tsx
-// /app/blog/[id]/page.tsx
-
+```tsx title:/app/blog/[id]/page.tsx
 import Link from 'next/link';
 
 export default function BlogPostPage( { params } ) {
