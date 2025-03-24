@@ -41,7 +41,7 @@ const {
 
 Nell'esempio bisogna aspettare che `fetchRevenue` venga eseguito prima che `fetchLatestInvoices` possa andare e così via.
 
->Questa situazione non è necessariamente cattiva, ci sono casi in cui vogliamo che ci sia una [[request waterfall]] perchè vogliamo prima validare dei dati per decidere se proseguire con la chiamata successiva. Ma ci sono casi in cui non è intenzionale e può creare problemi di performance.
+>Questa situazione non è necessariamente cattiva, ci sono casi in cui vogliamo che ci sia una [[request waterfall]] perché vogliamo prima validare dei dati per decidere se proseguire con la chiamata successiva. Ma ci sono casi in cui non è intenzionale e può creare problemi di performance.
 
 ---
 
