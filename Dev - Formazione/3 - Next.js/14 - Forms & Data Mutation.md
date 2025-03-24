@@ -13,9 +13,9 @@ Inoltre offrono una soluzione efficace per la sicurezza, proteggendo contro dive
 
 In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md):
 
-```tsx
+```tsx title:my-form.tsx
 // Server Component
-export default function Page() {
+export default function MyForm() {
   // Action
   async function create(formData: FormData) {
     'use server';
@@ -28,8 +28,7 @@ export default function Page() {
 }
 ```
 
-
-Un vantaggio di invocare la [[server action]] all'interno del [[Server Component]] è il potenziamento progressivo, i form funzionano anche se JS è disabilitato sul client.
+Un vantaggio di invocare la [[server action]] all'interno del [[Server Component]] è il potenziamento progressivo, infatti essendo eseguito tutto sul server, i form funzionano anche se JS è disabilitato sul client.
 
 ---
 
