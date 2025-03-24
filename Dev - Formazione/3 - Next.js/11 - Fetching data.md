@@ -99,7 +99,7 @@ Il problema con l'utilizzo della pagina `loading.tsx` è che ogni qual volta vie
 la maggior parte delle [[route]] non sono completamente statiche o dinamiche. 
 Ad es. il titolo della pagina ecc. potrebbero essere caricate subito e in seguito gli elementi dinamici, in modo da non dover mostrare tutto solo alla fine, quando i dati dinamici sono pronti.
 
->NB. Per la maggior parte delle web apps moderne, la scelta è fra [[static rendering]] e [[dynamic rendering]] per l'intera applicazione o per specifiche rotte. In [[Next.js]] se viene chiamata una [[dynamic function]] in una [[route]], l'intera [[route]] diventa dinamica. 
+>NB. Per la maggior parte delle web apps moderne, la scelta è fra [[static rendering]] e [[dynamic rendering]] per l'intera applicazione o per specifiche rotte. In [[Next.js]] se viene chiamata una [[dynamic function]] in una [[route]], l'intera [[route]] diventa dinamica.
 
 ### Partial Prerendering
 
@@ -113,9 +113,16 @@ Quando un utente visita una rotta:
 - Il guscio lascia buchi in cui il contenuto del carrello e i prodotti suggeriti verranno caricati asincronicamente.
 - I buchi asincroni vengono streammati in parallelo, riducendo il caricamento generale della pagina.
 
+>**NB.** con questo pattern non sarà più necessario il componente `loading.tsx`.
+
+Gli step da seguire per poter utilizzare questo pattern sono:
+
+1. Estrapolare il contenuto dinamico, ad es. creando un apposito componente.
+2. Fare il wrap di questo componente con `<Suspense>`.
+
 ### Suspense
 
-Il [[partial prerendering]] utilizza [[Suspense]], il fallback viene incluso nell'[[HTML]] iniziale con il contenuto statico, il contenuto statico così viene prerenderizzato creando il guscio statico. Il rendering del contenuto dinamico viene rimandato a quando l'utente richiederà la rotta.
+Il [[partial prerendering]] utilizza [[Suspense]], il contenuto dato alla prop `fallback` viene incluso nell'[[HTML]] iniziale con il contenuto statico, il contenuto statico così viene prerenderizzato creando il guscio statico. Il rendering del contenuto dinamico viene rimandato a quando l'utente richiederà la rotta.
 
 >Wrappare un componente in [[Suspense]] non lo rende di per se dinamico, piuttosto [[Suspense]] viene utilizzato come confine fra il contenuto statico e quello dinamico.
 
