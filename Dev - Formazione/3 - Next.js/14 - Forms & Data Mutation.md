@@ -48,7 +48,9 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 
 ---
 
-# Utilizzare i `form` con le [[server action]]
+# Form
+
+## Utilizzare i `form` con le [[server action]]
 
 In [React 19+](React%2019+.md) è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [12 - Forms](12%20-%20Forms.md) ):
 
@@ -72,9 +74,7 @@ export default function MyForm() {
 
 Un vantaggio di invocare la `server action` è che essendo eseguito tutto sul server, i form funzionano anche se JS è disabilitato sul client.
 
----
-
-# Estrarre i dati del form
+## Estrarre i dati del form
 
 Esistono diversi modi per farlo, uno di questi è l'utilizzo del metodo `.get(<inputName>)`.
 
@@ -98,11 +98,9 @@ export async function createInvoice(formData: FormData) {
 const rawFormData = Object.fromEntries(formData.entries())
 ```
 
----
+## Validazione e preparazione dati
 
-# Validazione e preparazione dati
-
-Prima di inviare i dati al database è necessario #validare i dati per assicurarsi che sono nel formato corretto e con i type corretti.
+Prima di inviare i dati al database è necessario #validare i dati per assicurarsi che siano nel formato corretto e con i type corretti.
 
 Per la validazione dati esistono diverse opzioni, fra cui l'utilizzo di librerie come  [Zod](https://zod.dev/):
 
