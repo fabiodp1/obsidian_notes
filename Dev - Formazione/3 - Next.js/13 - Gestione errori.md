@@ -44,9 +44,34 @@ Dall'esempio si possono capire diverse cose:
 
 # Gestire gli errori 404
 
+## `not-found.tsx`
+
+Se `error.tsx` è utile per fare il catch-all degli errori e mostrare una UI di errore all'utente, possiamo usare il file speciale `not-found.tsx` per fare la stessa cosa ma per l'errore `404`.
+
+```tsx title:not-found.tsx
+import Link from 'next/link';
+import { FaceFrownIcon } from '@heroicons/react/24/outline';
+ 
+export default function NotFound() {
+  return (
+    <main>
+      <h2>404 Not Found</h2>
+      <p>Could not find the requested invoice.</p>
+      <Link
+        href="/dashboard/invoices"
+      >
+        Go Back
+      </Link>
+    </main>
+  );
+}
+```
+
+>`not-found.tsx` avrà precedenza su `error.tsx`.
+
 ## `notFound`
 
-Un altro modo per gestire gli errori è utilizzare la funzione `notFound` fornita da `next/navigation`. `notFound` può essere usato quando si vuole lanciare lo specifico errore `404`:
+Un altro modo per gestire gli errori è utilizzare la funzione `notFound` fornita da `next/navigation`. `notFound` può essere usato quando si vuole lanciare lo specifico errore `404`, questo cercherà il componente `not-found.tsx` più vicino:
 
 ```tsx title:page.tsx
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
@@ -68,31 +93,6 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   // ...
 }
 ```
-
-## `not-found.tsx`
-
-Se `error.tsx` è utile per fare il catch-all degli errori, e mostrare una UI di errore all'utente, possiamo usare il file speciale `not-found.tsx` per fare la stessa cosa ma per l'errore `404`.
-
-```tsx title:not-found.tsx
-import Link from 'next/link';
-import { FaceFrownIcon } from '@heroicons/react/24/outline';
- 
-export default function NotFound() {
-  return (
-    <main>
-      <h2>404 Not Found</h2>
-      <p>Could not find the requested invoice.</p>
-      <Link
-        href="/dashboard/invoices"
-      >
-        Go Back
-      </Link>
-    </main>
-  );
-}
-```
-
->`notFound` avrà precedenza su `error.tsx`.
 
 ---
 
