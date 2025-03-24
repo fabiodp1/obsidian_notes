@@ -3,43 +3,31 @@
 Le `server action` di [[React]] permettono di lanciare codice asincrono direttamente sul server. Eliminano la necessità di creare endpoint [[API]] per cambiare i dati.
 Basta scrivere delle funzioni asincrone che verranno eseguite sul server e possono essere invocate dal client o dai [[Server Component]].
 
->Per fare ciò basta inserire il tag `"use server"` all'interno del nostro handler, all'interno del `Server Component`, per trasformarlo in una `server action`.
-
 Inoltre offrono una soluzione efficace per la sicurezza, proteggendo contro diversi tipi di attacco, mettendo al sicuro i dati e assicurando un accesso autorizzato. Le [[server action]] permettono questo attraverso tecniche come `POST` request, encrypted closure, strict input check, hashing dei messaggi di errore, restrizioni all'host, che tutti assieme collaborano per potenziare la sicurezza dell'applicativo.
 
----
+>Le [[server action]] sono profondamente integrate con il sistema di [[caching]] di [[Next.js]].
+>Quando un form viene confermato attraverso le [[server action]], non solo è possibile cambiare i dati, ma è anche possibile rivalidare la [[cache]] associata utilizzando [[API]] come [[revalidatePath]] e [[revalidateTag]].
 
-# Utilizzare i `form` con le [[server action]]
+## How
 
-In [[React]] è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [12 - Forms](12%20-%20Forms.md) ):
+Per crearle basta inserire il tag `"use server"` all'interno del nostro handler, all'interno del `Server Component`, per trasformarlo in una `server action`:
 
 ```tsx title:my-form.tsx
 // Server Component
 export default function MyForm() {
   // Action
-  async function create(formData: FormData) {
-    'use server';
+  async function handleSubmit(formData: FormData) {
+    'use server';                                      // <===
  
     // Logic to mutate data...
   }
- 
-  // Invoke the action using the "action" attribute
-  return <form action={create}>...</form>;
-}
+  //...
 ```
 
-Un vantaggio di invocare la [[server action]] all'interno del [[Server Component]] è il potenziamento progressivo, infatti essendo eseguito tutto sul server, i form funzionano anche se JS è disabilitato sul client.
+>Non è possibile usare una `server action` dichiarata all'interno di un `Client Component`.
 
----
-
-# [[Next.js]] con le [[server action]]
-
-Le [[server action]] sono profondamente integrate con il sistema di [[caching]] di [[Next.js]].
-Quando un form viene confermato attraverso le [[server action]], non solo è possibile cambiare i dati, ma è anche possibile rivalidare la [[cache]] associata utilizzando [[API]] come [[revalidatePath]] e [[revalidateTag]].
-
-## How
-
-per creare delle action:
+Se vogliamo esportare tutte le nostre action da un file `.ts` per poi poterle riutilizzare sia su `Server` che `Client` components, basta mettere in cima al file il flag `"use server"`.
+In questa maniera le funzioni esportate sono marcate come `server action` e possono essere usate sia da componenti Client che Server:
 
 ```tsx
 // actions.ts
@@ -58,10 +46,31 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
     {...}
 ```
 
-- [[use server]]: le funzioni esportate sono marcate come Server Actions e usate da componenti Client e Server. E' anche possibile scrivere [[server action]] direttamente nei [[Server Component]] aggiungendo '[[use server]]' all'interno della action.
+---
 
-> Normalmente in [[HTML]] all'attributo action verrebbe passato l'URL dell'endpoint dell'API di destinazione a cui inviare il form. In [[React]] invece l'attributo action è una prop speciale su cui React costruisce per dare la possibilità di invocarlo.
-> Dietro le quinte il [[server action]] crea un endpoint [[API]] di POST. Questo è il motivo per cui non c'è bisogno di creare endpoint manualmente quando utilizziamo le [[server action]].
+# Utilizzare i `form` con le [[server action]]
+
+In [React 19+](React%2019+.md) è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [12 - Forms](12%20-%20Forms.md) ):
+
+```tsx title:my-form.tsx
+// Server Component
+export default function MyForm() {
+  // Action
+  async function create(formData: FormData) {
+    'use server';
+ 
+    // Logic to mutate data...
+  }
+ 
+  // Invoke the action using the "action" attribute
+  return <form action={create}>...</form>;
+}
+```
+
+> Normalmente all'attributo action verrebbe passato l'URL dell'endpoint dell'API di destinazione a cui inviare il form. In [[React]] invece l'attributo action è una prop speciale su cui React costruisce per dare la possibilità di invocarlo.
+> Dietro le quinte la `server action` crea un endpoint [[API]] di POST. Questo è il motivo per cui non c'è bisogno di creare endpoint manualmente quando utilizziamo le `server action`.
+
+Un vantaggio di invocare la `server action` è che essendo eseguito tutto sul server, i form funzionano anche se JS è disabilitato sul client.
 
 ---
 
