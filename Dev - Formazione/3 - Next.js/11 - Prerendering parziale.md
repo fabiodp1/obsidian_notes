@@ -22,7 +22,7 @@ Quando un utente visita una rotta:
 
 Il [[partial prerendering]] utilizza [[Suspense]], il fallback viene incluso nell'[[HTML]] iniziale con il contenuto statico, il contenuto statico così viene prerenderizzato creando il guscio statico. Il rendering del contenuto dinamico viene rimandato a quando l'utente richiederà la rotta.
 
->Wrappere un componente in [[Suspense]] non lo rende di per se dinamico, piuttosto [[Suspense]] viene utilizzato come confine fra il contenuto statico e quello dinamico.
+>Wrappare un componente in [[Suspense]] non lo rende di per se dinamico, piuttosto [[Suspense]] viene utilizzato come confine fra il contenuto statico e quello dinamico.
 
 Per attivare il [[PPR]]:
 

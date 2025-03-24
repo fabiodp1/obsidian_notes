@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/11 - Fetching data.md",
+                "file": "3 - Next.js/11 - Prerendering parziale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - Fetching data"
+              "title": "11 - Prerendering parziale"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/11 - Fetching data.md",
+                "file": "3 - Next.js/11 - Prerendering parziale.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 11 - Fetching data"
+              "title": "Struttura di 11 - Prerendering parziale"
             }
           },
           {
@@ -182,10 +181,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4bad5ba6f5ce048b",
+  "active": "0a96076e09fecebb",
   "lastOpenFiles": [
-    "3 - Next.js/11 - Prerendering parziale.md",
     "3 - Next.js/11 - Fetching data.md",
+    "3 - Next.js/11 - Prerendering parziale.md",
     "3 - Next.js/5 - CSS Styling.md",
     "zzz_Pagine/root layout.md",
     "3 - Next.js/11 - Ricerca e paginazione.md",
