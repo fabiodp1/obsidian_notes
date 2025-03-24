@@ -160,12 +160,12 @@ export async function createInvoice(formData: FormData) {
 
 ---
 
-# Revalidate and redirect
+# Revalidate and Redirect
 
 [[Next.js]] ha un [[client-side]] [[router cache]] che mantiene nel browser dell'utente i segmenti della [[route]] per un certo periodo di tempo.
 Assieme al [[prefetching]], questa [[cache]] si assicura che gli utenti possano muoversi fra rotte in maniera veloce, limitando al minimo le richieste fatte al server.
 
-Se volessimo pulire questa cache, ad es. perchè vogliamo che i dati mostrati vengano aggiornati, possiamo utilizzare la funzione di Next.js [[revalidatePath]]:
+Se volessimo pulire questa cache, ad es. perché vogliamo che i dati mostrati vengano aggiornati, possiamo utilizzare la funzione di Next.js [[revalidatePath]]:
 
 ```tsx
 'use server';
@@ -185,17 +185,14 @@ export async function createInvoice(formData: FormData) {
   const amountInCents = amount * 100;
   const date = new Date().toISOString().split('T')[0];
  
-  await sql`
-    INSERT INTO invoices (customer_id, amount, status, date)
-    VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
-  `;
+  await sql`...`;
  
   revalidatePath('/dashboard/invoices');
 }
 ```
 
 Nell'es. una volta che il db è stato aggiornato, la path `/dashboard/invoices` sarà rivalidata e dati freschi verranno fetchati dal server.
-Una volta fatto ciò possiamo fare il redirect alla pagina precedente, utilizzando la funzione [[redirect]]:
+Una volta fatto ciò possiamo fare il `redirect` alla pagina precedente, utilizzando la funzione `redirect()` della libreria `next/navigation`:
 
 ```tsx
 'use server';
