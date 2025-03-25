@@ -125,3 +125,27 @@ In questa maniera si assicurerà che l'animazione definita dall'`exit` venga ese
   Add Challenge
 </motion.button>
 ```
+
+## Riutilizzare gli animation state
+
+Poiché alla fine stiamo passando degli oggetti alle prop di `motion`, potremmo anche metterli prima in una variabile e riutilizzarli.
+Ma esiste un modo migliore per farlo, utilizzando la prop `variants`, che prende un oggetto in cui possiamo settare le key che preferiamo:
+
+```tsx title:MyModal.tsx
+export default function Modal({ title, children, onClose }) {
+  return createPortal(
+    <>
+      <div className="backdrop" onClick={onClose} />
+      <motion.dialog open className="modal"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 30 }}
+	  >
+        <h2>{title}</h2>
+        {children}
+      </motion.dialog>
+    </>,
+    document.getElementById('modal');
+  )
+}
+```
