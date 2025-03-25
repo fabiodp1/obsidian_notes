@@ -345,6 +345,9 @@ Per gestire dei cambiamenti nel `layout`, ad es. la rimozione di un elemento da 
 </motion.li>
 ```
 
+>Bisogna tenere in considerazione che se ci sono elementi all'interno che compaiono e scompaiono i maniera condizionale (es. l'apertura di una section tramite chevron), la loro comparsa potrebbe essere registrata come cambio del layout (per il cambio ad es. di `height`), creando strane animaizioni.
+
+Per risolvere il problema conviene usare `AnimatePresence` e configurare le prop di animazione anche per questi elementi, in modo che vengano considerati nel flusso di animazione.
 ## AnimatePresence
 
 Come abbiamo visto prima, il componente `AnimatePresece` ci permette di gestire l'animazione di comparsa e scomparsa di componenti gestiti da valori condizionali. Possono esserci casi in cui i componenti wrappati da `AnimatePresence` siano a diversi e che ci possano essere altri `AnimatePresence` innestati fra loro con al loro interno elementi `motion`. In questo caso è **molto importante** mettere ad ogni elemento una `key` per fare in modo che vengano gestiti correttamente.
