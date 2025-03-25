@@ -428,16 +428,19 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function WelcomePage() {
   const { scrollY, scrollX, scrollYProgress, ... } = useScroll();
+  
   // scrollY sono il numero di pixel scrollati
   // Il secondo parametro rappresenta i breakpoint da utilizzare per la trasformazione degli oggetti
   // Il terzo rappresenta i valori a cui i corrispondenti breakpoint andrebbero trasformati
-  const opacityImg = useTransform(scrollY, [0, 200, 300, 500], [1, 0.5, 0.5, 0] )
+  const opacityImg = useTransform(scrollY, [0, 200, 300, 500], [1, 0.5, 0.5, 0] );
+
+  // Alla stessa maniera possiamo gestire la posizione degli elementi
 
   return (
     <>
       <header>
-        <motion.div animate>
-          
+        <motion.div>
+         ...
         </motion.div>
         <motion.img 
           // Style viene controllato da motion
