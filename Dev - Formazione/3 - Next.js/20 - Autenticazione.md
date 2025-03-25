@@ -1,7 +1,9 @@
-# [[NextAuth.js]]
+# NextAuth.js
+
 Normalmente per aggiungere autenticazione ad una app [[Next.js]] viene utilizzato [NextAuth.js](https://nextjs.authjs.dev/). Estrae gran parte della complessità nella gestione delle sessioni, sign-in e sign-out e altri aspetti dell'autenticazione.
 
 ## Configurazione
+
 Dopo aver installato [[Next.js]] creare una chiave che verrà usata per criptare i cookies, assicurando la sicurezza delle sessioni utente:
 
 ```terminal
@@ -28,7 +30,8 @@ export const authConfig = {
 
 L'opzione `pages` può essere usata per specificare la [[route]] per il sign-in sign-out e le pagine di errore. Non è richiesto, ma aggiungendo il campo `signIn: '/login'` l'utente verrà rediretto alla pagina di login custom e non quella di default di [[NextAuth.js]].
 
-## Proteggere le [[route]] con i middleware [[Next.js]]
+## Proteggere le route con i middleware [[Next.js]]
+
 Altro cosa da fare è aggiungere della logica per evitare che l'utente acceda a pagine a cui non è autorizzati se non loggato.
 
 ```ts
@@ -77,6 +80,7 @@ Viene iniazializzato [[NextAuth.js]] con l'[[authConfig]] e viene esportata la p
 >Il vantaggio di utilizzare il middleware è che le rotte protette non inizieranno neanche a renderizzare fino a quando il middleware verifica l'autenticazione, aumentando sia la sicurezza che le performance dell'applicativo.
 
 ## Password hashing
+
 È buona pratica fare il [[password hashing]] prima di salvarle nel [[DB]]. Una libreria molto utilizzata per farlo è [[bcrypt]], ma poiché fa affidamento sulle [[API]] di [[Node.js]] non disponibili in [[Next.js Middleware]] bisognerà creare un altro file per utilizzarlo, non potendolo usare nello stesso del middleware:
 
 ```ts
@@ -89,6 +93,7 @@ export const { auth, signIn, signOut } = NextAuth({
 ```
 
 ## Aggiungere il provider delle credenziali
+
 È una lista in cui vengono passate le opzioni per il login come ad es. Google o GitHub. In questo caso useremo il semplice [Credentials provider](https://authjs.dev/getting-started/providers/credentials-tutorial) che permette il login tramite username e password.
 
 ```ts
@@ -105,6 +110,7 @@ export const { auth, signIn, signOut } = NextAuth({
 >È consigliato normalmente di utilizzare metodi di autenticazione più sicuri, come provider [[OAuth]] o email, per le varie possibilità consultare i [NextAuth.js docs](https://authjs.dev/getting-started/providers).
 
 ## Aggiungere una funzionalità di sign-in
+
 È possibile utilizzare la funzione `authorize` per gestire la logica di #autenticazione, un po come per le [[server action]], è possibile usare [[Zod]] per validare la email e password prima di controllare se l'utente esiste a [[DB]]:
 
 ```tsx
@@ -287,7 +293,8 @@ export default function LoginForm() {
 ```
 
 ## Aggiungere la funzionalità di logout
-Per fare ciò a questo punto basta chiamare la funzione [[signOut]] esportata sempre dal file `auth.ts`:
+
+Per fare ciò a questo punto basta chiamare la funzione `signOut` esportata sempre dal file `auth.ts`:
 
 ```tsx
 import Link from 'next/link';
