@@ -11,17 +11,14 @@
             "id": "0a96076e09fecebb",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Senza nome.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": -93,
-                  "zoom": 0
-                }
+                "file": "3 - Next.js/16 - Metadati.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Senza nome"
+              "icon": "lucide-file",
+              "title": "16 - Metadati"
             }
           }
         ]
@@ -145,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Senza nome.canvas",
+                "file": "3 - Next.js/16 - Metadati.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Senza nome"
+              "title": "Struttura di 16 - Metadati"
             }
           },
           {
@@ -186,8 +183,8 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
-    "3 - Next.js/16 - Metadati.md",
     "Senza nome.canvas",
+    "3 - Next.js/16 - Metadati.md",
     "1 - Development/Convenzioni.md",
     "1 - Development/Gitflow.md",
     "1 - Development/Git.md",
