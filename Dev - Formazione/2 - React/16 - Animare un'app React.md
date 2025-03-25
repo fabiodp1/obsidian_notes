@@ -300,7 +300,7 @@ Ad es. se un utente inserisce dei valori non validi nel nostro form, vorremmo ch
 
 ### animate
 
-Accetta 3 argomenti, il primo definisce gli elementi da animare (classi, html tag ecc.), il secondo definisce il comportamento che vogliamo triggerare, il terzo è l'equivalente della prop `transition`
+Accetta 3 argomenti, il primo definisce gli elementi da animare (classi, html tag ecc.), il secondo definisce il comportamento che vogliamo triggerare, il terzo è l'equivalente della prop `transition`:
 
 ```tsx
 import { motion, useAnimate, stagger } from 'framer-motion';
@@ -320,4 +320,16 @@ export default function MyComponent() {
     return;
   }
 }
+```
+
+### scope
+
+Serve a definire l'area di selezione per l'animazione, in modo che non siano ad es. tutti i campi `input` e `textarea` della pagina ad essere coinvolti, ma solo quelli all'interno dell'area definita.
+
+```tsx
+...
+// Solo gli elementi al suo interno verranno animati
+<form ... ref={scope}>
+  ...
+</form>
 ```
