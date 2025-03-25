@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/14 - Forms & Data Mutation.md",
+                "file": "3 - Next.js/15 - Production Build & Caching.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14 - Forms & Data Mutation"
+              "title": "15 - Production Build & Caching"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Next.js/14 - Forms & Data Mutation.md",
+                "file": "3 - Next.js/15 - Production Build & Caching.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 14 - Forms & Data Mutation"
+              "title": "Riferimenti a 15 - Production Build & Caching"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/14 - Forms & Data Mutation.md",
+                "file": "3 - Next.js/15 - Production Build & Caching.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 14 - Forms & Data Mutation"
+              "title": "Struttura di 15 - Production Build & Caching"
             }
           },
           {
@@ -182,10 +182,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
-    "2 - React/12 - Forms.md",
     "3 - Next.js/14 - Forms & Data Mutation.md",
+    "2 - React/12 - Forms.md",
     "3 - Next.js/15 - Production Build & Caching.md",
     "3 - Next.js/20 - Metadati.md",
     "3 - Next.js/19 - Autenticazione.md",

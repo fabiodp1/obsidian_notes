@@ -35,3 +35,8 @@ redirect('/meals');
 
 # Production & Images
 
+Se nel nostro applicativo possiamo caricare e salvare immagini, queste normalmente vengono salvate nella cartella `public`.
+
+>Il problema è che in Production, la cartella `public` conterrà solo ciò che era presente a `build-time`, quindi tutto ciò che salveremo in seguito verrà ignorato.
+
+Per questo motivo normalmente nelle app [Next.js](Next.js), vengono utilizzati servizi di storing in cloud come [[AWS S3]].
