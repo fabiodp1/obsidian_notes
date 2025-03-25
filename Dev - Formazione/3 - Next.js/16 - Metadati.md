@@ -35,9 +35,28 @@ I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli 
 
 # Aggiungere metadati
 
-[[Next.js]] possiede un'[[API]] per i [[metadata]] ed esistono 2 modi per utilizzarla:
+[[Next.js]] possiede un'`API` per i [[metadata]] ed esistono 2 modi per utilizzarla:
 
 - **Config-based**: esportando un oggetto `statico` [[metadata]] o una funzione `dinamica` `generateMetadata` in un file `layout.tsx` o `page.tsx`.
+	- La versione dinamica è utile nel momento in cui ad es. ci troviamo in un `route` dinamica e vogliamo generare dei metadati in base ai parametri della route. 
+
+```tsx title:page.ts
+export async function generateMetadata({ params }) { //<== Passato da Next.js
+  const meal = getMeal(params.id);
+
+  if(!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.description
+  }
+}
+```
+
+>La parola `generateMetadata` è riservata e interpretata automaticamente da [Next.js](Next.js).
+
 - **File-based**: [[Next.js]] possiede una serie di file speciali specifici per i [[metadata]]:
 	- `favicon.ico`, `apple-icon.jpg` e `icon.jpg`: utilizzati per le `favicon` e icone.
 	- `opengraph-image.jpg` e `twitter-image.jpg`: per le immagini dei social media.
@@ -48,19 +67,9 @@ Si ha la flessibilità di utilizzare questi file per [[metadata]] statici, o pos
 
 Con queste due possibilità [[Next.js]] automaticamente genererà gli elementi per l'`<head>`.
 
----
+## Titolo e descrizione
 
-# Favicon e Open graph
-
-Nel momento in cui spostiamo la `favicon` e l'immagine [[open graph]] nella root della cartella `app`, [[Next.js]] le identificherà e utilizzerà.
-
->È anche possibile creare immagini [[open graph]] in maniera dinamica utilizzando il costruttore [[ImageResponse]].
-
----
-
-# Titolo e descrizione
-
-È possibile anche includere l'oggetto [[metadata]] da qualsiasi file `layout.tsx` o `page.tsx` per aggiungere ulteriori informazioni alla pagina, come titolo e descrizione.
+È possibile anche includere l'oggetto [[metadata]] in qualsiasi file `layout.tsx` o `page.tsx` per aggiungere ulteriori informazioni alla pagina, come titolo e descrizione.
 
 >Il nome della variabile `metadata` è riservato e verrà interpretato da [Next.js](Next.js).
 >Qualsiasi [[metadata]] in `layout.tsx` verrà ereditato da tutte le pagine che lo usano.
@@ -126,3 +135,11 @@ export const metadata: Metadata = {
   title: 'Invoices',
 };
 ```
+
+---
+
+## Favicon e Open graph
+
+Nel momento in cui spostiamo la `favicon` e l'immagine [[open graph]] nella root della cartella `app`, [[Next.js]] le identificherà e utilizzerà.
+
+>È anche possibile creare immagini [[open graph]] in maniera dinamica utilizzando il costruttore [[ImageResponse]].
