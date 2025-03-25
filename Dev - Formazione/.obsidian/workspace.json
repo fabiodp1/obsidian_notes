@@ -11,14 +11,17 @@
             "id": "0a96076e09fecebb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "3 - Next.js/16 - Metadati.md",
-                "mode": "source",
-                "source": false
+                "file": "Senza nome.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": -93,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "16 - Metadati"
+              "icon": "lucide-layout-dashboard",
+              "title": "Senza nome"
             }
           }
         ]
@@ -142,13 +145,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/16 - Metadati.md",
+                "file": "Senza nome.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 16 - Metadati"
+              "title": "Struttura di Senza nome"
             }
           },
           {
@@ -181,12 +184,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9799b7958c8dda",
+  "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "3 - Next.js/16 - Metadati.md",
+    "Senza nome.canvas",
     "1 - Development/Convenzioni.md",
     "1 - Development/Gitflow.md",
     "1 - Development/Git.md",
-    "3 - Next.js/16 - Metadati.md",
     "3 - Next.js/20 - Autenticazione.md",
     "3 - Next.js/19 - Ricerca e paginazione.md",
     "3 - Next.js/18 - Streaming.md",
@@ -208,7 +212,6 @@
     "3 - Next.js/5 - CSS Styling.md",
     "zzz_Pagine/Suspense.md",
     "zzz_Pagine/dynamic function.md",
-    "zzz_Pagine/root layout.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",
@@ -219,7 +222,6 @@
     "zzz_Pagine",
     "zzzz_allegati/Pasted image 20241216113742.png",
     "zzzz_allegati/Pasted image 20241216094250.png",
-    "Senza nome.canvas",
     "zzzz_allegati/Pasted image 20241209170949.png",
     "zzzz_allegati/Pasted image 20241209162837.png",
     "zzzz_allegati/Pasted image 20241209161745.png",
