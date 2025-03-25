@@ -187,3 +187,6 @@ Lavora assieme a `Suspense` per gestire il data fetching e loading fallback.
 >**IMPORTANTE** Non può essere usato con ogni tipo di `Promise`, ma con delle promise speciali, fornite dalla libreria legata a `Suspense`.
 
 Il problema è che quando facciamo l'`await` di una promise all'interno del `server component`, non avremo la pagina fino a quando non sarà risolta la promise, creando una [UX](UX) non delle migliori.
+Per questo come abbiamo visto, è possibile fare il wrap del componente in questione, utilizzando `Suspense` e valorizzando la sua prop `fallback`.
+
+Il problema si pone nel momento in cui vogliamo che questo componente sia `client` e quindi non sarà possibile usare l'await, visto che il componente non può più essere dichiarato come una funzione asincrona.
