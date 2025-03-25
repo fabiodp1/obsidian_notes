@@ -420,20 +420,35 @@ Per questo `motion` fornisce una prop apposita che permette di dichiarare un ele
 
 ## Animare in base allo scrolling
 
-Se volessimo animare degli elementi della pagina in base allo `scroll` dell'utente, possiamo usare farlo utilizzando gli elementi di `motion` ma ovviamente non possiamo hardencodare i valori dell'animazione: 
+Se volessimo animare degli elementi della pagina in base allo `scroll` dell'utente, possiamo usare farlo utilizzando gli elementi di `motion` ma ovviamente non possiamo hardencodare i valori dell'animazione.
+Per fare ciò possiamo usare l'[[hook]] `useScroll` che permetterà di stare in ascolto degli eventi di scroll, e `useTransform` per trasformare certi valori in valori utilizzabili per l'animazione:
 
 ```tsx title:WelcomePage.tsx
+import { motion, useScroll, useTransform } from 'framer-motion';
+
 export default function WelcomePage() {
+  const { scrollY, scrollX, scrollYProgress, ... } = useScroll();
+  // scrollY sono il numero di pixel scrollati
+  // Il secondo parametro rappresenta i breakpoint da utilizzare per la trasformazione degli oggetti
+  // Il terzo rappresenta i valori a cui i corrispondenti breakpoint andrebbero trasformati
+  const opacityImg = useTransform(scrollY, [0, 200, 300, 500], [1, 0.5, 0.5, 0] )
+
   return (
     <>
       <header>
         <motion.div animate>
           
         </motion.div>
-        <motion.img>
+        <motion.img 
+          // Style viene controllato da motion
+          style={{ opacity: opacityImg }}
+          ...
+		>
         </motion.img>
       </header>
     </>
   )
 }
 ```
+
+>Lo `useTransform` NON scatena il re-rendering, quindi l'animazione non impatta sulla performance.
