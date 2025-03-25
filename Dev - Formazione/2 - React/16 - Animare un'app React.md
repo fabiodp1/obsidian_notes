@@ -333,3 +333,14 @@ Serve a definire l'area di selezione per l'animazione, in modo che non siano ad 
   ...
 </form>
 ```
+
+## Animare cambiamenti nel layout
+
+Per gestire dei cambiamenti nel `layout`, ad es. la rimozione di un elemento da una lista che provocherebbe lo spostamento repentino degli altri rimanenti, possiamo utilizzare la prop `layout` per fare in modo che lo spostamento venga animato piacevolmente:
+
+```tsx
+...
+<motion.li layout>
+  ...
+</motion.li>
+```
