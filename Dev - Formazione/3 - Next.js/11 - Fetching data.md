@@ -185,3 +185,5 @@ L'[hook](hook) `use()` può essere utilizzato per avere accesso al `Context` ma 
 Lavora assieme a `Suspense` per gestire il data fetching e loading fallback.
 
 >**IMPORTANTE** Non può essere usato con ogni tipo di `Promise`, ma con delle promise speciali, fornite dalla libreria legata a `Suspense`.
+
+Il problema è che quando facciamo l'`await` di una promise all'interno del `server component`, non avremo la pagina fino a quando non sarà risolta la promise, creando una [UX](UX) non delle migliori.
