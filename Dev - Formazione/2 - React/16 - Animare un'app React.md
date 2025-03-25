@@ -232,3 +232,29 @@ Uno dei modi per risolvere il problema è fare l'override della prop specifica, 
 ## Animare liste
 
 Per quanto riguarda le liste, vorremmo che l'animazione non fosse un'unica che faccia comparire tutti gli elementi, ma che avvenga lo `staggering`, cioè che vengano animate in ordine uno per uno gli elementi della lista.
+
+Per farlo dobbiamo usare `motion` nel componente padre, quindi l'elemento `ul`, ma utilizzeremo la prop speciale `transition`, utilizzabile anche al di fuori della prop `variants` (ad es. anche solo alla prop `exit`), e che permette di passare lo stesso oggetto che normalmente viene passato alla prop `transition` che abbiamo visto prima.
+
+Nella nostra `variant` potremo in questo caso utilizzare l'opzione `staggerChildren`, che permette di definire il delay fra elementi prima che inizi la propria animazione:
+
+```tsx
+...
+<motion.ul
+  variants={{ 
+    visible: { transition: { staggerChildren: 0.05 } }
+  }}
+>
+  {images.map(image => (
+    <motion.li
+      variants={{
+        hidden: { opacity: 0, scale: 0.5 },
+        visible: { opacity: 1, scale: 1 }
+      }} 
+      transition={{ type: "spring" }}
+      exit={{ opacity: 1, scale: 1 }}
+    >
+      ...
+    <motion.li>
+  ))}
+</motion.ul>
+```
