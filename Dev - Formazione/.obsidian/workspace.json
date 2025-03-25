@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -181,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9799b7958c8dda",
+  "active": "0a96076e09fecebb",
   "lastOpenFiles": [
     "2 - React/8 - Patterns.md",
     "2 - React/16 - Animare un'app React.md",

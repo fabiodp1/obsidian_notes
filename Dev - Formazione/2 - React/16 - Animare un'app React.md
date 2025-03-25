@@ -217,12 +217,12 @@ Uno dei modi per risolvere il problema è fare l'override della prop specifica, 
 ...
 <motion.li
   variants={{
-    // La propria config per le varianti attivate all'initial ecc. da Modal
     hidden: { opacity: 0, scale: 0.5 },
     visible: { opacity: 1, scale: 1 }
   }} 
   transition={{ type: "spring" }}
-  // Non c'è bisogno di settare initial, animate e exit, perchè è già stato definito da Modal 
+  // Se riutilizzo "visible" come valore, perderò anche le altre anim.
+  exit={{ opacity: 1, scale: 1 }} // Non cambiando niente non partirà l'animazione
   >
   ...
 <motion.li>
