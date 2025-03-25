@@ -178,3 +178,10 @@ export default function Page() {
 ```
 
 >Non c'è bisogno di cambiare il codice, basta configurare e aver usato i `Suspense`.
+
+# Usare use() hook per Promise & Data Fetching
+
+L'[hook](hook) `use()` può essere utilizzato per avere accesso al `Context` ma può essere anche utilizzato per fare l'`await` di `Promise` nel componenti `client`.
+Lavora assieme a `Suspense` per gestire il data fetching e loading fallback.
+
+>**IMPORTANTE** Non può essere usato con ogni tipo di `Promise`, ma con delle promise speciali, fornite dalla libreria legata a `Suspense`.
