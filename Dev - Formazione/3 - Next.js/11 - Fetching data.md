@@ -184,10 +184,34 @@ export default function Page() {
 L'[hook](hook) `use()` può essere utilizzato per avere accesso al `Context` ma può essere anche utilizzato per fare l'`await` di `Promise` nel componenti `client`.
 Lavora assieme a `Suspense` per gestire il data fetching e loading fallback.
 
->**IMPORTANTE** Non può essere usato con ogni tipo di `Promise`, ma con delle promise speciali, fornite dalla libreria legata a `Suspense`.
+>**IMPORTANTE** Non può essere usato con ogni tipo di `Promise`, ma con delle promise speciali, fornite dalla libreria legata a `Suspense`, oppure create all'interno di un `server component`.
 
 Il problema è che quando facciamo l'`await` di una promise all'interno del `server component`, non avremo la pagina fino a quando non sarà risolta la promise, creando una [UX](UX) non delle migliori.
 Per questo come abbiamo visto, è possibile fare il wrap del componente in questione, utilizzando `Suspense` e valorizzando la sua prop `fallback`.
 
 Il problema si pone nel momento in cui vogliamo che questo componente sia `client` e quindi non sarà possibile usare l'await, visto che il componente non può più essere dichiarato come una funzione asincrona.
-Dovremo spostare la logica asincrona nel `server component` padre e passare al figlio `client` la prop con il risultato della promise, ed è qui che l'[hook](hook) `use` diventa utile. Infatti considerando che il padre non dovrà utilizzare il risultato della `Promise` ma farà solo da ponte per il figlio, possiamo passare a quest'ultimo direttamente la `Promise`.
+Dovremo spostare la logica asincrona nel `server component` padre e passare al figlio `client` la prop con il risultato della promise, ed è qui che l'[hook](hook) `use` diventa utile. Infatti considerando che il padre non dovrà utilizzare il risultato della `Promise` ma farà solo da ponte per il figlio, possiamo passare a quest'ultimo direttamente la `Promise`. Tramite `use` potremo aspettare che la promise venga risolta, ma `client-side`:
+
+```tsx
+// ServerComponent.tsx
+
+export default function ServerComponent() {
+  const userPromise = getUserFromDb();
+
+  return (
+    ...
+    <ClientComponent userPromise={ userPromise } />
+    ...
+  );
+}
+
+// ClientComponent.tsx
+"use client";
+import { use } from 'react';
+
+export default function ClientComponent({ userPromise }) {
+  const user = use(userPromise); // await automatico
+  ...
+}
+
+```

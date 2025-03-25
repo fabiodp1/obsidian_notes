@@ -74,8 +74,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4bad5ba6f5ce048b",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "2 - React/1 - React Fundamentals.md",
     "2 - React/2 - Gestione dei re-render e Ottimizzazione in React.md",
