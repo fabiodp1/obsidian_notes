@@ -21,11 +21,19 @@ function App() {
 
   return (
     <div>
-      <!== È presente qualsiasi tag HTML ==>
-      <motion.div id="box" animate={{ x: x, y: y, rotate: rotate }} /> 
+      <!-- È presente qualsiasi tag HTML -->
+      <motion.div id="box" 
+        animate={{ x: x, y: y, rotate: rotate }}
+        transition={{ 
+          duration: 0.3, <!-- durata animazione -->
+          type: 'spring', <!-- tipo di animazione -->
+          bounce: 1 <!-- effetto di rimbalzo -->
+        }}
+      /> 
     </div>
   );
 }
 ```
 
-Tramite l'oggetto passato alla prop `animate` possiamo animare qualsiasi proprietà e stile dell'elemento
+- Tramite l'oggetto passato alla prop `animate` possiamo animare qualsiasi proprietà e stile dell'elemento.
+- Tramite `transition` possiamo configurare come ciò che è in `animate` deve comportarsi (senza verranno usati dei default).
