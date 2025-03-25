@@ -277,5 +277,47 @@ Anche in questo caso verranno applicate le caratteristiche definite in `transiti
 
 Altra cosa da sapere è che alle varie prop degli oggetti passati, possiamo passare un'array, in quel caso gli elementi al suo interno verranno interpretati come `keyframe`:
 
+```tsx
+...
+<motion.li
+  variants={{
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: [0.8, 1.3, 1] } // <===
+  }} 
+  transition={{ type: "spring" }}
+  ...
+  >
+  ...
+<motion.li>
 ```
+
+## Imperative Animation
+
+Ci sono circostanze in cui vorremmo iniziare un'animazione in maniera imperative piuttosto che dichiarativa.
+Ad es. se un utente inserisce dei valori non validi nel nostro form, vorremmo che questi venissero animati al submit. Per fare ciò possiamo usare un [[hook]] di `motion`, `useAnimate`, che possiamo chiamare all'interno della logica del nostro componente. questo restituirà 2 elementi:
+- `scope`: è una `ref` che usiamo sugli elementi
+- `animate`: è la funzione per triggerare l'animazione
+
+### animate
+
+Accetta 3 argomenti, il primo definisce gli elementi da animare (classi, html tag ecc.), il secondo definisce il comportamento che vogliamo triggerare, il terzo è l'equivalente della prop `transition`
+
+```tsx
+import { motion, useAnimate, stagger } from 'framer-motion';
+
+export default function MyComponent() {
+  const [scope, animate] = useAnimate();
+
+  if(isFormInvalid) {
+    // si passano gli elementi da animare per tag o classe ecc.
+    animate(
+      "input, textarea", 
+      { x: [-10, 0, 10, 0] },
+      // stagger è una func per fare l'effetto stagger imperativamente
+      // in modo che non vengano animati tutti allo stesso momento
+      { type: "spring", duration: 0.2, delay: stagger(0.5) }
+    );
+    return;
+  }
+}
 ```
