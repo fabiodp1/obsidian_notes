@@ -387,7 +387,11 @@ Per fare in modo che `AnimatePresence` aspetti la fine dell'animazione prima di 
     </motion.ol> 
   )}
   {displayedCallenges.lenth === 0 && (
-    <p key="fallback">No challenges found.</p>
+    <motion.p key="fallback"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+	>No challenges found.</p>
   )}
 </AnimatePresence>
 ...
