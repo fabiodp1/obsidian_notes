@@ -8,9 +8,10 @@ Questo fa in modo che ci sia meno codice JS lato client, rendendo l'app più vel
 
 >Al contrario i `client components` sono componenti che vengono pre-renderizzati sul server, ma poi anche potenzialmente sul client.
 
-Se abbiamo necessità di eseguire del codice JS sul client e quindi rendere la pagina interattiva, avremo bisogno di un `client component`, ad es.:
+Normalmente avremo bisogno di dei `client component` quando:
 
-- se dobbiamo usare dei React [hook](hook), non possiamo in componenti renderizzati server-side;
+- abbiamo necessità di eseguire del codice JS sul client e quindi rendere la pagina interattiva;
+- se dobbiamo usare dei React [hook](hook). Non è possibile in componenti eseguiti server-side;
 - se dobbiamo reagire ad azioni dell'utente, ad es. usare gli eventi del [[DOM]], come click ecc.
 
 Per poter rendere un componente client, basta usare la direttiva `"use client"` in cima al file:
@@ -22,19 +23,11 @@ import { ... } from '...';
 //...
 ```
 
-
->I `server component` non sono altro che normali componenti [React](React.md) che però non vengono MAI eseguiti sul client.
-
->I `client component` vengono renderizzati sul server E sul client.
+---
 
 # Usare i Client Components efficientemente
 
-Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se è necessario che tutto il componente debba essere eseguito lato client, se possibile è molto meglio individuare e separare dei sottocomponenti che hanno veramente necessità di essere eseguiti lato client, in modo da lasciare il resto server-side.
-
-
-
-
-
+Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se è necessario che tutto il componente debba essere eseguito lato client, se possibile è molto meglio individuare e separare dei sottocomponenti che abbiano veramente necessità di essere eseguiti lato client, in modo da lasciare il resto server-side.
 
 ---
 
