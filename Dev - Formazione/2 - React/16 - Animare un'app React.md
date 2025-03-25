@@ -178,7 +178,7 @@ export default function Modal({ title, children, onClose }) {
         exit="hidden"
 	  >
         <h2>{title}</h2>
-        {children}    // Tutti i children potrenno definire la propria variante
+        {children}    // Tutti i children potranno definire la propria variante
       </motion.dialog>
     </>,
     document.getElementById('modal');
@@ -202,7 +202,29 @@ export default function Modal({ title, children, onClose }) {
 
 // App.tsx
 
-
+...
+<Modal>
+  <MyComponent />
+</Modal>
 
 ```
 
+>Bisogna però stare attenti al fatto che all'exit, ad es. chiusura della modal, i componenti condivideranno l'attivazione della propria versione della variante `exit`, quindi ad es. se la modal viene chiusa, gli elementi al suo interno dovranno prima finire la loro animazione di exit prima che scompaiano dallo schermo, potenzialmente creando effetti visivi strani.
+
+Uno dei modi per risolvere il problema è fare l'override della prop specifica, in questo caso `exit`:
+
+```tsx title:MyComponent.tsx
+...
+<motion.li
+  variants={{
+    // La propria config per le varianti attivate all'initial ecc. da Modal
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 }
+  }} 
+  transition={{ type: "spring" }}
+  // Non c'è bisogno di settare initial, animate e exit, perchè è già stato definito da Modal 
+  >
+  ...
+<motion.li>
+...
+```
