@@ -40,3 +40,12 @@ function App() {
 
 ## Animare fra valori condizionali
 
+```tsx
+...
+<button onClick={onViewDetails}>
+  View Details{' '}
+  <motion.span className="details-icon"
+    animate={{ rotate: isExpanded ? 180 : 0 }}
+  >&#9650;</motion.span>
+</button>
+```
