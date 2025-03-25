@@ -41,10 +41,11 @@ I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli 
 	- La versione dinamica è utile nel momento in cui ad es. ci troviamo in un `route` dinamica e vogliamo generare dei metadati in base ai parametri della route. 
 
 ```tsx title:page.ts
+...
 export async function generateMetadata({ params }) { //<== Passato da Next.js
   const meal = getMeal(params.id);
 
-  if(!meal) {
+  if(!meal) {  // Anche qui è importante fare il check
     notFound();
   }
 
@@ -53,6 +54,7 @@ export async function generateMetadata({ params }) { //<== Passato da Next.js
     description: meal.description
   }
 }
+...
 ```
 
 >La parola `generateMetadata` è riservata e interpretata automaticamente da [Next.js](Next.js).
