@@ -60,13 +60,12 @@ Nel momento in cui spostiamo la `favicon` e l'immagine [[open graph]] nella root
 
 # Titolo e descrizione
 
-È possibile anche includere l'oggetto [[metadata]] da qualsiasi file [[layout.tsx]] o [[page.tsx]] per aggiungere ulteriori informazioni alla pagina, come titolo e descrizione.
+È possibile anche includere l'oggetto [[metadata]] da qualsiasi file `layout.tsx` o `page.tsx` per aggiungere ulteriori informazioni alla pagina, come titolo e descrizione.
 
->Qualsiasi [[metadata]] in [[layout.tsx]] verrà ereditato da tutte le pagine che lo usano.
+>Il nome della variabile `metadata` è riservato e verrà interpretato da [Next.js](Next.js).
+>Qualsiasi [[metadata]] in `layout.tsx` verrà ereditato da tutte le pagine che lo usano.
 
-```tsx
-// /app/layout.tsx
-
+```tsx title:/app/layout.tsx
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
