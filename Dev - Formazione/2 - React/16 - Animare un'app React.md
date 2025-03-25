@@ -399,3 +399,21 @@ Per fare in modo che `AnimatePresence` aspetti la fine dell'animazione prima di 
 </AnimatePresence>
 ...
 ```
+
+## Animare elementi condivisi
+
+Può capitare di riutilizzare elementi in posti diversi della pagina, ad es. il bordo di un tab attivo, che nonostante siano ripetuti e non condivisi come componenti, sono comunque lo stesso elemento ma creato e distrutto in maniera condizionale.
+
+Per questo `motion` fornisce una prop apposita che permette di dichiarare un elemento riutilizzato alla stessa maniera altrove, e gestirlo con una animazione automatica, `layoutId`:
+
+```tsx title:MyTab.tsx
+...
+<button>
+  {children}
+</button>
+{ isSelected && 
+  <motion.div layoutId="tab-indicator" className="active-tab">
+    ...
+  </motion.div>
+}
+```
