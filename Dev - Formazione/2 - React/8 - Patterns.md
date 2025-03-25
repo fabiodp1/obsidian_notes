@@ -3,7 +3,7 @@
 # Code splitting
 [Code-Splitting – React](https://legacy.reactjs.org/docs/code-splitting.html)
 
-Per ottimizzare le performance è importante che fra componenti le callback vengano passate utilizzando l'hook [[useCallback]], in modo da evitare re-render inutili.
+Per ottimizzare le performance è importante che fra componenti le callback vengano passate utilizzando l'hook `useCallback`, in modo da evitare re-render inutili.
 Inoltre se il nostro componente è un context provider, è buona pratica passare come value la versione memoized:
 
 ```ts

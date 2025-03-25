@@ -113,3 +113,6 @@ return (
 ```
 
 In questa maniera si assicurerà che l'animazione definita dall'`exit` venga eseguita prima che il componente venga rimosso dalla [DOM](DOM).
+
+## Animare all'hover
+
