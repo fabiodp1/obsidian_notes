@@ -23,7 +23,7 @@ function App() {
     <div>
       <!-- È presente qualsiasi tag HTML -->
       <motion.div id="box" 
-        animate={{ x: x, y: y, rotate: rotate }}
+        animate={{ x, y, rotate }}
         transition={{ 
           duration: 0.3, <!-- durata animazione -->
           type: 'spring', <!-- tipo di animazione -->
@@ -37,3 +37,6 @@ function App() {
 
 - Tramite l'oggetto passato alla prop `animate` possiamo animare qualsiasi proprietà e stile dell'elemento.
 - Tramite `transition` possiamo configurare come ciò che è in `animate` deve comportarsi (senza verranno usati dei default).
+
+## Animare fra valori condizionali
+
