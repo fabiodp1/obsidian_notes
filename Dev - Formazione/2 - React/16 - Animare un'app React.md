@@ -3,9 +3,29 @@
 - Normale [CSS](CSS)
 	- [Transitions](https://www.w3schools.com/css/css3_transitions.asp)
 	- [Animations](https://www.w3schools.com/css/css3_animations.asp)
-- [Framer Motion](https://framermotion.framer.website/)
+- [Framer Motion](https://framermotion.framer.website/): permette di creare animazioni mantenendo alte performance.
 
 # Framer Motion
 
-## Config
+## Basics
 
+Per animare in `Framer Motion`, basta importare l'utility `motion` nel componente che vogliamo animare e usarlo così:
+
+```tsx title:App.jsx
+import { motion } from "framer-motion";
+
+function App() {
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  const [rotate, setRotate] = useState(0);
+
+  return (
+    <div>
+      <!== È presente qualsiasi tag HTML ==>
+      <motion.div id="box" animate={{ x: x, y: y, rotate: rotate }} /> 
+    </div>
+  );
+}
+```
+
+Tramite l'oggetto passato alla prop `animate` possiamo animare qualsiasi proprietà e stile dell'elemento
