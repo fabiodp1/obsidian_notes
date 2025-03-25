@@ -160,3 +160,49 @@ Come abbiamo visto `variants` possono essere utilizzate per riutilizzare gli ani
 
 >Possono essere usati anche per triggerare animazioni in elementi profondamente innestati, lungo l'albero degli elementi del [DOM](DOM), semplicemente settando un'animazione ad una certa `variant` presente sul componente antenato.
 
+```tsx
+// MyModal.tsx
+
+export default function Modal({ title, children, onClose }) {
+  return createPortal(
+    <>
+      <div className="backdrop" onClick={onClose} />
+      <motion.dialog open className="modal"
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0 }
+        }}
+        // Questi attiveranno la config delle varianti anche per i child
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+	  >
+        <h2>{title}</h2>
+        {children}    // Tutti i children potrenno definire la propria variante
+      </motion.dialog>
+    </>,
+    document.getElementById('modal');
+  )
+}
+
+// MyComponent.tsx
+...
+<motion.li
+  variants={{
+    // La propria config per le varianti attivate all'initial ecc. da Modal
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 }
+  }} 
+  transition={{ type: "spring" }}
+  // Non c'è bisogno di settare initial, animate e exit, perchè è già stato definito da Modal 
+  >
+  ...
+<motion.li>
+...
+
+// App.tsx
+
+
+
+```
+
