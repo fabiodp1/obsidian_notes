@@ -8,10 +8,6 @@ Di default le applicazioni [[Next.js]] utilizzano i [[React]] [[Server Component
 - Vengono eseguiti nel server, migliorando le performance. Il client riceverà direttamente il risultato.
 - Essendo eseguiti nel server, è possibile contattare direttamente il [[DB]].
 
-## Usare use() hook per Promise & Data Fetching
-
-
-
 ---
 
 # Utilizzo di [[SQL]]

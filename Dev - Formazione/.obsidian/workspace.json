@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Next.js/11 - Fetching data.md",
+                "file": "3 - Next.js/14 - Forms & Data Mutation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - Fetching data"
+              "title": "14 - Forms & Data Mutation"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Next.js/11 - Fetching data.md",
+                "file": "3 - Next.js/14 - Forms & Data Mutation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 11 - Fetching data"
+              "title": "Struttura di 14 - Forms & Data Mutation"
             }
           },
           {
@@ -181,10 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "263ff45da9c77ac1",
+  "active": "0a96076e09fecebb",
   "lastOpenFiles": [
-    "3 - Next.js/8 - Server Components.md",
+    "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/14 - Forms & Data Mutation.md",
+    "3 - Next.js/8 - Server Components.md",
     "3 - Next.js/3 - Routing.md",
     "3 - Next.js/16 - Metadati.md",
     "Senza nome.canvas",
@@ -202,7 +203,6 @@
     "3 - Next.js/100 - Link utili.md",
     "3 - Next.js/12 - Gestione Errori.md",
     "3 - Next.js/12 - Rendering statico e dinamico.md",
-    "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/10 - Configurare il DB.md",
     "3 - Next.js/9 - Navigazione fra pagine.md",
     "3 - Next.js/7 - Ottimizzare font e immagini.md",
