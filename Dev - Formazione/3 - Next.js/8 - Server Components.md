@@ -31,6 +31,35 @@ import { ... } from '...';
 
 Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se è necessario che tutto il componente debba essere eseguito lato client, se possibile è molto meglio individuare e separare dei sottocomponenti che abbiano veramente necessità di essere eseguiti lato client, in modo da lasciare il resto server-side.
 
+>Se è possibile includere componenti `client` in quelli `server`, non è possibile il contrario, SOLO SE inclusi come `children`:
+
+```tsx
+// YES <====
+
+// ServerComponent.tsx
+<h2>I'm a RSC!</h2>
+<ClientComponent />
+
+=================================
+// NO <====
+
+// ClientComponent.tsx
+<h2>I'm a Client Cmp!</h2>
+<ServerComponent />
+
+=================================
+// YES <====
+
+// ClientComponent.tsx
+<h2>I'm a Client Cmp!</h2>
+{ children }
+
+// page.tsx
+<ClientComponent>
+ <ServerComponent />
+</ClientComponent>
+```
+
 ---
 
 # Rendering Types
