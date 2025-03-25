@@ -417,3 +417,23 @@ Per questo `motion` fornisce una prop apposita che permette di dichiarare un ele
   </motion.div>
 }
 ```
+
+## Animare in base allo scrolling
+
+Se volessimo animare degli elementi della pagina in base allo `scroll` dell'utente, possiamo usare farlo utilizzando gli elementi di `motion` ma ovviamente non possiamo hardencodare i valori dell'animazione: 
+
+```tsx title:WelcomePage.tsx
+export default function WelcomePage() {
+  return (
+    <>
+      <header>
+        <motion.div animate>
+          
+        </motion.div>
+        <motion.img>
+        </motion.img>
+      </header>
+    </>
+  )
+}
+```
