@@ -31,7 +31,10 @@ import { ... } from '...';
 
 Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se è necessario che tutto il componente debba essere eseguito lato client, se possibile è molto meglio individuare e separare dei sottocomponenti che abbiano veramente necessità di essere eseguiti lato client, in modo da lasciare il resto server-side.
 
->Se è possibile includere componenti `client` in quelli `server`, non è possibile il contrario, SOLO SE inclusi come `children`:
+>Se è possibile includere componenti `client` in quelli `server`, non è possibile il contrario, SOLO SE inclusi come `children`. Se proviamo ad usare un `server component` all'interno di un `client` senza che sia un `children`, non avremo errori, ma dietro le quinte [Next.js](Next.js) convertirà il `server component` in `client`.
+>Se però il nostro `server component` è un async function, allora avremo un errore perché come sappiamo i `client component` non possono essere `async`.
+
+È comunque preferibile evitare la conversione automatica in `client` ed utilizzare la prop `children`.
 
 ```tsx
 // YES <====
@@ -40,14 +43,14 @@ Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se 
 <h2>I'm a RSC!</h2>
 <ClientComponent />
 
-=================================
+//=================================
 // NO <====
 
 // ClientComponent.tsx
 <h2>I'm a Client Cmp!</h2>
 <ServerComponent />
 
-=================================
+//=================================
 // YES <====
 
 // ClientComponent.tsx
