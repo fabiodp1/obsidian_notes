@@ -23,6 +23,8 @@ import { ... } from '...';
 //...
 ```
 
+>All'interno di un `server component` è possibile fare il fetch diretto dei dati e utilizzare `async/await`.
+
 ---
 
 # Usare i Client Components efficientemente
