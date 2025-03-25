@@ -32,12 +32,14 @@ I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli 
 # Aggiungere metadati
 
 [[Next.js]] possiede un'[[API]] per i [[metadata]] ed esistono 2 modi per utilizzarla:
-- **Config-based**: esportando un oggetto statico [[metadata]] o una funzione dinamica [[generateMetadata]] in un file [[layout.tsx]] o [[page.tsx]].
+
+- **Config-based**: esportando un oggetto statico [[metadata]] o una funzione dinamica `generateMetadata` in un file `layout.tsx` o `page.tsx`.
 - **File-based**: [[Next.js]] possiede una serie di file speciali specifici per i [[metadata]]:
 	- `favicon.ico`, `apple-icon.jpg` e `icon.jpg`: utilizzati per le #favicon e icone.
 	- `opengraph-image.jpg` e `twitter-image.jpg`: per le immagini dei social media.
 	- `robots.txt`: fornisce info per i crawler dei motori di ricerca.
 	- `sitemap.xml`: offre informazioni sulla struttura della pagina web.
+
 Si ha la flessibilità di utilizzare questi file per [[metadata]] statici, o possono essere generati programmaticamente.
 
 Con queste due possibilità [[Next.js]] automaticamente genererà gli elementi per l'`<head>`.
