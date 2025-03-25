@@ -215,3 +215,5 @@ export default function ClientComponent({ userPromise }) {
 }
 
 ```
+
+>**NOTA** non sarà possibile utilizzare questa feature in un progetti React "standard", ad es. creati tramite `Vite`.
