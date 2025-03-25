@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#favicon",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -181,12 +181,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "3 - Next.js/20 - Autenticazione.md",
+    "3 - Next.js/16 - Metadati.md",
     "3 - Next.js/19 - Ricerca e paginazione.md",
     "3 - Next.js/18 - Streaming.md",
-    "3 - Next.js/16 - Metadati.md",
     "3 - Next.js/15 - Production Build & Caching.md",
     "3 - Next.js/14 - Forms & Data Mutation.md",
     "2 - React/12 - Forms.md",

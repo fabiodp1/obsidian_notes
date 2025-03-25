@@ -17,7 +17,7 @@ I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli 
 <meta name="keywords" content="keyword1, keyword2, keyword3" />
 ```
 
-- **Open Graph metadata**: migliora il modo in cui una pagina viene rappresentata nel momento in cui viene condivisa nei social, fornendo informazioni come il titolo, la descrizione e la preview della immagine:
+- **Open Graph metadata**: migliora il modo in cui una pagina viene rappresentata nel momento in cui viene condivisa nei social, fornendo informazioni come il titolo, la descrizione e la preview dell'immagine:
 
 ```html
 <meta property="og:title" content="Title Here" />
@@ -25,7 +25,7 @@ I [[metadata]] sono molto importanti per la [[SEO]]. Questi aggiungono dettagli 
 <meta property="og:image" content="image_url_here" />
 ```
 
-- **Favicon metadata**: lega la #favicon alla pagina web, mostrandola sul tab del browser:
+- **Favicon metadata**: lega la `favicon` alla pagina web, mostrandola sul tab del browser:
 
 ```html
 <link rel="icon" href="path/to/favicon.ico" />
