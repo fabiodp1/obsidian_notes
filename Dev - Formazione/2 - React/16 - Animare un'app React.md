@@ -258,3 +258,24 @@ Nella nostra `variant` potremo in questo caso utilizzare l'opzione `staggerChild
   ))}
 </motion.ul>
 ```
+
+## Animare colori e keyframe
+
+Come per le altre proprietà come `scale`, `x` ecc., è anche possibile animare un cambio di colori:
+
+```tsx
+...
+<motion.button
+  whileHover={{ scale: 1.1, backgroundColor: '#8b11f0' }} // <===
+  transition={{ type: 'spring', stiffness: 500 }}
+  >
+  Add Challenge
+</motion.button>
+```
+
+Anche in questo caso verranno applicate le caratteristiche definite in `transition`.
+
+Altra cosa da sapere è che alle varie prop degli oggetti passati, possiamo passare un'array, in quel caso gli elementi al suo interno verranno interpretati come `keyframe`:
+
+```
+```
