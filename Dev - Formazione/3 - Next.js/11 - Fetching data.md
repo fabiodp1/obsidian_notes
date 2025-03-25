@@ -4,9 +4,13 @@ In [[Next.js]] è possibile creare endpoint API usando i [[route handler]]. Ovvi
 
 Di default le applicazioni [[Next.js]] utilizzano i [[React]] [[Server Component]]. Il fetch dei dati dai [[Server Component]] è relativamente un nuovo approccio e possiede i suoi vantaggi:
 
-- Supportano le promises, fornendo una soluzione più semplice per le task asincrone. E' possibile usare `async/await` senza bisogno di [[useEffect]], [[useState]] o librerie per il fetch dei dati.
+- Supportano le `Promise`, fornendo una soluzione più semplice per le task asincrone. E' possibile usare `async/await` senza bisogno di [[useEffect]], [[useState]] o librerie per il fetch dei dati.
 - Vengono eseguiti nel server, migliorando le performance. Il client riceverà direttamente il risultato.
 - Essendo eseguiti nel server, è possibile contattare direttamente il [[DB]].
+
+## Usare use() hook per Promise & Data Fetching
+
+
 
 ---
 
