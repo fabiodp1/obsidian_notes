@@ -44,6 +44,7 @@ Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se 
 <ClientComponent />
 
 //=================================
+
 // NO <====
 
 // ClientComponent.tsx
@@ -51,6 +52,7 @@ Quando decidiamo di rendere un componente `client`, dobbiamo ben considerare se 
 <ServerComponent />
 
 //=================================
+
 // YES <====
 
 // ClientComponent.tsx
