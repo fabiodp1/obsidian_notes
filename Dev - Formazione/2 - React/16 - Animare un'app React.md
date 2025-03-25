@@ -137,9 +137,13 @@ export default function Modal({ title, children, onClose }) {
     <>
       <div className="backdrop" onClick={onClose} />
       <motion.dialog open className="modal"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 30 }}
+        variants={{
+          hidden: { opacity: 0, y: 30 }, // nomi key liberi
+          visible: { opacity: 1, y: 0 }
+        }}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
 	  >
         <h2>{title}</h2>
         {children}
@@ -149,3 +153,10 @@ export default function Modal({ title, children, onClose }) {
   )
 }
 ```
+
+## Variants
+
+Come abbiamo visto `variants` possono essere utilizzate per riutilizzare gli animation state, ma non solo.
+
+>Possono essere usati anche per triggerare animazioni in elementi profondamente innestati, lungo l'albero degli elementi del [DOM](DOM), semplicemente settando un'animazione ad una certa `variant` presente sul componente antenato.
+
