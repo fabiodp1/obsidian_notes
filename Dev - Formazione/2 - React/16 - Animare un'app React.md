@@ -344,3 +344,51 @@ Per gestire dei cambiamenti nel `layout`, ad es. la rimozione di un elemento da 
   ...
 </motion.li>
 ```
+
+## AnimatePresence
+
+Come abbiamo visto prima, il componente `AnimatePresece` ci permette di gestire l'animazione di comparsa e scomparsa di componenti gestiti da valori condizionali. Possono esserci casi in cui i componenti wrappati da `AnimatePresence` siano a diversi e che ci possano essere altri `AnimatePresence` innestati fra loro con al loro interno elementi `motion`. In questo caso è **molto importante** mettere ad ogni elemento una `key` per fare in modo che vengano gestiti correttamente.
+
+```tsx
+...
+<AnimatePresence>
+  { displayedChallenges.length > 0 && (
+    <motion.ol
+      key="list"
+      exit={{...}}>
+      <AnimatePresence>
+        { displayedChallanges.map(challenge => (
+          <ChallengeItem .../>
+        )) }
+      </AnimatePresence>
+    </motion.ol> 
+  )}
+  {displayedCallenges.lenth === 0 && (
+    <p key="fallback">No challenges found.</p>
+  )}
+</AnimatePresence>
+```
+
+Nell'esempio sopra però, nel momento in cui scompare la `list`, di default comparirà il `fallback` ma prima che finisca l'animazione di uscita della lista, causando un effetto scattoso non voluto.
+Per fare in modo che `AnimatePresence` aspetti la fine dell'animazione prima di mostrare il `fallback`, possiamo cambiare la sua `mode`:
+
+```tsx
+...
+<AnimatePresence mode="wait">                       <==
+  { displayedChallenges.length > 0 && (
+    <motion.ol
+      key="list"
+      exit={{...}}>
+      <AnimatePresence>
+        { displayedChallanges.map(challenge => (
+          <ChallengeItem .../>
+        )) }
+      </AnimatePresence>
+    </motion.ol> 
+  )}
+  {displayedCallenges.lenth === 0 && (
+    <p key="fallback">No challenges found.</p>
+  )}
+</AnimatePresence>
+...
+```
