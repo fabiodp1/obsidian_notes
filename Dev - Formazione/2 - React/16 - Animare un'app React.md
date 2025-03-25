@@ -49,3 +49,67 @@ function App() {
   >&#9650;</motion.span>
 </button>
 ```
+
+## Animazioni d'entrata
+
+In questo caso nell'es. sotto non abbiamo degli indizi da utilizzare per capire se la modal è visibile o meno. Ciò non importa perché `motion` mette a disposizione la prop `initial` che permette di settare dei comportamenti di base non appena l'elemento viene aggiunto alla [DOM](DOM) (lo state iniziale). Se lo stato iniziale è diverso da quello presente in `animate`, motion animerà l'elemento per portarlo allo state definitivo e desiderato (presente in `animate`):
+
+```tsx title:MyModal.tsx
+export default function Modal({ title, children, onClose }) {
+  return createPortal(
+    <>
+      <div className="backdrop" onClick={onClose} />
+      <motion.dialog open className="modal"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+	  >
+        <h2>{title}</h2>
+        {children}
+      </motion.dialog>
+    </>,
+    document.getElementById('modal');
+  )
+}
+```
+
+## Animazioni d'uscita (scomparsa)
+
+Come abbiamo fatto per le animazioni d'entrata, possiamo utilizzare la stessa logica per quelle di uscita. Ma al posto di utilizzare la prop `initial`, utilizzeremo `exit`:
+
+```tsx title:MyModal.tsx
+export default function Modal({ title, children, onClose }) {
+  return createPortal(
+    <>
+      <div className="backdrop" onClick={onClose} />
+      <motion.dialog open className="modal"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 30 }}
+	  >
+        <h2>{title}</h2>
+        {children}
+      </motion.dialog>
+    </>,
+    document.getElementById('modal');
+  )
+}
+```
+
+>Esiste però un problema, se la presenza di un componente che contiene motion viene gestita da una logica condizionale, React rimuoverà l'elemento senza chiedere, non facendo scatenare l'animazione di uscita.
+
+Per fortuna per risolvere il problema `motion` ci mette a disposizione un componente speciale che wrappando il componente in questione ne gestirà il comportamento di scomparsa:
+
+```tsx title:Header.tsx
+import { AnimatePresence } from 'framer-motion';
+
+...
+return (
+  <>
+    <AnimatePresence>
+      { isVisible && <MyModal /> }
+    </AnimatePresence>
+  </>
+)
+```
+
+In questa maniera si assicurerà che l'animazione definita dall'`exit` venga eseguita prima che il componente venga rimosso dalla [DOM](DOM).

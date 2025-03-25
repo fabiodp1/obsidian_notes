@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/16 - Animare un'app React.md",
+                "file": "2 - React/8 - Patterns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16 - Animare un'app React"
+              "title": "8 - Patterns"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/16 - Animare un'app React.md",
+                "file": "2 - React/8 - Patterns.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 16 - Animare un'app React"
+              "title": "Struttura di 8 - Patterns"
             }
           },
           {
@@ -183,8 +183,8 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
-    "3 - Next.js/11 - Fetching data.md",
     "2 - React/16 - Animare un'app React.md",
+    "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/13 - Gestione Errori.md",
     "2 - React/1 - React Fundamentals.md",
     "2 - React/2 - Gestione dei re-render e Ottimizzazione in React.md",
