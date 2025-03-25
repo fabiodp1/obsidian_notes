@@ -228,3 +228,7 @@ Uno dei modi per risolvere il problema è fare l'override della prop specifica, 
 <motion.li>
 ...
 ```
+
+## Animare liste
+
+Per quanto riguarda le liste, vorremmo che l'animazione non fosse un'unica che faccia comparire tutti gli elementi, ma che avvenga lo `staggering`, cioè che vengano animate in ordine uno per uno gli elementi della lista.
