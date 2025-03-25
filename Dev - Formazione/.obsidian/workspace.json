@@ -157,8 +157,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -181,10 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "263ff45da9c77ac1",
+  "active": "5f9799b7958c8dda",
   "lastOpenFiles": [
-    "3 - Next.js/20 - Autenticazione.md",
+    "1 - Development/Convenzioni.md",
+    "1 - Development/Gitflow.md",
+    "1 - Development/Git.md",
     "3 - Next.js/16 - Metadati.md",
+    "3 - Next.js/20 - Autenticazione.md",
     "3 - Next.js/19 - Ricerca e paginazione.md",
     "3 - Next.js/18 - Streaming.md",
     "3 - Next.js/15 - Production Build & Caching.md",
@@ -206,9 +209,6 @@
     "zzz_Pagine/Suspense.md",
     "zzz_Pagine/dynamic function.md",
     "zzz_Pagine/root layout.md",
-    "3 - Next.js/2 - File riservati & Custom Components.md",
-    "3 - Next.js/1 - Base Concepts.md",
-    "3 - Next.js/4 - Layout.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",

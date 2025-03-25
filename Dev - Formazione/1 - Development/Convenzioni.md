@@ -1,4 +1,5 @@
 # Tag da utilizzare per i commit
+
 - [[feat]]: per le nuove feature che vengono aggiunte all'applicativo
 - [[fix]]: bug fix
 - [[style]]
@@ -12,6 +13,7 @@ feat: My Amazing feature
 ```
 
 # Issue References
+
 Se possibile aggiungere una reference alla task/issue di riferimento:
 
 ```
