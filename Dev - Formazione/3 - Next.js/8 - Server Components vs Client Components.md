@@ -55,3 +55,4 @@ Il benefici sono:
 - **Dati in real-time**: permette all'applicativo di mostrare in real-time dati aggiornati. Ideal in applicativi in cui sono frequenti i cambiamenti di dati.
 - **Contenuto specifico per l'utente**: è più semplice servire contenuti personalizzati e aggiornarli all'interazione dell'utente.
 - **Informazione alla richiesta**: il [[dynamic rendering]] permetto di accedere ad informazioni che possono essere note solo a request time, come cookies o i parametri di ricerca dell'[[URL]].
+
