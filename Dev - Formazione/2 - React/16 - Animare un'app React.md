@@ -116,3 +116,12 @@ In questa maniera si assicurerà che l'animazione definita dall'`exit` venga ese
 
 ## Animare all'hover
 
+```tsx
+...
+<motion.button
+  whileHover={{ scale: 1.1 }}
+  transition={{ type: 'spring', stiffness: 500 }} //<== Aggiunge il bounce
+>
+  Add Challenge
+</motion.button>
+```
