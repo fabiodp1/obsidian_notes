@@ -179,7 +179,7 @@ export default function Page() {
 
 >Non c'è bisogno di cambiare il codice, basta configurare e aver usato i `Suspense`.
 
-# Usare use() hook per Promise & Data Fetching
+# use() hook per Promise & Data Fetching
 
 L'[hook](hook) `use()` può essere utilizzato per avere accesso al `Context` ma può essere anche utilizzato per fare l'`await` di `Promise` nel componenti `client`.
 Lavora assieme a `Suspense` per gestire il data fetching e loading fallback.
@@ -190,3 +190,4 @@ Il problema è che quando facciamo l'`await` di una promise all'interno del `ser
 Per questo come abbiamo visto, è possibile fare il wrap del componente in questione, utilizzando `Suspense` e valorizzando la sua prop `fallback`.
 
 Il problema si pone nel momento in cui vogliamo che questo componente sia `client` e quindi non sarà possibile usare l'await, visto che il componente non può più essere dichiarato come una funzione asincrona.
+Dovremo spostare la logica asincrona nel `server component` padre e passare al figlio `client` la prop con il risultato della promise, ed è qui che l'[hook](hook) `use` diventa utile. Infatti considerando che il padre non dovrà utilizzare il risultato della `Promise` ma farà solo da ponte per il figlio, possiamo passare a quest'ultimo direttamente la `Promise`.
