@@ -59,6 +59,18 @@ function AuthProvider(props) {
 I [[compound components]] sono un modo in [[React]] per organizzare i componenti in modo da renderli flessibili e componibili fra loro.
 Non sono pensati per essere `standalone` ma per funzionare uniti fra loro.
 
+Ad es. se dovessimo creare un componente `Accordion`, normalmente potremmo crearne uno che contiene un `ul` e accetta una prop `items` su cui lui fa il `map` per mostrarne gli elementi.
+Ma utilizzando il pattern del `compound component` possiamo fare in modo che questo sia più elastico e riutilizzabile:
+
+```tsx title:Accordion.tsx
+export default function Accordion({children, className }) {
+  return <ul className={className}>{children}</ul>
+}
+```
+
+In questa maniera diventa un guscio personalizzabile a cui basta passare gli elementi che vogliamo.
+
+
 Ad es. considerando questo componente:
 
 ```ts
