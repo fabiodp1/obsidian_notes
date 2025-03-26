@@ -52,9 +52,9 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 
 ## Utilizzare i `form` con le [[server action]]
 
->Gran parte del funzionamento descritto sotto, riguardante from e action, è già stato affrontato con il capitolo [12 - Forms](12%20-%20Forms.md) alla sezione `Actions`.
+>Gran parte del funzionamento descritto sotto, riguardante from e action, è già stato affrontato con il capitolo [10 - Forms](10%20-%20Forms.md) alla sezione `Actions`.
 
-In [React 19+](React%2019+.md) è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [12 - Forms](12%20-%20Forms.md) ):
+In [React 19+](React%2019+.md) è possibile utilizzare l'attributo [[action]] nell'elemento `<form>` per invocare le action. L'action riceverà automaticamente l'oggetto `FormData` nativo, contenente i dati catturati, come avviene in [React 19+](React%2019+.md) (vedi [10 - Forms](10%20-%20Forms.md) ):
 
 ```tsx title:my-form.tsx
 // Server Component
@@ -216,7 +216,7 @@ export default function ShareMealPage() {
 }
 ```
 
-Come descritto nella pagina [12 - Forms](12%20-%20Forms.md), se utilizziamo la nostra action in questo modo, non riceverà più come parametro solo il `formData`, ma anche un altro parametro contenente lo state corrente:
+Come descritto nella pagina [10 - Forms](10%20-%20Forms.md), se utilizziamo la nostra action in questo modo, non riceverà più come parametro solo il `formData`, ma anche un altro parametro contenente lo state corrente:
 
 ```ts title:actions.ts
 // Before
