@@ -69,9 +69,50 @@ export default function Accordion({children, className }) {
 ```
 
 In questa maniera diventa un guscio personalizzabile a cui basta passare gli elementi che vogliamo.
+Questo però non basta, non è l'idea di questo pattern, creeremo altri `compound components` che con `Accordion` concorreranno a strutturare il nostro componente finale:
+
+```tsx title:AccordionItem.tsx
+export default function AccordionItem({className, title, children}) {
+  return (
+    <li className={className}>
+      <h3>{ title }</h3>
+      <div>{ children }</div>
+    </li>
+  )
+}
+```
+
+In questa maniera possiamo comporre i nostri componenti così:
+
+```tsx title:App.tsx
+function App() {
+  return(
+    ...
+    <Accordion className="accordion">
+      <AccordionItem title="One">
+        <article>
+          <p>One</p>
+        </article>
+      </AccordionItem>
+      <AccordionItem title="Two">
+        <article>
+          <p>Two</p>
+        </article>
+      </AccordionItem>
+    </Accordion>
+  )
+}
+```
 
 
-Ad es. considerando questo componente:
+
+
+
+
+
+
+
+Un altro esempio può essere considerando questo componente:
 
 ```ts
 <LoginFormModal
