@@ -57,6 +57,8 @@ function AuthProvider(props) {
 # Compound components
 
 I [[compound components]] sono un modo in [[React]] per organizzare i componenti in modo da renderli flessibili e componibili fra loro.
+Non sono pensati per essere `standalone` ma per funzionare uniti fra loro.
+
 Ad es. considerando questo componente:
 
 ```ts
