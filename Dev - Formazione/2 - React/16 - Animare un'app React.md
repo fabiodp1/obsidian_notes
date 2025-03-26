@@ -434,7 +434,7 @@ export default function WelcomePage() {
   // Il terzo rappresenta i valori a cui i corrispondenti breakpoint andrebbero trasformati
   const opacityImg = useTransform(scrollY, [0, 200, 300, 500], [1, 0.5, 0.5, 0] );
 
-  // Alla stessa maniera possiamo gestire la posizione degli elementi
+  // Alla stessa maniera possiamo gestire la posizione y, la grandezza dei font ecc.
 
   return (
     <>
