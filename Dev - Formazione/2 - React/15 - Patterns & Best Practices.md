@@ -127,22 +127,17 @@ export function useAccordionContext() {
 export default function Accordion({ children, className }) {
   const [openItemId, setOpenItemId] = useState();
 
-  function openItem(id) {
-    setOpenItemId(id);
-  }
-
-  function closeItem() {
-    setOpenItemId(null);
+  function toggleItem(id) {
+    setOpenItemId(prevId => prevId === id ? null : id);
   }
 
   const contextValue = {
     openItemId,
-    openItem,
-    closeItem
+    toggleItem
   };
 
   return (
-    <AccordionContext.Provider value={  }>
+    <AccordionContext.Provider value={ contextValue }>
       <ul className={ className }>{ children }</ul>
     </AccordionContext.Provider>
   )
@@ -151,16 +146,12 @@ export default function Accordion({ children, className }) {
 
 ```tsx title:AccordionItem.tsx
 export default function AccordionItem({id, className, title, children}) {
-  const { openItemId, openItem, closeItem } = useAccordionContext();
+  const { openItemId, toggleItem } = useAccordionContext();
 
   const isOpen = openItemId === id;
 
   function handleClick() {
-    if(isOpen) {
-      closeItem();
-    } else {
-      openItem(id);
-    }
+    toggleItem(id);
   }
 
   return (
