@@ -221,3 +221,4 @@ function App() {
 ```
 
 Adesso è chiaro che il componente `Item` appartiene ad `Accordion`.
+Ovviamente partendo da queste basi si potrebbe anche pensare di spezzare i componenti visti negli esempi in altri `compound components`, ad es. per il content dell'`Item`, il titolo ecc.
