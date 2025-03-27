@@ -292,3 +292,18 @@ function App() {
   )
 }
 ```
+
+Se nel nostro componente di ricerca aggiungiamo della logica per il filtraggio, vedremo che se possiamo in qualche modo risolvere il problema logico legato alla differenza di type, per il rendering non avremo una soluzione adatta:
+
+```tsx title:SearchableList.tsx
+export default function SearchableList({items}) {
+  return (
+    <div>
+      <input type="search" placeholder="Search" />
+      <ul>
+        {items.map(item => ...)}  <!-- <=== lo cambieremo dopo  -->
+      </ul>
+    </div>
+  )
+}
+```
