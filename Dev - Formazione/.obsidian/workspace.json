@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/7 - Folders.md",
+                "file": "2 - React/16 - React + TypeScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7 - Folders"
+              "title": "16 - React + TypeScript"
             }
           },
           {
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - React/7 - Folders.md",
+                "file": "2 - React/16 - React + TypeScript.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 7 - Folders"
+              "title": "Riferimenti a 16 - React + TypeScript"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/7 - Folders.md",
+                "file": "2 - React/16 - React + TypeScript.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 7 - Folders"
+              "title": "Struttura di 16 - React + TypeScript"
             }
           },
           {
@@ -209,8 +209,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "263ff45da9c77ac1",
+  "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "2 - React/7 - Folders.md",
+    "2 - React/16 - React + TypeScript.md",
     "2 - React/6 - Context.md",
     "2 - React/15 - Patterns & Best Practices.md",
     "2 - React/3 - Hooks.md",
@@ -235,8 +237,6 @@
     "2 - React/12 - Lazy loading.md",
     "2 - React/11 - Redux.md",
     "2 - React/8 - StrictMode.md",
-    "2 - React/7 - Folders.md",
-    "2 - React/7 - Compound components.md",
     "Senza nome.canvas",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
