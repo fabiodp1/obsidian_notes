@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/15 - Patterns & Best Practices.md",
+                "file": "2 - React/3 - Hooks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "15 - Patterns & Best Practices"
+              "title": "3 - Hooks"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/15 - Patterns & Best Practices.md",
+                "file": "2 - React/3 - Hooks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 15 - Patterns & Best Practices"
+              "title": "Struttura di 3 - Hooks"
             }
           },
           {
@@ -183,6 +183,10 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "zzz_Pagine/useContext.md",
+    "2 - React/3 - Hooks.md",
+    "2 - React/6 - Context.md",
+    "2 - React/15 - Patterns & Best Practices.md",
     "2 - React/14 - Animare un'app React.md",
     "2 - React/13 - Amplify & Cognito.md",
     "2 - React/12 - Lazy loading.md",
@@ -191,13 +195,11 @@
     "2 - React/9 - Portal.md",
     "2 - React/8 - StrictMode.md",
     "2 - React/7 - Folders.md",
-    "2 - React/15 - Patterns & Best Practices.md",
     "2 - React/7 - Compound components.md",
     "3 - Next.js/11 - Fetching data.md",
     "3 - Next.js/13 - Gestione Errori.md",
     "2 - React/1 - React Fundamentals.md",
     "2 - React/2 - Gestione dei re-render e Ottimizzazione in React.md",
-    "2 - React/3 - Hooks.md",
     "2 - React/4 - Routing.md",
     "2 - React/5 - Cache management - React Query.md",
     "3 - Next.js/14 - Forms & Data Mutation.md",
@@ -208,8 +210,6 @@
     "1 - Development/Convenzioni.md",
     "1 - Development/Gitflow.md",
     "1 - Development/Git.md",
-    "3 - Next.js/20 - Autenticazione.md",
-    "3 - Next.js/19 - Ricerca e paginazione.md",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
     "4 - Angular/Angular 19",

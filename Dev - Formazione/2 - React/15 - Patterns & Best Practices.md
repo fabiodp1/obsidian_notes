@@ -104,9 +104,11 @@ function App() {
 }
 ```
 
+## Gestire lo stato fra componenti
 
+Poiché stiamo lavorando con diversi componenti che devono rimanere fortemente configurabili, non possiamo aggiungere lo stato in uno solo di questi (ad. es. quello principale), perderebbero la loro indipendenza.
 
-
+Per farlo possiamo usare il [Context](6%20-%20Context.md) di React.
 
 
 
