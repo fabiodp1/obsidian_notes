@@ -1,20 +1,22 @@
 In React gli [[hook]] vengono utilizzati per la gestione dello state, i più comuni sono:
-- [[useState]]
-- [[useEffect]]
-- [[useContext]]
-- [[useRef]]
-- [[useReducer]]
+
+- `useState`
+- `useEffect`
+- `useContext`
+- `useRef`
+- `useReducer`
+
 Tutti questi possono essere utilizzati all'interno di un componente React per storare dati (useState) o compiere azioni (side-effects).
 
 Ognuno di questi hook possiede una propria [[API]], alcune ritornano un valore (come useRef e useContext), altre coppie di valori (useState, useReducer) e altri non ritornano niente (useEffect).
 
-# [[useState]]
+# useState
 
 E' una funzione che accetta un parametro come initial state e ritorna una coppia di valori, ritornando una array con 2 valori (utilizzato con la destrutturazione per dare un nome ai due valori), lo stato e una funzione setter per cambiare lo stato (per convenzione viene nominata iniziando con 'set').
 
 ## lazy state initialization
 
- useState può prendere come valore iniziale sia il valore direttamente, o una funzione che lo restituisca. La differenza è che passando una funzione, questa verrà chiamata solo al primo mount del componente, mentre nel primo caso il valore verrà estrapolato ogni volta che la funzione del componente verrà chiamata (ad es. al ri-render).
+ `useState` può prendere come valore iniziale sia il valore direttamente, o una funzione che lo restituisca. La differenza è che passando una funzione, questa verrà chiamata solo al primo mount del componente, mentre nel primo caso il valore verrà estrapolato ogni volta che la funzione del componente verrà chiamata (ad es. al ri-render).
  Passando una funzione ci assicuriamo, nel caso in cui il nostro valore sia il risultato di un'azione, che la stessa azione non venga ripetuta ad ogni render, creando rallentamenti.
 
 ```typescript
@@ -63,7 +65,47 @@ function handleChange(){
 >Come regola di base, usiamo [[useState]] se la variabile da usare e modificare ha un effetti nella UI (es. viene mostrata nella UI) e quindi c'è bisogno che la sua modifica scateni una riesecuzione del componente. In caso contrario meglio pensare di usare altri metodi, ad es. [[useRef]].
 
 >È inoltre importante capire prima di creare un nuovo stato, se può essere #derived o #computed da uno stato esistente, è importante mantenere il minimo lo state per evitare re-rendering inutili.
-# [[useEffect]]
+
+---
+
+# useRef
+
+[[useRef]] non serve solo ad accedere agli elementi del [[DOM]], ma anche a gestire lo state del componente che non va mostrato nella [[UI]], e quindi non ha bisogno che venga scatenata una riesecuzione del componente, ma ovviamente va gestito manualmente, non è ne uno state #derived ne #computed .
+
+```tsx
+// In questo caso usiamo useRef per tenere traccia di dei valori senza che vengano azzerati alla riesecuzione del componente, e li usiamo con l'unico scopo di computarne il timeLeft, non vengono utilizzati direttamente nella UI
+const timer = useRef();
+const startingTime = useRef();
+const endingTime = useRef();
+const timeLeft = endingTime.current * 1000 - endingTime.current * 1000;
+//...
+```
+
+## Come fare il forward verso [[custom component]]
+
+Per passare una ref ad un [[custom component]] figlio, da [[React 19+]] in poi, è possibile semplicemente passare la ref come se fosse una prop normale per poi utilizzarla nella ref dell'elemento html del custom component.
+
+```tsx
+const resultModal = useRef();
+function handleStopTimer() {
+    resultModal.current.showModal();
+  }
+//...
+<ResultModal
+	ref={resultModal}
+/>
+
+//ResultModal.tsx
+export default function ResultModal({ result, targetTime, timeLeft, ref }) {
+  return (
+    <dialog className="result-modal" ref={ref}>
+      <h2>You {result}</h2>
+//...
+```
+
+>Prima di [[React 19+]], bisognava usare [[forwardRef]].
+
+# useEffect
 
 Permette di fare delle azioni dopo che React ha renderizzato (e ri-renderizzato) il componente nel [[DOM]] (quindi da considerare che viene chiamata ogni volta).
 Accetta una funzione di callback che React chiamerà DOPO l'update del DOM:
@@ -75,9 +117,8 @@ React.useEffect(() => {
 })
 ```
 
-![[Pasted image 20241112161806.png]]
-
 ## effect dependencies
+
 Ovviamente non sempre vogliamo che il nostro useEffect venga chiamato ad ogni re-render, ad esempio se viene triggerato dal component parent e quindi non c'è un reale cambio nello state, l'useEffect viene chiamato, magari rifacendo inutili chiamate http o salvando nel localStore ecc.
 Per evitare questo useEffect prende un altro parametro opzionale chiamato [[dapendency array]], che farà in modo che useEffect chiami la callback solo nel caso in cui uno degli elementi nell'array cambi effettivamente di valore.
 
@@ -109,7 +150,7 @@ squaresCopy[2] = "newValue"
 setSquares(squaresCopy)
 ```
 
-## utilizzo con [[useRef]]
+## utilizzo con `useRef`
 
 Spesso capita lavorando con react di dover accedere ai nodi del DOM per manipolarlo, per far ciò utilizziamo useRef:
 
@@ -211,7 +252,8 @@ function App() {
 >Normalmente viene utilizzata la libreria [[react-error-boundary]] che già mette a disposizione tutte le proprietà e funzioni per gestire al meglio gli errori.
 >[bvaughn/react-error-boundary: Simple reusable React error boundary component](https://github.com/bvaughn/react-error-boundary)
 
-# [[useReducer]]
+# useReducer
+
 Grazie a `useState` abbiamo già un ottimo strumento per gestire lo stato dell'applicativo, ma ci sono casi in cui abbiamo bisogno di separare la logica dello [[state]] dai componenti che fanno i cambi di stato. Inoltre se abbiamo diversi elementi di stato che normalmente cambiano assieme, avere un unico oggetto che li contiene può essere molto comodo.
 
 In questi casi è molto utile `useReducer`:
@@ -250,7 +292,10 @@ function myReducer(currentState, action) {
 }
 ```
 
+>La reducer function avrà come primo argomento sempre l'ultimo valore disponibile.
+
 ## action
+
 La action può essere anche un oggetto..
 
 ```typescript
@@ -296,7 +341,7 @@ Questo può risultare utile se la funzione init ad es. fa azioni come leggere da
 
 # useCallback / useMemo
 
-[[memoization]]: tecnica di optimizzazione delle performace che elimina il bisogno di ricalcolare un valore per un dato input, salvando il calcolo originale e ritornandolo nel momento in cui viene utilizzato lo stesso input. E' una forma di [[caching]]:
+[[memoization]]: tecnica di ottimizzazione delle performance che elimina il bisogno di ricalcolare un valore per un dato input, salvando il calcolo originale e ritornandolo nel momento in cui viene utilizzato lo stesso input. E' una forma di [[caching]]:
 
 ```typescript
 const values = {}
@@ -349,7 +394,7 @@ const addOne = memoize((num: number) => num + 1)
 const getDog = memoize((name: string) => new Dog(name))
 ```
 
-In React non serve implementare questo tipo di astrazione, ne abbiamo già a disposizione 2 tipi [[useMemo]] e [[useCallback]].
+In React non serve implementare questo tipo di astrazione, ne abbiamo già a disposizione 2 tipi `useMemo` e `useCallback`.
 [Memoization and React | Epic React by Kent C. Dodds](https://www.epicreact.dev/memoization-and-react)
 
 Consideriamo la dependency list di useEffect, se non gliela forniamo, per evitare che il side effect della cb rimanga fuori sync con il resto dello stato dell'applicativo, questo rilancerà la cb ad ogni render.
@@ -406,6 +451,8 @@ const updateLocalStorage = React.useCallback(
 )
 ```
 
+>Nell'Array delle dipendenze vanno aggiunti solo elementi che sono state (NON i setter) o prop.
+
 >Normalmente `useCallback` e `useMemo` vengono utilizzati per fare il memoize di cb e dati per queste due situazioni:
 
 - per le array delle dipendenze, in modo da evitare di triggerare `useEffect` inutilmente.
@@ -442,67 +489,6 @@ ReactDOM.render(
 FooDisplay potrebbe trovarsi da qualsiasi parte della [[render tree]] e avrà comunque accesso al valore passato dal componente FooContext.Provider.
 
 >NOTA: è possibile passare un argomento al `createContext` che verrà usato come valore di default nel caso in cui il contesto venisse utilizzato tramite `useContext` senza la presenza di un provider. Ma questo è SCONSIGLIATO, perchè non è raccomandato usare un contesto al di fuori di un provider.
-
-## context provider component
-
-Per questo in genere viene creato un componente apposito che si occupa di fare il provide. Inoltre è buona norma creare un custom hook che si occupi di verificare se il componente figlio si trova all'interno di un provider e in caso contrario lanci un eccezione. In questa maniera evitiamo che ad es. un componente non mostri un valore semplicemente perchè non avendo un provider, allo `useContext` riceverà `undefined`.
-
-```javascript
-const CountContext = React.createContext()
-
-function useCount() {
-  const countContext = React.useContext(CountContext)
-  if (countContext === undefined) {
-    throw new Error(
-      'useCount may only be used from within a child of a CountProvider',
-    )
-  }
-  return countContext
-}
-
-// Importante passare anche props al component provider
-function CountProvider(props) {
-
-  const [count, setCount] = React.useState(0)
-  const value = [count, setCount]
-  
-  return <CountContext.Provider value={value} {...props} />
-}
-
-function CountDisplay() {
-  const [count] = useCount()
-  return <div>{'The current count is ${count}'}</div>
-}
-
-function Counter() {
-  const [, setCount] = useCount()
-  const increment = () => setCount(c => c + 1)
-  return <button onClick={increment}>Increment count</button>
-}
-
-function App() {
-  return (
-    <div>
-      <CountProvider>
-        <CountDisplay />
-        <Counter />
-      </CountProvider>
-    </div>
-  )
-}
-
-export default App
-```
-
->Con [[React 19+]] è possibile fare il wrap senza bisogno di aggiungere `.Provider`:
-
-```tsx
-<CartContext>
-	<App />
-</CartContext>
-```
-
->Inoltre con [[React 19+]] è possibile usare l'hook [[use]] invece di [[useContext]].
 
 ---
 

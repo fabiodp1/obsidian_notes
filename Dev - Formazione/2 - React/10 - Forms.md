@@ -1,3 +1,163 @@
+# Generale
+
+Non ci sono molti modi in React per poter interagire con le Form, possiamo aggiungere un handler che verrà triggerato al submit [[onSubmit]] questo verrà chiamato avendo come parametro l'evento, contenetne la proprietà target che rappresenta il nodo DOM della form.
+Tramite questo è possibile accedere ai songoli elementi della form e ai loro valori.
+
+Esistono diversi modi per accedere ai valori delle form:
+
+- tramite index: `event.target.elements[0].value`
+- tramite id o name: event.target.elements.usernameInput.value
+
+Un esempio di gestione della form:
+
+```JSX
+function UsernameForm({onSubmitUsername}) {
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const username = event.target.usernameInput.value
+    onSubmitUsername(username)
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input type="text" name="usernameInput" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+
+function App() {
+  const onSubmitUsername = username => alert(`You entered: ${username}`)
+  return <UsernameForm onSubmitUsername={onSubmitUsername} />
+}
+
+export default App
+```
+
+## Ref
+
+Un altro modo per accedere agli elementi di un DOM è tramite l'attributo [[ref]].
+
+>la proprietà [[ref]] è un oggetto che rimane consistente fra i render del componente React e possiede una proprietà *current* che può essere aggiornata in qualsiasi momento con qualsiasi valore.
+>Se stiamo interagendo con i nodi del [[DOM]] possiamo passare un ref ad un elemento React and React imposterà come valore del current il nodo DOM che viene renderizzato.
+
+Se creiamo un oggetto [[inputRef]] tramite `useRef` possiamo accedere al suo valore con *inputRef.current.value*.
+
+>**NOTA**: In React ref non funziona come in Vue, è un semplicemente un oggetto, ma la sua modifica non scatena il re-render del componente.
+
+Pricipali differenze con [[Vue]]:
+
+| Caratteristica            | Vue `ref`                         | React `useRef`                      |
+| ------------------------- | --------------------------------- | ----------------------------------- |
+| Sintassi                  | `const nome = ref(initialValue)`  | `const nome = useRef(initialValue)` |
+| Reattività                | Reattivo (triggera aggiornamenti) | Non causa render automatici         |
+| Accesso al valore         | .value                            | .current                            |
+| Uso tipico                | Dati reattivi e DOM refs          | Valori persistenti e DOM refs       |
+| Modifica DOM nei template | ref="nomeRef"                     | ref={nomeRef}                       |
+
+## State
+
+In react per accedere allo state si utilizza un [[hook]] chiamato `useState`.
+
+```jsx
+function Counter() {
+  const [count, setCount] = React.useState(0)
+  const increment = () => setCount(count + 1)
+  return <button onClick={increment}>{count}</button>
+}
+```
+
+`React.useState` accetta un valore di default e ritorna un array. Normalmente, come si vede nell'esempio, si fa il destructuring dell'array per avere lo state e la funzione per farne l'update.
+
+```JSX
+function UsernameForm({onSubmitUsername}) {
+  const usernameInput = React.useRef('fabio')
+  const [error, setError] = React.useState(null)
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    if (usernameInput.current.value) {
+      onSubmitUsername(usernameInput.current.value)
+    }
+  }
+
+  function handleChange(event) {
+    const value = usernameInput.current.value
+    const isValid = value === value.toLowerCase()
+
+    setError(isValid ? null : 'Username must be lower case')
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input
+          type="text"
+          name="usernameInput"
+          onChange={handleChange}
+          ref={usernameInput}
+        />
+      </div>
+      <div style={{color: 'red'}}>{error}</div>
+      <button type="submit" disabled={error !== null}>
+        Submit
+      </button>
+    </form>
+  )
+}
+```
+
+Negli esempi precedenti semplicemente abbiamo lasciato che il browser avesse il controllo del valore del campo input, noi semplicemente lo richiediamo nel momento in cui veniamo notificati del suo cambiamento, per poter applicare la nostra logica.
+Ma ci sono casi in cui vogliamo avere il controllo sul suo valore. React ci permette di farlo tramite il set della prop *value*:
+
+```jsx
+<input value={myInputValue} />
+```
+
+Una volta fatto ciò React si assicura che il valore dell'input non può mai essere differente dal valore della variabile passata.
+
+Normalmente viene anche utilizzato un handler per l'[[onChange]] in modo da poter avere la consapevolezza dei "cambiamenti suggeriti" al campo di input.
+Normalmente si fa lo store del valore del campo input che si vuole controllare in una variabile di stato (con React.useState) e poi l'onChange handler si occuperà del suo update.
+
+```jsx
+function UsernameForm({onSubmitUsername}) {
+  const usernameInput = React.useRef('fabio')
+  const [username, setUsername] = React.useState(null)
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    if (usernameInput.current.value) {
+      onSubmitUsername(usernameInput.current.value)
+    }
+  }
+
+  function handleChange(event) {
+    setUsername(usernameInput.current.value.toLowerCase())
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="usernameInput">Username:</label>
+        <input
+          type="text"
+          name="usernameInput"
+          onChange={handleChange}
+          value={username}
+          ref={usernameInput}
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
 # Data management
 
 Fare il submit di un form e l'estrazione dei relativi campi è abbastanza semplice, ad es. è possibile:
