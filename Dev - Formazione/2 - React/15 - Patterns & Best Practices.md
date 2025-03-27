@@ -250,8 +250,45 @@ export default function AccordionItem({id, className, title, children}) {
 }
 ```
 
-## Migliorare l'organizzazione dei componenti
+---
 
-Come abbiamo fatto fin adesso funziona correttamente e non c'è niente di sbagliato, ma allo stato attuale possiamo importare e utilizzare i componenti base, come `AccordionItem`, in giro, senza per forza dover passare da `Accordion.Item`.
+# Render Props
 
-Una delle soluzioni potrebbe essere quella di metterli tutti sotto uno stesso file e togliere l'`export`, ma non è una buona alternativa.
+L'idea alla base delle `Render Props` è quello di passare una funzione come valore per la prop `children` (in realtà è possibile farlo per qualsiasi prop, ma in genere è usato per `children`).
+
+>L'idea è quella di avere un componente che definisce una funzione che **ritorna del contenuto renderizzabile**, ed è questa funzione che verrà passata come valore per la prop `children` (quindi ad un secondo componente). Questo secondo componente ritornerà il contenuto restituito dalla chiamata a quella func.
+
+Ad es. possiamo volere un componente che andrebbe riutilizzato, ma si occupa di definire della logica, non tanto come il risultato di questa logica deve essere mostrato, e dovrà poter essere utilizzato anche per diversi tipi di dato:
+
+Pensiamo di avere un componente come questo:
+
+```tsx title:SearchableList.tsx
+export default function SearchableList({items}) {
+  return (
+    <div>
+      <input type="search" placeholder="Search" />
+      <ul>
+        {items.map(item => ...)}
+      </ul>
+    </div>
+  )
+}
+```
+
+Vorremmo utilizzarlo in diversi modi:
+
+```tsx title:App.tsx
+const PLACES = [
+  {id: "1", name: "Place 1"},
+  {id: "2", name: "Place 2"}
+]
+
+function App() {
+  return (
+    ...
+    <SearchableList items={items} />
+    <SearchableList items={[ 'item 1', 'item 2' ]} />
+    ...
+  )
+}
+```
