@@ -81,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "`use` ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -209,7 +209,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "2 - React/6 - Context.md",
     "2 - React/15 - Patterns & Best Practices.md",
