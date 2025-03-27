@@ -344,7 +344,3 @@ export default function SearchableList({items, children}) {
 >Utilizzandola nella maniera standard, l'[HTML](HTML.md) renderizzato sarà uguale per tutti gli item della lista, mentre noi vorremmo che fosse diverso per ogni elemento.
 >Chiamandolo come funzione, facciamo in modo che il [JSX](JSX.md) da renderizzare sia specifico per quell'item. Ovviamente, come dicevamo, la chiamata dovrà ritornare del codice renderizzabile.
 
-
-
-
-
