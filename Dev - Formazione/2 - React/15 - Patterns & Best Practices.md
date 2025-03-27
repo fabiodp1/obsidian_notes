@@ -417,6 +417,40 @@ function App() {
 
 # Debouncing
 
-Il `debouncing` è un pattern che permette di fare in modo che una stessa azione possa essere eseguita solo dopo un determinato periodo di tempo, evitando la sua continua ri-esecuzione al compiere di una determinata azione.
+Il `debouncing` è un pattern che permette di fare in modo che una stessa azione (anche solo aggiornamento dello state) possa essere eseguita solo dopo un determinato periodo di tempo, evitando la sua continua ri-esecuzione al compiere di una determinata azione.
 
 Un es. può essere quello di un campo di ricerca, se la funzione che si occupa di fare il fetch dei dati filtrati venisse chiamata ad ogni keystroke, rischieremmo di avere inutili e numerose chiamate server. Con il `debouncing` possiamo fare in modo che la chiamata venga fatta solo dopo che l'utente ha smesso di scrivere per un toto periodo di tempo.
+
+Per implementarlo a livello di componente (`react-query` fornisce i suoi strumenti per farlo) possiamo fare così:
+
+```tsx title:SearchableList.tsx
+export default function SearchableList({items, children, itemKeyFn}) {
+  ...
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const lastChange = useRef();
+
+  function handleChange(event) {
+    // Al nuovo keystroke viene distrutto il vecchio timer e ricreato
+    // in questa manierà ripartirà il conteggio senza eseguire il vecchio
+    if(lastChange.current) {
+      clearTimeout(lastChange.current);
+    }
+
+    lastChange.current = setTimeout(() => {
+	  // il ref con riferimento al timer va ripulito allo scadere del tempo
+      lastChange.current = null;
+      setSearchTerm(event.target.value);
+    }, 500);
+  }
+  
+  return (
+    <div>
+      <input type="search" placeholder="Search" onChange={handleChange} />
+      <ul>
+        ...
+      </ul>
+    </div>
+  )
+}
+```
