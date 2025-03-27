@@ -169,7 +169,11 @@ export default function AccordionItem({id, className, title, children}) {
 
 È buona norma, per rendere più leggibile e ovvio che dei componenti fanno parte dello stesso gruppo, mettere i componenti in uno stesso oggetto, che solitamente sarà il componente principale (nell'es. `Accordion`).
 
->In [JS](JS) le funzioni non sono altro che oggetti, e 
+>In [JS](JS) le funzioni non sono altro che oggetti, e i componenti [[React]] non sono altro che *funzioni*, quindi possiamo accedere o creare nuove prop.
+
+```tsx title:Accordion.tsx
+
+```
 
 
 
