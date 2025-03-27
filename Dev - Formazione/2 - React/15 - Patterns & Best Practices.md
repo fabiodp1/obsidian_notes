@@ -368,3 +368,52 @@ function App() {
 ```
 
 >In questa maniera stiamo riutilizzando il componente `SearchableList` in maniera molto più versatile ed elastica.
+
+## Gestire le key dinamicamente
+
+Nell'esempio sopra, stiamo utilizzando come `key` per il nostro `map` la index dell'item, ma come sappiamo non è corretto, può portare a risultati inaspettati nel comportamento della nostra lista.
+Il problema è però che i nostri item possono avere tipi diversi, quindi non possiamo fare affidamento sulla prop `id`.
+
+Possiamo però passare al nostro componente che gestisce la lista una funzione che si occuperà di generare l'id dinamicamente, un po come abbiamo fatto per il `children`:
+
+```tsx title:SearchableList.tsx
+export default function SearchableList({items, children, itemKeyFn}) {
+  ...
+  return (
+    <div>
+      <input type="search" placeholder="Search" onChange={handleChange} />
+      <ul>
+        {items.map((item, index) => (
+          <li key={ itemKeyFn(item) }>          <===
+            { children(item) }
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+```
+
+Adesso possiamo gestire come preferiamo la generazione dell'id a seconda del tipo passato.
+
+```tsx title:App.tsx
+function App() {
+  return (
+    ...
+    <SearchableList items={PLACES} 
+      itemKeyFn={ item => item.id }>                  <===
+      { item => <Place item={item} /> }
+	</SearchableList>
+    <SearchableList items={[ 'item 1', 'item 2' ]} 
+      itemKeyFn={ item => item }>                     <===
+      { item => item }
+	</SearchableList>
+    ...
+  )
+}
+```
+
+---
+
+# Debouncing
+
