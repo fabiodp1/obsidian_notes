@@ -222,3 +222,30 @@ function App() {
 
 Adesso è chiaro che il componente `Item` appartiene ad `Accordion`.
 Ovviamente partendo da queste basi si potrebbe anche pensare di spezzare i componenti visti negli esempi in altri `compound components`, ad es. per il content dell'`Item`, il titolo ecc.
+
+>Se abbiamo bisogno di condividere dello state solo con una parte del gruppo (ad es. sottocomponenti di `Item`), possiamo creare un context nel componente che deve condividere lo state, wrappando i suoi figli:
+
+```tsx title:AccordionItem.tsx
+const AccordionItemContext = createContext();
+
+export function useAccordionItemContext() {\
+  const ctx = useContext(AccordionItemContext);
+
+  if(!ctx) {
+    throw new Error("AccordionItem-related components should be wrapped by <Accordion.Item>")
+  };
+
+  return ctx;
+}
+
+export default function AccordionItem({id, className, title, children}) {
+  ...
+  return (
+    <AccordionItemContext.Provider value={id}>
+      <li className={className}>
+        { children }
+      </li>
+    </AccordionItemContext.Provider>
+  );
+}
+```
