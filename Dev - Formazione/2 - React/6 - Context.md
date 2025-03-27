@@ -27,6 +27,19 @@ return (
 
 Questo approccio non è quello preferibile perché rende il codice meno leggibile e un po antiquato.
 
+# use
+
+Disponibile da [React 19+](React%2019+.md)
+
+A differenza di `useContext` è più flessibile. Infatti anche se si tratta di un [[hook]] e facendo lo stesso di `useContext`, è possibile utilizzarlo anche in altri modi, ad es. all'interno di un `if statement`:
+
+```tsx
+//...
+if(true) {
+	const cartCtx = use(CartContext);
+}
+```
+
 # Re-rendering
 
 Nel momento in cui un componente utilizza il context e questo viene aggiornato, il componente viene ri-eseguito come se stesse aggiornando il proprio state.
