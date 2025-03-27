@@ -108,7 +108,35 @@ function App() {
 
 Poiché stiamo lavorando con diversi componenti che devono rimanere fortemente configurabili, non possiamo aggiungere lo stato in uno solo di questi (ad. es. quello principale), perderebbero la loro indipendenza.
 
-Per farlo possiamo usare il [Context](6%20-%20Context.md) di React.
+Per farlo possiamo usare il [Context](6%20-%20Context.md) di React.:
+
+```tsx title:Accordion.tsx
+import {createContext} from 'react';
+
+// Generalmente viene creato nel file del componente principale
+const AccordionContext = createContext();
+
+export default function Accordion({ children, className }) {
+  const [openItemId, setOpenItemId] = useState();
+
+  function openItem() {
+  }
+
+  function closeItem() {
+    
+  }
+
+  const contextValue = {
+    openItemId: null,
+  };
+
+  return (
+    <AccordionContext.Provider value={  }>
+      <ul className={ className }>{ children }</ul>
+    </AccordionContext.Provider>
+  )
+}
+```
 
 
 
