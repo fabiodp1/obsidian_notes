@@ -172,14 +172,55 @@ export default function AccordionItem({id, className, title, children}) {
 >In [JS](JS) le funzioni non sono altro che oggetti, e i componenti [[React]] non sono altro che *funzioni*, quindi possiamo accedere o creare nuove prop.
 
 ```tsx title:Accordion.tsx
+import {createContext} from 'react';
+import {AccordionItem} from './AccordionItem.tsx'
+
+// Generalmente viene creato nel file del componente principale
+const AccordionContext = createContext();
+
+export function useAccordionContext() {
+  ...
+}
+
+export default function Accordion({ children, className }) {
+  ...
+  return (
+    <AccordionContext.Provider value={ contextValue }>
+      <ul className={ className }>{ children }</ul>
+    </AccordionContext.Provider>
+  )
+}
+
+Accordion.Item = AccordionItem;
 
 ```
 
+In questa maniera possiamo usare il nostro `AccordionItem` in questa maniera:
 
+```tsx title:App.tsx
+// import AccordionItem from './AccordionItem.tsx' <== Non serve più
+import Accordion from './Accordion.tsx';
 
+function App() {
+  return(
+    ...
+    <Accordion className="accordion">
+      <Accordion.Item title="One">        <===
+        <article>
+          <p>One</p>
+        </article>
+      </Accordion.Item>
+      <Accordion.Item title="Two">
+        <article>
+          <p>Two</p>
+        </article>
+      </Accordion.Item>
+    </Accordion>
+  )
+}
+```
 
-
-
+Adesso è chiaro che il componente `Item` appartiene ad `Accordion`.
 
 
 Un altro esempio può essere considerando questo componente:
