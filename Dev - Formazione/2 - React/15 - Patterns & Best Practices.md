@@ -165,7 +165,11 @@ export default function AccordionItem({id, className, title, children}) {
 }
 ```
 
+## Raggruppare i compound componentes
 
+È buona norma, per rendere più leggibile e ovvio che dei componenti fanno parte dello stesso gruppo, mettere i componenti in uno stesso oggetto, che solitamente sarà il componente principale (nell'es. `Accordion`).
+
+>In [JS](JS) le funzioni non sono altro che oggetti, e 
 
 
 
