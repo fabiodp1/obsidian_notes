@@ -320,3 +320,31 @@ export default function SearchableList({items}) {
   )
 }
 ```
+
+In questo ci viene in aiuto il pattern delle `Render Props`, dove utilizzeremo la prop `children` non come faremmo normalmente, ma come se fosse una funzione:
+
+```tsx title:SearchableList.tsx
+export default function SearchableList({items, children}) {
+  ...
+  return (
+    <div>
+      <input type="search" placeholder="Search" onChange={handleChange} />
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>
+            { children(item) }                    <===
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+```
+
+>Utilizzandola nella maniera standard, l'[HTML](HTML.md) renderizzato sarà uguale per tutti gli item della lista, mentre noi vorremmo che fosse diverso per ogni elemento.
+>Chiamandolo come funzione, facciamo in modo che il [JSX](JSX.md) da renderizzare sia specifico per quell'item. Ovviamente, come dicevamo, la chiamata dovrà ritornare del codice renderizzabile.
+
+
+
+
+
