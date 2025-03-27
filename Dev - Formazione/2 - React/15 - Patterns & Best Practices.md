@@ -286,7 +286,7 @@ const PLACES = [
 function App() {
   return (
     ...
-    <SearchableList items={items} />
+    <SearchableList items={PLACES} />
     <SearchableList items={[ 'item 1', 'item 2' ]} />
     ...
   )
@@ -344,3 +344,27 @@ export default function SearchableList({items, children}) {
 >Utilizzandola nella maniera standard, l'[HTML](HTML.md) renderizzato sarà uguale per tutti gli item della lista, mentre noi vorremmo che fosse diverso per ogni elemento.
 >Chiamandolo come funzione, facciamo in modo che il [JSX](JSX.md) da renderizzare sia specifico per quell'item. Ovviamente, come dicevamo, la chiamata dovrà ritornare del codice renderizzabile.
 
+Quindi per utilizzarlo in questa maniera dovremo passare come child una funzione:
+
+```tsx title:App.tsx
+const PLACES = [
+  {id: "1", name: "Place 1"},
+  {id: "2", name: "Place 2"}
+]
+
+function App() {
+  return (
+    ...
+    <SearchableList items={PLACES} >
+    <!-- Un componente che si aspetta quel tipo di oggetto -->
+      { item => <Place item={item} /> }                     <===
+	</SearchableList>
+    <SearchableList items={[ 'item 1', 'item 2' ]} >
+      { item => item }                                      <===
+	</SearchableList>
+    ...
+  )
+}
+```
+
+>In questa maniera stiamo riutilizzando il componente `SearchableList` in maniera molto più versatile ed elastica.
