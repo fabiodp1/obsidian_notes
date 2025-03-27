@@ -249,3 +249,9 @@ export default function AccordionItem({id, className, title, children}) {
   );
 }
 ```
+
+## Migliorare l'organizzazione dei componenti
+
+Come abbiamo fatto fin adesso funziona correttamente e non c'è niente di sbagliato, ma allo stato attuale possiamo importare e utilizzare i componenti base, come `AccordionItem`, in giro, senza per forza dover passare da `Accordion.Item`.
+
+Una delle soluzioni potrebbe essere quella di metterli tutti sotto uno stesso file e togliere l'`export`, ma non è una buona alternativa.
