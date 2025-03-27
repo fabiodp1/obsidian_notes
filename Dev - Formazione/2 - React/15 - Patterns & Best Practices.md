@@ -268,14 +268,14 @@ export default function SearchableList({items}) {
     <div>
       <input type="search" placeholder="Search" />
       <ul>
-        {items.map(item => ...)}
+        {items.map(item => ...)}  <!-- <=== lo cambieremo dopo  -->
       </ul>
     </div>
   )
 }
 ```
 
-Vorremmo utilizzarlo in diversi modi:
+Vorremmo poterlo riutilizzare con diversi tipi di dato:
 
 ```tsx title:App.tsx
 const PLACES = [
