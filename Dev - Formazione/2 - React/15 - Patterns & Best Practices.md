@@ -116,18 +116,29 @@ import {createContext} from 'react';
 // Generalmente viene creato nel file del componente principale
 const AccordionContext = createContext();
 
+export function useAccordionContext() {
+  const ctx = useContext(AccordionContext);
+
+  if(!ctx) {
+    throw new Error("Accordion-related components must be wrapped by <Accordion>.");
+  }
+}
+
 export default function Accordion({ children, className }) {
   const [openItemId, setOpenItemId] = useState();
 
-  function openItem() {
+  function openItem(id) {
+    setOpenItemId(id);
   }
 
   function closeItem() {
-    
+    setOpenItemId(null);
   }
 
   const contextValue = {
-    openItemId: null,
+    openItemId,
+    openItem,
+    closeItem
   };
 
   return (
@@ -137,6 +148,36 @@ export default function Accordion({ children, className }) {
   )
 }
 ```
+
+```tsx title:AccordionItem.tsx
+export default function AccordionItem({id, className, title, children}) {
+  const { openItemId, openItem, closeItem } = useAccordionContext();
+
+  const isOpen = openItemId === id;
+
+  function handleClick() {
+    if(isOpen) {
+      closeItem();
+    } else {
+      openItem(id);
+    }
+  }
+
+  return (
+    <li className={className}>
+      <h3 onClick={handleClick}>{ title }</h3>
+      <div className={ isOpen ? 'open' : undefined }>
+        { children }
+      </div>
+    </li>
+  )
+}
+```
+
+
+
+
+
 
 
 
