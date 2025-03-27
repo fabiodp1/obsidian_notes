@@ -439,6 +439,8 @@ export default function SearchableList({items, children, itemKeyFn}) {
 
     lastChange.current = setTimeout(() => {
 	  // il ref con riferimento al timer va ripulito allo scadere del tempo
+	  // o al prossimo keystroke proverà a fare il clearTimeout di un timer
+	  // che non esiste più.
       lastChange.current = null;
       setSearchTerm(event.target.value);
     }, 500);
