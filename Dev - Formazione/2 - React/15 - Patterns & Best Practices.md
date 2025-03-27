@@ -417,3 +417,6 @@ function App() {
 
 # Debouncing
 
+Il `debouncing` è un pattern che permette di fare in modo che una stessa azione possa essere eseguita solo dopo un determinato periodo di tempo, evitando la sua continua ri-esecuzione al compiere di una determinata azione.
+
+Un es. può essere quello di un campo di ricerca, se la funzione che si occupa di fare il fetch dei dati filtrati venisse chiamata ad ogni keystroke, rischieremmo di avere inutili e numerose chiamate server. Con il `debouncing` possiamo fare in modo che la chiamata venga fatta solo dopo che l'utente ha smesso di scrivere per un toto periodo di tempo.
