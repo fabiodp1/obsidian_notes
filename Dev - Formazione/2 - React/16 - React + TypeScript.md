@@ -1,4 +1,4 @@
-# Component Props - React.FC
+# Component Props
 
 Il modo corretto di definire il type di un `Functional Component` in React è utilizzando il type `React.FC`.
 
@@ -59,4 +59,26 @@ const todoTextInputRef = useRef<HTMLInputElement>(null);       <===
 return (
   <input type="text" ref={ todoTextInputRef } />
 )
+```
+
+# Function Props
+
+```tsx title:NewTodo.tsx
+interface INewTodoProps {
+  onAddTodo: (text: string) => void;
+}
+
+const NewTodo: React.FC<INewTodoProps> = (props) => {
+  ...
+  const submitHandler = (event: React.FromEvent) => {
+    ...
+    props.onAddTodo(enteredText);  
+  } 
+}
+```
+
+# useState
+
+```tsx
+const [todos, setTodos] = useState<string[]>([]);
 ```
