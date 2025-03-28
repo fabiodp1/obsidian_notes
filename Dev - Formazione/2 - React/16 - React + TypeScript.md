@@ -82,3 +82,51 @@ const NewTodo: React.FC<INewTodoProps> = (props) => {
 ```tsx
 const [todos, setTodos] = useState<string[]>([]);
 ```
+
+# Context
+
+## createContext
+
+```tsx title:todos-context.tsx
+interface ITodoContext {
+  items: string[];
+  addTodo: (text: string) => void,
+  removeTodo: (id: string) => void
+}
+
+const TodosContext = React.createContext<ITodoContext>({
+  items: [],
+  addTodo: () => {},
+  removeTodo: (id: string) => {}
+})
+```
+
+## Context Provider
+
+```tsx title:todos-context.tsx
+cosnt TodosContextProvider: React.FC = (props) => {
+  const [todos, setTodos] = useState<string[]>([]);
+
+  const addTodoHandler = (todoText: string) => {
+    ...
+  }
+
+  const removeTodoHandler = (id: string) => {
+    ...
+  }
+
+  const contextValue: ITodoContext = {
+    items: todos,
+    addTodo: addTodoHandler,
+    removeTodo: removeTodoHandler
+  }
+
+  return (
+    <TodosContext.Provider value={ contextValue }>
+      { props.children }
+    </TodosContext.Provider>
+  )
+};
+
+export default TodosContextProvider;
+```
