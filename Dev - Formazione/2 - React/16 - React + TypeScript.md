@@ -16,7 +16,7 @@ const Todos: React.FC = (props) => {
 }
 ```
 
-A questo tramite `Generic` possiamo aggiungere le nostre prop:
+Tramite questo, via `Generic`, possiamo dichiarare le nostre prop:
 
 ```tsx title:Todos.tsx
 interface IMyType {
