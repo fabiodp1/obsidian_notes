@@ -1,4 +1,4 @@
-# Component Props
+# Component Props - React.FC
 
 Il modo corretto di definire il type di un `Functional Component` in React è utilizzando il type `React.FC`.
 
@@ -31,4 +31,32 @@ const Todos: React.FC<IMyType> = (props) => {    <===
     </ul>
   )
 }
+```
+
+# FormEvent
+
+L'evento di `submit` può essere tipizzato dal type fornito da [React](React.md) `React.FormEvent`:
+
+```tsx title:NewTodo.tsx
+...
+const submitHandler = (event: React.FormEvent) => {   <===
+  event.preventDefault();
+  ...
+}
+
+return (
+  <form onSubmit={ submitHandler }>
+    ...
+  </form>
+)
+```
+
+# useRef
+
+```tsx
+const todoTextInputRef = useRef<HTMLInputElement>(null);       <===
+
+return (
+  <input type="text" ref={ todoTextInputRef } />
+)
 ```
