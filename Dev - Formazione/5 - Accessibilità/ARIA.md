@@ -1,0 +1,1 @@
+`ARIA` (Accessible Rich Internet Applications) definisce le specifiche per la creazione di contenuti web accessibili a persone con disabilità.
