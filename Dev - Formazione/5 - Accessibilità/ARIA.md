@@ -77,5 +77,24 @@ or
 
 >**NOTA**: l'esempio sopra è per i widget ARIA. Per normali `input` HTML è preferibile seguire la prima regola ARIA e utilizzare l'elemento `label` con un attributo `for` per associare label e `input`.
 
-### `lable` ed elementi etichettabili
+### `label` ed elementi etichettabili
 
+L'elemento label non può essere utilizzato per fornire un nome accessibile ai `custom controls`, a meno che la label non referenzi un elemento HTML etichettabile:
+
+```html
+<!-- HTML input element with combox role -->
+
+<label>
+  user name <input type="text" role="combobox">   === YES ===
+</label>
+```
+
+Un elemento `div` a prescindere dal role che gli viene assegnato, non è un elemento etichettabile:
+
+````html
+<!-- HTML div element with combox role -->
+
+<label>
+ user name <div  role="combobox"></div>   === NO ===
+</label>
+```
