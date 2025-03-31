@@ -62,4 +62,6 @@ Un altro strumento utile è `Lighthouse` dei `devTools`.
 # HTML Accessibile
 
 Uno dei modi più semplici per rendere una pagina web accessibile, è utilizzare correttamente gli elementi dell'[HTML](HTML.md), la semantica di questi.
-Infatti non solo utilizzare gli giusti elementi ci darà dello styling a gratis, ma aggiungerà anche feature come la governabilità via tastiera.
+Infatti non solo utilizzare gli giusti elementi ci darà dello styling a gratis, ma aggiungerà anche feature come la governabilità via tastiera. Ad es. l'elemento `button` permette all'utente di spostarsi su di esso tramite il tasto `Tab` e attivarli premendo `space` o `enter`.
+
+Inoltre è più facile da rendere responsive e pesa meno rispetto a dello spaghetti code, e migliora la [SEO](SEO) della pagina.
