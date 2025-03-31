@@ -2,7 +2,7 @@
 
 ## WHAT
 
-`MobX` è una libreria che si basa sui `signal`, iper-testata che permette di gestire lo state in maniera semplice e scalabile. La filosofia dietro `MobX` è semplice:
+`MobX` è una libreria che si basa sui `signal`, iper-testata, che permette di gestire lo state in maniera semplice e scalabile. La filosofia dietro `MobX` è semplice:
 
 - **Straightforward**: codice senza `boilerplate`. Per aggiornare il valore di un campo basta fare una normale assegnazione JS ( x = y ). Il sistema di reattività si occuperà di captarlo e propagarlo per scatenare gli aggiornamenti. Non servono utility speciali per aggiornare dati in maniera asincrona.
 - **Rendering ottimizzato**: tutti i cambiamenti dello state vengono captati a runtime, creando un albero di dipendenze che cattura tutte le relazioni fra state e output. Tutto ottimizzato, nessun bisogno di ottimizzare manualmente i componenti tramite memoizzazione.
@@ -40,9 +40,16 @@ function createDoubler(value) {
 
 I componenti che dipenderanno dallo state andranno wrappati con il metodo `observer`:
 
-```ts
+```tsx title:TimerView.tsx
+const myTimer = createTimer();
 
+const TimerView = observer(({ timer }) => (
+    <button onClick={() => timer.reset()}>
+      Seconds passed: {timer.secondsPassed}
+    </button>
+));
 ```
+
 ### makeAutoObservable
 
 Di default fa l'`infer` di tutte le proprietà del nostro `state`, e quindi il `type`. Sarà comunque possibile fare l'override della configurazione di default.
