@@ -106,3 +106,14 @@ In una buona struttura come quella d'esempio uno screen reader potrà:
 - in alcuni screen reader, permette di fare una lista degli heading in modo da poterli usare come tabella dei contenuti.
 
 Un altro pregio di strutturare correttamente l'HTML è che è più facile gestirne lo stile [CSS](CSS), o manipolarlo con JS.
+
+### Utilizzo di linguaggio chiaro
+
+Anche il linguaggio utilizzato può inficiare l'accessibilità:
+
+- Non usare dash se possibile, invece di "5-7" è meglio "5 to 7".
+- Non usare abbreviazioni, invece di "Jan", scrivi "January".
+- Espandi gli acronimi, almeno una 2 volte, e poi usa `<abbr>` per descriverli.
+
+## Layout della pagina
+
