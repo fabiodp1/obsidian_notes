@@ -37,7 +37,7 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 
 >Dove le informazioni semantiche fornite nativamente dagli elementi dell'HTML non arrivano, possono essere supportati dalle feature delle specifiche [WAI-ARIA](https://www.w3.org/TR/wai-aria/), che aggiungono informazioni semantiche all'albero dell'accessibilità.
 
-# Tools
+# Checklist test di accessibilità
 
 - DevTools Lighthouse
 - [W3C HTML Validator](https://validator.w3.org/)
