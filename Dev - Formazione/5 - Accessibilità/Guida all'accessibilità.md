@@ -117,3 +117,5 @@ Anche il linguaggio utilizzato può inficiare l'accessibilità:
 
 ## Layout della pagina
 
+Una volta si utilizzava la sbagliata pratica di utilizzare le `table` per creare i layout della pagina. Questa non è una buona idea perché confonde gli screen reader, specialmente se complesso.
+
