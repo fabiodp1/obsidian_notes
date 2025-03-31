@@ -24,7 +24,9 @@ import { makeAutoObservable } from "mobx"
 
 function createDoubler(value) {
     return makeAutoObservable({
+	    // Prop
         value,
+        
         // Computed (derived state)
         get double() {
             return this.value * 2
@@ -54,11 +56,45 @@ const TimerView = observer(({ timer }) => (
 Di default fa l'`infer` di tutte le proprietà del nostro `state`, e quindi il `type`. Sarà comunque possibile fare l'override della configurazione di default.
 Nello state che ci verrà ritornato:
 
-- Tutte le proprietà dichiarate diventeranno `observable` (reattive);
+- Tutte le proprietà dichiarate diventeranno `observable` (reattive), e in maniera ricorsiva;
 - Tutti i `getter` diventeranno `computed`;
 - Tutti i `setter` diventeranno `action`;
 - Tutte le funzioni diventeranno `autoAction`;
 - I membri marcati come false nell'argomento `overrides`, non saranno annotate. Per esempio può essere usato per campi `read only`.
+
+>La reattività è **DEEP**, nel senso che anche se una proprietà dichiarata è un oggetto profondamente innestato, in maniera ricorsiva sarà reso interamente reattivo, per cui non ci sarà bisogno di utilizzare `spred operators` ecc.
+
+## MobX as Store + React
+
+In [React](React.md) normalmente avremo uno store principale che detiene l'app state, e magari (non sempre) un UI state.
+
+Per dichiarare uno state che sia un store, condiviso in tutto l'applicativo, basta creare/instanziare il nostro store ed esportarlo, in modo che funga da `singletone` condiviso:
+
+```ts title:getMyStore.ts
+import { makeAutoObservable } from "mobx"
+
+// Factory Function
+function createStore() {
+    return makeAutoObservable({
+	    // Prop
+        isLogged: false,
+        items: [],
+
+        // Method
+        addItem(item) {
+            this.items.push(item);
+        },
+        
+        // Computed (derived state)
+        get itemsLength() {
+            return this.items.length;
+        },
+    })
+}
+
+const getMyStore = createStore();
+
+```
 
 # Redux
 ## WHAT
