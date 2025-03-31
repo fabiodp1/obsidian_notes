@@ -190,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -209,7 +209,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "84b4a88a80271df9",
   "lastOpenFiles": [
     "2 - React/7 - Folders.md",
     "2 - React/16 - React + TypeScript.md",
