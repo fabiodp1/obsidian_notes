@@ -2,7 +2,14 @@
 
 ## WHAT
 
-`MobX` è una libreria che si basa sui `signal`, iper-testata che permette di gestire lo state in maniera semplice e scalabile
+`MobX` è una libreria che si basa sui `signal`, iper-testata che permette di gestire lo state in maniera semplice e scalabile. La filosofia dietro `MobX` è semplice:
+
+- **Straightforward**: codice senza `boilerplate`. Per aggiornare il valore di un campo basta fare una normale assegnazione JS ( x = y ). Il sistema di reattività si occuperà di captarlo e propagarlo per scatenare gli aggiornamenti. Non servono utility speciali per aggiornare dati in maniera asincrona.
+- **Rendering ottimizzato**: tutti i cambiamenti dello state vengono captati a runtime, creando un albero di dipendenze che cattura tutte le relazioni fra state e output. Tutto ottimizzato, nessun bisogno di ottimizzare manualmente i componenti tramite memoizzazione.
+- **Libertà architetturale**: `MobX` è non-opinionata, permettendo di gestire lo state al di fuori del framework UI. Questo rende il codice disaccoppiato, flessibile e soprattutto *facilmente testabile*.
+
+
+## How
 
 Esistono diversi modi per utilizzare `MobX`:
 
