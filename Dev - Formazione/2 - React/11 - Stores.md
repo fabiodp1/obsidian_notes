@@ -1,6 +1,18 @@
 # MobX
 
+## WHAT
 
+`MobX0 `
+
+Esistono diversi modi per utilizzare `MobX`:
+
+- Classi + utility `makeObservable`;
+- Classi + decoratori;
+- Factory Function + `makeAutoObservable`;
+
+Il metodo più semplice e diretto di utilizzare `MobX` con [React](React.md) e in maniera funzionale, è l'ultimo.
+
+### 
 
 # Redux
 ## WHAT
