@@ -10,5 +10,14 @@ Le principali disabilità da tenere in considerazione sono:
 - **Difficoltà motorie**
 	- Queste possono avere difficoltà ad es. ad usare il mouse, altre potrebbero essere completamente paralizzate, avendo bisogno di un `head pointer` per interagire col computer. Alcune di queste difficoltà possono essere superate dando la possibilità di utilizzare solo la tastiera per interagire con la pagina.
 - **Difficoltà cognitive**
-	- 
-
+	- In questo spettro rientrano diverse tipologie, da quelle intellettive alle malattie mentali. In questo caso per intervenire sull'accessibilità si possono adoperare diverse strategie:
+		- Fornire il contenuto in più di una maniera, come ad es. tramite "text-to-speech" o video.
+		- Contenuto facilmente comprensibile.
+		- Focalizzando l'attenzione sul contenuto importante.
+		- Riducendo le distrazioni, come contenuto inutile o pubblicità.
+		- Layout della pagina e navigazione consistenti.
+		- Elementi familiari, come link sottolineati in blue se non visitati e porpora se visitati.
+		- Dividendo i processi passi logici e essenziali, con indicatori di progresso.
+		- Autenticazione il più facile possibile senza compromettere la sicurezza.
+		- Rendendo i form facili da compilare, ad es. con messaggi di errore chiari.
+		- 
