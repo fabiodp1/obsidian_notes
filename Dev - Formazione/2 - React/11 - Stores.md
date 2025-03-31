@@ -40,12 +40,14 @@ function createDoubler(value) {
 
 ### makeAutoObservable
 
-Di default fa l'`infer` di tutte le proprietà del nostro `state`, e quindi il `type`.
+Di default fa l'`infer` di tutte le proprietà del nostro `state`, e quindi il `type`. Sarà comunque possibile fare l'override della configurazione di default.
+Nello state che ci verrà ritornato:
 
-
-- Tutte le proprietà dichiarate `observable` (reattive);
+- Tutte le proprietà dichiarate diventeranno `observable` (reattive);
 - Tutti i `getter` diventeranno `computed`;
-- 
+- Tutti i `setter` diventeranno `action`;
+- Tutte le funzioni diventeranno `autoAction`;
+- I membri marcati come false nell'argomento `overrides`, non saranno annotate. Per esempio può essere usato per campi `read only`.
 
 # Redux
 ## WHAT
