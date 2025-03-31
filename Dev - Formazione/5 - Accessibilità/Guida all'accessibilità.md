@@ -36,3 +36,6 @@ Le linee guida su come dovrebbe essere un applicativo accessibile, sono state de
 Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espongono informazioni utili alle tecnologie assistive.
 
 >Dove le informazioni semantiche fornite nativamente dagli elementi dell'HTML non arrivano, possono essere supportati dalle feature delle specifiche [WAI-ARIA](https://www.w3.org/TR/wai-aria/), che aggiungono informazioni semantiche all'albero dell'accessibilità.
+
+# Tools
+
