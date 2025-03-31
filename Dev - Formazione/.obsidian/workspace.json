@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Guida all'accessibilità"
             }
+          },
+          {
+            "id": "15146772ee9ee37c",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://wave.webaim.org/",
+                "title": "WAVE Web Accessibility Evaluation Tools",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "WAVE Web Accessibility Evaluation Tools"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,13 +157,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Accessibilità/Guida all'accessibilità.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Guida all'accessibilità"
+              "title": "Struttura"
             }
           },
           {
@@ -181,7 +195,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "15146772ee9ee37c",
   "lastOpenFiles": [
     "5 - Accessibilità/Guida all'accessibilità.md",
     "5 - Accessibilità/ARIA.md",

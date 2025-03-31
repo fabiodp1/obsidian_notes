@@ -39,5 +39,14 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 
 # Checklist test di accessibilità
 
-- DevTools Lighthouse
-- [W3C HTML Validator](https://validator.w3.org/)
+- Assicurati che il tuo HTML sia il più semanticamente corretto possibile. [Validarlo](https://validator.w3.org/) è un buon inizio, così come usare uno [strumento di audit](https://wave.webaim.org/).
+- Controlla che i tuoi contenuti abbiano senso anche quando il CSS è disattivato.
+- Assicurati che le funzionalità siano accessibili tramite tastiera ([vedi controlli UI](https://www.w3.org/TR/WCAG21/#keyboard-accessible)). Testa usando Tab, Invio, ecc.
+- Assicurati che i contenuti non testuali abbiano alternative testuali. Uno [strumento di audit](https://wave.webaim.org/) è utile per individuare problemi.
+- Controlla che il contrasto dei colori del tuo sito sia adeguato usando un [tool apposito](https://webaim.org/resources/contrastchecker/).
+- Assicurati che i contenuti nascosti siano visibili dai lettori di schermo.
+- Garantisci che le funzionalità siano utilizzabili anche senza JavaScript, ove possibile.
+- Usa [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) per migliorare l’accessibilità quando appropriato.
+- Esegui un audit del tuo sito con uno [strumento di verifica](https://wave.webaim.org/).
+- Testa il sito con un [lettore di schermo](https://www.nvaccess.org/download/).
+- Includi una dichiarazione di accessibilità in una posizione facilmente individuabile sul tuo sito per spiegare le misure adottate.
