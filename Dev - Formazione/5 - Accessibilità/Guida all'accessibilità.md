@@ -39,3 +39,6 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 
 # Tools
 
+- DevTools Lighthouse
+- L'estensione [aXe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- 
