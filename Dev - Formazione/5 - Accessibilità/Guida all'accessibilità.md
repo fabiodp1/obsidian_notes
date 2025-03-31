@@ -20,3 +20,19 @@ Le principali disabilità da tenere in considerazione sono:
 		- Dividendo i processi passi logici e essenziali, con indicatori di progresso.
 		- Autenticazione il più facile possibile senza compromettere la sicurezza.
 		- Rendendo i form facili da compilare, ad es. con messaggi di errore chiari.
+
+# HOW
+
+Si pensa che per rendere un applicativo accessibile, si debba impiegare un effort eccessivo, causando perdite di tempo e complicazioni.
+Se ciò potrebbe essere vero nel momento in cui devo rendere accessibile un applicativo già esistente, non è così se cerchiamo di renderlo accessibile da subito.
+Ad es. ponendoci da subito certe domande come:
+
+- è il mio datepicker utilizzabile tramite screen reader?
+- se il contenuto si aggiorna dinamicamente, se ne accorgeranno anche persone con difficoltà visive?
+- I miei bottoni sono accessibili sia tramite tastiera che da schermi touch?
+
+Le linee guida su come dovrebbe essere un applicativo accessibile, sono state definite da W3C nelle [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/).
+
+Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espongono informazioni utili alle tecnologie assistive.
+
+>Dove le informazioni semantiche fornite nativamente dagli elementi dell'HTML non arrivano, possono essere supportati dalle feature delle specifiche [WAI-ARIA](https://www.w3.org/TR/wai-aria/), che aggiungono informazioni semantiche all'albero dell'accessibilità.
