@@ -9,7 +9,7 @@
 - **Libertà architetturale**: `MobX` è non-opinionata, permettendo di gestire lo state al di fuori del framework UI. Questo rende il codice disaccoppiato, flessibile e soprattutto *facilmente testabile*.
 
 
-## How
+## HOW
 
 Esistono diversi modi per utilizzare `MobX`:
 
@@ -18,8 +18,34 @@ Esistono diversi modi per utilizzare `MobX`:
 - Factory Function + `makeAutoObservable`;
 
 Il metodo più semplice e diretto di utilizzare `MobX` con [React](React.md) e in maniera funzionale, è l'ultimo.
+Per fare ciò basta creare una `Factory Function` che ritorni il nostro state wrappato dall'utility `makeAutoObservable`:
 
-### 
+```ts
+import { makeAutoObservable } from "mobx"
+
+function createDoubler(value) {
+    return makeAutoObservable({
+        value,
+        // Computed (derived state)
+        get double() {
+            return this.value * 2
+        },
+        // Method
+        increment() {
+            this.value++
+        }
+    })
+}
+```
+
+### makeAutoObservable
+
+Di default fa l'`infer` di tutte le proprietà del nostro `state`, e quindi il `type`.
+
+
+- Tutte le proprietà dichiarate `observable` (reattive);
+- Tutti i `getter` diventeranno `computed`;
+- 
 
 # Redux
 ## WHAT
