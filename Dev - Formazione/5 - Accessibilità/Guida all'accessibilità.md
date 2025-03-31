@@ -105,3 +105,4 @@ In una buona struttura come quella d'esempio uno screen reader potrà:
 - è possibile saltare all'heading successivo/precedente;
 - in alcuni screen reader, permette di fare una lista degli heading in modo da poterli usare come tabella dei contenuti.
 
+Un altro pregio di strutturare correttamente l'HTML è che è più facile gestirne lo stile [CSS](CSS), o manipolarlo con JS.
