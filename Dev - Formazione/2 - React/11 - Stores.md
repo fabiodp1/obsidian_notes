@@ -38,6 +38,11 @@ function createDoubler(value) {
 }
 ```
 
+I componenti che dipenderanno dallo state andranno wrappati con il metodo `observer`:
+
+```ts
+
+```
 ### makeAutoObservable
 
 Di default fa l'`infer` di tutte le proprietà del nostro `state`, e quindi il `type`. Sarà comunque possibile fare l'override della configurazione di default.
