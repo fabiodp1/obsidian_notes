@@ -2,7 +2,7 @@
 
 ## WHAT
 
-`MobX0 `
+`MobX` è una libreria che si basa sui `signal`, iper-testata che permette di gestire lo state in maniera semplice e scalabile
 
 Esistono diversi modi per utilizzare `MobX`:
 
