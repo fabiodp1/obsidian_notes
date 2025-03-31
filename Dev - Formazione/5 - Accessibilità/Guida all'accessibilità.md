@@ -20,4 +20,3 @@ Le principali disabilità da tenere in considerazione sono:
 		- Dividendo i processi passi logici e essenziali, con indicatori di progresso.
 		- Autenticazione il più facile possibile senza compromettere la sicurezza.
 		- Rendendo i form facili da compilare, ad es. con messaggi di errore chiari.
-		- 
