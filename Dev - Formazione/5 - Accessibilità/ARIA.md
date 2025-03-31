@@ -2,6 +2,8 @@
 
 Le specifiche oltre a dare delle indicazioni generali, definiscono anche delle regole di base da seguire.
 
+Vedi anche [QUI](https://www.w3.org/WAI/ARIA/apg/patterns/).
+
 ---
 
 # Regole d'utilizzo
