@@ -1,4 +1,9 @@
-# WHAT
+# MobX
+
+
+
+# Redux
+## WHAT
 
 >[[Redux]] è un sistema di gestione dello stato trasversalmente ai componenti e il resto dell'app.
 
@@ -18,11 +23,11 @@ Possiamo suddividere gli `state` in 3 tipologie:
 
 ---
 
-# WHY
+## WHY
 
 Se [Redux](Redux) è semplicemente un'alternativa ai [6 - Context](6%20-%20Context.md), perché dovremmo usarlo?
 
-## Contro del Context
+### Contro del Context
 
 Parliamo di potenziali 'contro', perché potrebbe essere che nella nostra app non rappresentino un problema.
 
@@ -35,7 +40,7 @@ Librerie come `Redux` nascono per risolvere queste criticità.
 
 ---
 
-# HOW
+## HOW
 
 [[Redux]] nasce per poter creare uno `Central Data Store`, avere tutti dati (state) centralizzati in **un unico** store.
 Questo potrebbe sembrare difficile da mantenere, come per il Context, ma in realtà non abbiamo bisogno ogni volta di gestire direttamente l'intero store,
@@ -50,9 +55,9 @@ Quindi il componente chiama l'`Action`, [[React]] la passa al `Reducer` che gene
 
 ---
 
-# Concepts
+## Concepts
 
-## Reducer
+### Reducer
 
 Sono delle funzioni [JS](JS) che prendono come argomenti 2 parametri:
 
@@ -79,7 +84,7 @@ const store = redux.createStore(counterReducer);
 
 >Nel momento in cui lo store viene creato, i reducer verranno chiamati per la prima volta, quindi è importante dare un default alla proprietà `state` del `Reducer` o essendo al primo avvio `undefined`, cercare di accedere alle prop dello state darebbe errore.
 
-## Subscriber
+### Subscriber
 
 Il subscriber è una funzione che restituirà tutto o parte dello state, e andrà registrato nello store tramite il metodo `subscribe`.
 
@@ -93,7 +98,7 @@ const counterSubscriber = () => {
 store.subscribe(counterSubscriber);
 ```
 
-## Action
+### Action
 
 Un po come si fa con `useReducer`, la `Action` è un oggetto che tramite una prop `type`, definisce il tipo di azione che andrà fatta dal `Reducer`
 
@@ -126,11 +131,11 @@ const counterReducer = (state = {counter: 0}, action) => {
 
 ---
 
-# React & react-redux
+## React & react-redux
 
 Con `React` installeremo `react-redux` che semplifica un po le cose.
 
-## Creare lo store
+### Creare lo store
 
 Creiamo un file `.ts` (o .js) nella cartella che conterrà lo store:
 
@@ -175,7 +180,7 @@ root.render(
 
 >Come tutti i `Context`, non è obbligatorio fare il wrap a livello di root, possiamo farlo anche innestato in punti diversi del tree di componenti.
 
-## useSelector
+### useSelector
 
 Per leggere lo store in componente faremo uso di un custom hook appartenente alla libreria `react-redux`, `useSelector`. A questo [[hook]] va passata una funzione che verrà eseguita da `Redux` per estrarre la parte di state che ci serve:
 
@@ -196,7 +201,7 @@ const Counter = () => {
 >`useSelector` si occuperà di fare la `subscription` allo store per questo componente, quindi il componente verrà aggiornato ogni volta che lo stato per cui è stata fatta la subscription cambia.
 >Si occuperà anche di cancellare la sottoscrizione al destroy del componente.
 
-## useDispatch
+### useDispatch
 
 Per fare il `dispatch` di un'`action` all'interno di un componente possiamo usare l'`hook` di react-redux `useDispatch.
 
@@ -213,7 +218,7 @@ const Counter = () => {
 }
 ```
 
-### Passare un payload
+#### Passare un payload
 
 Come per le funzioni reducer utilizzate da `useReduce`, anche qui assieme al tipo di azione, l'`action` può contenere un payload:
 
@@ -237,7 +242,7 @@ const increaseHandler = (amount: number) => {
 
 ```
 
-## Proprietà multiple dello state
+### Proprietà multiple dello state
 
 ```ts
 const initialState = {
@@ -307,7 +312,7 @@ const counterReducer = (state = initialState, action) => {
 
 ---
 
-# Redux Toolkit
+## Redux Toolkit
 
 Il fatto di dover stare molto attenti a copiare lo state correttamente prima che il reducer lo possa ritornare per rispettare l'immutabilità dello state di [Redux](Redux) può essere tedioso e pericolosi man mano che l'applicativo e lo state crescono.
 
@@ -315,7 +320,7 @@ Il fatto di dover stare molto attenti a copiare lo state correttamente prima che
 
 [[Redux Toolkit]] semplifica molte cose nell'utilizzo di [Redux](Redux), partendo dal file di root dello store dove dichiariamo il `Reducer`.
 
-## createSlice
+### createSlice
 
 Aiuta nella creazione del `Reducer`. Esiste anche `createReducer`, ma è meno potente.
 Accetta un oggetto che rappresenta una fetta, "slice", dello state.
@@ -349,7 +354,7 @@ const counterSlice = createSlice({
 });
 ```
 
-### Unire più Slice
+#### Unire più Slice
 
 Per fare ciò viene utilizzato un altro [[hook]] del toolkit, `configureStore` che permette di configurare e creare uno store, ma rendendo facile l'unione fra più store:
 
@@ -368,7 +373,7 @@ const store = configureStore({
 });
 ```
 
-## Actions
+### Actions
 
 Per accedere alle action possiamo fare tramite la prop `actions`:
 

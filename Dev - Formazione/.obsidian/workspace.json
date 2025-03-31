@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/16 - React + TypeScript.md",
+                "file": "2 - React/11 - Stores.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16 - React + TypeScript"
+              "title": "11 - Stores"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/16 - React + TypeScript.md",
+                "file": "2 - React/11 - Stores.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 16 - React + TypeScript"
+              "title": "Struttura di 11 - Stores"
             }
           },
           {
@@ -190,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -209,10 +209,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "84b4a88a80271df9",
+  "active": "5f9799b7958c8dda",
   "lastOpenFiles": [
-    "2 - React/7 - Folders.md",
     "2 - React/16 - React + TypeScript.md",
+    "2 - React/7 - Folders.md",
     "2 - React/6 - Context.md",
     "2 - React/15 - Patterns & Best Practices.md",
     "2 - React/3 - Hooks.md",
@@ -235,7 +235,7 @@
     "2 - React/14 - Animare un'app React.md",
     "2 - React/13 - Amplify & Cognito.md",
     "2 - React/12 - Lazy loading.md",
-    "2 - React/11 - Redux.md",
+    "2 - React/11 - Stores.md",
     "2 - React/8 - StrictMode.md",
     "Senza nome.canvas",
     "zzzz_allegati/Pasted image 20250224122217.png",
