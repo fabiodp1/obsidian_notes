@@ -65,3 +65,43 @@ Uno dei modi più semplici per rendere una pagina web accessibile, è utilizzare
 Infatti non solo utilizzare gli giusti elementi ci darà dello styling a gratis, ma aggiungerà anche feature come la governabilità via tastiera. Ad es. l'elemento `button` permette all'utente di spostarsi su di esso tramite il tasto `Tab` e attivarli premendo `space` o `enter`.
 
 Inoltre è più facile da rendere responsive e pesa meno rispetto a dello spaghetti code, e migliora la [SEO](SEO) della pagina.
+
+## Text content
+
+Uno dei migliori supporti per gli screen reader è fornire una buona struttura per il contenuto, con `headings`, paragrafi, liste ecc.:
+
+```html
+<h1>My heading</h1>
+
+<p>This is the first section of my document.</p>
+
+<p>I'll add another paragraph here too.</p>
+
+<ol>
+  <li>Here is</li>
+  <li>a list for</li>
+  <li>you to read</li>
+</ol>
+
+<h2>My subheading</h2>
+
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
+
+<h2>My 2nd subheading</h2>
+
+<p>
+  This is the second subsection of my content, which I think is more interesting
+  than the last one.
+</p>
+```
+
+In una buona struttura come quella d'esempio uno screen reader potrà:
+
+- leggere ogni header mentre procede col contenuto, informando di quale è un heading e quale un paragrafo ecc.;
+- può fermarsi dopo ogni elemento, permettendo di procedere a qualsiasi ritmo si preferisce;
+- è possibile saltare all'heading successivo/precedente;
+- in alcuni screen reader, permette di fare una lista degli heading in modo da poterli usare come tabella dei contenuti.
+
