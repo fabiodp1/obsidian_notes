@@ -8,5 +8,7 @@ Le principali disabilità da tenere in considerazione sono:
 - **Difficoltà uditive**
 	- Persone non udenti o con problemi di udito, a cui è importante dare alternative testuali.
 - **Difficoltà motorie**
+	- Queste possono avere difficoltà ad es. ad usare il mouse, altre potrebbero essere completamente paralizzate, avendo bisogno di un `head pointer` per interagire col computer. Alcune di queste difficoltà possono essere superate dando la possibilità di utilizzare solo la tastiera per interagire con la pagina.
+- **Difficoltà cognitive**
 	- 
 
