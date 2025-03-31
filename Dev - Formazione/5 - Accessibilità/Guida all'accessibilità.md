@@ -40,4 +40,4 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 # Tools
 
 - DevTools Lighthouse
-- 
+- [W3C HTML Validator](https://validator.w3.org/)
