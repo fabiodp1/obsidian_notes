@@ -21,6 +21,8 @@ Le principali disabilità da tenere in considerazione sono:
 		- Autenticazione il più facile possibile senza compromettere la sicurezza.
 		- Rendendo i form facili da compilare, ad es. con messaggi di errore chiari.
 
+---
+
 # HOW
 
 Si pensa che per rendere un applicativo accessibile, si debba impiegare un effort eccessivo, causando perdite di tempo e complicazioni.
@@ -37,6 +39,8 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 
 >Dove le informazioni semantiche fornite nativamente dagli elementi dell'HTML non arrivano, possono essere supportati dalle feature delle specifiche [WAI-ARIA](https://www.w3.org/TR/wai-aria/), che aggiungono informazioni semantiche all'albero dell'accessibilità.
 
+---
+
 # Checklist test di accessibilità
 
 - Assicurati che il tuo HTML sia il più semanticamente corretto possibile. [Validarlo](https://validator.w3.org/) è un buon inizio, così come usare uno [strumento di audit](https://wave.webaim.org/).
@@ -52,3 +56,7 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 - Includi una dichiarazione di accessibilità in una posizione facilmente individuabile sul tuo sito per spiegare le misure adottate.
 
 Un altro strumento utile è `Lighthouse` dei `devTools`.
+
+---
+
+# HTML Accessibile
