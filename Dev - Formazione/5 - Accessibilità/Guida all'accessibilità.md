@@ -50,3 +50,5 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 - Esegui un audit del tuo sito con uno [strumento di verifica](https://wave.webaim.org/).
 - Testa il sito con un [lettore di schermo](https://www.nvaccess.org/download/).
 - Includi una dichiarazione di accessibilità in una posizione facilmente individuabile sul tuo sito per spiegare le misure adottate.
+
+Un altro strumento utile è `Lighthouse` dei `devTools`.
