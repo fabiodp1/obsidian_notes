@@ -31,6 +31,7 @@ function createDoubler(value) {
         get double() {
             return this.value * 2
         },
+        
         // Method
         increment() {
             this.value++
@@ -41,13 +42,16 @@ function createDoubler(value) {
 
 I componenti che dipenderanno dallo state andranno wrappati con il metodo `observer`:
 
-```tsx title:TimerView.tsx
-const myTimer = createTimer();
+```tsx title:DoublerView.tsx
+const { double, increment } = createDoubler(2);
 
-const TimerView = observer(({ timer }) => (
-    <button onClick={() => timer.reset()}>
-      Seconds passed: {timer.secondsPassed}
-    </button>
+const DoublerView = observer(({ timer }) => (
+	<>
+	  <h3>Current value: { double }</h3>
+      <button onClick={ increment }>
+        Increment
+      </button>
+    </>
 ));
 ```
 
