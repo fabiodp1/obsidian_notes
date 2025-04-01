@@ -431,7 +431,7 @@ const { data, isPending, isError, error } = useQuery({
 
 `React Query` oltre a poter essere usato per ottenere dati, può essere usato anche per inviare e aggiornare dati. Per fare ciò in maniera ottimizzata (volendo sarebbe possibile farlo anche tramite *useQuery*) viene messo a disposizione l'[hook](hook) `useMutation`.
 
->Lo scopo delle mutazioni non è quello di gestire la `cache` ma solo di mandare richieste al server server. Per questo non aggiornerà la `cache` con la risposta ecc.
+>Lo scopo delle mutazioni non è quello di gestire la `cache` ma solo di mandare richieste al server. Per questo non aggiornerà la `cache` con la risposta ecc.
 
 Come per `useQuery` vuole un oggetto in cui settare la funzione da lanciare, in questo caso alla prop `mutationFn` e ritornerà un oggetto che fra le alte prop conterrà la funzione `mutate` che sarà quella da utilizzare per lanciare la funzione impostata in `mutationFn`. Infatti a differenza di `useQuery`, la funzione settata non viene lanciata in automatico al mount del componente:
 
