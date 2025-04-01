@@ -796,11 +796,15 @@ Ci sono casi in cui è necessario aggiornare dei dati al leave di una pagina, in
 In questa maniera sono sicuro che al ritorno in quella pagina (che ad esempio mostra una lista di oggetti), lo stale fra i vecchi dati mostrati e la loro sostituzione con quelli aggiornati, non crei cambiamenti improvvisi di quello che vedo.
 
 ### Differenza con useQuery
-#### 1. [[useQuery]]
+
+#### 1. `useQuery`
+
 - **Scopo**: È un hook React utilizzato per gestire il fetching, il caching, il re-fetching e lo stato del caricamento dei dati.
 - **Funzionamento**: Viene eseguito automaticamente **quando il componente si monta** o quando cambiano i suoi `queryKey`.
 - **Ritorno**: Fornisce lo stato della query (`data`, `error`, `isLoading`, ecc.), permettendoti di integrarlo direttamente nell'interfaccia utente.
-#### 2. [[prefetchQuery]]
+
+#### 2. `prefetchQuery`
+
 - **Scopo**: Serve per caricare o aggiornare i dati nella cache **prima** che siano richiesti da un componente. Non restituisce lo stato della query; invece, riempie la cache in modo che i dati siano già pronti quando vengono richiesti con `useQuery`.
 - **Funzionamento**: Deve essere chiamato manualmente e **non è legato al ciclo di vita di un componente**.
 - **Ritorno**: Restituisce una `Promise` che risolve quando il prefetching è completo.
