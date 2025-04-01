@@ -563,6 +563,7 @@ function MyComponent() {
 ```
 
 >`react-router` autonomamente farà il re-evaluate nel momento in cui ad es. dovessimo fare il logout e ricaricare la `route` `/`.
+
 ## Programmaticamente
 
 `react-router-dom` mette a disposizione l'[hook](hook) `useSubmit` con cui è possibile emettere programmaticamente l'evento submit e settare la request che verrà passata alla action:
