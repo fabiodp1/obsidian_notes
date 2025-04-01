@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/4 - Routing.md",
+                "file": "2 - React/5 - Cache management - React Query.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 - Routing"
+              "title": "5 - Cache management - React Query"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/4 - Routing.md",
+                "file": "2 - React/5 - Cache management - React Query.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 4 - Routing"
+              "title": "Struttura di 5 - Cache management - React Query"
             }
           },
           {
@@ -183,9 +183,9 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "2 - React/4 - Routing.md",
     "2 - React/10 - Forms.md",
     "2 - React/5 - Cache management - React Query.md",
-    "2 - React/4 - Routing.md",
     "5 - Accessibilità/Guida all'accessibilità.md",
     "5 - Accessibilità/ARIA.md",
     "zzzz_allegati/Pasted image 20250331121152.png",

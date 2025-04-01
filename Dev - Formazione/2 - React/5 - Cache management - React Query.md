@@ -44,20 +44,24 @@ Se si unisce lo stato dell'interfaccia utente con lo stato della cache del serve
 
 Un approccio migliore è distinguere chiaramente i due tipi di stato:
 ### Gestione del UI State
+
 - Utilizza **stato locale** o **gestori locali**:
     - `useState`, `useReducer`.
     - Soluzioni come **Zustand** o altre librerie leggere se serve qualcosa di più sofisticato.
 
 ### Gestione del Server Cache State
+
 - Usa librerie ottimizzate per cache e sincronizzazione con il server:
-    - **React Query** (TanStack Query): Gestisce la cache, i refetch e la sincronizzazione in modo automatico.
+    - **React Query** (TanStack Query): Gestisce la cache, i re-fetch e la sincronizzazione in modo automatico.
     - Apollo Client (per GraphQL).
 
 ## Esempio Pratico
 
 ### Scenario:
+
 Vuoi mostrare una lista di utenti e, quando clicchi su un utente, aprire una modale con i dettagli.
 ### Cosa NON Fare:
+
 Mettere tutto lo stato in Redux/Context:
 
 ```ts
