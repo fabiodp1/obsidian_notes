@@ -373,7 +373,7 @@ loader={async () => {
 //...
 ```
 
-## Estrarre error data e Responses
+### Estrarre error data e Responses
 
 In molti casi vorremmo sapere il tipo di errore che è stato lanciato, in modo da poter gestire la pagina di errore da mostrare. Come detto in precedenza, il metodo `loader` può anche ritornare un oggetto `Response`:
 
