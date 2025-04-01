@@ -259,7 +259,7 @@ export async function fetchEvents(searchTerm) {
 }
 ```
 
-Nel nostro componente che si occuperà di lanciare la query, sostituiremo la `queryFn` con una funzione che lancia la richiesta con il parametro corretto.
+Nel nostro componente che si occuperà di lanciare la query, utilizzeremo com `queryFn` una funzione che lancia la richiesta con il parametro di ricerca.
 
 >Se impostassimo come `queryKey` solo "events", riutilizzeremmo la cache del componente che mostra tutti gli eventi, quindi quella query ritornerebbe l'ultima lista di eventi presente in cache e quindi bypassando il filtraggio.
 >Per questo dovremo costruire la nuova `queryKey` usando anche il valore passato, in modo che rimangano distinte e ogni ricerca unica.
