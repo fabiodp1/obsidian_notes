@@ -141,12 +141,13 @@ Per configurarla sarà necessario definire:
 
 - `queryFn`: la funzione che farà veramente la richiesta al server.
 
->`Tanstack` non invia di per se richieste HTTP, saremo noi a doverne configurare la logica.
->Poi `Tanstack` si occuperà di gestire il dato, gli errori, il caching e molto altro.
+>`React Query` non invia di per se richieste HTTP, saremo noi a doverne configurare la logica.
+>Poi `React Query` si occuperà di gestire il dato, gli errori, il caching e molto altro.
 
-- `queryKey`: usando `useQuery`, ogni query dovrebbe avere una key che `Tanstack` utilizzerà internamente per fare la `cache` del dato ricevuto dalla richiesta. La key è un `Array` di valori che possono avere diversi `type`.
+- `queryKey`: usando `useQuery`, ogni query dovrà avere una key che `React Query` utilizzerà internamente per fare la `cache` del dato ricevuto dalla risposta. La key è un `Array` di valori che possono avere diversi `type`.
 
 `useQuery` ritornerà un oggetto contenente diverse proprietà fra cui:
+
 - `data`: il dato ottenuto dal server
 - `isPending`: per avere lo stato della chiamata
 - `isError`: per controllare se la chiamata è fallita
@@ -193,7 +194,7 @@ export async function fetchEvents() {
 }
 ```
 
->Utilizzare `Tanstack` in questa maniera non basta, darebbe error perché per poterlo utilizzare bisogna fare il wrap dei componenti con il provider `QueryClientProvider` e il `QueryClient`:
+>Utilizzare `React Query` in questa maniera non basta, darebbe errore perché per poterlo utilizzare bisogna fare il wrap dei componenti con il provider `QueryClientProvider` e il `QueryClient`:
 
 ```tsx
 import { QueryClientProvider } from '@tanstack/react-query';
