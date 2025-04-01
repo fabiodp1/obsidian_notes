@@ -271,19 +271,19 @@ Potremmo pensare quindi di configurare la query così, ma è sbagliato:
 
 ```tsx
 export default function FindEventSection() {
-	const searchElement = useRef();
+  const searchElement = useRef();
 
-	const {data, ...} = useQuery({
-		queryKey: ["events", { search: searchElement.current.value }], // <== WRONG
-		queryFn: () => fetchEvents(searchElement.current.value)
-	}) 
+  const {data, ...} = useQuery({
+    queryKey: ["events", { search: searchElement.current.value }], //<== WRONG
+	queryFn: () => fetchEvents(searchElement.current.value)
+  }) 
 
-	return (
-		<form>
-			<input ... ref={ searchElement }/>
-			<button>Search</button>
-		</form>
-	)
+  return (
+    <form>
+      <input ... ref={ searchElement }/>
+	  <button>Search</button>
+	</form>
+  )
 }
 ```
 
