@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/5 - Cache management - React Query.md",
+                "file": "5 - Accessibilità/Guida all'accessibilità.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5 - Cache management - React Query"
+              "title": "Guida all'accessibilità"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/5 - Cache management - React Query.md",
+                "file": "5 - Accessibilità/Guida all'accessibilità.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 5 - Cache management - React Query"
+              "title": "Struttura di Guida all'accessibilità"
             }
           },
           {
@@ -183,9 +183,10 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "2 - React/11 - Stores.md",
+    "2 - React/5 - Cache management - React Query.md",
     "2 - React/4 - Routing.md",
     "2 - React/10 - Forms.md",
-    "2 - React/5 - Cache management - React Query.md",
     "5 - Accessibilità/Guida all'accessibilità.md",
     "5 - Accessibilità/ARIA.md",
     "zzzz_allegati/Pasted image 20250331121152.png",
@@ -193,7 +194,6 @@
     "zzz_Pagine/Senza nome.md",
     "5 - Accessibilità",
     "2 - React/14 - Animare un'app React.md",
-    "2 - React/11 - Stores.md",
     "2 - React/12 - Lazy loading.md",
     "2 - React/6 - Context.md",
     "2 - React/16 - React + TypeScript.md",
