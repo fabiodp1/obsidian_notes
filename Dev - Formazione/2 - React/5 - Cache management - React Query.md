@@ -331,7 +331,7 @@ export async function fetchEvents({ signal, searchTerm }) {
 	}
 
 	// Now it can be used by the browser
-	const response = await fetch(url, { signal: signal });
+	const response = await fetch(url, { signal });
 	//...
 
 // COMPONENT
@@ -342,7 +342,7 @@ export default function FindEventSection() {
 	const {data, ...} = useQuery({
 		queryKey: ["events", { search: searchTerm }],
 		// We pass the object that contains the signal forwarded and our prop
-		// Obiuvsly this is needed just because we need to pass a custom pro
+		// Obviously this is needed just because we need to pass a custom prop
 		// or we could have just passed the fetchEvents func
 		queryFn: ({ signal }) => fetchEvents({ searchTerm, signal })
 	});
