@@ -708,9 +708,9 @@ export function loader({params}) {
 ```
 
 Utilizzando il `loader` di React Router, non sarà più necessario usare la prop `isPending` ritornata da `useQuery`, perché i dati saranno caricati e salvati nella `cache` prima che venga servito il componente.
-Volendo se utilizziamo la gestione degli errori messa a disposizione da `React Router`, non ci sarebbe bisogno neanche di utilizzare le prorp `error` e `isError`.
+Volendo se utilizziamo la gestione degli errori messa a disposizione da `React Router`, non ci sarebbe bisogno neanche di utilizzare le prop `error` e `isError`.
 
->Il loader però potrebbe prendere un po di tempo per concludere il fetch e quindi creare un'[UX](UX) non delle migliori. Per questo possiamo usare l'[hook](hook) fornito da React Query `useIsFetching` che ci darà un valore che indicherà numericamente (0 se non sta facendo il fetch) se cu sibi fetch attivi (in qualsiasi componente della pagina), in modo da poter mostrare un'indicazione all'utente. 
+>Il loader però potrebbe prendere un po di tempo per concludere il fetch e quindi creare un'[UX](UX) non delle migliori. Per questo possiamo usare l'[hook](hook) fornito da React Query `useIsFetching` che ci darà un valore che indicherà numericamente (0 se non sta facendo il fetch) se ci sono fetch attivi (in qualsiasi componente della pagina), in modo da poter mostrare un'indicazione all'utente. 
 
 ## Action
 
