@@ -350,7 +350,8 @@ export default function FindEventSection() {
 
 ## Abilitare e Disabilitare le query
 
-Ci sono casi in cui non vorremmo che certe query venissero fatte automaticamente se non a determinate condizioni. Ad es. potremmo avere una query per avere una lista di oggetti e una query per la stessa lista ma filtrata (come visto sopra), essendo 2 query diverse, non possono essere gestite centralmente, quindi se una pagina al mount mostra una zona con la lista generale e una con la lista filtrata, le rispettive query verrebbero lanciate, risultando in due liste identiche (al mount il termine di ricerca per il filtraggio non è ancora stato impostato). Per questo vorremmo *disabilitare* la query di filtraggio fino a quando non viene inserito un termine di ricerca.
+Ci sono casi in cui non vorremmo che certe query venissero fatte automaticamente se non a determinate condizioni. Ad es. potremmo avere una query per avere una lista di oggetti e una query per la stessa lista ma filtrata (come visto sopra), essendo 2 query diverse, non possono essere gestite centralmente, quindi se una pagina al mount mostra una zona con la lista generale e una con la lista filtrata, le rispettive query verrebbero lanciate ed essendo che al mount non è ancora stato inserito un valore di ricerca, il risultato sarebbe due liste identiche. 
+Per questo vorremmo *disabilitare* la query di filtraggio fino a quando non viene inserito un termine di ricerca.
 
 >Potremmo gestirla all'interno della nostra `queryFn`, ma esiste un modo più efficiente, utilizzando la proprietà di *useQuery* `enabled`.
 
@@ -368,7 +369,7 @@ export default function FindEventSection() {
 //...
 ```
 
->C'è però un problema con il codice scritto sopra. Infatti noi non vorremmo che la query venisse disabilitata **OGNI** volta che il searchTerm è vuoto, ma solo all'inizio. Questo perchè se no ogni volta che l'utente cancella il termine di ricerca e lancia la ricerca, la nostra lista scomparirà, e non è quello che si vorrebbe, è preferibile che vengano invece mostrati tutti gli elementi.
+>C'è però un problema con il codice scritto sopra. Infatti noi non vorremmo che la query venisse disabilitata **OGNI** volta che il searchTerm è vuoto, ma solo all'inizio. Questo perché se no ogni volta che l'utente cancella il termine di ricerca e lancia la ricerca, la nostra lista scomparirà non venendo fatto il fetch, e non è quello che si vorrebbe, è preferibile che vengano invece mostrati tutti gli elementi.
 
 Per questo è consigliabile inizializzare il campo di ricerca ad `undefined`, in questa maniera la query sarà disabilitata solo al `mount` e non quando viene valorizzata con una stringa vuota:
 
