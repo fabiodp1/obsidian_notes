@@ -714,7 +714,7 @@ Volendo se utilizziamo la gestione degli errori messa a disposizione da `React R
 
 ## Action
 
-Come abbiamo fatto per il `leader`, possiamo usare `React Query` e le sue `mutation` anche per definire la `action` della route.
+Come abbiamo fatto per il `loader`, possiamo usare `React Query` e le sue `mutation` anche per definire la `action` della route.
 Anche in questo caso la funzione riceverà (come abbiamo visto in [4 - Routing](4%20-%20Routing.md)) un oggetto con informazioni riguardo la richiesta di `submit` che ha scatenato la `action` della route.
 
 ```tsx
