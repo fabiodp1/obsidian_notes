@@ -599,15 +599,16 @@ Per fare ciò dovremmo conservare i dati originali prima di fare l'update, da po
 ```tsx
 //...
 const { mutate } = useMutation({
-	mutationFn: updateEvent,
-	onMutate: async (data) => {
-	  const newEvent = data.event;
+  mutationFn: updateEvent,
+  onMutate: async (data) => {
+	const newEvent = data.event;
 		
-	  await queryClient.cancelQueries({queryKey: ['events', params.id]});
+	await queryClient.cancelQueries({queryKey: ['events', params.id]});
 		
-	  const prevEvent = queryClient.getQueryData(['events', params.id]);   // <==
-	  queryClient.setQueryData(['events', params.id], newEvent);
-	}
+	const prevEvent = queryClient.getQueryData(['events', params.id]);  // <==
+	
+	queryClient.setQueryData(['events', params.id], newEvent);
+  }
 });
 //...
 ```
