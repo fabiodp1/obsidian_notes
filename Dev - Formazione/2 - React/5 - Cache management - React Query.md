@@ -480,7 +480,7 @@ Potremmo gestirlo all'interno del nostro handler:
 //...
 funciton handleSubmit(formData) {
 	mutate({ event: formData });
-	navigate('/events');                // <==
+	navigate('/events');                // <== ?
 }
 ```
 
