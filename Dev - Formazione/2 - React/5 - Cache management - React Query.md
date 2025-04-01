@@ -569,25 +569,26 @@ Questo grazie al metodo `cancelQueries`, e passandogli la chiave della relativa 
 
 ```tsx
 export default function EditEvent() {
-	//...
-	const params = useParams();
-	const {data, isPending, isError, error} = useQuery({
-		queryKey: ['events', params.id],
-		queryFn: ({signal}) => fetchEvent({signal, id: params.id})
-	});
+  //...
+  const params = useParams();
+  const {data, isPending, isError, error} = useQuery({
+  	queryKey: ['events', params.id],
+	queryFn: ({signal}) => fetchEvent({signal, id: params.id})
+  });
 
-	const { mutate } = useMutation({
-		mutationFn: updateEvent,
-		// React Query passerà i dati che verranno utilizzati per la mutation
-		onMutate: async (data) => {
-			const newEvent = data.event;
+  const { mutate } = useMutation({
+	mutationFn: updateEvent,
+	// React Query passerà i dati che verranno utilizzati per la mutation
+	onMutate: async (data) => {
+      const newEvent = data.event;
 
-			// Cancellare tutte le query pending per evitare data collision
-			await queryClient.cancelQueries({queryKey: ['events', params.id]});
-			// Modifico in maniera ottimistica la cache con i nuovi dati
-			queryClient.setQueryData(['events', params.id], newEvent);
-		}
-	});
+	  // Cancellare tutte le query pending per evitare data collision
+	  await queryClient.cancelQueries({queryKey: ['events', params.id]});
+	  
+	  // Modifico in maniera ottimistica la cache con i nuovi dati
+	  queryClient.setQueryData(['events', params.id], newEvent);
+	}
+  });
 }
 ```
 
