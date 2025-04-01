@@ -206,6 +206,9 @@ export default function ProductDetails () {
 ```
 
 >Se invece vogliamo estrarre i [[query parameter]] useremo l'[hook](hook) messo a disposizione da `react-reouter-dom` `useSearchParams`, che restituirà l'oggetto contenente i parametri e il setter per modificarli.
+
+---
+
 # Relative and Absolute paths
 
 >Se la route inizia con `/` avremo una **absolute path**, quindi ad esempio cliccando su un link verremo rimandati a quel path che verrà subito dopo il dominio.
