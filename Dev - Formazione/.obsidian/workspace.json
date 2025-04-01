@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/10 - Forms.md",
+                "file": "2 - React/4 - Routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 - Forms"
+              "title": "4 - Routing"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/10 - Forms.md",
+                "file": "2 - React/4 - Routing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 10 - Forms"
+              "title": "Struttura di 4 - Routing"
             }
           },
           {
@@ -183,6 +183,7 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
+    "2 - React/10 - Forms.md",
     "2 - React/5 - Cache management - React Query.md",
     "2 - React/4 - Routing.md",
     "5 - Accessibilità/Guida all'accessibilità.md",
@@ -199,7 +200,6 @@
     "2 - React/7 - Folders.md",
     "2 - React/15 - Patterns & Best Practices.md",
     "2 - React/3 - Hooks.md",
-    "2 - React/10 - Forms.md",
     "3 - Next.js/11 - Fetching data.md",
     "zzz_Pagine/use.md",
     "zzz_Pagine/useRef.md",
