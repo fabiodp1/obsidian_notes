@@ -215,9 +215,9 @@ function App() {
 
 Una delle più grandi feature di `React Query`, è la possibilità di fare `caching` client-side. Infatti ad ogni chiamata server fa il `cache` della risposta. In questa maniera se cambiamo la pagina dell'applicativo e poi ritorniamo, se la cache non è stata invalidata rivedremo gli stessi dati immediatamente, senza bisogno di fare un'altra chiamata server, così migliorando di molto la [[UX]].
 
->Le immagini non vengono gestite da `React Query` o da React, vengono comunque richieste o potenzialmente sarà il browser a farne il `cache`.
+>Le immagini non vengono gestite da `React Query` o da React, vengono comunque richieste al server o potenzialmente sarà il browser a farne il `cache`.
 
-Dietro le quinte **in realtà viene comunque fatta la chiamata**, ma solo per controllare se i dati in cache sono ancora validi o meno. Nel mentre è già stato restituito il dato in cache.
+Dietro le quinte **in realtà `React Query` fa comunque la chiamata**, ma solo per controllare se i dati in cache sono ancora validi o meno. Nel mentre è già stato restituito il dato della cache.
 Ovviamente come sviluppatori vogliamo avere il controllo su questo tipo di comportamenti, per questo React Query mette a disposizione prop di configurazione come `staleTime` con cui possiamo indicare dopo quanto tempo deve essere fatta la chiamata di controllo nel momento in cui il dato è presente in cache, in modo da evitare chiamate non necessarie:
 
 ```tsx
