@@ -608,6 +608,9 @@ const { mutate } = useMutation({
 	const prevEvent = queryClient.getQueryData(['events', params.id]);  // <==
 	
 	queryClient.setQueryData(['events', params.id], newEvent);
+
+    // Importante
+	return { previousEvent: prevEvent };
   }
 });
 //...
@@ -623,18 +626,18 @@ A questa funzione vengono passati automaticamente dei parametri:
 ```tsx
 //...
 const { mutate } = useMutation({
-	mutationFn: updateEvent,
-	onMutate: async (data) => {
-	  //...
-	  const prevEvent = queryClient.getQueryData(['events', params.id]);
+  mutationFn: updateEvent,
+  onMutate: async (data) => {
+    //...
+    const prevEvent = queryClient.getQueryData(['events', params.id]);
 
-	  // Importante
-	  return { previousEvent: prevEvent };
-	},
-	onError: (error, data, context) => {
-	  // Resettiamo al dato originale usando context e il dato ritornato
-	  queryClient.setQueryData(['events', params.id], context.previousEvent)
-	}
+    // Importante
+    return { previousEvent: prevEvent };
+  },
+  onError: (error, data, context) => {
+    // Resettiamo al dato originale usando context e il dato ritornato
+    queryClient.setQueryData(['events', params.id], context.previousEvent)
+  }
 });
 //...
 ```
