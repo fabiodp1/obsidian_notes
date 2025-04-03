@@ -127,5 +127,8 @@ Nel creare layout bisognerebbe utilizzare la semantica [HTML](HTML.md) (verdi [c
 Per UI controls intendiamo le parti della UI con cui gli utenti interagiscono, es. bottoni, link e form controls.
 Un aspetto chiave che riguarda l'accessibilità degli UI controls è che di default i browser permettono di manipolarli tramite tastiera.
 
+### Labels
+
+Le label degli UI controls sono molto importanti per tutti gli utenti
 
 **CONTINUES....**
