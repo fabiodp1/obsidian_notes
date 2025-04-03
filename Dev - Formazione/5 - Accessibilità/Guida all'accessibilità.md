@@ -122,7 +122,10 @@ Questo è un retaggio di quando il [CSS](CSS) non era largamente supportato dai 
 
 Nel creare layout bisognerebbe utilizzare la semantica [HTML](HTML.md) (verdi [content sectioning](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning)) cercando di evitare dove possibile generici `div`, quindi `nav` per la navigazione principale, `footer`, `article` per le unità di contenuto che si ripetono, ecc.
 
+## UI controls
 
+Per UI controls intendiamo le parti della UI con cui gli utenti interagiscono, es. bottoni, link e form controls.
+Un aspetto chiave che riguarda l'accessibilità degli UI controls è che di default i browser permettono di manipolarli tramite tastiera.
 
 
 **CONTINUES....**
