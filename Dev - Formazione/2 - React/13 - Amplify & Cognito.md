@@ -1,9 +1,9 @@
 # WHAT
 
-AWS [[Amplify]] è un collezione di servizi cloude e librerie per lo sviluppo di applicazioni fullstack.
-Fornisce librerie forntend, componenti [UI](UI), building backend, a frontend hosting per il build di applicazioni fullstack in cloude. In particolare la [Gen 2](https://docs.amplify.aws/react/how-amplify-works/concepts/) migliora ulteriormente l'esperienza di sviluppo.
+AWS [[Amplify]] è un collezione di servizi cloud e librerie per lo sviluppo di applicazioni fullstack.
+Fornisce librerie forntend, componenti [UI](UI), building backend, a frontend hosting per il build di applicazioni fullstack in cloud. In particolare la [Gen 2](https://docs.amplify.aws/react/how-amplify-works/concepts/) migliora ulteriormente l'esperienza di sviluppo.
 
-Mentre [[Cognito]] è una `user directory service` che gestisce la registrazione utente, autenticazione, account recovery e molto altro concernente i flussi auth.
+[[Cognito]] è una `user directory service` che gestisce la registrazione utente, autenticazione, account recovery e molto altro concernente i flussi auth.
 
 ---
 
@@ -43,6 +43,8 @@ Amplify.configure({
 })
 ```
 
+---
+
 # Utilizzo
 
 Per tutte le azioni utili al flusso di autenticazione e gestione utenze, si può utilizzare la libreria `auth` messa a disposizione da `aws-amplify`, semplicemente importandoli da `aws-amplify/auth`:
@@ -57,6 +59,8 @@ await signIn({
 ```
 
 Fare comunque riferimento alla [documentazione ufficiale](https://docs.amplify.aws/react/build-a-backend/auth/connect-your-frontend/).
+
+---
 
 # Ascoltare gli eventi di Auth
 
@@ -96,6 +100,8 @@ Hub.listen('auth', ({ payload }) => {
   }
 });
 ```
+
+---
 
 # Interrompere l'ascolto degli eventi
 
