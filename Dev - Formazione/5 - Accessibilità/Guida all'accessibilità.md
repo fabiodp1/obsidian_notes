@@ -132,6 +132,18 @@ Un aspetto chiave che riguarda l'accessibilità degli UI controls è che di defa
 Le label degli UI controls sono molto importanti per tutti gli utenti, specialmente per quelli con disabilità.
 Bisogna fare in modo che le label dei bottoni o link siano comprensibili e distintivi, non bisogna usare "click here" o cose di questo genere, poiché gli screen reader creerebbero una lista di bottoni non distinguibili l'uno dall'altro.
 
+```html
+// === YES ===
+<p>
+  Whales are really awesome creatures.
+  <a href="whales.html">Find out more about whales</a>.
+</p>
 
+// === NO ===
+<p>
+  Whales are really awesome creatures. To find out more about whales,
+  <a href="whales.html">click here</a>.
+</p>
+```
 
 **CONTINUES....**
