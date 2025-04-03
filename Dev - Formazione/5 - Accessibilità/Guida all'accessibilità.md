@@ -118,7 +118,9 @@ Anche il linguaggio utilizzato può inficiare l'accessibilità:
 ## Layout della pagina
 
 Una volta si aveva la cattiva abitudine di utilizzare le `table` per creare i layout della pagina. Questa non è una buona idea perché confonde gli screen reader, specialmente se complesso.
+Questo è un retaggio di quando il [CSS](CSS) non era largamente supportato dai browser.
+
+
+
 
 **CONTINUES....**
-
-[HTML: A good basis for accessibility - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts)
