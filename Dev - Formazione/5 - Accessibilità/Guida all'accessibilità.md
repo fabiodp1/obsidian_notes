@@ -120,6 +120,8 @@ Anche il linguaggio utilizzato può inficiare l'accessibilità:
 Una volta si aveva la cattiva abitudine di utilizzare le `table` per creare i layout della pagina. Questa non è una buona idea perché confonde gli screen reader, specialmente se complesso.
 Questo è un retaggio di quando il [CSS](CSS) non era largamente supportato dai browser.
 
+Nel creare layout bisognerebbe utilizzare la semantica [HTML](HTML.md) (verdi [content sectioning](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning)) cercando di evitare dove possibile generici `div`, quindi `nav` per la navigazione principale, `footer`, `article` per le unità di contenuto che si ripetono, ecc.
+
 
 
 
