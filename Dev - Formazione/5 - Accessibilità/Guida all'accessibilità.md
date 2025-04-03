@@ -129,6 +129,7 @@ Un aspetto chiave che riguarda l'accessibilità degli UI controls è che di defa
 
 ### Labels
 
-Le label degli UI controls sono molto importanti per tutti gli utenti
+Le label degli UI controls sono molto importanti per tutti gli utenti, specialmente per quelli con disabilità.
+Bisogna fare in modo che le label dei bottoni o link siano comprensibili e distintivi, non bisogna usare "click here" o cose di questo genere, poiché gli screen reader creerebbero una lista di bottoni non distinguibili l'uno dall'altro.
 
 **CONTINUES....**
