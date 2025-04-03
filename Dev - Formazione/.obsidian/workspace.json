@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/13 - Amplify & Cognito.md",
+                "file": "5 - Accessibilità/Guida all'accessibilità.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13 - Amplify & Cognito"
+              "title": "Guida all'accessibilità"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/13 - Amplify & Cognito.md",
+                "file": "5 - Accessibilità/Guida all'accessibilità.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 13 - Amplify & Cognito"
+              "title": "Struttura di Guida all'accessibilità"
             }
           },
           {
@@ -166,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 342.5
+    "width": 342.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,8 +184,9 @@
   },
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
-    "2 - React/16 - React + TypeScript.md",
     "5 - Accessibilità/Guida all'accessibilità.md",
+    "2 - React/13 - Amplify & Cognito.md",
+    "2 - React/16 - React + TypeScript.md",
     "2 - React/11 - Stores.md",
     "2 - React/5 - Cache management - React Query.md",
     "2 - React/4 - Routing.md",
@@ -211,7 +213,6 @@
     "zzz_Pagine/useMemo.md",
     "zzz_Pagine/useCallback.md",
     "2 - React/9 - Portal.md",
-    "zzz_Pagine/useContext.md",
     "Senza nome.canvas",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
