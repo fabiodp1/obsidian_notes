@@ -146,4 +146,21 @@ Bisogna fare in modo che le label dei bottoni o link siano comprensibili e disti
 </p>
 ```
 
+Anche le label dei form sono molto importanti:
+
+```html
+// === NO ===
+Fill in your name: <input type="text" id="name" name="name" />
+
+// === YES ===
+<div>
+  <label for="name">Fill in your name:</label>
+  <input type="text" id="name" name="name" />
+</div>
+```
+
+
+
 **CONTINUES....**
+
+[HTML: A good basis for accessibility - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML#accessible_data_tables)
