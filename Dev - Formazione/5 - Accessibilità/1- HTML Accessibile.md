@@ -289,3 +289,12 @@ Infatti persone che hanno bisogno di screen reader verrebbero confuse nel moment
 ```
 
 In alternativa se viene usata una icona al posto del testo per significare il comportamento del link, bisogna assicurarsi di usare `alt`.
+
+## Skip links
+
+Uno `skip link`, noto anche come `skipnav`, è una elemento `a` posizionato il più vicino possibile al tag `<body>` che collega all'inizio del contenuto principale della pagina. Questo permette alle persone di bypassare il contenuto ripetuto su pagine diverse, come gli header della pagina e la navigazione principale.
+
+Sono utili per persone che navigano con l'aiuto delle tecnologie assistive come lo switch control, comando vocale, dove l'atto di muoversi fra link ripetitivi può essere faticoso.
+
+## Prossimità
+
