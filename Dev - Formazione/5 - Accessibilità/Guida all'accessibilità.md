@@ -193,7 +193,30 @@ Per questo è importante usare gli `scope tag`e i tag corretti, come `<thead>`, 
 
 ## Oltre al testo
 
-Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può necessariamente dire per quelli multimediali
+Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può necessariamente dire per quelli multimediali, per quello bisogna utilizzare gli strumenti che ci vengono messi a disposizione dai tag html e gli attributi AREA:
+
+```html
+// === NO ===
+<img src="dinosaur.png" />
+
+// === YES ===
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
+  title="The Mozilla red dinosaur" />
+
+<img src="dinosaur.png" aria-labelledby="dino-label" />
+
+<p id="dino-label">
+  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
+  a human, with small arms, and a large head with lots of sharp teeth.
+</p>
+
+```
 
 
 **CONTINUES....**
