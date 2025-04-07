@@ -39,6 +39,11 @@ Inoltre i `browser` fanno utilizzo di speciali API per l'accessibilità che espo
 
 >Dove le informazioni semantiche fornite nativamente dagli elementi dell'HTML non arrivano, possono essere supportati dalle feature delle specifiche [WAI-ARIA](https://www.w3.org/TR/wai-aria/), che aggiungono informazioni semantiche all'albero dell'accessibilità.
 
+Uno dei modi più semplici per rendere una pagina web accessibile, è utilizzare correttamente gli elementi dell'[HTML](HTML.md), la semantica di questi.
+Infatti non solo utilizzare gli giusti elementi ci darà dello styling a gratis, ma aggiungerà anche feature come la governabilità via tastiera. Ad es. l'elemento `button` permette all'utente di spostarsi su di esso tramite il tasto `Tab` e attivarli premendo `space` o `enter`.
+
+Inoltre è più facile da rendere responsive e pesa meno rispetto a dello spaghetti code, e migliora la [SEO](SEO) della pagina.
+
 ---
 
 # Checklist test di accessibilità
@@ -59,14 +64,7 @@ Un altro strumento utile è `Lighthouse` dei `devTools`.
 
 ---
 
-# HTML Accessibile
-
-Uno dei modi più semplici per rendere una pagina web accessibile, è utilizzare correttamente gli elementi dell'[HTML](HTML.md), la semantica di questi.
-Infatti non solo utilizzare gli giusti elementi ci darà dello styling a gratis, ma aggiungerà anche feature come la governabilità via tastiera. Ad es. l'elemento `button` permette all'utente di spostarsi su di esso tramite il tasto `Tab` e attivarli premendo `space` o `enter`.
-
-Inoltre è più facile da rendere responsive e pesa meno rispetto a dello spaghetti code, e migliora la [SEO](SEO) della pagina.
-
-## Text content
+# Text content
 
 Uno dei migliori supporti per gli screen reader è fornire una buona struttura per il contenuto, con `headings`, paragrafi, liste ecc.:
 
@@ -107,7 +105,7 @@ In una buona struttura come quella d'esempio uno screen reader potrà:
 
 Un altro pregio di strutturare correttamente l'HTML è che è più facile gestirne lo stile [CSS](CSS), o manipolarlo con JS.
 
-### Utilizzo di linguaggio chiaro
+## Utilizzo di linguaggio chiaro
 
 Anche il linguaggio utilizzato può inficiare l'accessibilità:
 
@@ -115,19 +113,23 @@ Anche il linguaggio utilizzato può inficiare l'accessibilità:
 - Non usare abbreviazioni, invece di "Jan", scrivi "January".
 - Espandi gli acronimi, almeno una 2 volte, e poi usa `<abbr>` per descriverli.
 
-## Layout della pagina
+---
+
+# Layout della pagina
 
 Una volta si aveva la cattiva abitudine di utilizzare le `table` per creare i layout della pagina. Questa non è una buona idea perché confonde gli screen reader, specialmente se complesso.
 Questo è un retaggio di quando il [CSS](CSS) non era largamente supportato dai browser.
 
 Nel creare layout bisognerebbe utilizzare la semantica [HTML](HTML.md) (verdi [content sectioning](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning)) cercando di evitare dove possibile generici `div`, quindi `nav` per la navigazione principale, `footer`, `article` per le unità di contenuto che si ripetono, ecc.
 
-## UI controls
+---
+
+# UI controls
 
 Per UI controls intendiamo le parti della UI con cui gli utenti interagiscono, es. bottoni, link e form controls.
 Un aspetto chiave che riguarda l'accessibilità degli UI controls è che di default i browser permettono di manipolarli tramite tastiera.
 
-### Labels
+## Labels
 
 Le label degli UI controls sono molto importanti per tutti gli utenti, specialmente per quelli con disabilità.
 Bisogna fare in modo che le label dei bottoni o link siano comprensibili e distintivi, non bisogna usare "click here" o cose di questo genere, poiché gli screen reader creerebbero una lista di bottoni non distinguibili l'uno dall'altro.
@@ -159,7 +161,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 </div>
 ```
 
-## Tabelle
+---
+
+# Tabelle
 
 Una tabella base può essere scritta come segue:
 
@@ -191,7 +195,7 @@ Una tabella base può essere scritta come segue:
 Ma scritta così presenta un problema, non c'è modo per uno screen reader di associare fra loro righe e colonne. Per fare ciò è necessario sapere quali sono le righe dell'header e se stanno intestando righe, colonne, ecc.
 Per questo è importante usare gli `scope tag`e i tag corretti, come `<thead>`, `<tbody>`, `<tfoot>`, `<th>`.
 
-## Oltre al testo
+# Oltre al testo
 
 Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può necessariamente dire per quelli multimediali, per quello bisogna utilizzare gli strumenti che ci vengono messi a disposizione dai tag html e gli attributi AREA:
 
@@ -220,7 +224,7 @@ Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può n
 
 ```
 
-### Figure e didascalie
+## Figure e didascalie
 
 L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano una figura di qualsivoglia tipo (non necessariamente un'immagine) con una didascalia:
 
@@ -240,7 +244,7 @@ L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano
 Nonostante vi sia un supporto misto da parte degli screen reader per l'associazione fra didascalia e figura, includere `aria-labelledby` o `aria-describedby` crea l'associazione se non è presente.
 Detto ciò, la struttura degli elementi vista è utile per lo styling [CSS](CSS), e fornisce un modo per aggiungere una descrizione dell'immagine accanto ad essa nel codice sorgente. 
 
-### Attributi `alt` vuoti
+## Attributi `alt` vuoti
 
 ```html
 <h3>
