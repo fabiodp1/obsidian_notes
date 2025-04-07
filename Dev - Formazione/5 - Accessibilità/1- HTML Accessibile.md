@@ -258,6 +258,12 @@ In quel caso è corretto valorizzare l'attributo `alt` con una stringa vuota.
 Questo perché se non mettessimo l'attributo lo screen reader leggerebbe tutto l'url dell'immagine, creando solo confusione.
 Un'alternativa è quella di usare `role` come `role="presentation"`, anche in questo caso il reader smetterà di leggerne il contenuto che non avrebbe nessuna utilità di contenuto.
 
+---
 
+# Link
 
-**CONTINUES....**
+I link (`<a>` e il suo attributo `href`) a seconda di come sono usati, possono migliorare o peggiorare l'accessibilità di una pagina. 
+Possono migliorarla aiutando l'utente a navigare velocemente fra sezioni differenti di una pagina. Ma possono anche peggiorarla se viene rimosso il loro styling per l'accessibilità o se JS li fa comportare in maniere inaspettate.
+
+## Link styling
+
