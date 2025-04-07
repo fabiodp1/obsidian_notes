@@ -240,6 +240,20 @@ L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano
 Nonostante vi sia un supporto misto da parte degli screen reader per l'associazione fra didascalia e figura, includere `aria-labelledby` o `aria-describedby` crea l'associazione se non è presente.
 Detto ciò, la struttura degli elementi vista è utile per lo styling [CSS](CSS), e fornisce un modo per aggiungere una descrizione dell'immagine accanto ad essa nel codice sorgente. 
 
+### Attributi `alt` vuoti
+
+```html
+<h3>
+  <img src="article-icon.png" alt="" />
+  Tyrannosaurus Rex: the king of the dinosaurs
+</h3>
+```
+
+Ci sono casi in cui un'immagine viene inclusa nella pagina, ma il suo scopo è solo decorativo.
+In quel caso è corretto valorizzare l'attributo `alt` con una stringa vuota.
+Questo perché se non mettessimo l'attributo lo screen reader leggerebbe tutto l'url dell'immagine, creando solo confusione.
+Un'alternativa è quella di usare `role` come `role="presentation"`, anche in questo caso il reader smetterà di leggerne il contenuto che non avrebbe nessuna utilità di contenuto.
+
 
 
 **CONTINUES....**
