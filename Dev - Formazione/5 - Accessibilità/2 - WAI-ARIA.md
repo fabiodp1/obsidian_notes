@@ -30,6 +30,9 @@ La specifica definisce 3 principali feature:
 
 # WHEN
 
+>**NOTA** Usando i corretti elementi [HTML](HTML.md) implicitamente ci vengono forniti i ruoli che sono necessari, per questo vanno *SEMPRE* utilizzate le feature native dell'HTML per fornire le semantiche richieste dagli screen reader per far capire agli utenti cosa sta succedendo.
+>`ARIA` interviene quando ciò non è possibile.
+
 Le aree in cui `WAI-ARIA` è utile sono essenzialmente 4:
 
 ## Segnaletica / Riferimenti
