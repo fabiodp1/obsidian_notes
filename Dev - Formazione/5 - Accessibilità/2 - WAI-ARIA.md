@@ -70,6 +70,8 @@ Dal valore dato alla proprietà dipenderà l'urgenza con cui verrà letto il con
 - `off`: il default, l'update non dovrebbe essere annunciato.
 - `polite`: deve essere annunciato solo se l'utente è in attesa.
 - `assertive`: va annunciato appena possibile.
+
+C'è inoltre da considerare che in questa maniera verrà letta solo la porzione di testo che viene aggiornato, sarebbe utile se venisse letto anche la testata, in modo che l'utente possa ricordare di cosa si sta parlando. Per fare ciò possiamo aggiungere `aria-atomic`
 ## Potenziare l'accessibilità via tastiera
 
 Ci sono elementi HTML built-in che hanno accessibilità tramite tastiera in maniera nativa. Quando altri elementi vengono usati con JS per simulare comportamenti simili, l'accessibilità via tastiera e in generale gli screen reader ne soffrono.
