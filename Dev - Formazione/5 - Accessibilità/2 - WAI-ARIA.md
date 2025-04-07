@@ -19,4 +19,7 @@ La specifica definisce 3 principali feature:
 	- definiscono cosa un elemento è e fa. Molti di questi sono chiamati `landmark roles`, che in gran parte riproducono la semantica degli elementi HTML built-in, come `role="navigation"` (`<nav>`), `role="banner"` (`<header>`), `role="complementary"` (`<aside>`) o `role="search"` (`<search>`) e altri.
 
 - **Properties**
-	- definiscono le proprietà degli elementi, che possono essere usate per dargli semantica o arricchirne il significato. Ad es. `aria-required="true"` specifica che un campo input deve essere riempito per essere valido, mentre `aria-labelledby="label"` permette di mettere un id ad un elemento, per poi referenziarlo come label di qualsiasi cosa vogliamo nella pagina, anche più elementi, non possibile con il semplice `<label for="input">`
+	- definiscono le proprietà degli elementi, che possono essere usate per dargli semantica o arricchirne il significato. Ad es. `aria-required="true"` specifica che un campo input deve essere riempito per essere valido, mentre `aria-labelledby="label"` permette di mettere un id ad un elemento, per poi referenziarlo come label di qualsiasi cosa vogliamo nella pagina, anche più elementi, non possibile con il semplice `<label for="input">`.
+
+- **States**
+	- proprietà speciali che definiscono la condizione attuale degli elementi, come `aria-disabled="true"`, che specifica ad uno screen reader che un campo input è al momento disabilitato. La differenza fra `properties` e `state` è che le prime non cambiano nel tempo, mentre gli state sì, in genere programmaticamente tramite [JS](JS).
