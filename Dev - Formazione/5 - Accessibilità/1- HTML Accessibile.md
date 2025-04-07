@@ -295,5 +295,7 @@ In alternativa se viene usata una icona al posto del testo per significare il co
 Uno `skip link`, noto anche come `skipnav`, è una elemento `a` posizionato il più vicino possibile al tag `<body>` che collega all'inizio del contenuto principale della pagina. Questo permette alle persone di bypassare il contenuto ripetuto su pagine diverse, come gli header della pagina e la navigazione principale.
 Sono utili per persone che navigano con l'aiuto delle tecnologie assistive come lo switch control, comando vocale, dove l'atto di muoversi fra link ripetitivi può essere faticoso.
 
-## Prossimità
+## Spaziatura
+
+I contenuti interattivi andrebbero disposti fra loro a sufficiente distanza, in modo da evitare che persone con problemi motori abbiano la possibilità di azionare correttamente l'elemento desiderato. 
 
