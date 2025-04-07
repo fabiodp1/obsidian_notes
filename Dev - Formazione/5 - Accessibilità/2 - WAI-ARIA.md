@@ -40,3 +40,5 @@ I valori dell'attributo `role` possono fungere da punti di riferimento che repli
 
 Gli screen reader tendono ad avere difficoltà con i contenuti dinamici. Con `ARIA` possiamo usare `aria-live` per informare gli utenti degli screen reader quando un contenuto viene aggiornato dinamicamente.
 
+## Potenziare l'accessibilità via tastiera
+
