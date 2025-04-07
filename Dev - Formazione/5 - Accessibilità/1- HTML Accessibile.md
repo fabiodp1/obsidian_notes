@@ -277,3 +277,4 @@ Questa pratica causa comportamenti inaspettati quando copiamo o trasciniamo i li
 
 ## Link esterni e linking a risorse non-HTML
 
+ I link che aprono un nuovo tab tramite `target="_blank"` e i link il cui `href` punta ad un file, dovrebbero includere un indicatore sul comportamento che avverrà nel momento il cui il link viene attivato.
