@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Accessibilità/1- HTML Accessibile.md",
+                "file": "5 - Accessibilità/2 - WAI-ARIA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1- HTML Accessibile"
+              "title": "2 - WAI-ARIA"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Accessibilità/1- HTML Accessibile.md",
+                "file": "5 - Accessibilità/2 - WAI-ARIA.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 1- HTML Accessibile"
+              "title": "Struttura di 2 - WAI-ARIA"
             }
           },
           {
@@ -184,6 +184,7 @@
   "active": "0a96076e09fecebb",
   "lastOpenFiles": [
     "5 - Accessibilità/1- HTML Accessibile.md",
+    "5 - Accessibilità/2 - WAI-ARIA.md",
     "2 - React/13 - Amplify & Cognito.md",
     "2 - React/16 - React + TypeScript.md",
     "2 - React/11 - Stores.md",
@@ -211,7 +212,6 @@
     "zzz_Pagine/useQuery.md",
     "zzz_Pagine/useMemo.md",
     "zzz_Pagine/useCallback.md",
-    "2 - React/9 - Portal.md",
     "Senza nome.canvas",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",
