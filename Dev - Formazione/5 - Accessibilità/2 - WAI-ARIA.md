@@ -47,4 +47,6 @@ Quando non è possibile evitarlo, `WAI-ARIA` fornisce un modo per permettere che
 
 ## Accessibilità di controlli non semantici
 
-Quando vengono usati una serie di `<div>` innestati insieme a CSS/JS per creare una feature UI complessa, o quando un controllo nativo viene potenziato usando JS, l'accessibilità ne può soffrire
+Quando vengono usati una serie di `<div>` innestati insieme a CSS/JS per creare una feature UI complessa, o quando un controllo nativo viene potenziato usando JS, l'accessibilità ne può soffrire.
+In questi casi `ARIA` può aiutare nel fornire ciò che manca con una combinazione di ruoli, come `button`, `listbox`, o `tablist`, e proprietà come `aria-required` o `aria-posinset`, fornendo così maggiori indizi sulle funzionalità.
+
