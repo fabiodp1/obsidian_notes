@@ -279,3 +279,13 @@ Questa pratica causa comportamenti inaspettati quando copiamo o trasciniamo i li
 
  I link che aprono un nuovo tab tramite `target="_blank"` e i link il cui `href` punta ad un file, dovrebbero includere un indicatore sul comportamento che avverrà nel momento il cui il link viene attivato.
 Infatti persone che hanno bisogno di screen reader verrebbero confuse nel momento in cui si trova su un altro tab, finestra o se viene aperta un'altra app inaspettatamente.
+
+```html
+<a target="_blank" href="https://www.wikipedia.org/"
+  >Wikipedia (opens in a new window)</a>
+
+<a target="_blank" href="2017-annual-report.ppt"
+  >2017 Annual Report (PowerPoint)</a>
+```
+
+In alternativa se viene usata una icona al posto del testo per significare il comportamento del link, bisogna assicurarsi di usare `alt`.
