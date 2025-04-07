@@ -220,9 +220,9 @@ Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può n
 
 ```
 
-### Figure e caption
+### Figure e didascalie
 
-L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano una figura di qualsivoglia tipo (non necessariamente un'immagine) con una caption:
+L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano una figura di qualsivoglia tipo (non necessariamente un'immagine) con una didascalia:
 
 ```html
 <figure>
@@ -237,7 +237,8 @@ L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano
 </figure>
 ```
 
-
+Nonostante vi sia un supporto misto da parte degli screen reader per l'associazione fra didascalia e figura, includere `aria-labelledby` o `aria-describedby` crea l'associazione se non è presente.
+Detto ciò, la struttura degli elementi vista è utile per lo styling [CSS](CSS), e fornisce un modo per aggiungere una descrizione dell'immagine accanto ad essa nel codice sorgente. 
 
 
 
