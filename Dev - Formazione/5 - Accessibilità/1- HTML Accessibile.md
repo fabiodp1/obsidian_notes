@@ -267,3 +267,13 @@ Possono migliorarla aiutando l'utente a navigare velocemente fra sezioni differe
 
 ## Link styling
 
+Di default i link sono visivamente diversi dal resto del testo, sia per colore che decorazione, blue e sottolineati, viola e sottolineati se già visitati, e con un anello di focus quando ricevono il focus tramite tastiera. Il colore non dovrebbe essere l'unico parametro per distinguerli dal resto.
+
+## `onclick` events
+
+>I tag anchor (`<a>`) vengono spesso utilizzati in maniera impropria con l'evento `onclick` per creare bottoni, settando l'`href` a `#` per evitare il refresh della pagina.
+
+Questa pratica causa comportamenti inaspettati quando copiamo o trasciniamo i link, aprendo i link in nuovi tab o finestre, creando bookmark, e quando il JS sta ancora venendo scaricato, crea messaggi di errore o viene disabilitato. Inoltre porta a una semantica incorretta per le tecnologie assistive. Per questo non bisogna usare l'anchor tag come bottone, ma solo per navigare nella pagina.
+
+## Link esterni e linking a risorse non-HTML
+
