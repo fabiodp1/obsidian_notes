@@ -189,5 +189,9 @@ Una tabella base può essere scritta come segue:
 ```
 
 Ma scritta così presenta un problema, non c'è modo per uno screen reader di associare fra loro righe e colonne. Per fare ciò è necessario sapere quali sono le righe dell'header e se stanno intestando righe, colonne, ecc.
+Per questo è importante usare gli `scope tag`e i tag corretti, come `<thead>`, `<tbody>`, `<tfoot>`, `<th>`.
+
+
+
 
 **CONTINUES....**
