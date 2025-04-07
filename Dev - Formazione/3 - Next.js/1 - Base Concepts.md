@@ -1,6 +1,6 @@
 # Creare un nuovo progetto
 
-Viene utilizzato il comando [[create-next-app]] :
+Viene utilizzato il comando `create-next-app` :
 
 ```terminal
 npx create-next-app@latest <my-app-name> --use-pnpm
@@ -15,7 +15,7 @@ npx create-next-app@latest <my-app-name> --use-pnpm
 - `/app/ui`: contiene tutti i componenti della UI, come card, tabelle, form ecc.
 - `/public`: contiene tutti gli asset statici come ad es. le immagini.
 - **File di config**: nella route del progetto sono presenti file come `next.config.js`.
-  Molti di questi file vengono creati e pre-configurati allo scaffolding di un nuovo progetto utilizzando [[create-next-app]].
+  Molti di questi file vengono creati e pre-configurati allo scaffolding di un nuovo progetto utilizzando `create-next-app`.
 
 ---
 

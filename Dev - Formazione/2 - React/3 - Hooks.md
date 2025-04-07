@@ -103,7 +103,7 @@ export default function ResultModal({ result, targetTime, timeLeft, ref }) {
 //...
 ```
 
->Prima di [[React 19+]], bisognava usare [[forwardRef]].
+>Prima di [[React 19+]], bisognava usare `forwardRef`.
 
 # useEffect
 

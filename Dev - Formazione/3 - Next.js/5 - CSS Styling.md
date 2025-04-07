@@ -1,7 +1,7 @@
 # Global styles
 
 Normalmente nella cartella `/app` è presente il file `globals.css`. E' possibile usare questo file per aggiungere regole CSS a tutte le [[route]] dell'applicativo.
-E' possibile importare questo file in qualsiasi componente, ma è buona pratica aggiungerlo al **top level component** che in [[Next.js]] è il [[root layout]].
+E' possibile importare questo file in qualsiasi componente, ma è buona pratica aggiungerlo al **top level component** che in [[Next.js]] è il `root layout`.
 
 ```tsx title:layout.tsx
 import '@/app/globals.css';

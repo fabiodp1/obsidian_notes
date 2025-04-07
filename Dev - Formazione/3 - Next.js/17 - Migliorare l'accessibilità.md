@@ -10,7 +10,7 @@ Esistono diversi metodi in [[Next.js]] per migliorare l'[[accessibilità]]:
 },
 ```
 
-- Migliorare l'accessibilità dei [[form]] utilizzando ad esempio:
+- Migliorare l'accessibilità dei `form` utilizzando ad esempio:
 	- `Semantic HTML`: utilizzando gli elementi di semantica (`<input>`, `<option>` ecc.) al posto del semplice `<div>`.
 	- `Labelling`: includere il `<label>` e l'attributo `htmlFor` assicura che ogni campo del form abbia una label descrittiva.
 	- `Focus Outline`: I campi sono correttamente stilizzati per mostrare una linea di contorno nel momento in cui sono in focus.

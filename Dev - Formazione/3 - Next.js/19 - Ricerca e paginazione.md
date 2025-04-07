@@ -65,7 +65,7 @@ Se viene usato lo [[state]] per gestire il valore di un input, allora verrà usa
 
 Nel caso sopra non viene usato lo state, per cui si può usare `defaultValue`. Ciò vuol dire che il campo input gestirà il suo stato nativamente. Questo perché in quel caso il search query viene salvato nell'[[URL]] e non nello state.
 
->**Quando usare [[useSearchParams]] vs. [[searchParams]]**
+>**Quando usare `useSearchParams` vs. `searchParams`**
 >Come si può vedere dall'esempio abbiamo 2 modi diversi per estrarre il parametri di ricerca. Per decidere se usare uno o l'altro dipende dal fatto se stiamo lavorando sulla parte client o server.
 >Se a doverli utilizzare è un [[Client Component]] usare [[useSearchParams]],  se è un [[Server Component]] [[searchParams]].
 

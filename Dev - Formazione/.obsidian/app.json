@@ -5,5 +5,5 @@
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
   "newFileFolderPath": "zzz_Pagine",
-  "promptDelete": true
+  "promptDelete": false
 }

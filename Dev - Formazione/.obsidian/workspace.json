@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9b46b9294e827dd2",
+        "id": "83df70e0759e6046",
         "type": "tabs",
         "children": [
           {
-            "id": "0a96076e09fecebb",
+            "id": "573693c971fdf874",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - React/16 - React + TypeScript.md",
+                "file": "5 - Accessibilità/2 - WAI-ARIA.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 16 - React + TypeScript"
+              "title": "Riferimenti a 2 - WAI-ARIA"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - React/2 - Gestione dei re-render e Ottimizzazione in React.md",
+                "file": "5 - Accessibilità/2 - WAI-ARIA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da 2 - Gestione dei re-render e Ottimizzazione in React"
+              "title": "Collegamenti in uscita da 2 - WAI-ARIA"
             }
           },
           {
@@ -161,8 +161,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -181,37 +180,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a96076e09fecebb",
+  "active": "573693c971fdf874",
   "lastOpenFiles": [
-    "5 - Accessibilità/1- HTML Accessibile.md",
-    "5 - Accessibilità/2 - WAI-ARIA.md",
-    "2 - React/13 - Amplify & Cognito.md",
-    "2 - React/16 - React + TypeScript.md",
-    "2 - React/11 - Stores.md",
-    "2 - React/5 - Cache management - React Query.md",
-    "2 - React/4 - Routing.md",
-    "2 - React/10 - Forms.md",
-    "5 - Accessibilità/ARIA.md",
+    "zzz_Pagine/Zod.md",
+    "zzz_Pagine/Vercel.md",
+    "zzz_Pagine/use.md",
+    "3 - Next.js/19 - Ricerca e paginazione.md",
+    "zzz_Pagine/searchParams.md",
+    "3 - Next.js/14 - Forms & Data Mutation.md",
+    "3 - Next.js/5 - CSS Styling.md",
+    "zzz_Pagine/root layout.md",
+    "zzz_Pagine/react-query.md",
+    "zzz_Pagine/react-router-dom.md",
+    "zzz_Pagine/React 19+.md",
+    "zzz_Pagine/React.md",
+    "zzz_Pagine/pnpm.md",
+    "zzz_Pagine/optimistic UI.md",
+    "2 - React/3 - Hooks.md",
+    "zzz_Pagine/Link.md",
+    "zzz_Pagine/forwardRef.md",
+    "3 - Next.js/17 - Migliorare l'accessibilità.md",
+    "zzz_Pagine/form.md",
+    "2 - React/100 - Risorse utili.md",
+    "zzz_Pagine/docs.md",
+    "zzz_Pagine/dialog.md",
+    "1 - Development/Convenzioni.md",
+    "zzz_Pagine/dependency injection.md",
+    "zzz_Pagine/CSS Modules.md",
+    "4 - Angular/Angular 14/2 - Config ambiente.md",
     "zzzz_allegati/Pasted image 20250331121152.png",
     "zzzz_allegati/Pasted image 20250331120823.png",
-    "zzz_Pagine/Senza nome.md",
     "5 - Accessibilità",
-    "2 - React/14 - Animare un'app React.md",
-    "2 - React/12 - Lazy loading.md",
-    "2 - React/6 - Context.md",
-    "2 - React/7 - Folders.md",
-    "2 - React/15 - Patterns & Best Practices.md",
-    "2 - React/3 - Hooks.md",
-    "3 - Next.js/11 - Fetching data.md",
-    "zzz_Pagine/use.md",
-    "zzz_Pagine/useRef.md",
-    "2 - React/1 - React Fundamentals.md",
-    "zzz_Pagine/useState.md",
-    "zzz_Pagine/useReducer.md",
-    "zzz_Pagine/useEffect.md",
-    "zzz_Pagine/useQuery.md",
-    "zzz_Pagine/useMemo.md",
-    "zzz_Pagine/useCallback.md",
     "Senza nome.canvas",
     "zzzz_allegati/Pasted image 20250224122217.png",
     "4 - Angular/Angular 14",

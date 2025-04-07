@@ -312,7 +312,7 @@ Per fare ciò basta creare un un folder wrappandone il nome con parentesi quadre
 
 ## Leggere i parametri della route
 
-Oltre a [[searchParams]], i componenti della pagina accettano anche un prop chiamata [[params]] che può essere utilizzata per leggere i parametri della [[route]]:
+Oltre a `searchParams`, i componenti della pagina accettano anche un prop chiamata [[params]] che può essere utilizzata per leggere i parametri della [[route]]:
 
 ```tsx
 import Form from '@/app/ui/invoices/edit-form';
