@@ -220,6 +220,25 @@ Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può n
 
 ```
 
-### `<`
+### Figure e caption
+
+L'[HTML](HTML.md) include 2 elementi, `<figure>` e `<figcaption>`, che associano una figura di qualsivoglia tipo (non necessariamente un'immagine) con una caption:
+
+```html
+<figure>
+  <img
+    src="dinosaur.png"
+    alt="The Mozilla Tyrannosaurus"
+    aria-describedby="dinodescr" />
+  <figcaption id="dinodescr">
+    A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a
+    human, with small arms, and a large head with lots of sharp teeth.
+  </figcaption>
+</figure>
+```
+
+
+
+
 
 **CONTINUES....**
