@@ -161,7 +161,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -180,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "573693c971fdf874",
+  "active": "5f9799b7958c8dda",
   "lastOpenFiles": [
     "zzz_Pagine/Zod.md",
     "zzz_Pagine/Vercel.md",

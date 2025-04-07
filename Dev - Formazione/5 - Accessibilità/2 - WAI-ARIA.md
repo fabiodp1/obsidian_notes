@@ -30,3 +30,6 @@ La specifica definisce 3 principali feature:
 
 # WHEN
 
+Le aree in cui `WAI-ARIA` è utile sono essenzialmente 4:
+
+## Segnaposto/
