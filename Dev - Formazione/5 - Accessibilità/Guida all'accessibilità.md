@@ -204,19 +204,22 @@ Di per se i contenuti testuali sono accessibili, ma la stessa cosa non si può n
   src="dinosaur.png"
   alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 
+// === YES ===
 <img
   src="dinosaur.png"
   alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
   title="The Mozilla red dinosaur" />
 
+// === YES ===
+// Usefull if we need a label and to reutilize it around the page
 <img src="dinosaur.png" aria-labelledby="dino-label" />
 
 <p id="dino-label">
-  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
-  a human, with small arms, and a large head with lots of sharp teeth.
+  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.
 </p>
 
 ```
 
+### `<`
 
 **CONTINUES....**
