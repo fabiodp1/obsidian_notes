@@ -159,8 +159,35 @@ Fill in your name: <input type="text" id="name" name="name" />
 </div>
 ```
 
+## Tabelle
 
+Una tabella base può essere scritta come segue:
+
+```html
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Pronouns</td>
+  </tr>
+  <tr>
+    <td>Gabriel</td>
+    <td>13</td>
+    <td>he/him</td>
+  </tr>
+  <tr>
+    <td>Elva</td>
+    <td>8</td>
+    <td>she/her</td>
+  </tr>
+  <tr>
+    <td>Freida</td>
+    <td>5</td>
+    <td>she/her</td>
+  </tr>
+</table>
+```
+
+Ma scritta così presenta un problema, non c'è modo per uno screen reader di associare fra loro righe e colonne. Per fare ciò è necessario che 
 
 **CONTINUES....**
-
-[HTML: A good basis for accessibility - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML#accessible_data_tables)
