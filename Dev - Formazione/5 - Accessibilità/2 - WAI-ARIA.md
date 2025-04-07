@@ -32,4 +32,11 @@ La specifica definisce 3 principali feature:
 
 Le aree in cui `WAI-ARIA` è utile sono essenzialmente 4:
 
-## Segnaposto/
+## Segnaletica / Riferimenti
+
+I valori dell'attributo `role` possono fungere da punti di riferimento che replicano la semantica degli elementi HTML (es. `<nav>`), oppure possono andare oltre e fornire segnali a diverse aree funzionali, come `search`, `tablist`, `tab`, `listbox` ecc.
+
+## Contenuti dinamici
+
+Gli screen reader tendono ad avere difficoltà con i contenuti dinamici. Con `ARIA` possiamo usare `aria-live` per informare gli utenti degli screen reader quando un contenuto viene aggiornato dinamicamente.
+
