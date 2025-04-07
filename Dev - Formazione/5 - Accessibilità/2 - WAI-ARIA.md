@@ -15,7 +15,7 @@ Il problema è che seppure visualmente e come comportamento questi elementi funz
 
 La specifica definisce 3 principali feature:
 
-- **Roles**
+- [**Roles**](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
 	- definiscono cosa un elemento è e fa. Molti di questi sono chiamati `landmark roles`, che in gran parte riproducono la semantica degli elementi HTML built-in, come `role="navigation"` (`<nav>`), `role="banner"` (`<header>`), `role="complementary"` (`<aside>`) o `role="search"` (`<search>`) e altri.
 
 - **Properties**
