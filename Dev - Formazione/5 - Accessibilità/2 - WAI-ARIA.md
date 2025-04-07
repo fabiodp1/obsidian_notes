@@ -44,3 +44,7 @@ Gli screen reader tendono ad avere difficoltà con i contenuti dinamici. Con `AR
 
 Ci sono elementi HTML built-in che hanno accessibilità tramite tastiera in maniera nativa. Quando altri elementi vengono usati con JS per simulare comportamenti simili, l'accessibilità via tastiera e in generale gli screen reader ne soffrono.
 Quando non è possibile evitarlo, `WAI-ARIA` fornisce un modo per permettere che venga fatto il focus anche su questi elementi, tramite `tabindex`.
+
+## Accessibilità di controlli non semantici
+
+Quando vengono usati una serie di `<div>` innestati insieme a CSS/JS per creare una feature UI complessa, o quando un controllo nativo viene potenziato usando JS, l'accessibilità ne può soffrire
