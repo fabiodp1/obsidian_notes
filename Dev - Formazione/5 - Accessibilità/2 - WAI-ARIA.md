@@ -25,3 +25,8 @@ La specifica definisce 3 principali feature:
 	- proprietà speciali che definiscono la condizione attuale degli elementi, come `aria-disabled="true"`, che specifica ad uno screen reader che un campo input è al momento disabilitato. La differenza fra `properties` e `state` è che le prime non cambiano nel tempo, mentre gli state sì, in genere programmaticamente tramite [JS](JS).
 
 >Ciò che è importante sapere sugli attributi `WAI-ARIA` è che non condizionano assolutamente la pagina web, se non l'informazione che viene esposta dall'API di accessibilità del browser. Non modifica ne DOM ne struttura della pagina, nonostante possono essere usati ad es. per la selezione [CSS](CSS).
+
+---
+
+# WHEN
+
