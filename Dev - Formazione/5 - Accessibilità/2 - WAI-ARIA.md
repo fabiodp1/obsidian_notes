@@ -119,4 +119,75 @@ Come abbiamo visto esistono anche `aria-label`, `aria-describedby` e `aria-label
 ## Bottoni non-semantici come bottoni
 
 Abbiamo visto in precedenza che quando andiamo a creare degli elementi interattivi come bottoni senza utilizzare i tag semantici messi a disposizione da HTML, possiamo renderli comunque accessibili ad es. tramite tastiera utilizzando `tabindex`.
-Questo non risolve però il fatto che non saranno comunque considerati bottoni dagli screen reader
+Questo non risolve però il fatto che non saranno comunque considerati bottoni dagli screen reader.
+Possiamo risolvere questo utilizzando un ruolo `WAI-ARIA`:
+
+```html
+<div data-message="This is from the first button" tabindex="0" role="button">
+  Click me!
+</div>
+```
+
+>Rimane il fatto che è sempre preferibile e consigliato usare i corretti elementi semantici forniti da HTML.
+
+Un esempio più complesso di come possiamo usare i ruoli:
+
+```html
+<section class="info-box">
+  <div role="tablist" class="manual">
+    <button
+      id="tab-1"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="tabpanel-1">
+      <span>Tab 1</span>
+    </button>
+    <button
+      id="tab-2"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tabpanel-2"
+      tabindex="-1">
+      <span>Tab 2</span>
+    </button>
+    <button
+      id="tab-3"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tabpanel-3"
+      tabindex="-1">
+      <span>Tab 3</span>
+    </button>
+  </div>
+  <div class="panels">
+    <article id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
+      <h2>The first tab</h2>
+      <p>This is the content for tab one and is just a paragraph.</p>
+    </article>
+    <article
+      id="tabpanel-2"
+      role="tabpanel"
+      aria-labelledby="tab-2"
+      class="is-hidden">
+      <h2>The second tab</h2>
+      <p>This is the content for tab two and is just a paragraph.</p>
+    </article>
+    <article
+      id="tabpanel-3"
+      role="tabpanel"
+      aria-labelledby="tab-3"
+      class="is-hidden">
+      <h2>The third tab</h2>
+      <p>This is the content for tab three and is a paragraph and a list.</p>
+      <ul>
+        <li>Cat</li>
+        <li>Dog</li>
+        <li>Horse</li>
+      </ul>
+    </article>
+  </div>
+</section>
+```
