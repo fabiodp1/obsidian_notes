@@ -115,3 +115,8 @@ Un'altra feature ben supportata è l'attributo `placeholder`.
 >ché non tutti i reader supportano `placeholder`.
 
 Come abbiamo visto esistono anche `aria-label`, `aria-describedby` e `aria-labelledby`, ma il metodo preferenziale è sempre usare `label` con il suo attributo `for`.
+
+## Bottoni non-semantici come bottoni
+
+Abbiamo visto in precedenza che quando andiamo a creare degli elementi interattivi come bottoni senza utilizzare i tag semantici messi a disposizione da HTML, possiamo renderli comunque accessibili ad es. tramite tastiera utilizzando `tabindex`.
+Questo non risolve però il fatto che non saranno comunque considerati bottoni dagli screen reader
