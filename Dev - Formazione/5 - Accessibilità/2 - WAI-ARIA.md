@@ -91,3 +91,10 @@ In questi casi `ARIA` può aiutare nel fornire ciò che manca con una combinazio
 
 ### Validazione form e alert di errore
 
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul></ul>
+</div>
+```
+
+- `role="alert"`: automaticamente trasforma 
