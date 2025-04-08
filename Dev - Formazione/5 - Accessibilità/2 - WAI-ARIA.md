@@ -103,5 +103,8 @@ In questi casi `ARIA` può aiutare nel fornire ciò che manca con una combinazio
 Possiamo informare i reader del tipo di validazione presente:
 
 ```html
+<input type="text" name="name" id="name" aria-required="true" />
 
+<input type="number" name="age" id="age" aria-required="true" />
 ```
+
