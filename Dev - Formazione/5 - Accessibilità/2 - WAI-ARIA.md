@@ -108,3 +108,9 @@ Possiamo informare i reader del tipo di validazione presente:
 <input type="number" name="age" id="age" aria-required="true" />
 ```
 
+Possiamo anche informare i reader di che valore dovrebbero avere i campi ad es. tramite `aria-valuemin` e `aria-valuemax` e comunque i reader supportano anche il `min` e `max` nativo.
+Un'altra feature ben supportata è l'attributo `placeholder`.
+
+>Bisogna SEMPRE includere un elemento `<lavel>` per ogni input, perché non tutti i reader supportano `placeholder`.
+
+Come abbiamo visto esistono anche `aria-label`, `aria-describedby` e `aria-labelledby`, ma il metodo preferenziale è sempre usare `label` con il suo attributo `for`.
