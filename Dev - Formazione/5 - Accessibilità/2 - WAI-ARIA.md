@@ -99,3 +99,9 @@ In questi casi `ARIA` può aiutare nel fornire ciò che manca con una combinazio
 
 - `role="alert"`: automaticamente trasforma l'elemento in una `live region`, quindi i cambiamenti vengono letti dal reader. Inoltre semanticamente lo identifica come messaggio di allerta, rappresentando una maniera migliore e più accessibile di gestire un alert.
 - `aria-relevant="all"`: istruisce lo screen reader per leggere i contenuti della lista di errore nel momento in cui questa cambia. Utile per far sapere all'utente quali errori rimangono, non solo quelli che sono stati aggiunti o rimossi dalla lista.
+
+Possiamo informare i reader del tipo di validazione presente:
+
+```html
+
+```
