@@ -73,7 +73,7 @@ const element = (
 
 ReactDOM.createRoot(document.getElementById('root')).render(element)
 ```
-# [[4 - Angular/Angular 19/1 - Components]]
+# Components
 
 In React i components sono semplicemente delle funzioni JS che ritornano del contenuto renderizzabile (altri elementi React, stringhe, numeri, null ecc.).
 
