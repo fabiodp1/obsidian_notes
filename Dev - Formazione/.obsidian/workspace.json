@@ -89,8 +89,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,7 +196,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6f9c03ccb059bbec",
+  "active": "263ff45da9c77ac1",
   "lastOpenFiles": [
     "2 - React/4 - Routing.md",
     "2 - React/11 - Stores.md",
