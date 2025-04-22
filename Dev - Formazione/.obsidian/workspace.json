@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/16 - React + TypeScript.md",
+                "file": "2 - React/4 - Routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16 - React + TypeScript"
+              "title": "4 - Routing"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/16 - React + TypeScript.md",
+                "file": "2 - React/4 - Routing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 16 - React + TypeScript"
+              "title": "Struttura di 4 - Routing"
             }
           },
           {
@@ -196,14 +196,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "263ff45da9c77ac1",
+  "active": "6f9c03ccb059bbec",
   "lastOpenFiles": [
+    "2 - React/16 - React + TypeScript.md",
     "2 - React/4 - Routing.md",
     "2 - React/11 - Stores.md",
     "2 - React/3 - Hooks.md",
     "4 - Angular/Angular 19/1 - Components.md",
     "zzz_Pagine/React 19+.md",
-    "2 - React/16 - React + TypeScript.md",
     "2 - React/1 - React Fundamentals.md",
     "2 - React/5 - Cache management - React Query.md",
     "2 - React/10 - Forms.md",
