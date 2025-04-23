@@ -299,3 +299,19 @@ Sono utili per persone che navigano con l'aiuto delle tecnologie assistive come 
 
 I contenuti interattivi andrebbero disposti fra loro a sufficiente distanza, in modo da evitare che persone con problemi motori abbiano la possibilità di azionare correttamente l'elemento desiderato. 
 
+# Revisione dell'HTML Semantico
+
+## Cos'è l'HTML Semantico?
+L'HTML semantico significa utilizzare elementi HTML che **descrivono il loro scopo** in modo significativo sia agli sviluppatori che ai browser. Gli elementi come `<header>`, `<nav>`, `<main>` e `<footer>` creano una struttura documentaria chiara rispetto all'uso generico di `<div>`.
+
+### Esempio Semantico vs Non-Semantico
+```html
+<!-- Non semantico -->
+<div class="header">
+  <div class="menu">...</div>
+</div>
+
+<!-- Semantico -->
+<header>
+  <nav>...</nav>
+</header>
