@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "1- HTML Accessibile"
             }
+          },
+          {
+            "id": "69111606c9f9d201",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,7 +208,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6f9c03ccb059bbec",
+  "active": "69111606c9f9d201",
   "lastOpenFiles": [
     "2 - React/4 - Routing.md",
     "2 - React/16 - React + TypeScript.md",
