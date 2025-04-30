@@ -310,7 +310,7 @@ gh pr merge --squash  # Merge con squash su GitHub
 - **Terminale**:
 
 ```bash
-gh pr merge --squash  # Merge con squash su GitHub
+git-flow feature finish FEATURE_NAME
 ```
     
 - **VS Code**:
@@ -320,8 +320,10 @@ gh pr merge --squash  # Merge con squash su GitHub
         
 - **Fork**:
     
-    1. Vai alla PR su GitHub.
-    2. Seleziona **"Squash and Merge"** dal dropdown.
+    1. Tasto destro sul branch
+    2. GitFlow/finish feature
+    3. Opzioni `Delete branches` e `Rebase before merging`
+    4. Finish feature
 
 ---
 # 3. Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
