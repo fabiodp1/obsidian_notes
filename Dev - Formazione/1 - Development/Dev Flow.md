@@ -198,41 +198,46 @@ gh pr create --base develop --head feature/FEATURE_NAME --title "Titolo PR" --bo
 2. Compila titolo, descrizione e seleziona `develop` come branch di destinazione.
 
 ---
-
-## **3. Gestione dei Branch Condivisi (⚠️ Avvisi Critici)**
+# 3. Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
 
 ---
 
-### **Regole per Branch Condivisi**
+## Regole per Branch Condivisi
+
 1. **Prima di ogni push**:  
+
    ```bash
    git fetch origin
    git rebase origin/feature/FEATURE_NAME  # Allineati alle modifiche altrui
    ```
+
 2. **Dopo un force push altrui**:  
+
    ```bash
    git reset --hard origin/feature/FEATURE_NAME  # Sincronizza la tua copia locale
    ```
+
 3. **Comunica sempre** prima di un force push (es. su Slack/Teams).
 
 ---
 
-### **Comandi di Emergenza**
+## Comandi di Emergenza
 
-#### **Annulla un Rebase Fallito**
+### Annulla un Rebase Fallito
+
 ```bash
 git rebase --abort
 ```
 
-#### **Ripristina il Branch al Remoto**
+### Ripristina il Branch al Remoto
+
 ```bash
 git fetch origin
 git reset --hard origin/feature/FEATURE_NAME
 ```
 
 ---
-
-## **4. Comandi GitFlow Avanzati**
+# 4. Comandi GitFlow Avanzati
 
 ---
 
