@@ -174,7 +174,7 @@ git push origin feature/FEATURE_NAME --force-with-lease
 
 1. Fai clic destro sul branch nel grafico da cui fare il rebase (es. development).  
 2. Seleziona **"Interactive Rebase"**.  
-3. Usa le opzioni **"Squash"** o **"Fixup"** per unire i commit.  
+3. Usa le opzioni **"Squash"** o **"Fixup"** per unire i commit.
 
 ---
 
