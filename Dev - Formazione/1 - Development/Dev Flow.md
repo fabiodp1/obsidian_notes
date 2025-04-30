@@ -24,9 +24,9 @@ git flow feature start FEATURE_NAME  # Crea un branch da develop e effettua il c
 3. Assegna il nome `feature/FEATURE_NAME` e conferma.
 
 ---
-
 # 1. Sviluppo Giornaliero
 
+---
 ## 1. Commit delle Modifiche
 
 ### Terminale
@@ -71,8 +71,9 @@ git fetch origin develop  # Scarica l'ultima versione di develop dal remote
 2. Seleziona **"Fetch All"** per aggiornare tutti i branch remoti.
 
 ---
-
 ## 3. Rebase del Feature Branch su `origin/develop`
+
+---
 
 ### Terminale
 
@@ -152,8 +153,9 @@ git push origin feature/FEATURE_NAME --force-with-lease  # Push sicuro
 3. Conferma l'operazione.
 
 ---
-
 # 2. Preparazione della Pull Request (PR)
+
+---
 
 ## 1. Squash dei Commit (Opzionale)
 
