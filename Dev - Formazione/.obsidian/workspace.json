@@ -39,12 +39,14 @@
             "id": "69111606c9f9d201",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.10"
+                "file": "1 - Development/Gitflow.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
+              "icon": "lucide-file",
+              "title": "Gitflow"
             }
           }
         ],
@@ -169,12 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "1 - Development/Gitflow.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura"
+              "title": "Struttura di Gitflow"
             }
           },
           {
@@ -209,6 +212,7 @@
   },
   "active": "69111606c9f9d201",
   "lastOpenFiles": [
+    "1 - Development/Convenzioni.md",
     "2 - React/4 - Routing.md",
     "2 - React/16 - React + TypeScript.md",
     "2 - React/11 - Stores.md",
@@ -234,7 +238,6 @@
     "zzz_Pagine/React.md",
     "zzz_Pagine/pnpm.md",
     "zzz_Pagine/optimistic UI.md",
-    "zzz_Pagine/Link.md",
     "zzzz_allegati/Pasted image 20250331121152.png",
     "zzzz_allegati/Pasted image 20250331120823.png",
     "5 - Accessibilità",
