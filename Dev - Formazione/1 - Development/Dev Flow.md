@@ -153,6 +153,175 @@ git push origin feature/FEATURE_NAME --force-with-lease  # Push sicuro
 3. Conferma l'operazione.
 
 ---
+# 2. Flow Creazione Pull Request
+
+---
+
+## 1. Rebase finale su `develop`**
+
+```bash
+git fetch origin develop
+git rebase origin/develop  # Allinea il branch alla versione più recente di develop
+git push origin feature/FEATURE_NAME --force-with-lease
+```
+
+>**VEDI SOPRA** per altri metodi per fare il rebase.
+
+---
+
+## 2. Creazione della Pull Request
+
+### Requisiti Obbligatori (Checklist Aziendale)**
+
+1. ✅ Branch rebasato su `develop` (vedi Step 1).
+2. ✅ Target branch corretto:
+    - **Feature branch** → `develop`
+    - **Release/hotfix branch** → `main`/`production`
+3. ✅ Descrizione PR include:
+    - Link all'issue tracker (es. Jira, Trello)
+    - Link alla documentazione di specifica
+    - Descrizione "umana" delle modifiche
+    - Dati di esempio/screenshot per testare
+4. ✅ Contrassegna come **WIP** se non pronto per il merge.
+5. ✅ Assegna almeno 1 revisore (o notifica il team leader).
+
+---
+
+### VS Code (Estensione GitHub)
+
+#### 1. Installa l'estensione (se non presente)
+
+- Cerca **"GitHub Pull Requests and Issues"** nel marketplace e installala.
+
+#### 2. Crea la PR
+
+1. Apri la palette comandi (Ctrl+Shift+P).
+2. Cerca **"Create Pull Request"**.
+3. Segui la procedura guidata:
+    - **Base branch**: `develop`
+    - **Compare branch**: `feature/FEATURE_NAME`
+    - **Title**: Includi il nome della feature e una descrizione breve.
+    - **Description**: Inserisci:
+    
+```markdown
+**Issue Tracker:** [LINK](https://issue-tracker.com/ISSUE-123)  
+**Documentazione:** [Specifiche](https://docs.com/spec)  
+**Modifiche:**  
+    - Aggiunto sistema di autenticazione OAuth2  
+    - Corretto bug nel calcolo degli sconti
+```
+
+1. - **Assignees**: Seleziona un revisore dall'elenco.
+    - **Labels**: Aggiungi `WIP` se necessario.  
+2. Clicca **"Create"**.
+
+### Fork (App)
+
+#### 1. Apri la sezione Pull Requests
+
+1. Clicca sul pulsante **"Pull Requests"** nella barra laterale.
+2. Seleziona **"New Pull Request"**.
+
+#### 2. Compila i dettagli
+
+- **Source Branch**: `feature/FEATURE_NAME`
+- **Target Branch**: `develop`    
+- **Title**: Usa il formato `[FEATURE] Descrizione breve`.
+- **Description**:
+
+```markdown
+### Collegamenti  
+- **Issue:** [ISSUE-456](https://issue-tracker.com/ISSUE-456)  
+- **Specifiche:** [Documento Tecnico](https://docs.com/tech-spec)  
+
+### Modifiche  
+- Implementata cache Redis per le query frequenti  
+- Aggiornato il pacchetto `security-lib` alla v2.1  
+
+### Test  
+1. Esegui `npm run test:auth`  
+2. Verifica il log delle transazioni in `/var/logs`  
+```
+
+- **Options**:
+    - ✅ **Draft** (per WIP)
+    - **Reviewers**: Aggiungi almeno un revisore.
+        
+#### 3. Invia la PR
+
+Clicca **"Create Pull Request"**.
+
+---
+
+## 3. Best Practice per la Descrizione della PR
+
+#### Template Consigliato (Markdown)
+
+```markdown
+## Collegamenti
+- **Issue Tracker:** [ISSUE-123](https://issue-tracker.com/ISSUE-123)
+- **Documentazione:** [Specifiche Funzionali](https://docs.com/functional-spec)
+
+## Modifiche
+- Aggiunto endpoint API `/v2/payments`  
+- Rimosso codice deprecato dal modulo `legacy-utils`  
+- **Motivazione:** Migrazione a Stripe per conformità PCI-DSS  
+```
+
+---
+
+## 3. Gestione dei WIP (Work in Progress)
+
+- **Terminale**: Usa `--draft` con GitHub CLI: 
+
+```bash
+gh pr create --draft
+```
+
+- **VS Code**: Seleziona l'opzione **"Create as Draft"** durante la creazione.
+- **Fork**: Spunta la checkbox **"Draft"** nel form di creazione PR.
+    
+---
+
+## 4. Assegnazione Revisori**
+
+|Strumento|Istruzioni|
+|---|---|
+|**Terminale**|`gh pr edit --add-reviewer @user1,@user2`|
+|**VS Code**|Usa il menu a tendina "Assignees" durante la creazione della PR.|
+|**Fork**|Clicca su **"Add Reviewers"** e seleziona gli utenti dal dropdown.|
+
+---
+
+## 5. Aggiornamento della PR
+
+- Dopo ulteriori commit, esegui nuovamente il rebase e force push:
+
+```bash
+gh pr merge --squash  # Merge con squash su GitHub
+```
+ 
+- La PR si aggiornerà automaticamente.
+    
+---
+
+## 6. Chiusura della PR (Post-Approval)
+
+- **Terminale**:
+
+```bash
+gh pr merge --squash  # Merge con squash su GitHub
+```
+    
+- **VS Code**:
+    
+    1. Apri la PR nell'estensione GitHub.
+    2. Clicca **"Merge"** → **"Squash and Merge"**.
+        
+- **Fork**:
+    
+    1. Vai alla PR su GitHub.
+    2. Seleziona **"Squash and Merge"** dal dropdown.
 
 ---
 # 3. Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
