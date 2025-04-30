@@ -2,7 +2,7 @@ Ecco il **flow completo e dettagliato**, con i comandi specifici, e le istruzion
 
 ---
 
-# 0. Inizio di una Nuova Feature
+# Inizio di una Nuova Feature
 
 ## Creazione del Feature Branch
 ### Terminale (Con GitFlow)
@@ -24,7 +24,7 @@ git flow feature start FEATURE_NAME  # Crea un branch da develop e effettua il c
 3. Assegna il nome `feature/FEATURE_NAME` e conferma.
 
 ---
-# 1. Sviluppo Giornaliero
+# Sviluppo Giornaliero
 
 ---
 ## 1. Commit delle Modifiche
@@ -153,7 +153,7 @@ git push origin feature/FEATURE_NAME --force-with-lease  # Push sicuro
 3. Conferma l'operazione.
 
 ---
-# 2. Flow Creazione Pull Request
+# Flow Creazione Pull Request
 
 ---
 
@@ -326,7 +326,7 @@ git-flow feature finish FEATURE_NAME
     4. Finish feature
 
 ---
-# 3. Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
+# Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
 
 ---
 
@@ -349,7 +349,7 @@ git-flow feature finish FEATURE_NAME
 
 ---
 
-## Comandi di Emergenza
+# Comandi di Emergenza
 
 ### Annulla un Rebase Fallito
 
@@ -365,28 +365,32 @@ git reset --hard origin/feature/FEATURE_NAME
 ```
 
 ---
-# 4. Comandi GitFlow Avanzati
+# Comandi GitFlow Avanzati
 
 ---
 
-### **Completamento di una Feature**
+## Completamento di una Feature
+
 ```bash
 git flow feature finish FEATURE_NAME  # Merge su develop ed elimina il branch locale
 ```
 
-### **Avvio di una Release**
+## Avvio di una Release
+
 ```bash
 git flow release start RELEASE_NAME
 ```
 
-### **Avvio di un Hotfix**
+## Avvio di un Hotfix
+
 ```bash
 git flow hotfix start HOTFIX_NAME
 ```
 
 ---
 
-## **Strumenti Consigliati**
+# Strumenti Consigliati
+
 | Operazione               | Terminale                  | VS Code                                | Fork (App)                          |
 |--------------------------|----------------------------|----------------------------------------|-------------------------------------|
 | **Gestione Conflitti**   | Editor manuale             | Merge Editor integrato                 | Strumento di merge a 3 vie          |
@@ -395,7 +399,8 @@ git flow hotfix start HOTFIX_NAME
 
 ---
 
-## **Best Practice Finali**
+# Best Practice Finali
+
 1. **Rebase frequente**: Esegui `git fetch + rebase` almeno una volta al giorno.  
 2. **Commit atomici**: Suddividi le modifiche in commit logici e mirati.  
 3. **`--force-with-lease` > `-f`**: Usa sempre l'opzione sicura per i push.  
