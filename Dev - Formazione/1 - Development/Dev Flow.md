@@ -283,13 +283,13 @@ gh pr create --draft
     
 ---
 
-## 4. Assegnazione Revisori**
+## 4. Assegnazione Revisori
 
-|Strumento|Istruzioni|
-|---|---|
-|**Terminale**|`gh pr edit --add-reviewer @user1,@user2`|
-|**VS Code**|Usa il menu a tendina "Assignees" durante la creazione della PR.|
-|**Fork**|Clicca su **"Add Reviewers"** e seleziona gli utenti dal dropdown.|
+| Strumento     | Istruzioni                                                         |
+| ------------- | ------------------------------------------------------------------ |
+| **Terminale** | `gh pr edit --add-reviewer @user1,@user2`                          |
+| **VS Code**   | Usa il menu a tendina "Assignees" durante la creazione della PR.   |
+| **Fork**      | Clicca su **"Add Reviewers"** e seleziona gli utenti dal dropdown. |
 
 ---
 
