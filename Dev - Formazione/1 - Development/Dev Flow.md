@@ -267,8 +267,3 @@ git flow hotfix start HOTFIX_NAME
 2. **Commit atomici**: Suddividi le modifiche in commit logici e mirati.  
 3. **`--force-with-lease` > `-f`**: Usa sempre l'opzione sicura per i push.  
 4. **Branch personali**: Preferisci branch individuali per evitare conflitti.  
-
----
-
-Questo documento è pronto per essere salvato come riferimento ufficiale. 📄  
-Ogni passaggio è stato testato e validato per garantire coerenza con GitFlow e le linee guida aziendali.
