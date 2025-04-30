@@ -153,49 +153,6 @@ git push origin feature/FEATURE_NAME --force-with-lease  # Push sicuro
 3. Conferma l'operazione.
 
 ---
-# 2. Preparazione della Pull Request (PR)
-
----
-
-## 1. Squash dei Commit (Opzionale)
-
-### Terminale (Squash Locale)
-
-```bash
-git rebase -i origin/develop  # Avvia un rebase interattivo
-# Sostituisci "pick" con "squash" o "fixup" per i commit da unire
-git push origin feature/FEATURE_NAME --force-with-lease
-```
-
-### GitHub (Squash durante il Merge)
-
-1. Durante la creazione della PR su GitHub, seleziona **"Squash and Merge"** come metodo di merge.  
-2. Combina tutti i commit in un unico messaggio.
-
-### Fork (App)
-
-1. Fai clic destro sul branch nel grafico da cui fare il rebase (es. development).  
-2. Seleziona **"Interactive Rebase"**.  
-3. Usa le opzioni **"Squash"** o **"Fixup"** per unire i commit.
-
----
-
-### **Step 7: Creazione della Pull Request**
-
-#### **Terminale (Con GitHub CLI)**
-
-```bash
-gh pr create --base develop --head feature/FEATURE_NAME --title "Titolo PR" --body "Descrizione"
-```
-
-#### **VS Code**
-1. Installa l'estensione **"GitHub Pull Requests and Issues"**.  
-2. Apri la palette comandi (Ctrl+Shift+P).  
-3. Cerca **"Create Pull Request"** e segui la procedura guidata.
-
-#### **Fork (App)**
-1. Clicca sul pulsante **"Create Pull Request"** nella barra superiore.  
-2. Compila titolo, descrizione e seleziona `develop` come branch di destinazione.
 
 ---
 # 3. Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
