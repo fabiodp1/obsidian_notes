@@ -298,10 +298,15 @@ gh pr create --draft
 - Dopo ulteriori commit, esegui nuovamente il rebase e force push:
 
 ```bash
-gh pr merge --squash  # Merge con squash su GitHub
+git fetch origin develop
+git rebase origin/develop          # Allinea il branch alle ultime modifiche di develop
+git push origin feature/FEATURE_NAME --force-with-lease
 ```
  
 - La PR si aggiornerà automaticamente.
+- **Cosa fa**: Aggiorna il branch remoto con le nuove modifiche, mantenendo tutti i commit intermedi.
+
+>**Attenzione**: Non fare squash locale! I commit rimangono separati fino al merge finale.
     
 ---
 
