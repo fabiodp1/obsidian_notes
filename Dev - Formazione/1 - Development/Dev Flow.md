@@ -181,6 +181,7 @@ git push origin feature/FEATURE_NAME --force-with-lease
 ### **Step 7: Creazione della Pull Request**
 
 #### **Terminale (Con GitHub CLI)**
+
 ```bash
 gh pr create --base develop --head feature/FEATURE_NAME --title "Titolo PR" --body "Descrizione"
 ```
