@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Development/Git.md",
+                "file": "1 - Development/Dev Flow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "Dev Flow"
             }
           }
         ],
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Development/Git.md",
+                "file": "1 - Development/Dev Flow.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Git"
+              "title": "Struttura di Dev Flow"
             }
           },
           {
@@ -212,9 +212,9 @@
   },
   "active": "69111606c9f9d201",
   "lastOpenFiles": [
-    "1 - Development/Dev Flow.md",
     "1 - Development/Gitflow.md",
     "1 - Development/Git.md",
+    "1 - Development/Dev Flow.md",
     "1 - Development/Flow per Creazione Pull Request.md",
     "1 - Development/Convenzioni.md",
     "2 - React/4 - Routing.md",
