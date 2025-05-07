@@ -363,8 +363,6 @@ git reset --hard origin/feature/FEATURE_NAME
 ---
 # Comandi GitFlow Avanzati
 
----
-
 ## Completamento di una Feature
 
 ```bash
