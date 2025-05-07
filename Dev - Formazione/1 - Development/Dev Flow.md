@@ -26,7 +26,6 @@ git flow feature start FEATURE_NAME  # Crea un branch da develop e effettua il c
 ---
 # Sviluppo Giornaliero
 
----
 ## 1. Commit delle Modifiche
 
 ### Terminale
@@ -72,8 +71,6 @@ git fetch origin develop  # Scarica l'ultima versione di develop dal remote
 
 ---
 ## 3. Rebase del Feature Branch su `origin/develop`
-
----
 
 ### Terminale
 
@@ -155,8 +152,6 @@ git push origin feature/FEATURE_NAME --force-with-lease  # Push sicuro
 ---
 # Flow Creazione Pull Request
 
----
-
 ## 1. Rebase finale su `develop`**
 
 ```bash
@@ -166,8 +161,6 @@ git push origin feature/FEATURE_NAME --force-with-lease
 ```
 
 >**VEDI SOPRA** per altri metodi per fare il rebase.
-
----
 
 ## 2. Creazione della Pull Request
 
@@ -332,8 +325,6 @@ git-flow feature finish FEATURE_NAME
 
 ---
 # Gestione dei Branch Condivisi (⚠️ Avvisi Critici)
-
----
 
 ## Regole per Branch Condivisi
 
