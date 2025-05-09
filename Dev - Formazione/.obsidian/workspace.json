@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "figure",
+                "query": "cho",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -211,7 +211,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "69111606c9f9d201",
+  "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
     "2 - React/11 - Stores.md",
     "5 - Accessibilità/1- HTML Accessibile.md",
