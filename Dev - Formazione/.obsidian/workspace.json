@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Development/Dev Flow.md",
+                "file": "5 - Accessibilità/1- HTML Accessibile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dev Flow"
+              "title": "1- HTML Accessibile"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "react.fc",
+                "query": "figure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,7 +103,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -171,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Development/Dev Flow.md",
+                "file": "5 - Accessibilità/1- HTML Accessibile.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Dev Flow"
+              "title": "Struttura di 1- HTML Accessibile"
             }
           },
           {
@@ -212,14 +213,15 @@
   },
   "active": "69111606c9f9d201",
   "lastOpenFiles": [
+    "2 - React/11 - Stores.md",
+    "5 - Accessibilità/1- HTML Accessibile.md",
+    "1 - Development/Dev Flow.md",
     "1 - Development/Gitflow.md",
     "1 - Development/Git.md",
-    "1 - Development/Dev Flow.md",
     "1 - Development/Flow per Creazione Pull Request.md",
     "1 - Development/Convenzioni.md",
     "2 - React/4 - Routing.md",
     "2 - React/16 - React + TypeScript.md",
-    "2 - React/11 - Stores.md",
     "2 - React/3 - Hooks.md",
     "4 - Angular/Angular 19/1 - Components.md",
     "zzz_Pagine/React 19+.md",
@@ -237,7 +239,6 @@
     "3 - Next.js/14 - Forms & Data Mutation.md",
     "3 - Next.js/5 - CSS Styling.md",
     "zzz_Pagine/root layout.md",
-    "zzz_Pagine/react-query.md",
     "zzzz_allegati/Pasted image 20250331121152.png",
     "zzzz_allegati/Pasted image 20250331120823.png",
     "5 - Accessibilità",
