@@ -310,6 +310,21 @@ git push origin feature/FEATURE_NAME --force-with-lease
 ```bash
 git-flow feature finish FEATURE_NAME
 ```
+
+Da terminale normale (non git-flow):
+
+1. Fare prima merge/squash da GitHub o fork
+2. cancellare branch localmente:
+
+```terminal
+git branch -D <nome branch>
+```
+
+3. Cancellare il branch remoto
+
+```terminal
+git push origin :<nome branch>
+```
     
 - **VS Code**:
     

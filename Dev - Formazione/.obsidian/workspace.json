@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Accessibilità/1- HTML Accessibile.md",
+                "file": "1 - Development/Dev Flow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1- HTML Accessibile"
+              "title": "Dev Flow"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cho",
+                "query": "git push",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -172,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Accessibilità/1- HTML Accessibile.md",
+                "file": "1 - Development/Dev Flow.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 1- HTML Accessibile"
+              "title": "Struttura di Dev Flow"
             }
           },
           {
@@ -213,8 +213,8 @@
   },
   "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
-    "2 - React/11 - Stores.md",
     "5 - Accessibilità/1- HTML Accessibile.md",
+    "2 - React/11 - Stores.md",
     "1 - Development/Dev Flow.md",
     "1 - Development/Gitflow.md",
     "1 - Development/Git.md",
