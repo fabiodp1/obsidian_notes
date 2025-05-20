@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Development/Git.md",
+                "file": "2 - React/5 - Cache management - React Query.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "5 - Cache management - React Query"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Development/Git.md",
+                "file": "2 - React/5 - Cache management - React Query.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Git"
+              "title": "Struttura di 5 - Cache management - React Query"
             }
           },
           {
@@ -183,13 +183,13 @@
   },
   "active": "573693c971fdf874",
   "lastOpenFiles": [
+    "1 - Development/Git.md",
     "1 - Development/Dev Flow.md",
     "2 - React/3 - Hooks.md",
     "5 - Accessibilità/1- HTML Accessibile.md",
     "zzz_Pagine/2025-05-13.md",
     "2 - React/11 - Stores.md",
     "1 - Development/Gitflow.md",
-    "1 - Development/Git.md",
     "1 - Development/Flow per Creazione Pull Request.md",
     "1 - Development/Convenzioni.md",
     "2 - React/4 - Routing.md",
