@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - React/5 - Cache management - React Query.md",
+                "file": "1 - Development/Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5 - Cache management - React Query"
+              "title": "Git"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mutation",
+                "query": "invalidateQueries",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - React/5 - Cache management - React Query.md",
+                "file": "1 - Development/Git.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 5 - Cache management - React Query"
+              "title": "Struttura di Git"
             }
           },
           {
@@ -184,10 +184,10 @@
   },
   "active": "4bad5ba6f5ce048b",
   "lastOpenFiles": [
-    "2 - React/15 - Patterns & Best Practices.md",
-    "2 - React/5 - Cache management - React Query.md",
-    "1 - Development/Git.md",
     "1 - Development/Dev Flow.md",
+    "2 - React/5 - Cache management - React Query.md",
+    "2 - React/15 - Patterns & Best Practices.md",
+    "1 - Development/Git.md",
     "2 - React/3 - Hooks.md",
     "5 - Accessibilità/1- HTML Accessibile.md",
     "zzz_Pagine/2025-05-13.md",
